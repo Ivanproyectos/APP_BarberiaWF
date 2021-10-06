@@ -2,6 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Data.Common;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace Barberia.Datos
 {
@@ -245,6 +248,62 @@ namespace Barberia.Datos
             }
             return lista;
         }
+
+
+
+        public List<T_M_CLIENTES> Reporte_TiempoPromedio(string ORDEN_COLUMNA, string ORDEN, int FILAS, int PAGINA, string @WHERE, ref Cls_Ent_Auditoria auditoria)
+        {
+            var TABLA = ""; 
+            auditoria.Limpiar();
+            DbDataReader dr = null;
+            List<T_M_CLIENTES> lista = new List<T_M_CLIENTES>();
+            try
+            {
+                using (var command = _context.GetStoredProcedureCommand("USP_TIEMPO_PROMEDIO",
+                new SqlParameter("@PI_PAGINA", PAGINA),
+                new SqlParameter("@PI_NROREGISTROS", FILAS),
+                new SqlParameter("@PI_ORDEN_COLUMNA", ORDEN_COLUMNA),
+                new SqlParameter("@PI_ORDEN", ORDEN),
+                new SqlParameter("@PI_WHERE", @WHERE),
+                new SqlParameter("@PI_TABLA", TABLA),
+                new SqlParameter("PO_CUENTA", SqlDbType.Int).Direction = System.Data.ParameterDirection.Output,
+                //new SqlParameter("PO_MENSAJE", OracleDbType.Varchar2, ParameterDirection.Output) { Size = 200 },
+                null)
+                )
+                {
+                    dr = command.ExecuteReader();
+                    int pos_ID_DOCUMENTO_PROCESO = dr.GetOrdinal("ID_DOCUMENTO_PROCESO");
+                    int pos_USU_CREACION = dr.GetOrdinal("USU_CREACION");
+                    int pos_TIEMPO_ESCANEO = dr.GetOrdinal("TIEMPO_ESCANEO");
+                    int pos_FOLIOS = dr.GetOrdinal("FOLIOS");
+                    if (dr.HasRows)
+                        while (dr.Read())
+                        {
+                            T_M_CLIENTES entidad = new T_M_CLIENTES();
+
+                            if (dr.IsDBNull(pos_ID_DOCUMENTO_PROCESO)) entidad.ID_CLIENTE = 0;
+                            else entidad.ID_CLIENTE = int.Parse(dr[pos_ID_DOCUMENTO_PROCESO].ToString());
+
+                            if (dr.IsDBNull(pos_USU_CREACION)) entidad.USU_CREACION = "";
+                            else entidad.USU_CREACION = dr[pos_USU_CREACION].ToString();
+
+
+                            lista.Add(entidad);
+                        }
+                }
+            }
+            catch (Exception ex)
+            {
+                auditoria.Error(ex);
+            }
+            return lista;
+        }
+
+
+
+
+
+
 
     }
 }
