@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_BARBERIAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="T_M_PRODUCTO">
+    <Key>
+      <PropertyRef Name="ID_PRODUCTO" />
+    </Key>
+    <Property Name="ID_PRODUCTO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PRODUCTO" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="STOCK" Type="int" Nullable="false" />
+    <Property Name="PRECIO_COMPRA" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="PRECIO_VENTA" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="FEC_COMPRA" Type="datetime" />
+    <Property Name="FOTO" Type="image" />
+  </EntityType>
+  <EntityType Name="T_M_VENTA">
+    <Key>
+      <PropertyRef Name="ID_VENTA" />
+    </Key>
+    <Property Name="ID_VENTA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_PERSONAL" Type="int" Nullable="false" />
+    <Property Name="ID_PRODUCTO" Type="int" Nullable="false" />
+    <Property Name="CANTIDAD" Type="int" Nullable="false" />
+    <Property Name="PRECIO" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="DESCUENTO" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="TOTAL" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="FEC_VENTA" Type="datetime" />
+  </EntityType>
+  <Association Name="FK_ID_PRODUCTO">
+    <End Role="T_M_PRODUCTO" Type="Self.T_M_PRODUCTO" Multiplicity="1" />
+    <End Role="T_M_VENTA" Type="Self.T_M_VENTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_M_PRODUCTO">
+        <PropertyRef Name="ID_PRODUCTO" />
+      </Principal>
+      <Dependent Role="T_M_VENTA">
+        <PropertyRef Name="ID_PRODUCTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DB_BARBERIAModelStoreContainer">
+    <EntitySet Name="T_M_PRODUCTO" EntityType="Self.T_M_PRODUCTO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_M_VENTA" EntityType="Self.T_M_VENTA" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_ID_PRODUCTO" Association="Self.FK_ID_PRODUCTO">
+      <End Role="T_M_PRODUCTO" EntitySet="T_M_PRODUCTO" />
+      <End Role="T_M_VENTA" EntitySet="T_M_VENTA" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

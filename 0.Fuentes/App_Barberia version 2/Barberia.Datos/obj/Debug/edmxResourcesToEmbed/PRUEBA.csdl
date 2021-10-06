@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_BARBERIAModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="T_M_PRODUCTO">
+    <Key>
+      <PropertyRef Name="ID_PRODUCTO" />
+    </Key>
+    <Property Name="ID_PRODUCTO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PRODUCTO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STOCK" Type="Int32" Nullable="false" />
+    <Property Name="PRECIO_COMPRA" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="PRECIO_VENTA" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="FEC_COMPRA" Type="DateTime" Precision="3" />
+    <Property Name="FOTO" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="T_M_VENTA" Relationship="Self.FK_ID_PRODUCTO" FromRole="T_M_PRODUCTO" ToRole="T_M_VENTA" />
+  </EntityType>
+  <EntityType Name="T_M_VENTA">
+    <Key>
+      <PropertyRef Name="ID_VENTA" />
+    </Key>
+    <Property Name="ID_VENTA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ID_PERSONAL" Type="Int32" Nullable="false" />
+    <Property Name="ID_PRODUCTO" Type="Int32" Nullable="false" />
+    <Property Name="CANTIDAD" Type="Int32" Nullable="false" />
+    <Property Name="PRECIO" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="DESCUENTO" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="TOTAL" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="FEC_VENTA" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="T_M_PRODUCTO" Relationship="Self.FK_ID_PRODUCTO" FromRole="T_M_VENTA" ToRole="T_M_PRODUCTO" />
+  </EntityType>
+  <Association Name="FK_ID_PRODUCTO">
+    <End Role="T_M_PRODUCTO" Type="Self.T_M_PRODUCTO" Multiplicity="1" />
+    <End Role="T_M_VENTA" Type="Self.T_M_VENTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_M_PRODUCTO">
+        <PropertyRef Name="ID_PRODUCTO" />
+      </Principal>
+      <Dependent Role="T_M_VENTA">
+        <PropertyRef Name="ID_PRODUCTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DB_BARBERIAEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="T_M_PRODUCTO" EntityType="Self.T_M_PRODUCTO" />
+    <EntitySet Name="T_M_VENTA" EntityType="Self.T_M_VENTA" />
+    <AssociationSet Name="FK_ID_PRODUCTO" Association="Self.FK_ID_PRODUCTO">
+      <End Role="T_M_PRODUCTO" EntitySet="T_M_PRODUCTO" />
+      <End Role="T_M_VENTA" EntitySet="T_M_VENTA" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

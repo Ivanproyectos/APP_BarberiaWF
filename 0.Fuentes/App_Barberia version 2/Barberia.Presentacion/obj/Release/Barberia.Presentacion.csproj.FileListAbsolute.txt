@@ -1,0 +1,357 @@
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\bin\Release\Barberia.Presentacion.exe.config
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\bin\Release\Barberia.Presentacion.exe.manifest
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\bin\Release\Barberia.Presentacion.application
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\bin\Release\Barberia.Presentacion.exe
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\bin\Release\Barberia.Presentacion.pdb
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\bin\Release\Barberia.Entidad.dll
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\bin\Release\Barberia.Negocio.dll
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\bin\Release\EntityFramework.dll
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\bin\Release\Microsoft.ReportViewer.WinForms.dll
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\bin\Release\Barberia.Datos.dll
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\bin\Release\Microsoft.SqlServer.Types.dll
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\bin\Release\Barberia.Entidad.pdb
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\bin\Release\Barberia.Negocio.pdb
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\bin\Release\EntityFramework.xml
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\bin\Release\Barberia.Datos.pdb
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\bin\Release\Barberia.Datos.dll.config
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\bin\Release\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\bin\Release\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\bin\Release\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\bin\Release\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\bin\Release\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\bin\Release\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\bin\Release\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\bin\Release\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\bin\Release\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\bin\Release\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\bin\Release\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\obj\Release\Barberia.Presentacion.csprojAssemblyReference.cache
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_AnularPryVe.Frm_Anular.resources
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Cargos.Frm_Cargo.resources
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Cliente.Frm_RegistrarCliente.resources
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Configuracion.Frm_Marca.resources
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Configuracion.Frm_UndMedida.resources
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Configuracion.Frm_Modelo.resources
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Cortes.Frm_Buscar.resources
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Cortes.Frm_Corte.resources
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Cortes.Frm_Historial.resources
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_DashBoards.Frm_Buscar.resources
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_DashBoards.Frm_Dashboard.resources
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_DashBoards.Frm_ReporteCorte.resources
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_DashBoards.Frm_ReporteProducto.resources
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_DashBoards.Frm_ReporteVenta.resources
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Perfiles.Frm_Perfil.resources
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Personal.Frm_Personales.resources
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Principal.Frm_Inicio.resources
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_loggins.Frm_Loggin.resources
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Productos.Frm_ActualizarStock.resources
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Productos.Frm_Producto.resources
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Configuracion.Frm_Servicio.resources
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Usuarios.Frm_Usuario.resources
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Ventas.Frm_Buscar.resources
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Ventas.Frm_Venta.resources
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Properties.Resources.resources
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\obj\Release\Barberia.Presentacion.csproj.GenerateResource.cache
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\obj\Release\RdlCompile.cache
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\obj\Release\RdlCompile.compiled
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\obj\Release\Barberia.Presentacion.csproj.CoreCompileInputs.cache
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\obj\Release\Barberia.Presentacion.TrustInfo.xml
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\obj\Release\Barberia.Presentacion.exe.manifest
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\obj\Release\Barberia.Presentacion.application
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\obj\Release\Barberia.Presentacion.csproj.CopyComplete
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\obj\Release\Barberia.Presentacion.exe
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\obj\Release\Barberia.Presentacion.pdb
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\bin\Release\Barberia.Presentacion.exe.config
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\bin\Release\Barberia.Presentacion.exe.manifest
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\bin\Release\Barberia.Presentacion.application
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\bin\Release\Barberia.Presentacion.exe
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\bin\Release\Barberia.Presentacion.pdb
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\bin\Release\Barberia.Entidad.dll
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\bin\Release\Barberia.Negocio.dll
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\bin\Release\EntityFramework.dll
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\bin\Release\Microsoft.ReportViewer.WinForms.dll
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\bin\Release\Barberia.Datos.dll
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\bin\Release\Microsoft.SqlServer.Types.dll
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\bin\Release\Barberia.Entidad.pdb
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\bin\Release\Barberia.Negocio.pdb
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\bin\Release\EntityFramework.xml
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\bin\Release\Barberia.Datos.pdb
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\bin\Release\Barberia.Datos.dll.config
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\bin\Release\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\bin\Release\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\bin\Release\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\bin\Release\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\bin\Release\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\bin\Release\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\bin\Release\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\bin\Release\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\bin\Release\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\bin\Release\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\bin\Release\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.csprojAssemblyReference.cache
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_AnularPryVe.Frm_Anular.resources
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Cargos.Frm_Cargo.resources
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Cliente.Frm_RegistrarCliente.resources
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Configuracion.Frm_Marca.resources
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Configuracion.Frm_UndMedida.resources
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Configuracion.Frm_Modelo.resources
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Cortes.Frm_Buscar.resources
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Cortes.Frm_Corte.resources
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Cortes.Frm_Historial.resources
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_DashBoards.Frm_Buscar.resources
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_DashBoards.Frm_Dashboard.resources
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_DashBoards.Frm_ReporteCorte.resources
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_DashBoards.Frm_ReporteAnular.resources
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_DashBoards.Frm_ReporteProducto.resources
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_DashBoards.Frm_ReporteVenta.resources
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Perfiles.Frm_Perfil.resources
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Personal.Frm_Personales.resources
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Principal.Frm_Inicio.resources
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_loggins.Frm_Loggin.resources
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Productos.Frm_ActualizarStock.resources
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Productos.Frm_Producto.resources
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Configuracion.Frm_Servicio.resources
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Usuarios.Frm_Usuario.resources
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Ventas.Frm_Buscar.resources
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Ventas.Frm_Venta.resources
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Properties.Resources.resources
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.csproj.GenerateResource.cache
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\obj\Release\RdlCompile.cache
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\obj\Release\RdlCompile.compiled
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.csproj.CoreCompileInputs.cache
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.TrustInfo.xml
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.exe.manifest
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.application
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.csproj.CopyComplete
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.exe
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.pdb
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_DashBoards.Frm_ReporteAnular.resources
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\bin\Release\Barberia.Presentacion.exe.config
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\bin\Release\Barberia.Presentacion.exe.manifest
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\bin\Release\Barberia.Presentacion.application
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\bin\Release\Barberia.Presentacion.exe
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\bin\Release\Barberia.Presentacion.pdb
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\bin\Release\Barberia.Entidad.dll
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\bin\Release\Barberia.Negocio.dll
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\bin\Release\EntityFramework.dll
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\bin\Release\Microsoft.ReportViewer.WinForms.dll
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\bin\Release\Barberia.Datos.dll
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\bin\Release\Microsoft.SqlServer.Types.dll
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\bin\Release\Barberia.Entidad.pdb
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\bin\Release\Barberia.Negocio.pdb
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\bin\Release\EntityFramework.xml
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\bin\Release\Barberia.Datos.pdb
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\bin\Release\Barberia.Datos.dll.config
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\bin\Release\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\bin\Release\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\bin\Release\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\bin\Release\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\bin\Release\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\bin\Release\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\bin\Release\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\bin\Release\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\bin\Release\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\bin\Release\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\bin\Release\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\obj\Release\Barberia.Presentacion.csprojAssemblyReference.cache
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_AnularPryVe.Frm_Anular.resources
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Cargos.Frm_Cargo.resources
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Cliente.Frm_RegistrarCliente.resources
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Configuracion.Frm_Marca.resources
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Configuracion.Frm_UndMedida.resources
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Configuracion.Frm_Modelo.resources
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Cortes.Frm_Buscar.resources
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Cortes.Frm_Corte.resources
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Cortes.Frm_Historial.resources
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_DashBoards.Frm_Buscar.resources
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_DashBoards.Frm_Dashboard.resources
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_DashBoards.Frm_ReporteCorte.resources
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_DashBoards.Frm_ReporteAnular.resources
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_DashBoards.Frm_ReporteProducto.resources
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_DashBoards.Frm_ReporteVenta.resources
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Perfiles.Frm_Perfil.resources
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Personal.Frm_Personales.resources
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Principal.Frm_Inicio.resources
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_loggins.Frm_Loggin.resources
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Productos.Frm_ActualizarStock.resources
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Productos.Frm_Producto.resources
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Configuracion.Frm_Servicio.resources
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Usuarios.Frm_Usuario.resources
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Ventas.Frm_Buscar.resources
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Ventas.Frm_Venta.resources
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Properties.Resources.resources
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\obj\Release\Barberia.Presentacion.csproj.GenerateResource.cache
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\obj\Release\RdlCompile.cache
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\obj\Release\RdlCompile.compiled
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\obj\Release\Barberia.Presentacion.csproj.CoreCompileInputs.cache
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\obj\Release\Barberia.Presentacion.TrustInfo.xml
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\obj\Release\Barberia.Presentacion.exe.manifest
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\obj\Release\Barberia.Presentacion.application
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\obj\Release\Barberia.Presentacion.csproj.CopyComplete
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\obj\Release\Barberia.Presentacion.exe
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\obj\Release\Barberia.Presentacion.pdb
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_DashBoards.Frm_DashboardProducto.resources
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\bin\Release\Barberia.Presentacion.exe.config
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\bin\Release\Barberia.Presentacion.exe.manifest
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\bin\Release\Barberia.Presentacion.application
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\bin\Release\Barberia.Presentacion.exe
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\bin\Release\Barberia.Presentacion.pdb
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\bin\Release\Barberia.Entidad.dll
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\bin\Release\Barberia.Negocio.dll
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\bin\Release\EntityFramework.dll
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\bin\Release\Microsoft.ReportViewer.WinForms.dll
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\bin\Release\Newtonsoft.Json.dll
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\bin\Release\RestSharp.dll
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\bin\Release\Barberia.Datos.dll
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\bin\Release\Microsoft.SqlServer.Types.dll
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\bin\Release\Barberia.Entidad.pdb
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\bin\Release\Barberia.Negocio.pdb
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\bin\Release\EntityFramework.xml
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\bin\Release\Newtonsoft.Json.xml
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\bin\Release\RestSharp.xml
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\bin\Release\Barberia.Datos.pdb
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\bin\Release\Barberia.Datos.dll.config
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\bin\Release\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\bin\Release\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\bin\Release\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\bin\Release\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\bin\Release\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\bin\Release\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\bin\Release\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\bin\Release\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\bin\Release\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\bin\Release\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\bin\Release\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\bin\Release\Interop.AcroPDFLib.dll
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\bin\Release\AxInterop.AcroPDFLib.dll
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\obj\Release\Barberia.Presentacion.csprojAssemblyReference.cache
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\obj\Release\Interop.AcroPDFLib.dll
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\obj\Release\AxInterop.AcroPDFLib.dll
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\obj\Release\Barberia.Presentacion.csproj.ResolveComReference.cache
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_AnularPryVe.Frm_Anular.resources
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Cargos.Frm_Cargo.resources
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Cliente.Frm_RegistrarCliente.resources
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Configuracion.Frm_Marca.resources
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Configuracion.Frm_UndMedida.resources
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Configuracion.Frm_Modelo.resources
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Cortes.Frm_Buscar.resources
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Cortes.Frm_Corte.resources
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Cortes.Frm_Historial.resources
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_DashBoards.Frm_Buscar.resources
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_DashBoards.Frm_DashboardProducto.resources
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_DashBoards.Frm_Dashboard.resources
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_DashBoards.Frm_ReporteCorte.resources
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_DashBoards.Frm_ReporteAnular.resources
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_DashBoards.Frm_ReporteProducto.resources
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_DashBoards.Frm_ReporteVenta.resources
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Perfiles.Frm_Perfil.resources
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Personal.Frm_Personales.resources
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Principal.Frm_Inicio.resources
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_loggins.Frm_Loggin.resources
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Productos.Frm_ActualizarStock.resources
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Productos.Frm_Producto.resources
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Configuracion.Frm_Servicio.resources
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Usuarios.Frm_Usuario.resources
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Ventas.Frm_Buscar.resources
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Ventas.Frm_Venta.resources
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Ventas.Frm_Visor_PDF.resources
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Properties.Resources.resources
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\obj\Release\Barberia.Presentacion.csproj.GenerateResource.cache
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\obj\Release\RdlCompile.cache
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\obj\Release\RdlCompile.compiled
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\obj\Release\Barberia.Presentacion.csproj.CoreCompileInputs.cache
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\obj\Release\Barberia.Presentacion.TrustInfo.xml
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\obj\Release\Barberia.Presentacion.exe.manifest
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\obj\Release\Barberia.Presentacion.application
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\obj\Release\Barberia.Presentacion.csproj.CopyComplete
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\obj\Release\Barberia.Presentacion.exe
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\obj\Release\Barberia.Presentacion.pdb
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Cliente.Frm_Empresa.resources
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\bin\Release\Barberia.Presentacion.exe.config
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\bin\Release\Barberia.Presentacion.exe.manifest
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\bin\Release\Barberia.Presentacion.application
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\bin\Release\Barberia.Presentacion.exe
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\bin\Release\Barberia.Presentacion.pdb
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\bin\Release\Barberia.Entidad.dll
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\bin\Release\Barberia.Negocio.dll
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\bin\Release\EntityFramework.dll
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\bin\Release\Microsoft.ReportViewer.WinForms.dll
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\bin\Release\Newtonsoft.Json.dll
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\bin\Release\RestSharp.dll
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\bin\Release\Barberia.Datos.dll
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\bin\Release\Microsoft.SqlServer.Types.dll
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\bin\Release\Barberia.Entidad.pdb
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\bin\Release\Barberia.Negocio.pdb
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\bin\Release\EntityFramework.xml
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\bin\Release\Newtonsoft.Json.xml
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\bin\Release\RestSharp.xml
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\bin\Release\Barberia.Datos.pdb
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\bin\Release\Barberia.Datos.dll.config
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\bin\Release\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\bin\Release\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\bin\Release\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\bin\Release\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\bin\Release\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\bin\Release\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\bin\Release\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\bin\Release\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\bin\Release\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\bin\Release\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\bin\Release\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\bin\Release\Interop.AcroPDFLib.dll
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\bin\Release\AxInterop.AcroPDFLib.dll
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.csprojAssemblyReference.cache
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\obj\Release\Interop.AcroPDFLib.dll
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\obj\Release\AxInterop.AcroPDFLib.dll
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.csproj.ResolveComReference.cache
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_AnularPryVe.Frm_Anular.resources
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Cargos.Frm_Cargo.resources
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Cliente.Frm_RegistrarCliente.resources
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Cliente.Frm_Empresa.resources
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Configuracion.Frm_Marca.resources
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Configuracion.Frm_UndMedida.resources
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Configuracion.Frm_Modelo.resources
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Cortes.Frm_Buscar.resources
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Cortes.Frm_Corte.resources
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Cortes.Frm_Historial.resources
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_DashBoards.Frm_Buscar.resources
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_DashBoards.Frm_DashboardProducto.resources
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_DashBoards.Frm_Dashboard.resources
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_DashBoards.Frm_ReporteCorte.resources
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_DashBoards.Frm_ReporteAnular.resources
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_DashBoards.Frm_ReporteProducto.resources
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_DashBoards.Frm_ReporteVenta.resources
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Perfiles.Frm_Perfil.resources
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Personal.Frm_Personales.resources
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Principal.Frm_Inicio.resources
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_loggins.Frm_Loggin.resources
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Productos.Frm_ActualizarStock.resources
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Productos.Frm_Producto.resources
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Configuracion.Frm_Servicio.resources
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Usuarios.Frm_Usuario.resources
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Ventas.Frm_Buscar.resources
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Ventas.Frm_Comprobantes.resources
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Ventas.Frm_Venta.resources
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Ventas.Frm_Visor_PDF.resources
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Properties.Resources.resources
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.csproj.GenerateResource.cache
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\obj\Release\RdlCompile.cache
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\obj\Release\RdlCompile.compiled
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.csproj.CoreCompileInputs.cache
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.TrustInfo.xml
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.exe.manifest
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.application
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.csproj.CopyComplete
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.exe
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Presentacion\obj\Release\Barberia.Presentacion.pdb
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Presentacion\obj\Release\Barberia.Presentacion.Frm_Ventas.Frm_Comprobantes.resources

@@ -1,0 +1,509 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{869BD1BA-01F5-49A8-8899-BC5F30F9AF52}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Barberia.Presentacion</RootNamespace>
+    <AssemblyName>Barberia.Presentacion</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\yordan\Desktop\setup\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>es-PE</TargetCulture>
+    <ProductName>Sistema de Gestion Barberia y Ventas</ProductName>
+    <PublisherName>Link-Soft</PublisherName>
+    <ApplicationRevision>6</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>8FF39B5C4EBBB9BCE80CE2AF837C91A6D11E6E89</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Barberia.Presentacion_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationIcon>logo_original_32x32.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Barberia.Datos\bin\Debug\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\Barberia.Datos\bin\Debug\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.12.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.12.0\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Frm_AnularPryVe\DataActStock.cs" />
+    <Compile Include="Frm_AnularPryVe\DataCorte.cs" />
+    <Compile Include="Frm_AnularPryVe\DataVenta.cs" />
+    <Compile Include="Frm_AnularPryVe\Frm_Anular.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_AnularPryVe\Frm_Anular.Designer.cs">
+      <DependentUpon>Frm_Anular.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Cargos\Frm_Cargo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Cargos\Frm_Cargo.Designer.cs">
+      <DependentUpon>Frm_Cargo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Cliente\Frm_RegistrarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Cliente\Frm_RegistrarCliente.Designer.cs">
+      <DependentUpon>Frm_RegistrarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Configuracion\Frm_Empresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Configuracion\Frm_Empresa.Designer.cs">
+      <DependentUpon>Frm_Empresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Configuracion\Frm_Marca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Configuracion\Frm_Marca.Designer.cs">
+      <DependentUpon>Frm_Marca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Configuracion\Frm_UndMedida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Configuracion\Frm_UndMedida.Designer.cs">
+      <DependentUpon>Frm_UndMedida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Configuracion\Frm_Modelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Configuracion\Frm_Modelo.Designer.cs">
+      <DependentUpon>Frm_Modelo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Cortes\Data_Corte2.cs" />
+    <Compile Include="Frm_Cortes\Data_Corte.cs" />
+    <Compile Include="Frm_Cortes\Frm_Buscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Cortes\Frm_Buscar.Designer.cs">
+      <DependentUpon>Frm_Buscar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Cortes\Frm_Corte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Cortes\Frm_Corte.Designer.cs">
+      <DependentUpon>Frm_Corte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Cortes\Frm_Historial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Cortes\Frm_Historial.Designer.cs">
+      <DependentUpon>Frm_Historial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_DashBoards\DataProducto.cs" />
+    <Compile Include="Frm_DashBoards\DataTotal.cs" />
+    <Compile Include="Frm_DashBoards\Frm_Buscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_DashBoards\Frm_Buscar.Designer.cs">
+      <DependentUpon>Frm_Buscar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_DashBoards\Frm_DashboardProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_DashBoards\Frm_DashboardProducto.Designer.cs">
+      <DependentUpon>Frm_DashboardProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_DashBoards\Frm_Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_DashBoards\Frm_Dashboard.Designer.cs">
+      <DependentUpon>Frm_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_DashBoards\Frm_ReporteCorte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_DashBoards\Frm_ReporteCorte.Designer.cs">
+      <DependentUpon>Frm_ReporteCorte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_DashBoards\Frm_ReporteAnular.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_DashBoards\Frm_ReporteAnular.Designer.cs">
+      <DependentUpon>Frm_ReporteAnular.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_DashBoards\Frm_ReporteProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_DashBoards\Frm_ReporteProducto.Designer.cs">
+      <DependentUpon>Frm_ReporteProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_DashBoards\Frm_ReporteVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_DashBoards\Frm_ReporteVenta.Designer.cs">
+      <DependentUpon>Frm_ReporteVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_DashBoards\ventaDatos.cs" />
+    <Compile Include="Frm_Perfiles\Frm_Perfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Perfiles\Frm_Perfil.Designer.cs">
+      <DependentUpon>Frm_Perfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Personal\Frm_Personal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Personal\Frm_Personal.Designer.cs">
+      <DependentUpon>Frm_Personal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Principal\Frm_Inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Principal\Frm_Inicio.Designer.cs">
+      <DependentUpon>Frm_Inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_loggins\Frm_Loggin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_loggins\Frm_Loggin.Designer.cs">
+      <DependentUpon>Frm_Loggin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Productos\Frm_ActualizarStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Productos\Frm_ActualizarStock.Designer.cs">
+      <DependentUpon>Frm_ActualizarStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Productos\Frm_Producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Productos\Frm_Producto.Designer.cs">
+      <DependentUpon>Frm_Producto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Configuracion\Frm_Servicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Configuracion\Frm_Servicio.Designer.cs">
+      <DependentUpon>Frm_Servicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Usuarios\Frm_Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Usuarios\Frm_Usuario.Designer.cs">
+      <DependentUpon>Frm_Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Ventas\Data_Venta.cs" />
+    <Compile Include="Frm_Ventas\Data_Venta2.cs" />
+    <Compile Include="Frm_Ventas\Frm_Buscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Ventas\Frm_Buscar.Designer.cs">
+      <DependentUpon>Frm_Buscar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Ventas\Frm_Comprobantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Ventas\Frm_Comprobantes.Designer.cs">
+      <DependentUpon>Frm_Comprobantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Ventas\Frm_Venta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Ventas\Frm_Venta.Designer.cs">
+      <DependentUpon>Frm_Venta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Ventas\Frm_Visor_PDF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Ventas\Frm_Visor_PDF.Designer.cs">
+      <DependentUpon>Frm_Visor_PDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recursos\CreaTicket.cs" />
+    <Compile Include="Recursos\Css_Codigo.cs" />
+    <Compile Include="Recursos\Css_Log.cs" />
+    <Compile Include="Recursos\Css_Ruta.cs" />
+    <Compile Include="Recursos\DBApi.cs" />
+    <Compile Include="Recursos\EnviarEmail.cs" />
+    <Compile Include="Recursos\Impresor.cs" />
+    <Compile Include="Recursos\LocalReportExtensions.cs" />
+    <Compile Include="Recursos\Mail.cs" />
+    <Compile Include="Recursos\Moneda.cs" />
+    <Compile Include="Recursos\RawPrinterHelper.cs" />
+    <EmbeddedResource Include="Frm_AnularPryVe\Frm_Anular.resx">
+      <DependentUpon>Frm_Anular.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Cargos\Frm_Cargo.resx">
+      <DependentUpon>Frm_Cargo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Cliente\Frm_RegistrarCliente.resx">
+      <DependentUpon>Frm_RegistrarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Configuracion\Frm_Empresa.resx">
+      <DependentUpon>Frm_Empresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Configuracion\Frm_Marca.resx">
+      <DependentUpon>Frm_Marca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Configuracion\Frm_UndMedida.resx">
+      <DependentUpon>Frm_UndMedida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Configuracion\Frm_Modelo.resx">
+      <DependentUpon>Frm_Modelo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Cortes\Frm_Buscar.resx">
+      <DependentUpon>Frm_Buscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Cortes\Frm_Corte.resx">
+      <DependentUpon>Frm_Corte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Cortes\Frm_Historial.resx">
+      <DependentUpon>Frm_Historial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_DashBoards\Frm_Buscar.resx">
+      <DependentUpon>Frm_Buscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_DashBoards\Frm_DashboardProducto.resx">
+      <DependentUpon>Frm_DashboardProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_DashBoards\Frm_Dashboard.resx">
+      <DependentUpon>Frm_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_DashBoards\Frm_ReporteCorte.resx">
+      <DependentUpon>Frm_ReporteCorte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_DashBoards\Frm_ReporteAnular.resx">
+      <DependentUpon>Frm_ReporteAnular.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_DashBoards\Frm_ReporteProducto.resx">
+      <DependentUpon>Frm_ReporteProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_DashBoards\Frm_ReporteVenta.resx">
+      <DependentUpon>Frm_ReporteVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Perfiles\Frm_Perfil.resx">
+      <DependentUpon>Frm_Perfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Personal\Frm_Personal.resx">
+      <DependentUpon>Frm_Personal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Principal\Frm_Inicio.resx">
+      <DependentUpon>Frm_Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_loggins\Frm_Loggin.resx">
+      <DependentUpon>Frm_Loggin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Productos\Frm_ActualizarStock.resx">
+      <DependentUpon>Frm_ActualizarStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Productos\Frm_Producto.resx">
+      <DependentUpon>Frm_Producto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Configuracion\Frm_Servicio.resx">
+      <DependentUpon>Frm_Servicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Usuarios\Frm_Usuario.resx">
+      <DependentUpon>Frm_Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Ventas\Frm_Buscar.resx">
+      <DependentUpon>Frm_Buscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Ventas\Frm_Comprobantes.resx">
+      <DependentUpon>Frm_Comprobantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Ventas\Frm_Venta.resx">
+      <DependentUpon>Frm_Venta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Ventas\Frm_Visor_PDF.resx">
+      <DependentUpon>Frm_Visor_PDF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reporte\DashBoardProducto.rdlc" />
+    <EmbeddedResource Include="Reporte\ReporteAnularStock.rdlc" />
+    <EmbeddedResource Include="Reporte\ReporteAnularCorte.rdlc" />
+    <EmbeddedResource Include="Reporte\ReporteAnularVenta.rdlc" />
+    <EmbeddedResource Include="Reporte\ReporteProductoStock.rdlc" />
+    <EmbeddedResource Include="Reporte\ReporteProducto.rdlc" />
+    <EmbeddedResource Include="Reporte\ReporteXDia.rdlc" />
+    <EmbeddedResource Include="Reporte\ReporteVentaXDia.rdlc" />
+    <EmbeddedResource Include="Reporte\ReporteVenta.rdlc" />
+    <EmbeddedResource Include="Reporte\DashBoard.rdlc" />
+    <EmbeddedResource Include="Reporte\Reporte.rdlc" />
+    <EmbeddedResource Include="Reporte\VaucherVenta.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte\VaucherCorte.rdlc" />
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\DataSources\Barberia.Entidad.Cls_Ent_Producto.datasource" />
+    <None Include="Properties\DataSources\Barberia.Entidad.T_ANULAR_CORTE.datasource" />
+    <None Include="Properties\DataSources\Barberia.Entidad.T_ANULAR_VENTA.datasource" />
+    <None Include="Properties\DataSources\Barberia.Entidad.T_M_VENTA.datasource" />
+    <None Include="Properties\DataSources\Barberia.Entidad.T_STOCK_ANULAR.datasource" />
+    <None Include="Properties\DataSources\Barberia.Entidad.T_VOUCHER_CORTE.datasource" />
+    <None Include="Properties\DataSources\Barberia.Entidad.T_VOUCHER_VENTA.datasource" />
+    <None Include="Properties\DataSources\Barberia.Entidad.V_CORTE.datasource" />
+    <None Include="Properties\DataSources\Barberia.Entidad.V_VENTA.datasource" />
+    <None Include="Properties\DataSources\Barberia.Presentacion.Frm_Cortes.Data_Corte.datasource" />
+    <None Include="Properties\DataSources\Barberia.Presentacion.Frm_Cortes.Data_Corte2.datasource" />
+    <None Include="Properties\DataSources\Barberia.Presentacion.Frm_Cortes.Frm_Buscar.datasource" />
+    <None Include="Properties\DataSources\Barberia.Presentacion.Frm_Cortes.Frm_Corte.datasource" />
+    <None Include="Properties\DataSources\Barberia.Presentacion.Frm_Cortes.Frm_Historial.datasource" />
+    <None Include="Properties\DataSources\Barberia.Presentacion.Frm_DashBoards.DataTotal.datasource" />
+    <None Include="Properties\DataSources\Barberia.Presentacion.Frm_DashBoards.DataTotal2.datasource" />
+    <None Include="Properties\DataSources\Barberia.Presentacion.Frm_Ventas.Data_Venta.datasource" />
+    <None Include="Properties\DataSources\Barberia.Presentacion.Frm_Ventas.Data_Venta2.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BackupDB\" />
+    <Folder Include="Imagenes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Barberia.Entidad\Barberia.Entidad.csproj">
+      <Project>{364b1601-efa2-4c30-afe8-32f98aa8d493}</Project>
+      <Name>Barberia.Entidad</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Barberia.Negocio\Barberia.Negocio.csproj">
+      <Project>{843b29df-da25-466b-bf54-02ff94bb3df2}</Project>
+      <Name>Barberia.Negocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pdf4.png" />
+    <None Include="icono\boton\lupa.png" />
+    <None Include="icono\boton\xml.png" />
+    <Content Include="logo_original_32x32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

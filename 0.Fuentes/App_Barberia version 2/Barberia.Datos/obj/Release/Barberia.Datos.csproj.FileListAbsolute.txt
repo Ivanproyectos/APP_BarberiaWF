@@ -1,0 +1,70 @@
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Datos\bin\Release\Barberia.Datos.dll.config
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Datos\bin\Release\Barberia.Datos.dll
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Datos\bin\Release\Barberia.Datos.pdb
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Datos\bin\Release\Barberia.Entidad.dll
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Datos\bin\Release\EntityFramework.dll
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Datos\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Datos\bin\Release\Barberia.Entidad.pdb
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Datos\bin\Release\EntityFramework.xml
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Datos\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Datos\obj\Release\Barberia.Datos.csprojAssemblyReference.cache
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Datos\obj\Release\Barberia.Datos.csproj.CoreCompileInputs.cache
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Datos\obj\Release\Barberia.Datos.csproj.CopyComplete
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Datos\obj\Release\Barberia.Datos.dll
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Datos\obj\Release\Barberia.Datos.pdb
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Datos\bin\Release\Barberia.Datos.dll.config
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Datos\bin\Release\Barberia.Datos.dll
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Datos\bin\Release\Barberia.Datos.pdb
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Datos\bin\Release\Barberia.Entidad.dll
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Datos\bin\Release\EntityFramework.dll
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Datos\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Datos\bin\Release\Barberia.Entidad.pdb
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Datos\bin\Release\EntityFramework.xml
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Datos\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Datos\obj\Release\Barberia.Datos.csproj.CoreCompileInputs.cache
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Datos\obj\Release\Barberia.Datos.csproj.CopyComplete
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Datos\obj\Release\Barberia.Datos.dll
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Datos\obj\Release\Barberia.Datos.pdb
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Datos\obj\Release\Barberia.Datos.csprojAssemblyReference.cache
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Datos\bin\Release\Barberia.Datos.dll.config
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Datos\bin\Release\Barberia.Datos.dll
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Datos\bin\Release\Barberia.Datos.pdb
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Datos\bin\Release\Barberia.Entidad.dll
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Datos\bin\Release\EntityFramework.dll
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Datos\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Datos\bin\Release\Barberia.Entidad.pdb
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Datos\bin\Release\EntityFramework.xml
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Datos\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Datos\obj\Release\Barberia.Datos.csprojAssemblyReference.cache
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Datos\obj\Release\Barberia.Datos.csproj.CoreCompileInputs.cache
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Datos\obj\Release\Barberia.Datos.csproj.CopyComplete
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Datos\obj\Release\Barberia.Datos.dll
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Datos\obj\Release\Barberia.Datos.pdb
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Datos\bin\Release\Barberia.Datos.dll.config
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Datos\bin\Release\Barberia.Datos.dll
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Datos\bin\Release\Barberia.Datos.pdb
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Datos\bin\Release\Barberia.Entidad.dll
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Datos\bin\Release\EntityFramework.dll
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Datos\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Datos\bin\Release\Barberia.Entidad.pdb
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Datos\bin\Release\EntityFramework.xml
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Datos\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Datos\obj\Release\Barberia.Datos.csprojAssemblyReference.cache
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Datos\obj\Release\Barberia.Datos.csproj.CoreCompileInputs.cache
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Datos\obj\Release\Barberia.Datos.csproj.CopyComplete
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Datos\obj\Release\Barberia.Datos.dll
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Datos\obj\Release\Barberia.Datos.pdb
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Datos\bin\Release\Barberia.Datos.dll.config
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Datos\bin\Release\Barberia.Datos.dll
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Datos\bin\Release\Barberia.Datos.pdb
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Datos\bin\Release\Barberia.Entidad.dll
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Datos\bin\Release\EntityFramework.dll
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Datos\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Datos\bin\Release\Barberia.Entidad.pdb
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Datos\bin\Release\EntityFramework.xml
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Datos\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Datos\obj\Release\Barberia.Datos.csprojAssemblyReference.cache
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Datos\obj\Release\Barberia.Datos.csproj.CoreCompileInputs.cache
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Datos\obj\Release\Barberia.Datos.csproj.CopyComplete
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Datos\obj\Release\Barberia.Datos.dll
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Datos\obj\Release\Barberia.Datos.pdb

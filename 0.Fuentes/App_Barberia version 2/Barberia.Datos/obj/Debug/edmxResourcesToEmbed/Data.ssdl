@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_BARBERIAModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="T_C_PERFIL">
+    <Key>
+      <PropertyRef Name="ID_CONFIG" />
+    </Key>
+    <Property Name="ID_CONFIG" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_PERFIL" Type="int" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="USU_INGRESO" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="FEC_INGRESO" Type="datetime" />
+    <Property Name="USU_MODIFICA" Type="varchar" MaxLength="20" />
+    <Property Name="FEC_MODIFICA" Type="datetime" />
+  </EntityType>
+  <EntityType Name="T_D_CARGO">
+    <Key>
+      <PropertyRef Name="ID_CARGO" />
+    </Key>
+    <Property Name="ID_CARGO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESC_CARGO" Type="varchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="T_D_CORTE">
+    <Key>
+      <PropertyRef Name="ID_DETALLE" />
+    </Key>
+    <Property Name="ID_DETALLE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_CORTE" Type="int" Nullable="false" />
+    <Property Name="CANTIDAD" Type="int" Nullable="false" />
+    <Property Name="PRECIO" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="DESCUENTO" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="EFECTIVO" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="VUELTO" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="TOTAL" Type="numeric" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="T_M_CLIENTES">
+    <Key>
+      <PropertyRef Name="ID_CLIENTE" />
+    </Key>
+    <Property Name="ID_CLIENTE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMBRES" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="APELLIDOS" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="DNI" Type="varchar" MaxLength="11" />
+    <Property Name="CORREO" Type="varchar" MaxLength="100" />
+    <Property Name="TELEFONO" Type="varchar" MaxLength="11" />
+  </EntityType>
+  <EntityType Name="T_M_CORTE">
+    <Key>
+      <PropertyRef Name="ID_CORTE" />
+    </Key>
+    <Property Name="ID_CORTE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_CLIENTE" Type="int" Nullable="false" />
+    <Property Name="ID_PERSONAL" Type="int" Nullable="false" />
+    <Property Name="DETALLE_CORTE" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="FEC_CORTE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="T_M_PERFIL">
+    <Key>
+      <PropertyRef Name="ID_PERFIL" />
+    </Key>
+    <Property Name="ID_PERFIL" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="USU_INGRESO" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="FEC_INGRESO" Type="datetime" />
+    <Property Name="USU_MODIFICA" Type="varchar" MaxLength="20" />
+    <Property Name="FEC_MODIFICA" Type="datetime" />
+  </EntityType>
+  <EntityType Name="T_M_PERSONAL">
+    <Key>
+      <PropertyRef Name="ID_PERSONAL" />
+    </Key>
+    <Property Name="ID_PERSONAL" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMBRES" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="APELLIDOS" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="DNI" Type="varchar" MaxLength="11" />
+    <Property Name="CORREO" Type="varchar" MaxLength="100" />
+    <Property Name="TELEFONO" Type="varchar" MaxLength="11" />
+    <Property Name="ID_CARGO" Type="int" />
+  </EntityType>
+  <EntityType Name="T_M_PRODUCTO">
+    <Key>
+      <PropertyRef Name="ID_PRODUCTO" />
+    </Key>
+    <Property Name="ID_PRODUCTO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PRODUCTO" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="STOCK" Type="int" Nullable="false" />
+    <Property Name="PRECIO_COMPRA" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="PRECIO_VENTA" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="FEC_COMPRA" Type="datetime" />
+    <Property Name="FOTO" Type="image" />
+  </EntityType>
+  <EntityType Name="T_M_USUARIO">
+    <Key>
+      <PropertyRef Name="ID_USUARIO" />
+    </Key>
+    <Property Name="ID_USUARIO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="USUARIO" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="CLAVE" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="ID_PERFIL" Type="int" Nullable="false" />
+    <Property Name="USU_INGRESO" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="FEC_INGRESO" Type="datetime" />
+    <Property Name="USU_MODIFICA" Type="varchar" MaxLength="20" />
+    <Property Name="FEC_MODIFICA" Type="datetime" />
+  </EntityType>
+  <EntityType Name="T_M_VENTA">
+    <Key>
+      <PropertyRef Name="ID_VENTA" />
+    </Key>
+    <Property Name="ID_VENTA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_PERSONAL" Type="int" Nullable="false" />
+    <Property Name="ID_PRODUCTO" Type="int" Nullable="false" />
+    <Property Name="CANTIDAD" Type="int" Nullable="false" />
+    <Property Name="PRECIO" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="DESCUENTO" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="TOTAL" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="FEC_VENTA" Type="datetime" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_CORTE' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="V_CORTE">
+    <Key>
+      <PropertyRef Name="ID_DETALLE" />
+      <PropertyRef Name="ID_CORTE" />
+      <PropertyRef Name="PERSONAL" />
+      <PropertyRef Name="CLIENTE" />
+      <PropertyRef Name="DETALLE_CORTE" />
+      <PropertyRef Name="CANTIDAD" />
+    </Key>
+    <Property Name="ID_DETALLE" Type="int" Nullable="false" />
+    <Property Name="ID_CORTE" Type="int" Nullable="false" />
+    <Property Name="PERSONAL" Type="varchar" MaxLength="701" Nullable="false" />
+    <Property Name="CLIENTE" Type="varchar" MaxLength="701" Nullable="false" />
+    <Property Name="DETALLE_CORTE" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="CANTIDAD" Type="int" Nullable="false" />
+    <Property Name="PRECIO" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="DESCUENTO" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="TOTAL" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="EFECTIVO" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="VUELTO" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="FEC_CORTE" Type="datetime" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_PERSONAL' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="V_PERSONAL">
+    <Key>
+      <PropertyRef Name="ID_PERSONAL" />
+      <PropertyRef Name="NOMBRES" />
+      <PropertyRef Name="APELLIDOS" />
+    </Key>
+    <Property Name="ID_PERSONAL" Type="int" Nullable="false" />
+    <Property Name="NOMBRES" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="APELLIDOS" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="DNI" Type="varchar" MaxLength="11" />
+    <Property Name="CORREO" Type="varchar" MaxLength="100" />
+    <Property Name="TELEFONO" Type="varchar" MaxLength="11" />
+    <Property Name="DESC_CARGO" Type="varchar" MaxLength="300" />
+  </EntityType>
+  <Association Name="FK_ID_CARGO">
+    <End Role="T_D_CARGO" Type="Self.T_D_CARGO" Multiplicity="0..1" />
+    <End Role="T_M_PERSONAL" Type="Self.T_M_PERSONAL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_D_CARGO">
+        <PropertyRef Name="ID_CARGO" />
+      </Principal>
+      <Dependent Role="T_M_PERSONAL">
+        <PropertyRef Name="ID_CARGO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ID_CORTE">
+    <End Role="T_M_CORTE" Type="Self.T_M_CORTE" Multiplicity="1" />
+    <End Role="T_D_CORTE" Type="Self.T_D_CORTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_M_CORTE">
+        <PropertyRef Name="ID_CORTE" />
+      </Principal>
+      <Dependent Role="T_D_CORTE">
+        <PropertyRef Name="ID_CORTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ID_PERFIL">
+    <End Role="T_M_PERFIL" Type="Self.T_M_PERFIL" Multiplicity="0..1" />
+    <End Role="T_C_PERFIL" Type="Self.T_C_PERFIL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_M_PERFIL">
+        <PropertyRef Name="ID_PERFIL" />
+      </Principal>
+      <Dependent Role="T_C_PERFIL">
+        <PropertyRef Name="ID_PERFIL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ID_PERSONAL">
+    <End Role="T_M_PERSONAL" Type="Self.T_M_PERSONAL" Multiplicity="1" />
+    <End Role="T_M_VENTA" Type="Self.T_M_VENTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_M_PERSONAL">
+        <PropertyRef Name="ID_PERSONAL" />
+      </Principal>
+      <Dependent Role="T_M_VENTA">
+        <PropertyRef Name="ID_PERSONAL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ID_PRODUCTO">
+    <End Role="T_M_PRODUCTO" Type="Self.T_M_PRODUCTO" Multiplicity="1" />
+    <End Role="T_M_VENTA" Type="Self.T_M_VENTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_M_PRODUCTO">
+        <PropertyRef Name="ID_PRODUCTO" />
+      </Principal>
+      <Dependent Role="T_M_VENTA">
+        <PropertyRef Name="ID_PRODUCTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USUARIO_ID_PERFIL">
+    <End Role="T_M_PERFIL" Type="Self.T_M_PERFIL" Multiplicity="1" />
+    <End Role="T_M_USUARIO" Type="Self.T_M_USUARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_M_PERFIL">
+        <PropertyRef Name="ID_PERFIL" />
+      </Principal>
+      <Dependent Role="T_M_USUARIO">
+        <PropertyRef Name="ID_PERFIL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DB_BARBERIAModel1StoreContainer">
+    <EntitySet Name="T_C_PERFIL" EntityType="Self.T_C_PERFIL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_D_CARGO" EntityType="Self.T_D_CARGO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_D_CORTE" EntityType="Self.T_D_CORTE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_M_CLIENTES" EntityType="Self.T_M_CLIENTES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_M_CORTE" EntityType="Self.T_M_CORTE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_M_PERFIL" EntityType="Self.T_M_PERFIL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_M_PERSONAL" EntityType="Self.T_M_PERSONAL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_M_PRODUCTO" EntityType="Self.T_M_PRODUCTO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_M_USUARIO" EntityType="Self.T_M_USUARIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_M_VENTA" EntityType="Self.T_M_VENTA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="V_CORTE" EntityType="Self.V_CORTE" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [V_CORTE].[ID_DETALLE] AS [ID_DETALLE], 
+    [V_CORTE].[ID_CORTE] AS [ID_CORTE], 
+    [V_CORTE].[PERSONAL] AS [PERSONAL], 
+    [V_CORTE].[CLIENTE] AS [CLIENTE], 
+    [V_CORTE].[DETALLE_CORTE] AS [DETALLE_CORTE], 
+    [V_CORTE].[CANTIDAD] AS [CANTIDAD], 
+    [V_CORTE].[PRECIO] AS [PRECIO], 
+    [V_CORTE].[DESCUENTO] AS [DESCUENTO], 
+    [V_CORTE].[TOTAL] AS [TOTAL], 
+    [V_CORTE].[EFECTIVO] AS [EFECTIVO], 
+    [V_CORTE].[VUELTO] AS [VUELTO], 
+    [V_CORTE].[FEC_CORTE] AS [FEC_CORTE]
+    FROM [dbo].[V_CORTE] AS [V_CORTE]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="V_PERSONAL" EntityType="Self.V_PERSONAL" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [V_PERSONAL].[ID_PERSONAL] AS [ID_PERSONAL], 
+    [V_PERSONAL].[NOMBRES] AS [NOMBRES], 
+    [V_PERSONAL].[APELLIDOS] AS [APELLIDOS], 
+    [V_PERSONAL].[DNI] AS [DNI], 
+    [V_PERSONAL].[CORREO] AS [CORREO], 
+    [V_PERSONAL].[TELEFONO] AS [TELEFONO], 
+    [V_PERSONAL].[DESC_CARGO] AS [DESC_CARGO]
+    FROM [dbo].[V_PERSONAL] AS [V_PERSONAL]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_ID_CARGO" Association="Self.FK_ID_CARGO">
+      <End Role="T_D_CARGO" EntitySet="T_D_CARGO" />
+      <End Role="T_M_PERSONAL" EntitySet="T_M_PERSONAL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ID_CORTE" Association="Self.FK_ID_CORTE">
+      <End Role="T_M_CORTE" EntitySet="T_M_CORTE" />
+      <End Role="T_D_CORTE" EntitySet="T_D_CORTE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ID_PERFIL" Association="Self.FK_ID_PERFIL">
+      <End Role="T_M_PERFIL" EntitySet="T_M_PERFIL" />
+      <End Role="T_C_PERFIL" EntitySet="T_C_PERFIL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ID_PERSONAL" Association="Self.FK_ID_PERSONAL">
+      <End Role="T_M_PERSONAL" EntitySet="T_M_PERSONAL" />
+      <End Role="T_M_VENTA" EntitySet="T_M_VENTA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ID_PRODUCTO" Association="Self.FK_ID_PRODUCTO">
+      <End Role="T_M_PRODUCTO" EntitySet="T_M_PRODUCTO" />
+      <End Role="T_M_VENTA" EntitySet="T_M_VENTA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USUARIO_ID_PERFIL" Association="Self.FK_USUARIO_ID_PERFIL">
+      <End Role="T_M_PERFIL" EntitySet="T_M_PERFIL" />
+      <End Role="T_M_USUARIO" EntitySet="T_M_USUARIO" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

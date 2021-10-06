@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{843B29DF-DA25-466B-BF54-02FF94BB3DF2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Barberia.Negocio</RootNamespace>
+    <AssemblyName>Barberia.Negocio</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cls_Rule_M_Categoria.cs" />
+    <Compile Include="Cls_Rule_D_Parametro.cs" />
+    <Compile Include="Cls_Rule_Parametro.cs" />
+    <Compile Include="Cls_Rule_Anular_Corte.cs" />
+    <Compile Include="Cls_Rule_Anular_Stock.cs" />
+    <Compile Include="Cls_Rule_Anular_Venta.cs" />
+    <Compile Include="Cls_Rule_Backup.cs" />
+    <Compile Include="Cls_Rule_Act_Stock.cs" />
+    <Compile Include="Cls_Rule_Almacen.cs" />
+    <Compile Include="Cls_Rule_Clase.cs" />
+    <Compile Include="Cls_Rule_Correlativo_Producto.cs" />
+    <Compile Include="Cls_Rule_Correlativo_OrdenCom.cs" />
+    <Compile Include="Cls_Rule_Correlativo_Cotiza.cs" />
+    <Compile Include="Cls_Rule_D_OrdenCompra.cs" />
+    <Compile Include="Cls_Rule_D_Cotizacion.cs" />
+    <Compile Include="Cls_Rule_M_OrdenCompra.cs" />
+    <Compile Include="Cls_Rule_M_Cotizacion.cs" />
+    <Compile Include="Cls_Rule_Voucher.cs" />
+    <Compile Include="Cls_Rule_DocumentoVenta.cs" />
+    <Compile Include="Cls_Rule_V_M_OrdenCompra.cs" />
+    <Compile Include="Cls_Rule_V_M_Parametro.cs" />
+    <Compile Include="Cls_Rule_V_OrdenCompra.cs" />
+    <Compile Include="Cls_Rule_V_Empresa.cs" />
+    <Compile Include="Cls_Rule_Empresa.cs" />
+    <Compile Include="Cls_Rule_C_Anular.cs" />
+    <Compile Include="Cls_Rule_V_Cliente.cs" />
+    <Compile Include="Cls_Rule_Tipo_Doc.cs" />
+    <Compile Include="Cls_Rule_Tipo_Per.cs" />
+    <Compile Include="Cls_Rule_Distrito.cs" />
+    <Compile Include="Cls_Rule_Provincia.cs" />
+    <Compile Include="Cls_Rule_D_Venta.cs" />
+    <Compile Include="Cls_Rule_Boleta.cs" />
+    <Compile Include="Cls_Rule_Factura.cs" />
+    <Compile Include="Cls_Rule_UndMedida.cs" />
+    <Compile Include="Cls_Rule_Modelo.cs" />
+    <Compile Include="Cls_Rule_Marca.cs" />
+    <Compile Include="Cls_Rule_Servicio.cs" />
+    <Compile Include="Cls_Rule_Cargo.cs" />
+    <Compile Include="Cls_Rule_Venta.cs" />
+    <Compile Include="Cls_Rule_Producto.cs" />
+    <Compile Include="Cls_Rule_C_Perfil.cs" />
+    <Compile Include="Cls_Rule_M_Perfil.cs" />
+    <Compile Include="Cls_Rule_Usuario.cs" />
+    <Compile Include="Cls_Rule_Corte.cs" />
+    <Compile Include="Cls_Rule_M_Corte.cs" />
+    <Compile Include="Cls_Rule_D_Corte.cs" />
+    <Compile Include="Cls_Rule_Departamento.cs" />
+    <Compile Include="Cls_Rule_V_M_Cotizacion.cs" />
+    <Compile Include="Cls_Rule_V_M_Corte.cs" />
+    <Compile Include="Cls_Rule_V_M_Producto.cs" />
+    <Compile Include="Cls_Rule_V_M_Venta.cs" />
+    <Compile Include="Cls_Rule_Forma_Pago.cs" />
+    <Compile Include="Cls_Rule_V_Cotizacion.cs" />
+    <Compile Include="Cls_Rule_V_Venta.cs" />
+    <Compile Include="Cls_Rule_V_Corte.cs" />
+    <Compile Include="Cls_Rule_V_Personal.cs" />
+    <Compile Include="Cls_Rule_Personal.cs" />
+    <Compile Include="Cls_Rule_Clientes.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Barberia.Datos\Barberia.Datos.csproj">
+      <Project>{ae48e116-8e29-473a-833a-e9e58f3009de}</Project>
+      <Name>Barberia.Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Barberia.Entidad\Barberia.Entidad.csproj">
+      <Project>{364b1601-efa2-4c30-afe8-32f98aa8d493}</Project>
+      <Name>Barberia.Entidad</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

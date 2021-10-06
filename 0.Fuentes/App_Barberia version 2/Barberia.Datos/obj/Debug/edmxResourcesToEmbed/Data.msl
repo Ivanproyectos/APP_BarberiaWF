@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_BARBERIAModel1StoreContainer" CdmEntityContainer="DB_BARBERIAEntities2">
+    <EntitySetMapping Name="T_C_PERFIL">
+      <EntityTypeMapping TypeName="DB_BARBERIAModel1.T_C_PERFIL">
+        <MappingFragment StoreEntitySet="T_C_PERFIL">
+          <ScalarProperty Name="ID_CONFIG" ColumnName="ID_CONFIG" />
+          <ScalarProperty Name="ID_PERFIL" ColumnName="ID_PERFIL" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="USU_INGRESO" ColumnName="USU_INGRESO" />
+          <ScalarProperty Name="FEC_INGRESO" ColumnName="FEC_INGRESO" />
+          <ScalarProperty Name="USU_MODIFICA" ColumnName="USU_MODIFICA" />
+          <ScalarProperty Name="FEC_MODIFICA" ColumnName="FEC_MODIFICA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_D_CARGO">
+      <EntityTypeMapping TypeName="DB_BARBERIAModel1.T_D_CARGO">
+        <MappingFragment StoreEntitySet="T_D_CARGO">
+          <ScalarProperty Name="ID_CARGO" ColumnName="ID_CARGO" />
+          <ScalarProperty Name="DESC_CARGO" ColumnName="DESC_CARGO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_D_CORTE">
+      <EntityTypeMapping TypeName="DB_BARBERIAModel1.T_D_CORTE">
+        <MappingFragment StoreEntitySet="T_D_CORTE">
+          <ScalarProperty Name="ID_DETALLE" ColumnName="ID_DETALLE" />
+          <ScalarProperty Name="ID_CORTE" ColumnName="ID_CORTE" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="PRECIO" ColumnName="PRECIO" />
+          <ScalarProperty Name="DESCUENTO" ColumnName="DESCUENTO" />
+          <ScalarProperty Name="EFECTIVO" ColumnName="EFECTIVO" />
+          <ScalarProperty Name="VUELTO" ColumnName="VUELTO" />
+          <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_M_CLIENTES">
+      <EntityTypeMapping TypeName="DB_BARBERIAModel1.T_M_CLIENTES">
+        <MappingFragment StoreEntitySet="T_M_CLIENTES">
+          <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+          <ScalarProperty Name="NOMBRES" ColumnName="NOMBRES" />
+          <ScalarProperty Name="APELLIDOS" ColumnName="APELLIDOS" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="CORREO" ColumnName="CORREO" />
+          <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_M_CORTE">
+      <EntityTypeMapping TypeName="DB_BARBERIAModel1.T_M_CORTE">
+        <MappingFragment StoreEntitySet="T_M_CORTE">
+          <ScalarProperty Name="ID_CORTE" ColumnName="ID_CORTE" />
+          <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+          <ScalarProperty Name="ID_PERSONAL" ColumnName="ID_PERSONAL" />
+          <ScalarProperty Name="DETALLE_CORTE" ColumnName="DETALLE_CORTE" />
+          <ScalarProperty Name="FEC_CORTE" ColumnName="FEC_CORTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_M_PERFIL">
+      <EntityTypeMapping TypeName="DB_BARBERIAModel1.T_M_PERFIL">
+        <MappingFragment StoreEntitySet="T_M_PERFIL">
+          <ScalarProperty Name="ID_PERFIL" ColumnName="ID_PERFIL" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="USU_INGRESO" ColumnName="USU_INGRESO" />
+          <ScalarProperty Name="FEC_INGRESO" ColumnName="FEC_INGRESO" />
+          <ScalarProperty Name="USU_MODIFICA" ColumnName="USU_MODIFICA" />
+          <ScalarProperty Name="FEC_MODIFICA" ColumnName="FEC_MODIFICA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_M_PERSONAL">
+      <EntityTypeMapping TypeName="DB_BARBERIAModel1.T_M_PERSONAL">
+        <MappingFragment StoreEntitySet="T_M_PERSONAL">
+          <ScalarProperty Name="ID_PERSONAL" ColumnName="ID_PERSONAL" />
+          <ScalarProperty Name="NOMBRES" ColumnName="NOMBRES" />
+          <ScalarProperty Name="APELLIDOS" ColumnName="APELLIDOS" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="CORREO" ColumnName="CORREO" />
+          <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+          <ScalarProperty Name="ID_CARGO" ColumnName="ID_CARGO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_M_PRODUCTO">
+      <EntityTypeMapping TypeName="DB_BARBERIAModel1.T_M_PRODUCTO">
+        <MappingFragment StoreEntitySet="T_M_PRODUCTO">
+          <ScalarProperty Name="FOTO" ColumnName="FOTO" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="PRODUCTO" ColumnName="PRODUCTO" />
+          <ScalarProperty Name="STOCK" ColumnName="STOCK" />
+          <ScalarProperty Name="PRECIO_COMPRA" ColumnName="PRECIO_COMPRA" />
+          <ScalarProperty Name="PRECIO_VENTA" ColumnName="PRECIO_VENTA" />
+          <ScalarProperty Name="FEC_COMPRA" ColumnName="FEC_COMPRA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_M_USUARIO">
+      <EntityTypeMapping TypeName="DB_BARBERIAModel1.T_M_USUARIO">
+        <MappingFragment StoreEntitySet="T_M_USUARIO">
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+          <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+          <ScalarProperty Name="CLAVE" ColumnName="CLAVE" />
+          <ScalarProperty Name="ID_PERFIL" ColumnName="ID_PERFIL" />
+          <ScalarProperty Name="USU_INGRESO" ColumnName="USU_INGRESO" />
+          <ScalarProperty Name="FEC_INGRESO" ColumnName="FEC_INGRESO" />
+          <ScalarProperty Name="USU_MODIFICA" ColumnName="USU_MODIFICA" />
+          <ScalarProperty Name="FEC_MODIFICA" ColumnName="FEC_MODIFICA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_M_VENTA">
+      <EntityTypeMapping TypeName="DB_BARBERIAModel1.T_M_VENTA">
+        <MappingFragment StoreEntitySet="T_M_VENTA">
+          <ScalarProperty Name="ID_VENTA" ColumnName="ID_VENTA" />
+          <ScalarProperty Name="ID_PERSONAL" ColumnName="ID_PERSONAL" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="PRECIO" ColumnName="PRECIO" />
+          <ScalarProperty Name="DESCUENTO" ColumnName="DESCUENTO" />
+          <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+          <ScalarProperty Name="FEC_VENTA" ColumnName="FEC_VENTA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="V_CORTE">
+      <EntityTypeMapping TypeName="DB_BARBERIAModel1.V_CORTE">
+        <MappingFragment StoreEntitySet="V_CORTE">
+          <ScalarProperty Name="ID_DETALLE" ColumnName="ID_DETALLE" />
+          <ScalarProperty Name="ID_CORTE" ColumnName="ID_CORTE" />
+          <ScalarProperty Name="PERSONAL" ColumnName="PERSONAL" />
+          <ScalarProperty Name="CLIENTE" ColumnName="CLIENTE" />
+          <ScalarProperty Name="DETALLE_CORTE" ColumnName="DETALLE_CORTE" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="PRECIO" ColumnName="PRECIO" />
+          <ScalarProperty Name="DESCUENTO" ColumnName="DESCUENTO" />
+          <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+          <ScalarProperty Name="EFECTIVO" ColumnName="EFECTIVO" />
+          <ScalarProperty Name="VUELTO" ColumnName="VUELTO" />
+          <ScalarProperty Name="FEC_CORTE" ColumnName="FEC_CORTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="V_PERSONAL">
+      <EntityTypeMapping TypeName="DB_BARBERIAModel1.V_PERSONAL">
+        <MappingFragment StoreEntitySet="V_PERSONAL">
+          <ScalarProperty Name="ID_PERSONAL" ColumnName="ID_PERSONAL" />
+          <ScalarProperty Name="NOMBRES" ColumnName="NOMBRES" />
+          <ScalarProperty Name="APELLIDOS" ColumnName="APELLIDOS" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="CORREO" ColumnName="CORREO" />
+          <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+          <ScalarProperty Name="DESC_CARGO" ColumnName="DESC_CARGO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

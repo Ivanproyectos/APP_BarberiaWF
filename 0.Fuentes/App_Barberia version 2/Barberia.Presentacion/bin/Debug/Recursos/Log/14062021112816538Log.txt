@@ -1,0 +1,12 @@
+System.InvalidOperationException: The property 'ID_CLIENTE' is part of the object's key information and cannot be modified. 
+   en System.Data.Entity.Core.Objects.EntityEntry.DetectChangesInProperty(Int32 ordinal, Boolean detectOnlyComplexProperties, Boolean detectOnly)
+   en System.Data.Entity.Core.Objects.EntityEntry.DetectChangesInProperties(Boolean detectOnlyComplexProperties)
+   en System.Data.Entity.Core.Objects.ObjectStateManager.DetectChangesInScalarAndComplexProperties(IList`1 entries)
+   en System.Data.Entity.Core.Objects.ObjectStateManager.DetectChanges()
+   en System.Data.Entity.Core.Objects.ObjectContext.DetectChanges()
+   en System.Data.Entity.Internal.InternalContext.DetectChanges(Boolean force)
+   en System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   en System.Data.Entity.Internal.Linq.InternalSet`1.Attach(Object entity)
+   en System.Data.Entity.DbSet`1.Attach(TEntity entity)
+   en Barberia.Datos.Repository`1.Update(T entity) en C:\Users\yordan\Desktop\App_Barberia\Barberia.Datos\Repository.cs:línea 96
+   en Barberia.Datos.Cls_Dat_Clientes.Actualizar_Clientes(T_M_CLIENTES entidad, Cls_Ent_Auditoria& auditoria) en C:\Users\yordan\Desktop\App_Barberia\Barberia.Datos\Cls_Dat_Clientes.cs:línea 124

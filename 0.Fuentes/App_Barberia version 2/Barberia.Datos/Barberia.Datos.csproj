@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AE48E116-8E29-473A-833A-E9E58F3009DE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Barberia.Datos</RootNamespace>
+    <AssemblyName>Barberia.Datos</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cls_Data_Backup.cs" />
+    <Compile Include="Cls_Dat_M_Categoria.cs" />
+    <Compile Include="Cls_Dat_D_Parametro.cs" />
+    <Compile Include="Cls_Dat_M_Parametro.cs" />
+    <Compile Include="Cls_Dat_Anular_Stock.cs" />
+    <Compile Include="Cls_Dat_Anular_Corte.cs" />
+    <Compile Include="Cls_Dat_Anular_Venta.cs" />
+    <Compile Include="Cls_Dat_Act_Stock.cs" />
+    <Compile Include="Cls_Dat_Almacen.cs" />
+    <Compile Include="Cls_Dat_Clase.cs" />
+    <Compile Include="Cls_Dat_Correlativo_Producto.cs" />
+    <Compile Include="Cls_Dat_Correlativo_OrdenCompra.cs" />
+    <Compile Include="Cls_Dat_Correlativo_Cotizacion.cs" />
+    <Compile Include="Cls_Dat_D_OrdenCompra.cs" />
+    <Compile Include="Cls_Dat_OrdenCompra.cs" />
+    <Compile Include="Cls_Dat_Cotizacion.cs" />
+    <Compile Include="Cls_Dat_D_Cotizacion.cs" />
+    <Compile Include="Cls_Dat_Voucher.cs" />
+    <Compile Include="Cls_Dat_DocumentoVenta.cs" />
+    <Compile Include="Cls_Dat_V_M_Parametro.cs" />
+    <Compile Include="Cls_Dat_V_M_OrdenCompra.cs" />
+    <Compile Include="Cls_Dat_V_OrdenCompra.cs" />
+    <Compile Include="Cls_Dat_V_Empresa.cs" />
+    <Compile Include="Cls_Dat_Empresa.cs" />
+    <Compile Include="Cls_Dat_C_Anular.cs" />
+    <Compile Include="Cls_Dat_V_Cliente.cs" />
+    <Compile Include="Cls_Dat_Tipo_Doc.cs" />
+    <Compile Include="Cls_Dat_Tipo_Per.cs" />
+    <Compile Include="Cls_Dat_Distrito.cs" />
+    <Compile Include="Cls_Dat_Provincia.cs" />
+    <Compile Include="Cls_Dat_D_Venta.cs" />
+    <Compile Include="Cls_Dat_UndMedida.cs" />
+    <Compile Include="Cls_Dat_Modelo.cs" />
+    <Compile Include="Cls_Dat_Marca.cs" />
+    <Compile Include="Cls_Dat_Servicio.cs" />
+    <Compile Include="Cls_Dat_Cargo.cs" />
+    <Compile Include="Cls_Dat_Venta.cs" />
+    <Compile Include="Cls_Dat_Producto.cs" />
+    <Compile Include="Cls_Dat_C_Perfil.cs" />
+    <Compile Include="Cls_Dat_M_Perfil.cs" />
+    <Compile Include="Cls_Dat_Usuario.cs" />
+    <Compile Include="Cls_Dat_M_Corte.cs" />
+    <Compile Include="Cls_Dat_D_Corte.cs" />
+    <Compile Include="Cls_Dat_Boleta.cs" />
+    <Compile Include="Cls_Dat_Factura.cs" />
+    <Compile Include="Cls_Dat_V_M_Cotizacion.cs" />
+    <Compile Include="Cls_Dat_V_M_Corte.cs" />
+    <Compile Include="Cls_Dat_V_M_Producto.cs" />
+    <Compile Include="Cls_Dat_V_M_Venta.cs" />
+    <Compile Include="Cls_Dat_Forma_Pago.cs" />
+    <Compile Include="Cls_Dat_V_Cotizacion.cs" />
+    <Compile Include="Cls_Dat_V_Venta.cs" />
+    <Compile Include="Cls_Dat_V_Corte.cs" />
+    <Compile Include="Cls_Dat_Departamento.cs" />
+    <Compile Include="Cls_V_Personal.cs" />
+    <Compile Include="Cls_Dat_Personal.cs" />
+    <Compile Include="Cls_Dat_Clientes.cs" />
+    <Compile Include="DataModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="IRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="DataModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DataModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DataModel.edmx.diagram">
+      <DependentUpon>DataModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Barberia.Entidad\Barberia.Entidad.csproj">
+      <Project>{364b1601-efa2-4c30-afe8-32f98aa8d493}</Project>
+      <Name>Barberia.Entidad</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DataModel.edmx</DependentUpon>
+      <LastGenOutput>DataModel.Context.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>

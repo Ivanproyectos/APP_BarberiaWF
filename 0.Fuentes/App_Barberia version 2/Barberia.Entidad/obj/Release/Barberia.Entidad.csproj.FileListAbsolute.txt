@@ -1,0 +1,29 @@
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Entidad\bin\Release\Barberia.Entidad.dll
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Entidad\bin\Release\Barberia.Entidad.pdb
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Entidad\obj\Release\Barberia.Entidad.csproj.CoreCompileInputs.cache
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Entidad\obj\Release\Barberia.Entidad.dll
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Entidad\obj\Release\Barberia.Entidad.pdb
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Entidad\bin\Release\Barberia.Entidad.dll
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Entidad\bin\Release\Barberia.Entidad.pdb
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Entidad\obj\Release\Barberia.Entidad.csproj.CoreCompileInputs.cache
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Entidad\obj\Release\Barberia.Entidad.dll
+C:\Users\yordan\Desktop\App_Barberia - copia (2)\Barberia.Entidad\obj\Release\Barberia.Entidad.pdb
+C:\Users\yordan\Desktop\App_Barberia\Barberia.Entidad\obj\Release\Barberia.Entidad.csprojAssemblyReference.cache
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Entidad\bin\Release\Barberia.Entidad.dll
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Entidad\bin\Release\Barberia.Entidad.pdb
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Entidad\obj\Release\Barberia.Entidad.csprojAssemblyReference.cache
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Entidad\obj\Release\Barberia.Entidad.csproj.CoreCompileInputs.cache
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Entidad\obj\Release\Barberia.Entidad.dll
+C:\Users\yordan\Desktop\manual-pase-script\App_Barberia version 1\Barberia.Entidad\obj\Release\Barberia.Entidad.pdb
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Entidad\bin\Release\Barberia.Entidad.dll
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Entidad\bin\Release\Barberia.Entidad.pdb
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Entidad\obj\Release\Barberia.Entidad.csproj.CoreCompileInputs.cache
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Entidad\obj\Release\Barberia.Entidad.dll
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Entidad\obj\Release\Barberia.Entidad.pdb
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Entidad\bin\Release\Barberia.Entidad.dll
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Entidad\bin\Release\Barberia.Entidad.pdb
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Entidad\obj\Release\Barberia.Entidad.csprojAssemblyReference.cache
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Entidad\obj\Release\Barberia.Entidad.csproj.CoreCompileInputs.cache
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Entidad\obj\Release\Barberia.Entidad.dll
+C:\Users\yordan\Desktop\App_Barberia version 2 - copia (6)\Barberia.Entidad\obj\Release\Barberia.Entidad.pdb
+C:\Users\yordan\Desktop\App_Barberia version 2\Barberia.Entidad\obj\Release\Barberia.Entidad.csprojAssemblyReference.cache
