@@ -6,6 +6,9 @@ using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Data.Common;
+using System.Data.SqlClient;
+
 
 namespace Barberia.Datos
 {
@@ -30,7 +33,14 @@ namespace Barberia.Datos
             //}
             return _context.Set<T>().ToList();
         }
-        
+
+
+
+
+ 
+
+
+
 
         public T Get(object key) =>
         _context.Set<T>().Find(key);
