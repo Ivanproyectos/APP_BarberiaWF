@@ -780,3 +780,7 @@ C:\Users\Inmortal\Documents\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version
 C:\Users\Inmortal\Documents\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Presentacion\obj\Debug\Barberia.Presentacion.csproj.CopyComplete
 C:\Users\Inmortal\Documents\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Presentacion\obj\Debug\Barberia.Presentacion.exe
 C:\Users\Inmortal\Documents\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Presentacion\obj\Debug\Barberia.Presentacion.pdb
+C:\Users\ivans\OneDrive\Documentos\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Presentacion\obj\Debug\Barberia.Presentacion.csprojAssemblyReference.cache
+C:\Users\ivans\OneDrive\Documentos\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Presentacion\obj\Debug\Barberia.Presentacion.csproj.ResolveComReference.cache
+C:\Users\ivans\OneDrive\Documentos\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Presentacion\obj\Debug\Barberia.Presentacion.exe
+C:\Users\ivans\OneDrive\Documentos\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Presentacion\obj\Debug\Barberia.Presentacion.pdb

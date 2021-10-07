@@ -152,3 +152,17 @@ C:\Users\Inmortal\Documents\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version
 C:\Users\Inmortal\Documents\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Datos\obj\Debug\Barberia.Datos.csproj.CopyComplete
 C:\Users\Inmortal\Documents\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Datos\obj\Debug\Barberia.Datos.dll
 C:\Users\Inmortal\Documents\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Datos\obj\Debug\Barberia.Datos.pdb
+C:\Users\ivans\OneDrive\Documentos\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Datos\bin\Debug\Barberia.Datos.dll.config
+C:\Users\ivans\OneDrive\Documentos\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Datos\bin\Debug\Barberia.Datos.dll
+C:\Users\ivans\OneDrive\Documentos\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Datos\bin\Debug\Barberia.Datos.pdb
+C:\Users\ivans\OneDrive\Documentos\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Datos\bin\Debug\Barberia.Entidad.dll
+C:\Users\ivans\OneDrive\Documentos\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Datos\bin\Debug\EntityFramework.dll
+C:\Users\ivans\OneDrive\Documentos\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Datos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ivans\OneDrive\Documentos\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Datos\bin\Debug\Barberia.Entidad.pdb
+C:\Users\ivans\OneDrive\Documentos\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Datos\bin\Debug\EntityFramework.xml
+C:\Users\ivans\OneDrive\Documentos\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Datos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ivans\OneDrive\Documentos\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Datos\obj\Debug\Barberia.Datos.csprojAssemblyReference.cache
+C:\Users\ivans\OneDrive\Documentos\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Datos\obj\Debug\Barberia.Datos.csproj.CoreCompileInputs.cache
+C:\Users\ivans\OneDrive\Documentos\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Datos\obj\Debug\Barberia.Datos.csproj.CopyComplete
+C:\Users\ivans\OneDrive\Documentos\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Datos\obj\Debug\Barberia.Datos.dll
+C:\Users\ivans\OneDrive\Documentos\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Datos\obj\Debug\Barberia.Datos.pdb
