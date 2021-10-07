@@ -138,3 +138,17 @@ C:\Users\Inmortal\Desktop\sistema\App_Barberia version 2\Barberia.Datos\obj\Debu
 C:\Users\Inmortal\Desktop\sistema\App_Barberia version 2\Barberia.Datos\obj\Debug\Barberia.Datos.csproj.CopyComplete
 C:\Users\Inmortal\Desktop\sistema\App_Barberia version 2\Barberia.Datos\obj\Debug\Barberia.Datos.dll
 C:\Users\Inmortal\Desktop\sistema\App_Barberia version 2\Barberia.Datos\obj\Debug\Barberia.Datos.pdb
+C:\Users\Inmortal\Documents\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Datos\bin\Debug\Barberia.Datos.dll.config
+C:\Users\Inmortal\Documents\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Datos\bin\Debug\Barberia.Datos.dll
+C:\Users\Inmortal\Documents\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Datos\bin\Debug\Barberia.Datos.pdb
+C:\Users\Inmortal\Documents\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Datos\bin\Debug\Barberia.Entidad.dll
+C:\Users\Inmortal\Documents\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Datos\bin\Debug\EntityFramework.dll
+C:\Users\Inmortal\Documents\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Datos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Inmortal\Documents\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Datos\bin\Debug\Barberia.Entidad.pdb
+C:\Users\Inmortal\Documents\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Datos\bin\Debug\EntityFramework.xml
+C:\Users\Inmortal\Documents\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Datos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Inmortal\Documents\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Datos\obj\Debug\Barberia.Datos.csproj.AssemblyReference.cache
+C:\Users\Inmortal\Documents\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Datos\obj\Debug\Barberia.Datos.csproj.CoreCompileInputs.cache
+C:\Users\Inmortal\Documents\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Datos\obj\Debug\Barberia.Datos.csproj.CopyComplete
+C:\Users\Inmortal\Documents\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Datos\obj\Debug\Barberia.Datos.dll
+C:\Users\Inmortal\Documents\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Datos\obj\Debug\Barberia.Datos.pdb

@@ -138,3 +138,17 @@ C:\Users\Inmortal\Desktop\sistema\App_Barberia version 2\Barberia.Negocio\obj\De
 C:\Users\Inmortal\Desktop\sistema\App_Barberia version 2\Barberia.Negocio\obj\Debug\Barberia.Negocio.csproj.CopyComplete
 C:\Users\Inmortal\Desktop\sistema\App_Barberia version 2\Barberia.Negocio\obj\Debug\Barberia.Negocio.dll
 C:\Users\Inmortal\Desktop\sistema\App_Barberia version 2\Barberia.Negocio\obj\Debug\Barberia.Negocio.pdb
+C:\Users\Inmortal\Documents\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Negocio\bin\Debug\Barberia.Negocio.dll
+C:\Users\Inmortal\Documents\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Negocio\bin\Debug\Barberia.Negocio.pdb
+C:\Users\Inmortal\Documents\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Negocio\bin\Debug\Barberia.Datos.dll
+C:\Users\Inmortal\Documents\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Negocio\bin\Debug\Barberia.Entidad.dll
+C:\Users\Inmortal\Documents\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Negocio\bin\Debug\EntityFramework.dll
+C:\Users\Inmortal\Documents\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Negocio\bin\Debug\Barberia.Datos.pdb
+C:\Users\Inmortal\Documents\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Negocio\bin\Debug\Barberia.Datos.dll.config
+C:\Users\Inmortal\Documents\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Negocio\bin\Debug\Barberia.Entidad.pdb
+C:\Users\Inmortal\Documents\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Negocio\bin\Debug\EntityFramework.xml
+C:\Users\Inmortal\Documents\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Negocio\obj\Debug\Barberia.Negocio.csproj.AssemblyReference.cache
+C:\Users\Inmortal\Documents\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Negocio\obj\Debug\Barberia.Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Inmortal\Documents\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Negocio\obj\Debug\Barberia.Negocio.csproj.CopyComplete
+C:\Users\Inmortal\Documents\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Negocio\obj\Debug\Barberia.Negocio.dll
+C:\Users\Inmortal\Documents\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Negocio\obj\Debug\Barberia.Negocio.pdb
