@@ -8,7 +8,7 @@ namespace Barberia.Negocio
     public class Cls_Rule_Clientes
     {
         private Cls_Dat_Clientes ObjCliente = new Cls_Dat_Clientes();
-
+        private Cls_Dat_ClientePaginado ObjClientePag = new Cls_Dat_ClientePaginado();
         public List<T_M_CLIENTES> Listar_Clientes(int idEmpresa, ref Cls_Ent_Auditoria auditoria)
         {
             List<T_M_CLIENTES> lista = new List<T_M_CLIENTES>();
@@ -136,12 +136,12 @@ namespace Barberia.Negocio
         }
 
 
-        public List<Cls_Ent_V_Cliente> ListarPaginado_Cliente(string ORDEN_COLUMNA, string ORDEN, int FILAS, int PAGINA, string @WHERE, ref Cls_Ent_Auditoria auditoria)
+        public List<Cls_Ent_V_Cliente> ListarPaginado_Cliente(string ORDEN_COLUMNA, string ORDEN, int FILAS, int PAGINA, string @WHERE, ref Cls_Ent_Auditoria auditoria, string xd)
         {
             List<Cls_Ent_V_Cliente> lista = new List<Cls_Ent_V_Cliente>();
             try
             {
-                lista = ObjCliente.ListarPaginado_Cliente(ORDEN_COLUMNA,ORDEN, FILAS, PAGINA, WHERE,  ref auditoria);
+                lista = ObjClientePag.ListarPaginado_Cliente(ORDEN_COLUMNA,ORDEN, FILAS, PAGINA, WHERE,  ref auditoria, xd);
             }
             catch (Exception ex)
             {

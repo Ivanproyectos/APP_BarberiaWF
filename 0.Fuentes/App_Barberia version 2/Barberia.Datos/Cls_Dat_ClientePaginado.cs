@@ -11,7 +11,7 @@ namespace Barberia.Datos
     {
 
 
-        public List<Cls_Ent_V_Cliente> ListarPaginado_Cliente(string ORDEN_COLUMNA, string ORDEN, int FILAS, int PAGINA, string @WHERE, ref Cls_Ent_Auditoria auditoria)
+        public List<Cls_Ent_V_Cliente> ListarPaginado_Cliente(string ORDEN_COLUMNA, string ORDEN, int FILAS, int PAGINA, string @WHERE, ref Cls_Ent_Auditoria auditoria, string xd)
         {
             var TABLA = "";
             auditoria.Limpiar();
@@ -26,7 +26,7 @@ namespace Barberia.Datos
                 new SqlParameter("@PI_ORDEN", ORDEN),
                 new SqlParameter("@PI_WHERE", @WHERE),
                 new SqlParameter("@PI_TABLA", TABLA),
-                new SqlParameter("PO_CUENTA", SqlDbType.Int).Direction = System.Data.ParameterDirection.Output,
+                new SqlParameter("@PO_CUENTA", SqlDbType.Int).Direction = System.Data.ParameterDirection.Output,
                 //new SqlParameter("PO_MENSAJE", OracleDbType.Varchar2, ParameterDirection.Output) { Size = 200 },
                 null)
                 )
@@ -55,6 +55,7 @@ namespace Barberia.Datos
                     int pos_FEC_MODIFICA = dr.GetOrdinal("FEC_MODIFICA");
 
                     if (dr.HasRows)
+                    {
                         while (dr.Read())
                         {
                             Cls_Ent_V_Cliente entidad = new Cls_Ent_V_Cliente();
@@ -124,6 +125,10 @@ namespace Barberia.Datos
 
                             lista.Add(entidad);
                         }
+                    }
+                    dr.Close();
+                    int CUENTA = int.Parse(command.Parameters["PO_CUENTA"].Value.ToString());
+                    auditoria.OBJETO = CUENTA;
                 }
             }
             catch (Exception ex)
