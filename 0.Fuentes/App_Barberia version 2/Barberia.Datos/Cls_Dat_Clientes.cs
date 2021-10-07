@@ -251,12 +251,12 @@ namespace Barberia.Datos
 
 
 
-        public List<V_CLIENTE> ListarPaginado_Cliente(string ORDEN_COLUMNA, string ORDEN, int FILAS, int PAGINA, string @WHERE, ref Cls_Ent_Auditoria auditoria)
+        public List<Cls_Ent_V_Cliente> ListarPaginado_Cliente(string ORDEN_COLUMNA, string ORDEN, int FILAS, int PAGINA, string @WHERE, ref Cls_Ent_Auditoria auditoria)
         {
             var TABLA = ""; 
             auditoria.Limpiar();
             DbDataReader dr = null;
-            List<V_CLIENTE> lista = new List<V_CLIENTE>();
+            List<Cls_Ent_V_Cliente> lista = new List<Cls_Ent_V_Cliente>();
             try
             {
                 using (var command = _context.GetStoredProcedureCommand("USP_CLIENTE_PAGINADO",
@@ -297,7 +297,7 @@ namespace Barberia.Datos
                     if (dr.HasRows)
                         while (dr.Read())
                         {
-                            V_CLIENTE entidad = new V_CLIENTE();
+                            Cls_Ent_V_Cliente entidad = new Cls_Ent_V_Cliente();
 
                             if (dr.IsDBNull(pos_ID_CLIENTE)) entidad.ID_CLIENTE = 0;
                             else entidad.ID_CLIENTE = int.Parse(dr[pos_ID_CLIENTE].ToString());
@@ -353,14 +353,14 @@ namespace Barberia.Datos
                             if (dr.IsDBNull(pos_USU_CREACION)) entidad.USU_CREACION = "";
                             else entidad.USU_CREACION = dr[pos_USU_CREACION].ToString();
 
-                            if (dr.IsDBNull(pos_FEC_CREACION)) entidad.FEC_CREACION = null;
-                            else entidad.FEC_CREACION = (DateTime?)dr[pos_FEC_CREACION];
+                            if (dr.IsDBNull(pos_FEC_CREACION)) entidad.FEC_CREACION = "";
+                            else entidad.FEC_CREACION = dr[pos_FEC_CREACION].ToString();
 
                             if (dr.IsDBNull(pos_USU_MODIFICA)) entidad.USU_MODIFICA = "";
                             else entidad.USU_MODIFICA = dr[pos_USU_MODIFICA].ToString();
 
-                            if (dr.IsDBNull(pos_FEC_MODIFICA)) entidad.FEC_MODIFICA = null;
-                            else entidad.FEC_MODIFICA = (DateTime?)dr[pos_FEC_MODIFICA];
+                            if (dr.IsDBNull(pos_FEC_MODIFICA)) entidad.FEC_MODIFICA = "";
+                            else entidad.FEC_MODIFICA = dr[pos_FEC_MODIFICA].ToString();
 
                             lista.Add(entidad);
                         }

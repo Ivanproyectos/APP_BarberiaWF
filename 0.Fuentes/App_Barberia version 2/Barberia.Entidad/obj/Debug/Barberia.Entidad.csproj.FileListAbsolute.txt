@@ -50,3 +50,9 @@ C:\Users\Inmortal\Desktop\sistema\App_Barberia version 2\Barberia.Entidad\obj\De
 C:\Users\Inmortal\Desktop\sistema\App_Barberia version 2\Barberia.Entidad\obj\Debug\Barberia.Entidad.dll
 C:\Users\Inmortal\Desktop\sistema\App_Barberia version 2\Barberia.Entidad\obj\Debug\Barberia.Entidad.pdb
 C:\Users\Inmortal\Desktop\sistema\App_Barberia version 2\Barberia.Entidad\obj\Debug\Barberia.Entidad.csproj.AssemblyReference.cache
+C:\Users\Inmortal\Documents\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Entidad\bin\Debug\Barberia.Entidad.dll
+C:\Users\Inmortal\Documents\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Entidad\bin\Debug\Barberia.Entidad.pdb
+C:\Users\Inmortal\Documents\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Entidad\obj\Debug\Barberia.Entidad.csproj.AssemblyReference.cache
+C:\Users\Inmortal\Documents\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Entidad\obj\Debug\Barberia.Entidad.csproj.CoreCompileInputs.cache
+C:\Users\Inmortal\Documents\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Entidad\obj\Debug\Barberia.Entidad.dll
+C:\Users\Inmortal\Documents\GitHub\APP_BarberiaWF\0.Fuentes\App_Barberia version 2\Barberia.Entidad\obj\Debug\Barberia.Entidad.pdb

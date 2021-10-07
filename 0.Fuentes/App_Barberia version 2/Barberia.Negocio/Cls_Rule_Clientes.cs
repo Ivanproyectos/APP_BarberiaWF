@@ -136,9 +136,9 @@ namespace Barberia.Negocio
         }
 
 
-        public List<V_CLIENTE> ListarPaginado_Cliente(string ORDEN_COLUMNA, string ORDEN, int FILAS, int PAGINA, string @WHERE, ref Cls_Ent_Auditoria auditoria)
+        public List<Cls_Ent_V_Cliente> ListarPaginado_Cliente(string ORDEN_COLUMNA, string ORDEN, int FILAS, int PAGINA, string @WHERE, ref Cls_Ent_Auditoria auditoria)
         {
-            List<V_CLIENTE> lista = new List<V_CLIENTE>();
+            List<Cls_Ent_V_Cliente> lista = new List<Cls_Ent_V_Cliente>();
             try
             {
                 lista = ObjCliente.ListarPaginado_Cliente(ORDEN_COLUMNA,ORDEN, FILAS, PAGINA, WHERE,  ref auditoria);
