@@ -63,6 +63,7 @@ namespace Barberia.Datos
             return query.ToList();
         }
 
+
         public IEnumerable<T> FindCustom(IQueryable<T> query)
         {
             //var result = new PagedResult<T>
