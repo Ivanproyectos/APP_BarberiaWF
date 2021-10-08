@@ -26,10 +26,7 @@ namespace Barberia.Datos
                 new SqlParameter("@PI_ORDEN", ORDEN),
                 new SqlParameter("@PI_WHERE", @WHERE),
                 new SqlParameter("@PI_TABLA", TABLA),
-                new SqlParameter("PO_CUENTA", SqlDbType.Int).Direction = System.Data.ParameterDirection.Output,
-                //new SqlParameter("PO_MENSAJE", OracleDbType.Varchar2, ParameterDirection.Output) { Size = 200 },
-                null)
-                )
+                new SqlParameter("PO_CUENTA", SqlDbType.Int).Direction = System.Data.ParameterDirection.Output) )
 
                 {
 

@@ -72,7 +72,14 @@ namespace Barberia.Datos
 
 
 
-
+        public SqlParameter GetDefaultRefCursor()
+        {
+            return new SqlParameter()
+            {
+                SqlDbType = SqlDbType.Int,
+                Direction = System.Data.ParameterDirection.Output
+            };
+        }
 
 
         public virtual DbSet<T_ACTUALIZAR_STOCK> T_ACTUALIZAR_STOCK { get; set; }
