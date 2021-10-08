@@ -19,6 +19,8 @@ namespace Barberia.Datos
             List<Cls_Ent_V_Cliente> lista = new List<Cls_Ent_V_Cliente>();
             try
             {
+     
+
                 using (var command = _context.GetStoredProcedureCommand("USP_CLIENTE_PAGINADO",
                 new SqlParameter("@PI_PAGINA", PAGINA),
                 new SqlParameter("@PI_NROREGISTROS", FILAS),
@@ -26,8 +28,10 @@ namespace Barberia.Datos
                 new SqlParameter("@PI_ORDEN", ORDEN),
                 new SqlParameter("@PI_WHERE", @WHERE),
                 new SqlParameter("@PI_TABLA", TABLA),
-                new SqlParameter("PO_CUENTA", SqlDbType.Int).Direction = System.Data.ParameterDirection.Output) )
-
+                new SqlParameter  {
+                    ParameterName = "@PO_CUENTA",
+                    DbType = DbType.Int32,
+                    Direction = System.Data.ParameterDirection.Output }) )
                 {
 
                     dr = command.ExecuteReader();
