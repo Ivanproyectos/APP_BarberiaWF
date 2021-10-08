@@ -26,11 +26,13 @@ namespace Barberia.Datos
                 new SqlParameter("@PI_ORDEN", ORDEN),
                 new SqlParameter("@PI_WHERE", @WHERE),
                 new SqlParameter("@PI_TABLA", TABLA),
-                new SqlParameter("@PO_CUENTA", SqlDbType.Int).Direction = System.Data.ParameterDirection.Output,
+                new SqlParameter("PO_CUENTA", SqlDbType.Int).Direction = System.Data.ParameterDirection.Output,
                 //new SqlParameter("PO_MENSAJE", OracleDbType.Varchar2, ParameterDirection.Output) { Size = 200 },
                 null)
                 )
+
                 {
+
                     dr = command.ExecuteReader();
                     int pos_ID_CLIENTE = dr.GetOrdinal("ID_CLIENTE");
                     int pos_ID_EMPRESA = dr.GetOrdinal("ID_EMPRESA");
