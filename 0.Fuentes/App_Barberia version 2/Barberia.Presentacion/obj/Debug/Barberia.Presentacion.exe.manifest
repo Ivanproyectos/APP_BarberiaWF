@@ -55,26 +55,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Barberia.Datos.dll" size="422400">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Barberia.Datos.dll" size="424960">
       <assemblyIdentity name="Barberia.Datos" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>7Wt/sIWnhZfFBHDKo3lWIparGy7lU2JXN+UUGWAwApc=</dsig:DigestValue>
+        <dsig:DigestValue>Er2yrggN2RJnjxV1bivINTc+G83YAyAYS+D/PrdNbQE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Barberia.Entidad.dll" size="122880">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Barberia.Entidad.dll" size="124928">
       <assemblyIdentity name="Barberia.Entidad" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>nw9AlDxwktTMWydqL6LYw51ap0ZXwQAkjetQk3RoMls=</dsig:DigestValue>
+        <dsig:DigestValue>MdxEXrHj9X1sl+10I7hNgNy9GRzIe4DCV21JHHuI3R4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -86,7 +86,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>t+ZA1QJeBm3Lfz/3qCibgSwRvGxPFu0o+FPFvC6gJ4M=</dsig:DigestValue>
+        <dsig:DigestValue>fICE4GWo5+vum8W3PT4ieImKUdQOxMDn7rsuf7meYw4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
