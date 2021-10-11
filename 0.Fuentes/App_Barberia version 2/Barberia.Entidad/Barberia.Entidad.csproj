@@ -56,6 +56,9 @@
     <Compile Include="Cls_Ent_sistemas_Usuarios.cs" />
     <Compile Include="Cls_Ent_Usuario.cs" />
     <Compile Include="Cls_Ent_UsuarioWForm.cs" />
+    <Compile Include="Cls_Ent_V_Venta.cs" />
+    <Compile Include="Cls_Ent_V_Cotizacion.cs" />
+    <Compile Include="Cls_Ent_V_OrdenCompra.cs" />
     <Compile Include="Cls_Ent_V_Producto.cs" />
     <Compile Include="Cls_Ent_V_Cliente.cs" />
     <Compile Include="DataModel.cs">

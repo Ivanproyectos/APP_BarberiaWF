@@ -67,5 +67,19 @@ namespace Barberia.Negocio
             return lista;
         }
 
+        public List<Cls_Ent_V_Venta> ListarPaginado_Venta(string ORDEN_COLUMNA, string ORDEN, int FILAS, int PAGINA, string @WHERE, ref Cls_Ent_Auditoria auditoria)
+        {
+            List<Cls_Ent_V_Venta> lista = new List<Cls_Ent_V_Venta>();
+            try
+            {
+                lista = VistaVenta.ListarPaginado_Venta(ORDEN_COLUMNA, ORDEN, FILAS, PAGINA, WHERE, ref auditoria);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return lista;
+        }
+
     }
 }

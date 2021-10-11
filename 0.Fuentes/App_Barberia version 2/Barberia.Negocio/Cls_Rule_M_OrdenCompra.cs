@@ -94,6 +94,19 @@ namespace Barberia.Negocio
             return lista;
         }
 
+        public List<Cls_Ent_V_OrdenCompra> ListarPaginado_OrdenCompra(string ORDEN_COLUMNA, string ORDEN, int FILAS, int PAGINA, string @WHERE, ref Cls_Ent_Auditoria auditoria)
+        {
+            List<Cls_Ent_V_OrdenCompra> lista = new List<Cls_Ent_V_OrdenCompra>();
+            try
+            {
+                lista = Obj.ListarPaginado_OrdenCompra(ORDEN_COLUMNA, ORDEN, FILAS, PAGINA, WHERE, ref auditoria);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return lista;
+        }
 
     }
 }
