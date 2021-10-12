@@ -79,6 +79,20 @@ namespace Barberia.Negocio
             return exito;
         }
 
+        public bool Actualizar_D_Parametro(int idDetalleParametro, decimal valorDecimal, ref Cls_Ent_Auditoria auditoria)
+        {
+            bool exito = false;
+            try
+            {
+                exito = Obj.Actualizar_D_Parametro(idDetalleParametro, valorDecimal, ref auditoria);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return exito;
+        }
+
         public bool ActualizarHide_D_Parametro(T_D_PARAMETRO entidad, ref Cls_Ent_Auditoria auditoria)
         {
             bool exito = false;

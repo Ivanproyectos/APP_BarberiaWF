@@ -117,12 +117,7 @@ namespace Barberia.Datos
                     exito = true;
                 }
 
-                if (entidad.VALOR_S == null)
-                {
-                    lista.VALOR_D = entidad.VALOR_D;
-                    Update(lista, entidad.ID_PARAMETRO);
-                }
-                else if (exito)
+                if (exito)
                 {
                     //lista.COD_PARAMETRO = entidad.COD_PARAMETRO;
                     lista.DESC_PARAMETRO = entidad.DESC_PARAMETRO;
@@ -142,6 +137,28 @@ namespace Barberia.Datos
             }
             return exito;
         }
+
+        public bool Actualizar_Parametro(int idParametro, decimal valorDecimal,  ref Cls_Ent_Auditoria auditoria)
+        {
+            T_M_PARAMETRO lista = new T_M_PARAMETRO();
+            bool exito = true;
+            auditoria.Limpiar();
+            try
+            {
+
+                lista = Find(c => c.ID_PARAMETRO == idParametro);
+                lista.VALOR_D = valorDecimal;
+                Update(lista, idParametro);
+
+            }
+            catch (Exception ex)
+            {
+                exito = false;
+                auditoria.Error(ex);
+            }
+            return exito;
+        }
+
 
         public bool Eliminar_Parametro(T_M_PARAMETRO entidad, ref Cls_Ent_Auditoria auditoria)
         {

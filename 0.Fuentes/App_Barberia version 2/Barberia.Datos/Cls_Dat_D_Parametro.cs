@@ -195,6 +195,27 @@ namespace Barberia.Datos
             return exito;
         }
 
+        public bool Actualizar_D_Parametro(int idDetalleParametro, decimal valorDecimal, ref Cls_Ent_Auditoria auditoria)
+        {
+            T_D_PARAMETRO lista = new T_D_PARAMETRO();
+            bool exito = true;
+            auditoria.Limpiar();
+            try
+            {
+
+                lista = Find(c => c.ID_D_PARAMETRO == idDetalleParametro);
+                lista.VALOR_D = valorDecimal;
+                Update(lista, idDetalleParametro);
+
+            }
+            catch (Exception ex)
+            {
+                exito = false;
+                auditoria.Error(ex);
+            }
+            return exito;
+        }
+
         public bool ActualizarHide_D_Parametro(T_D_PARAMETRO entidad, ref Cls_Ent_Auditoria auditoria)
         {
             T_D_PARAMETRO lista = new T_D_PARAMETRO();
