@@ -117,11 +117,16 @@ namespace Barberia.Datos
                     exito = true;
                 }
 
-                if (exito)
+                if (entidad.VALOR_S == null)
                 {
-                    lista.COD_PARAMETRO = entidad.COD_PARAMETRO;
+                    lista.VALOR_D = entidad.VALOR_D;
+                    Update(lista, entidad.ID_PARAMETRO);
+                }
+                else if (exito)
+                {
+                    //lista.COD_PARAMETRO = entidad.COD_PARAMETRO;
                     lista.DESC_PARAMETRO = entidad.DESC_PARAMETRO;
-                    lista.TIPO_PARAMETRO = entidad.TIPO_PARAMETRO;
+                    //lista.TIPO_PARAMETRO = entidad.TIPO_PARAMETRO;
                     lista.VALOR_D = entidad.VALOR_D;
                     lista.VALOR_I = entidad.VALOR_I;
                     lista.VALOR_S = entidad.VALOR_S;
