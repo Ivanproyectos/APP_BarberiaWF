@@ -1029,10 +1029,11 @@
     <Key>
       <PropertyRef Name="ID_VENTA" />
       <PropertyRef Name="PRODUCTO" />
+      <PropertyRef Name="ID_EMPRESA" />
     </Key>
     <Property Name="ID_VENTA" Type="Int32" Nullable="false" />
     <Property Name="VOUCHER" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="PERSONAL" Type="String" MaxLength="1202" FixedLength="false" Unicode="false" />
+    <Property Name="PERSONAL" Type="String" MaxLength="602" FixedLength="false" Unicode="false" />
     <Property Name="CLIENTE" Type="String" MaxLength="1202" FixedLength="false" Unicode="false" />
     <Property Name="PRODUCTO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="CANTIDAD" Type="Int32" />
@@ -1048,6 +1049,7 @@
     <Property Name="FEC_VENTA" Type="DateTime" Precision="3" />
     <Property Name="ANIO" Type="Int32" />
     <Property Name="MES" Type="Int32" />
+    <Property Name="ID_EMPRESA" Type="Int32" Nullable="false" />
   </EntityType>
   <Association Name="FK_ID_PERFIL">
     <End Role="T_M_PERFIL" Type="Self.T_M_PERFIL" Multiplicity="0..1" />

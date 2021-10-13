@@ -1016,11 +1016,13 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
   <EntityType Name="V_VENTA">
     <Key>
       <PropertyRef Name="ID_VENTA" />
+      <PropertyRef Name="ID_EMPRESA" />
       <PropertyRef Name="PRODUCTO" />
     </Key>
     <Property Name="ID_VENTA" Type="int" Nullable="false" />
+    <Property Name="ID_EMPRESA" Type="int" Nullable="false" />
     <Property Name="VOUCHER" Type="varchar" MaxLength="20" />
-    <Property Name="PERSONAL" Type="varchar" MaxLength="1202" />
+    <Property Name="PERSONAL" Type="varchar" MaxLength="602" />
     <Property Name="CLIENTE" Type="varchar" MaxLength="1202" />
     <Property Name="PRODUCTO" Type="varchar" MaxLength="200" Nullable="false" />
     <Property Name="CANTIDAD" Type="int" />
@@ -1624,6 +1626,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
     <EntitySet Name="V_VENTA" EntityType="Self.V_VENTA" store:Type="Views" store:Schema="dbo">
       <DefiningQuery>SELECT 
     [V_VENTA].[ID_VENTA] AS [ID_VENTA], 
+    [V_VENTA].[ID_EMPRESA] AS [ID_EMPRESA], 
     [V_VENTA].[VOUCHER] AS [VOUCHER], 
     [V_VENTA].[PERSONAL] AS [PERSONAL], 
     [V_VENTA].[CLIENTE] AS [CLIENTE], 

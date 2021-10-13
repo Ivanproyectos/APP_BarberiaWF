@@ -15,6 +15,7 @@ namespace Barberia.Entidad
     public partial class V_VENTA
     {
         public int ID_VENTA { get; set; }
+        public int ID_EMPRESA { get; set; }
         public string VOUCHER { get; set; }
         public string PERSONAL { get; set; }
         public string CLIENTE { get; set; }

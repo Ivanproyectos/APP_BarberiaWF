@@ -1010,6 +1010,7 @@
     <EntitySetMapping Name="V_VENTA">
       <EntityTypeMapping TypeName="DB_BARBERIAModel.V_VENTA">
         <MappingFragment StoreEntitySet="V_VENTA">
+          <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
           <ScalarProperty Name="ID_VENTA" ColumnName="ID_VENTA" />
           <ScalarProperty Name="VOUCHER" ColumnName="VOUCHER" />
           <ScalarProperty Name="PERSONAL" ColumnName="PERSONAL" />
