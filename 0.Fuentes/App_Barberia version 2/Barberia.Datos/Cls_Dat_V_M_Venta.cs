@@ -108,90 +108,90 @@ namespace Barberia.Datos
             {
 
 
-                using (var command = _context.GetStoredProcedureCommand("USP_PRODUCTO_PAGINADO",
-                new SqlParameter("@PI_PAGINA", PAGINA),
-                new SqlParameter("@PI_NROREGISTROS", FILAS),
-                new SqlParameter("@PI_ORDEN_COLUMNA", ORDEN_COLUMNA),
-                new SqlParameter("@PI_ORDEN", ORDEN),
-                new SqlParameter("@PI_WHERE", @WHERE),
-                new SqlParameter("@PI_TABLA", TABLA),
-                new SqlParameter
-                {
-                    ParameterName = "@PO_CUENTA",
-                    DbType = DbType.Int32,
-                    Direction = System.Data.ParameterDirection.Output
-                }))
-                {
+                //using (var command = _context.GetStoredProcedureCommand("USP_PRODUCTO_PAGINADO",
+                //new SqlParameter("@PI_PAGINA", PAGINA),
+                //new SqlParameter("@PI_NROREGISTROS", FILAS),
+                //new SqlParameter("@PI_ORDEN_COLUMNA", ORDEN_COLUMNA),
+                //new SqlParameter("@PI_ORDEN", ORDEN),
+                //new SqlParameter("@PI_WHERE", @WHERE),
+                //new SqlParameter("@PI_TABLA", TABLA),
+                //new SqlParameter
+                //{
+                //    ParameterName = "@PO_CUENTA",
+                //    DbType = DbType.Int32,
+                //    Direction = System.Data.ParameterDirection.Output
+                //}))
+                //{
 
-                    dr = command.ExecuteReader();
-                    int pos_ID_EMPRESA = dr.GetOrdinal("ID_EMPRESA");
-                    int pos_ID_VENTA = dr.GetOrdinal("ID_VENTA");
-                    int pos_VOUCHER = dr.GetOrdinal("VOUCHER");
-                    int pos_CLIENTE = dr.GetOrdinal("CLIENTE");
-                    int pos_TOTAL_IMPORTE = dr.GetOrdinal("TOTAL_IMPORTE");
-                    int pos_IGV = dr.GetOrdinal("IGV");
-                    int pos_DESCT_TOTAL = dr.GetOrdinal("DESCT_TOTAL");
-                    int pos_TOTAL = dr.GetOrdinal("TOTAL");
-                    int pos_EFECTIVO = dr.GetOrdinal("EFECTIVO");
-                    int pos_VUELTO = dr.GetOrdinal("VUELTO");
-                    int pos_USUARIO = dr.GetOrdinal("USUARIO");
-                    int pos_FEC_VENTA = dr.GetOrdinal("FEC_VENTA");
-                    int pos_CODIGO_ARCHIVO = dr.GetOrdinal("CODIGO_ARCHIVO");
-                    int pos_EXTENSION_ARCHIVO = dr.GetOrdinal("EXTENSION_ARCHIVO");
+                //    dr = command.ExecuteReader();
+                //    int pos_ID_EMPRESA = dr.GetOrdinal("ID_EMPRESA");
+                //    int pos_ID_VENTA = dr.GetOrdinal("ID_VENTA");
+                //    int pos_VOUCHER = dr.GetOrdinal("VOUCHER");
+                //    int pos_CLIENTE = dr.GetOrdinal("CLIENTE");
+                //    int pos_TOTAL_IMPORTE = dr.GetOrdinal("TOTAL_IMPORTE");
+                //    int pos_IGV = dr.GetOrdinal("IGV");
+                //    int pos_DESCT_TOTAL = dr.GetOrdinal("DESCT_TOTAL");
+                //    int pos_TOTAL = dr.GetOrdinal("TOTAL");
+                //    int pos_EFECTIVO = dr.GetOrdinal("EFECTIVO");
+                //    int pos_VUELTO = dr.GetOrdinal("VUELTO");
+                //    int pos_USUARIO = dr.GetOrdinal("USUARIO");
+                //    int pos_FEC_VENTA = dr.GetOrdinal("FEC_VENTA");
+                //    int pos_CODIGO_ARCHIVO = dr.GetOrdinal("CODIGO_ARCHIVO");
+                //    int pos_EXTENSION_ARCHIVO = dr.GetOrdinal("EXTENSION_ARCHIVO");
 
-                    if (dr.HasRows)
-                    {
-                        while (dr.Read())
-                        {
-                            Cls_Ent_V_Venta entidad = new Cls_Ent_V_Venta();
+                //    if (dr.HasRows)
+                //    {
+                //        while (dr.Read())
+                //        {
+                //            Cls_Ent_V_Venta entidad = new Cls_Ent_V_Venta();
 
 
-                            if (dr.IsDBNull(pos_ID_EMPRESA)) entidad.ID_EMPRESA = 0;
-                            else entidad.ID_EMPRESA = int.Parse(dr[pos_ID_EMPRESA].ToString());
+                //            if (dr.IsDBNull(pos_ID_EMPRESA)) entidad.ID_EMPRESA = 0;
+                //            else entidad.ID_EMPRESA = int.Parse(dr[pos_ID_EMPRESA].ToString());
 
-                            if (dr.IsDBNull(pos_ID_VENTA)) entidad.ID_VENTA = 0;
-                            else entidad.ID_VENTA = int.Parse(dr[pos_ID_VENTA].ToString());
+                //            if (dr.IsDBNull(pos_ID_VENTA)) entidad.ID_VENTA = 0;
+                //            else entidad.ID_VENTA = int.Parse(dr[pos_ID_VENTA].ToString());
 
-                            if (dr.IsDBNull(pos_VOUCHER)) entidad.VOUCHER = "";
-                            else entidad.VOUCHER = dr[pos_VOUCHER].ToString();
+                //            if (dr.IsDBNull(pos_VOUCHER)) entidad.VOUCHER = "";
+                //            else entidad.VOUCHER = dr[pos_VOUCHER].ToString();
 
-                            if (dr.IsDBNull(pos_TOTAL_IMPORTE)) entidad.TOTAL_IMPORTE = 0;
-                            else entidad.TOTAL_IMPORTE = decimal.Parse(dr[pos_TOTAL_IMPORTE].ToString());
+                //            if (dr.IsDBNull(pos_TOTAL_IMPORTE)) entidad.TOTAL_IMPORTE = 0;
+                //            else entidad.TOTAL_IMPORTE = decimal.Parse(dr[pos_TOTAL_IMPORTE].ToString());
 
-                            if (dr.IsDBNull(pos_IGV)) entidad.IGV = 0;
-                            else entidad.IGV = decimal.Parse(dr[pos_IGV].ToString());
+                //            if (dr.IsDBNull(pos_IGV)) entidad.IGV = 0;
+                //            else entidad.IGV = decimal.Parse(dr[pos_IGV].ToString());
 
-                            if(dr.IsDBNull(pos_DESCT_TOTAL)) entidad.DESCT_TOTAL = 0;
-                            else entidad.DESCT_TOTAL = decimal.Parse(dr[pos_DESCT_TOTAL].ToString());
+                //            if(dr.IsDBNull(pos_DESCT_TOTAL)) entidad.DESCT_TOTAL = 0;
+                //            else entidad.DESCT_TOTAL = decimal.Parse(dr[pos_DESCT_TOTAL].ToString());
 
-                            if (dr.IsDBNull(pos_TOTAL)) entidad.TOTAL = 0;
-                            else entidad.TOTAL = decimal.Parse(dr[pos_TOTAL].ToString());
+                //            if (dr.IsDBNull(pos_TOTAL)) entidad.TOTAL = 0;
+                //            else entidad.TOTAL = decimal.Parse(dr[pos_TOTAL].ToString());
 
-                            if (dr.IsDBNull(pos_EFECTIVO)) entidad.EFECTIVO = 0;
-                            else entidad.EFECTIVO = decimal.Parse(dr[pos_EFECTIVO].ToString());
+                //            if (dr.IsDBNull(pos_EFECTIVO)) entidad.EFECTIVO = 0;
+                //            else entidad.EFECTIVO = decimal.Parse(dr[pos_EFECTIVO].ToString());
 
-                            if (dr.IsDBNull(pos_VUELTO)) entidad.VUELTO = 0;
-                            else entidad.VUELTO = decimal.Parse(dr[pos_VUELTO].ToString());
+                //            if (dr.IsDBNull(pos_VUELTO)) entidad.VUELTO = 0;
+                //            else entidad.VUELTO = decimal.Parse(dr[pos_VUELTO].ToString());
 
-                            if (dr.IsDBNull(pos_USUARIO)) entidad.USUARIO = "";
-                            else entidad.USUARIO = dr[pos_USUARIO].ToString();
+                //            if (dr.IsDBNull(pos_USUARIO)) entidad.USUARIO = "";
+                //            else entidad.USUARIO = dr[pos_USUARIO].ToString();
 
-                            if (dr.IsDBNull(pos_FEC_VENTA)) entidad.FEC_VENTA = "";
-                            else entidad.FEC_VENTA = dr[pos_FEC_VENTA].ToString();
+                //            if (dr.IsDBNull(pos_FEC_VENTA)) entidad.FEC_VENTA = "";
+                //            else entidad.FEC_VENTA = dr[pos_FEC_VENTA].ToString();
 
-                            if (dr.IsDBNull(pos_CODIGO_ARCHIVO)) entidad.CODIGO_ARCHIVO = "";
-                            else entidad.CODIGO_ARCHIVO = dr[pos_CODIGO_ARCHIVO].ToString();
+                //            if (dr.IsDBNull(pos_CODIGO_ARCHIVO)) entidad.CODIGO_ARCHIVO = "";
+                //            else entidad.CODIGO_ARCHIVO = dr[pos_CODIGO_ARCHIVO].ToString();
 
-                            if (dr.IsDBNull(pos_EXTENSION_ARCHIVO)) entidad.EXTENSION_ARCHIVO = "";
-                            else entidad.EXTENSION_ARCHIVO = dr[pos_EXTENSION_ARCHIVO].ToString();
+                //            if (dr.IsDBNull(pos_EXTENSION_ARCHIVO)) entidad.EXTENSION_ARCHIVO = "";
+                //            else entidad.EXTENSION_ARCHIVO = dr[pos_EXTENSION_ARCHIVO].ToString();
 
-                            lista.Add(entidad);
-                        }
-                    }
-                    dr.Close();
-                    int CUENTA = int.Parse(command.Parameters["PO_CUENTA"].Value.ToString());
-                    auditoria.OBJETO = CUENTA;
-                }
+                //            lista.Add(entidad);
+                //        }
+                //    }
+                //    dr.Close();
+                //    int CUENTA = int.Parse(command.Parameters["PO_CUENTA"].Value.ToString());
+                //    auditoria.OBJETO = CUENTA;
+                //}
             }
             catch (Exception ex)
             {

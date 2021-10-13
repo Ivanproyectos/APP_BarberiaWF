@@ -44,7 +44,6 @@ namespace Barberia.Datos
 
             try
             {
-                query = query.Where(c => c.ID_EMPRESA == entidad.ID_EMPRESA);
 
                 if (!string.IsNullOrEmpty(entidad.NUM_ORDEN_COMPRA))
                     query = query.Where(w => w.NUM_ORDEN_COMPRA.Contains(entidad.NUM_ORDEN_COMPRA));
@@ -79,7 +78,7 @@ namespace Barberia.Datos
                         }
                     }
                 }
-                lista = query.ToList();
+                lista = query.Where(c => c.ID_EMPRESA == entidad.ID_EMPRESA).ToList();
             }
             catch (Exception ex)
             {

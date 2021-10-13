@@ -352,109 +352,109 @@ namespace Barberia.Datos
             {
 
 
-                using (var command = _context.GetStoredProcedureCommand("USP_PRODUCTO_PAGINADO",
-                new SqlParameter("@PI_PAGINA", PAGINA),
-                new SqlParameter("@PI_NROREGISTROS", FILAS),
-                new SqlParameter("@PI_ORDEN_COLUMNA", ORDEN_COLUMNA),
-                new SqlParameter("@PI_ORDEN", ORDEN),
-                new SqlParameter("@PI_WHERE", @WHERE),
-                new SqlParameter("@PI_TABLA", TABLA),
-                new SqlParameter
-                {
-                    ParameterName = "@PO_CUENTA",
-                    DbType = DbType.Int32,
-                    Direction = System.Data.ParameterDirection.Output
-                }))
-                {
+                //using (var command = _context.GetStoredProcedureCommand("USP_PRODUCTO_PAGINADO",
+                //new SqlParameter("@PI_PAGINA", PAGINA),
+                //new SqlParameter("@PI_NROREGISTROS", FILAS),
+                //new SqlParameter("@PI_ORDEN_COLUMNA", ORDEN_COLUMNA),
+                //new SqlParameter("@PI_ORDEN", ORDEN),
+                //new SqlParameter("@PI_WHERE", @WHERE),
+                //new SqlParameter("@PI_TABLA", TABLA),
+                //new SqlParameter
+                //{
+                //    ParameterName = "@PO_CUENTA",
+                //    DbType = DbType.Int32,
+                //    Direction = System.Data.ParameterDirection.Output
+                //}))
+                //{
 
-                    dr = command.ExecuteReader(); 
-                    int pos_ID_EMPRESA = dr.GetOrdinal("ID_EMPRESA");
-                    int pos_DESC_CATEGORIA = dr.GetOrdinal("DESC_CATEGORIA");
-                    int pos_ID_CATEGORIA = dr.GetOrdinal("ID_CATEGORIA");
-                    int pos_ID_PRODUCTO = dr.GetOrdinal("ID_PRODUCTO");
-                    int pos_COD_PRODUCTO = dr.GetOrdinal("COD_PRODUCTO");
-                    int pos_DES_ALMACEN = dr.GetOrdinal("DES_ALMACEN");
-                    int pos_DES_CLASE = dr.GetOrdinal("DES_CLASE");
-                    int pos_PRODUCTO = dr.GetOrdinal("PRODUCTO");
-                    int pos_DES_UNIDAD_MEDIDA = dr.GetOrdinal("DES_UNIDAD_MEDIDA");
-                    int pos_DES_MODELO = dr.GetOrdinal("DES_MODELO");
-                    int pos_DES_MARCA = dr.GetOrdinal("DES_MARCA");
-                    int pos_STOCK = dr.GetOrdinal("STOCK");
-                    int pos_PRECIO_COMPRA = dr.GetOrdinal("PRECIO_COMPRA");
-                    int pos_PRECIO_VENTA = dr.GetOrdinal("PRECIO_VENTA");
-                    int pos_USU_CREACION = dr.GetOrdinal("USU_CREACION");
-                    int pos_FEC_CREACION = dr.GetOrdinal("FEC_CREACION");
-                    int pos_USU_MODIFICA = dr.GetOrdinal("USU_MODIFICA");
-                    int pos_FEC_MODIFICA = dr.GetOrdinal("FEC_MODIFICA");
+                //    dr = command.ExecuteReader(); 
+                //    int pos_ID_EMPRESA = dr.GetOrdinal("ID_EMPRESA");
+                //    int pos_DESC_CATEGORIA = dr.GetOrdinal("DESC_CATEGORIA");
+                //    int pos_ID_CATEGORIA = dr.GetOrdinal("ID_CATEGORIA");
+                //    int pos_ID_PRODUCTO = dr.GetOrdinal("ID_PRODUCTO");
+                //    int pos_COD_PRODUCTO = dr.GetOrdinal("COD_PRODUCTO");
+                //    int pos_DES_ALMACEN = dr.GetOrdinal("DES_ALMACEN");
+                //    int pos_DES_CLASE = dr.GetOrdinal("DES_CLASE");
+                //    int pos_PRODUCTO = dr.GetOrdinal("PRODUCTO");
+                //    int pos_DES_UNIDAD_MEDIDA = dr.GetOrdinal("DES_UNIDAD_MEDIDA");
+                //    int pos_DES_MODELO = dr.GetOrdinal("DES_MODELO");
+                //    int pos_DES_MARCA = dr.GetOrdinal("DES_MARCA");
+                //    int pos_STOCK = dr.GetOrdinal("STOCK");
+                //    int pos_PRECIO_COMPRA = dr.GetOrdinal("PRECIO_COMPRA");
+                //    int pos_PRECIO_VENTA = dr.GetOrdinal("PRECIO_VENTA");
+                //    int pos_USU_CREACION = dr.GetOrdinal("USU_CREACION");
+                //    int pos_FEC_CREACION = dr.GetOrdinal("FEC_CREACION");
+                //    int pos_USU_MODIFICA = dr.GetOrdinal("USU_MODIFICA");
+                //    int pos_FEC_MODIFICA = dr.GetOrdinal("FEC_MODIFICA");
 
-                    if (dr.HasRows)
-                    {
-                        while (dr.Read())
-                        {
-                            Cls_Ent_V_Producto entidad = new Cls_Ent_V_Producto();
+                //    if (dr.HasRows)
+                //    {
+                //        while (dr.Read())
+                //        {
+                //            Cls_Ent_V_Producto entidad = new Cls_Ent_V_Producto();
 
 
-                            if (dr.IsDBNull(pos_ID_EMPRESA)) entidad.ID_EMPRESA = 0;
-                            else entidad.ID_EMPRESA = int.Parse(dr[pos_ID_EMPRESA].ToString());
+                //            if (dr.IsDBNull(pos_ID_EMPRESA)) entidad.ID_EMPRESA = 0;
+                //            else entidad.ID_EMPRESA = int.Parse(dr[pos_ID_EMPRESA].ToString());
 
-                            if (dr.IsDBNull(pos_DESC_CATEGORIA)) entidad.DESC_CATEGORIA = "";
-                            else entidad.DESC_CATEGORIA = dr[pos_DESC_CATEGORIA].ToString();
+                //            if (dr.IsDBNull(pos_DESC_CATEGORIA)) entidad.DESC_CATEGORIA = "";
+                //            else entidad.DESC_CATEGORIA = dr[pos_DESC_CATEGORIA].ToString();
 
-                            if (dr.IsDBNull(pos_ID_CATEGORIA)) entidad.ID_CATEGORIA = 0;
-                            else entidad.ID_CATEGORIA = int.Parse(dr[pos_ID_CATEGORIA].ToString());
+                //            if (dr.IsDBNull(pos_ID_CATEGORIA)) entidad.ID_CATEGORIA = 0;
+                //            else entidad.ID_CATEGORIA = int.Parse(dr[pos_ID_CATEGORIA].ToString());
 
-                            if (dr.IsDBNull(pos_ID_PRODUCTO)) entidad.ID_PRODUCTO = 0;
-                            else entidad.ID_PRODUCTO = int.Parse(dr[pos_ID_PRODUCTO].ToString());
+                //            if (dr.IsDBNull(pos_ID_PRODUCTO)) entidad.ID_PRODUCTO = 0;
+                //            else entidad.ID_PRODUCTO = int.Parse(dr[pos_ID_PRODUCTO].ToString());
 
-                            if (dr.IsDBNull(pos_COD_PRODUCTO)) entidad.COD_PRODUCTO = "";
-                            else entidad.COD_PRODUCTO = dr[pos_COD_PRODUCTO].ToString();
+                //            if (dr.IsDBNull(pos_COD_PRODUCTO)) entidad.COD_PRODUCTO = "";
+                //            else entidad.COD_PRODUCTO = dr[pos_COD_PRODUCTO].ToString();
 
-                            if (dr.IsDBNull(pos_DES_ALMACEN)) entidad.DES_ALMACEN = "";
-                            else entidad.DES_ALMACEN = dr[pos_DES_ALMACEN].ToString();
+                //            if (dr.IsDBNull(pos_DES_ALMACEN)) entidad.DES_ALMACEN = "";
+                //            else entidad.DES_ALMACEN = dr[pos_DES_ALMACEN].ToString();
 
-                            if (dr.IsDBNull(pos_DES_CLASE)) entidad.DES_CLASE = "";
-                            else entidad.DES_CLASE = dr[pos_DES_CLASE].ToString();
+                //            if (dr.IsDBNull(pos_DES_CLASE)) entidad.DES_CLASE = "";
+                //            else entidad.DES_CLASE = dr[pos_DES_CLASE].ToString();
 
-                            if (dr.IsDBNull(pos_PRODUCTO)) entidad.PRODUCTO = "";
-                            else entidad.PRODUCTO = dr[pos_PRODUCTO].ToString();
+                //            if (dr.IsDBNull(pos_PRODUCTO)) entidad.PRODUCTO = "";
+                //            else entidad.PRODUCTO = dr[pos_PRODUCTO].ToString();
 
-                            if (dr.IsDBNull(pos_DES_UNIDAD_MEDIDA)) entidad.DES_UNIDAD_MEDIDA = "";
-                            else entidad.DES_UNIDAD_MEDIDA = dr[pos_DES_UNIDAD_MEDIDA].ToString();
+                //            if (dr.IsDBNull(pos_DES_UNIDAD_MEDIDA)) entidad.DES_UNIDAD_MEDIDA = "";
+                //            else entidad.DES_UNIDAD_MEDIDA = dr[pos_DES_UNIDAD_MEDIDA].ToString();
 
-                            if (dr.IsDBNull(pos_DES_MODELO)) entidad.DES_MODELO = "";
-                            else entidad.DES_MODELO = dr[pos_DES_MODELO].ToString();
+                //            if (dr.IsDBNull(pos_DES_MODELO)) entidad.DES_MODELO = "";
+                //            else entidad.DES_MODELO = dr[pos_DES_MODELO].ToString();
 
-                            if (dr.IsDBNull(pos_DES_MARCA)) entidad.DES_MARCA = "";
-                            else entidad.DES_MARCA = dr[pos_DES_MARCA].ToString();
+                //            if (dr.IsDBNull(pos_DES_MARCA)) entidad.DES_MARCA = "";
+                //            else entidad.DES_MARCA = dr[pos_DES_MARCA].ToString();
 
-                            if (dr.IsDBNull(pos_STOCK)) entidad.STOCK = 0;
-                            else entidad.STOCK = int.Parse(dr[pos_STOCK].ToString());
+                //            if (dr.IsDBNull(pos_STOCK)) entidad.STOCK = 0;
+                //            else entidad.STOCK = int.Parse(dr[pos_STOCK].ToString());
 
-                            if (dr.IsDBNull(pos_PRECIO_COMPRA)) entidad.PRECIO_COMPRA = 0;
-                            else entidad.PRECIO_COMPRA = int.Parse(dr[pos_PRECIO_COMPRA].ToString());
+                //            if (dr.IsDBNull(pos_PRECIO_COMPRA)) entidad.PRECIO_COMPRA = 0;
+                //            else entidad.PRECIO_COMPRA = int.Parse(dr[pos_PRECIO_COMPRA].ToString());
 
-                            if (dr.IsDBNull(pos_PRECIO_VENTA)) entidad.PRECIO_VENTA = 0;
-                            else entidad.PRECIO_VENTA = int.Parse(dr[pos_PRECIO_VENTA].ToString());
+                //            if (dr.IsDBNull(pos_PRECIO_VENTA)) entidad.PRECIO_VENTA = 0;
+                //            else entidad.PRECIO_VENTA = int.Parse(dr[pos_PRECIO_VENTA].ToString());
 
-                            if (dr.IsDBNull(pos_USU_CREACION)) entidad.USU_CREACION = "";
-                            else entidad.USU_CREACION = dr[pos_USU_CREACION].ToString();
+                //            if (dr.IsDBNull(pos_USU_CREACION)) entidad.USU_CREACION = "";
+                //            else entidad.USU_CREACION = dr[pos_USU_CREACION].ToString();
 
-                            if (dr.IsDBNull(pos_FEC_CREACION)) entidad.FEC_CREACION = "";
-                            else entidad.FEC_CREACION = dr[pos_FEC_CREACION].ToString();
+                //            if (dr.IsDBNull(pos_FEC_CREACION)) entidad.FEC_CREACION = "";
+                //            else entidad.FEC_CREACION = dr[pos_FEC_CREACION].ToString();
 
-                            if (dr.IsDBNull(pos_USU_MODIFICA)) entidad.USU_MODIFICA = "";
-                            else entidad.USU_MODIFICA = dr[pos_USU_MODIFICA].ToString();
+                //            if (dr.IsDBNull(pos_USU_MODIFICA)) entidad.USU_MODIFICA = "";
+                //            else entidad.USU_MODIFICA = dr[pos_USU_MODIFICA].ToString();
 
-                            if (dr.IsDBNull(pos_FEC_MODIFICA)) entidad.FEC_MODIFICA = "";
-                            else entidad.FEC_MODIFICA = dr[pos_FEC_MODIFICA].ToString();
+                //            if (dr.IsDBNull(pos_FEC_MODIFICA)) entidad.FEC_MODIFICA = "";
+                //            else entidad.FEC_MODIFICA = dr[pos_FEC_MODIFICA].ToString();
 
-                            lista.Add(entidad);
-                        }
-                    }
-                    dr.Close();
-                    int CUENTA = int.Parse(command.Parameters["PO_CUENTA"].Value.ToString());
-                    auditoria.OBJETO = CUENTA;
-                }
+                //            lista.Add(entidad);
+                //        }
+                //    }
+                //    dr.Close();
+                //    int CUENTA = int.Parse(command.Parameters["PO_CUENTA"].Value.ToString());
+                //    auditoria.OBJETO = CUENTA;
+                //}
             }
             catch (Exception ex)
             {

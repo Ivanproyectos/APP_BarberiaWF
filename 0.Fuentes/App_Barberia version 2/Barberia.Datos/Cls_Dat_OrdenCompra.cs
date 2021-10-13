@@ -173,97 +173,97 @@ namespace Barberia.Datos
             {
 
 
-                using (var command = _context.GetStoredProcedureCommand("USP_PRODUCTO_PAGINADO",
-                new SqlParameter("@PI_PAGINA", PAGINA),
-                new SqlParameter("@PI_NROREGISTROS", FILAS),
-                new SqlParameter("@PI_ORDEN_COLUMNA", ORDEN_COLUMNA),
-                new SqlParameter("@PI_ORDEN", ORDEN),
-                new SqlParameter("@PI_WHERE", @WHERE),
-                new SqlParameter("@PI_TABLA", TABLA),
-                new SqlParameter
-                {
-                    ParameterName = "@PO_CUENTA",
-                    DbType = DbType.Int32,
-                    Direction = System.Data.ParameterDirection.Output
-                }))
-                {
+                //using (var command = _context.GetStoredProcedureCommand("USP_PRODUCTO_PAGINADO",
+                //new SqlParameter("@PI_PAGINA", PAGINA),
+                //new SqlParameter("@PI_NROREGISTROS", FILAS),
+                //new SqlParameter("@PI_ORDEN_COLUMNA", ORDEN_COLUMNA),
+                //new SqlParameter("@PI_ORDEN", ORDEN),
+                //new SqlParameter("@PI_WHERE", @WHERE),
+                //new SqlParameter("@PI_TABLA", TABLA),
+                //new SqlParameter
+                //{
+                //    ParameterName = "@PO_CUENTA",
+                //    DbType = DbType.Int32,
+                //    Direction = System.Data.ParameterDirection.Output
+                //}))
+                //{
 
-                    dr = command.ExecuteReader();
-                    int pos_ID_ORDEN_COMPRA = dr.GetOrdinal("ID_ORDEN_COMPRA");
-                    int pos_ID_EMPRESA = dr.GetOrdinal("ID_EMPRESA");
-                    int pos_EMPRESA_EXTERNA = dr.GetOrdinal("EMPRESA_EXTERNA");
-                    int pos_NUM_COTIZACION_REF = dr.GetOrdinal("NUM_COTIZACION_REF");
-                    int pos_NUM_ORDEN_COMPRA = dr.GetOrdinal("NUM_ORDEN_COMPRA");
-                    int pos_FECHA = dr.GetOrdinal("FECHA");
-                    int pos_NOMBRES = dr.GetOrdinal("NOMBRES");
-                    int pos_ASUNTO = dr.GetOrdinal("ASUNTO");
-                    int pos_FORMA_PAGO = dr.GetOrdinal("FORMA_PAGO");
-                    int pos_GARANTIA = dr.GetOrdinal("GARANTIA");
-                    int pos_CANT_DIAS_VALIDES = dr.GetOrdinal("CANT_DIAS_VALIDES");
-                    int pos_USU_CREACION = dr.GetOrdinal("USU_CREACION");
-                    int pos_FEC_CREACION = dr.GetOrdinal("FEC_CREACION");
-                    int pos_USU_MODIFICA = dr.GetOrdinal("USU_MODIFICA");
-                    int pos_FEC_MODIFICA = dr.GetOrdinal("FEC_MODIFICA");
+                //    dr = command.ExecuteReader();
+                //    int pos_ID_ORDEN_COMPRA = dr.GetOrdinal("ID_ORDEN_COMPRA");
+                //    int pos_ID_EMPRESA = dr.GetOrdinal("ID_EMPRESA");
+                //    int pos_EMPRESA_EXTERNA = dr.GetOrdinal("EMPRESA_EXTERNA");
+                //    int pos_NUM_COTIZACION_REF = dr.GetOrdinal("NUM_COTIZACION_REF");
+                //    int pos_NUM_ORDEN_COMPRA = dr.GetOrdinal("NUM_ORDEN_COMPRA");
+                //    int pos_FECHA = dr.GetOrdinal("FECHA");
+                //    int pos_NOMBRES = dr.GetOrdinal("NOMBRES");
+                //    int pos_ASUNTO = dr.GetOrdinal("ASUNTO");
+                //    int pos_FORMA_PAGO = dr.GetOrdinal("FORMA_PAGO");
+                //    int pos_GARANTIA = dr.GetOrdinal("GARANTIA");
+                //    int pos_CANT_DIAS_VALIDES = dr.GetOrdinal("CANT_DIAS_VALIDES");
+                //    int pos_USU_CREACION = dr.GetOrdinal("USU_CREACION");
+                //    int pos_FEC_CREACION = dr.GetOrdinal("FEC_CREACION");
+                //    int pos_USU_MODIFICA = dr.GetOrdinal("USU_MODIFICA");
+                //    int pos_FEC_MODIFICA = dr.GetOrdinal("FEC_MODIFICA");
 
-                    if (dr.HasRows)
-                    {
-                        while (dr.Read())
-                        {
-                            Cls_Ent_V_OrdenCompra entidad = new Cls_Ent_V_OrdenCompra();
+                //    if (dr.HasRows)
+                //    {
+                //        while (dr.Read())
+                //        {
+                //            Cls_Ent_V_OrdenCompra entidad = new Cls_Ent_V_OrdenCompra();
 
 
-                            if (dr.IsDBNull(pos_ID_EMPRESA)) entidad.ID_EMPRESA = 0;
-                            else entidad.ID_EMPRESA = int.Parse(dr[pos_ID_EMPRESA].ToString());
+                //            if (dr.IsDBNull(pos_ID_EMPRESA)) entidad.ID_EMPRESA = 0;
+                //            else entidad.ID_EMPRESA = int.Parse(dr[pos_ID_EMPRESA].ToString());
 
-                            if (dr.IsDBNull(pos_ID_ORDEN_COMPRA)) entidad.ID_ORDEN_COMPRA = 0;
-                            else entidad.ID_ORDEN_COMPRA = int.Parse(dr[pos_ID_ORDEN_COMPRA].ToString());
+                //            if (dr.IsDBNull(pos_ID_ORDEN_COMPRA)) entidad.ID_ORDEN_COMPRA = 0;
+                //            else entidad.ID_ORDEN_COMPRA = int.Parse(dr[pos_ID_ORDEN_COMPRA].ToString());
 
-                            if (dr.IsDBNull(pos_EMPRESA_EXTERNA)) entidad.EMPRESA_EXTERNA = "";
-                            else entidad.EMPRESA_EXTERNA = dr[pos_EMPRESA_EXTERNA].ToString();
+                //            if (dr.IsDBNull(pos_EMPRESA_EXTERNA)) entidad.EMPRESA_EXTERNA = "";
+                //            else entidad.EMPRESA_EXTERNA = dr[pos_EMPRESA_EXTERNA].ToString();
 
-                            if (dr.IsDBNull(pos_NUM_COTIZACION_REF)) entidad.NUM_COTIZACION_REF = "";
-                            else entidad.NUM_COTIZACION_REF = dr[pos_NUM_COTIZACION_REF].ToString();
+                //            if (dr.IsDBNull(pos_NUM_COTIZACION_REF)) entidad.NUM_COTIZACION_REF = "";
+                //            else entidad.NUM_COTIZACION_REF = dr[pos_NUM_COTIZACION_REF].ToString();
 
-                            if (dr.IsDBNull(pos_NUM_ORDEN_COMPRA)) entidad.NUM_ORDEN_COMPRA = "";
-                            else entidad.NUM_ORDEN_COMPRA = dr[pos_NUM_ORDEN_COMPRA].ToString();
+                //            if (dr.IsDBNull(pos_NUM_ORDEN_COMPRA)) entidad.NUM_ORDEN_COMPRA = "";
+                //            else entidad.NUM_ORDEN_COMPRA = dr[pos_NUM_ORDEN_COMPRA].ToString();
 
-                            if (dr.IsDBNull(pos_FECHA)) entidad.FECHA = "";
-                            else entidad.FECHA = dr[pos_FECHA].ToString();
+                //            if (dr.IsDBNull(pos_FECHA)) entidad.FECHA = "";
+                //            else entidad.FECHA = dr[pos_FECHA].ToString();
 
-                            if (dr.IsDBNull(pos_NOMBRES)) entidad.NOMBRES = "";
-                            else entidad.NOMBRES = dr[pos_NOMBRES].ToString();
+                //            if (dr.IsDBNull(pos_NOMBRES)) entidad.NOMBRES = "";
+                //            else entidad.NOMBRES = dr[pos_NOMBRES].ToString();
 
-                            if (dr.IsDBNull(pos_ASUNTO)) entidad.ASUNTO = "";
-                            else entidad.ASUNTO = dr[pos_ASUNTO].ToString();
+                //            if (dr.IsDBNull(pos_ASUNTO)) entidad.ASUNTO = "";
+                //            else entidad.ASUNTO = dr[pos_ASUNTO].ToString();
 
-                            if (dr.IsDBNull(pos_FORMA_PAGO)) entidad.FORMA_PAGO = "";
-                            else entidad.FORMA_PAGO = dr[pos_FORMA_PAGO].ToString();
+                //            if (dr.IsDBNull(pos_FORMA_PAGO)) entidad.FORMA_PAGO = "";
+                //            else entidad.FORMA_PAGO = dr[pos_FORMA_PAGO].ToString();
 
-                            if (dr.IsDBNull(pos_GARANTIA)) entidad.GARANTIA = "";
-                            else entidad.GARANTIA = dr[pos_GARANTIA].ToString();
+                //            if (dr.IsDBNull(pos_GARANTIA)) entidad.GARANTIA = "";
+                //            else entidad.GARANTIA = dr[pos_GARANTIA].ToString();
 
-                            if (dr.IsDBNull(pos_CANT_DIAS_VALIDES)) entidad.CANT_DIAS_VALIDES = 0;
-                            else entidad.CANT_DIAS_VALIDES = int.Parse(dr[pos_CANT_DIAS_VALIDES].ToString());
+                //            if (dr.IsDBNull(pos_CANT_DIAS_VALIDES)) entidad.CANT_DIAS_VALIDES = 0;
+                //            else entidad.CANT_DIAS_VALIDES = int.Parse(dr[pos_CANT_DIAS_VALIDES].ToString());
 
-                            if (dr.IsDBNull(pos_USU_CREACION)) entidad.USU_CREACION = "";
-                            else entidad.USU_CREACION = dr[pos_USU_CREACION].ToString();
+                //            if (dr.IsDBNull(pos_USU_CREACION)) entidad.USU_CREACION = "";
+                //            else entidad.USU_CREACION = dr[pos_USU_CREACION].ToString();
 
-                            if (dr.IsDBNull(pos_FEC_CREACION)) entidad.FEC_CREACION = "";
-                            else entidad.FEC_CREACION = dr[pos_FEC_CREACION].ToString();
+                //            if (dr.IsDBNull(pos_FEC_CREACION)) entidad.FEC_CREACION = "";
+                //            else entidad.FEC_CREACION = dr[pos_FEC_CREACION].ToString();
 
-                            if (dr.IsDBNull(pos_USU_MODIFICA)) entidad.USU_MODIFICA = "";
-                            else entidad.USU_MODIFICA = dr[pos_USU_MODIFICA].ToString();
+                //            if (dr.IsDBNull(pos_USU_MODIFICA)) entidad.USU_MODIFICA = "";
+                //            else entidad.USU_MODIFICA = dr[pos_USU_MODIFICA].ToString();
 
-                            if (dr.IsDBNull(pos_FEC_MODIFICA)) entidad.FEC_MODIFICA = "";
-                            else entidad.FEC_MODIFICA = dr[pos_FEC_MODIFICA].ToString();
+                //            if (dr.IsDBNull(pos_FEC_MODIFICA)) entidad.FEC_MODIFICA = "";
+                //            else entidad.FEC_MODIFICA = dr[pos_FEC_MODIFICA].ToString();
 
-                            lista.Add(entidad);
-                        }
-                    }
-                    dr.Close();
-                    int CUENTA = int.Parse(command.Parameters["PO_CUENTA"].Value.ToString());
-                    auditoria.OBJETO = CUENTA;
-                }
+                //            lista.Add(entidad);
+                //        }
+                //    }
+                //    dr.Close();
+                //    int CUENTA = int.Parse(command.Parameters["PO_CUENTA"].Value.ToString());
+                //    auditoria.OBJETO = CUENTA;
+                //}
             }
             catch (Exception ex)
             {

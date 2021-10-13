@@ -7,14 +7,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Data.Common;
-using System.Data.SqlClient;
-using System.Data; 
-
 namespace Barberia.Datos
 {
     using Barberia.Entidad;
@@ -33,55 +25,7 @@ namespace Barberia.Datos
         {
             throw new UnintentionalCodeFirstException();
         }
-
-
-
-        public DbCommand GetStoredProcedureCommand(string storedProcedureName, params object[] parameterValues)
-        {
-            var connection = Database.Connection;
-            var command = CreateCommand(connection, parameterValues);
-            command.CommandText = storedProcedureName;
-            command.CommandType = CommandType.StoredProcedure;
-
-            if (connection.State == ConnectionState.Closed || connection.State == ConnectionState.Broken)
-                connection.Open();
-
-            return command;
-        }
-
-        private DbCommand CreateCommand(DbConnection connection, params object[] parameters)
-        {
-            var command = connection.CreateCommand();
-
-            //if (parameters == null)
-            //    command.Parameters.Add(GetDefaultRefCursor());
-
-            // Añadir parametros a Oracle
-            for (var i = 0; i <= (parameters?.Length ?? 0) - 1; i++)
-            {
-                if (!(parameters[i] is SqlParameter parameter))
-                {
-                    //command.Parameters.Add(GetDefaultRefCursor());
-                    continue;
-                }
-
-                command.Parameters.Add(parameter);
-            }
-            return command;
-        }
-
-
-
-        public SqlParameter GetDefaultRefCursor()
-        {
-            return new SqlParameter()
-            {
-                SqlDbType = SqlDbType.Int,
-                Direction = System.Data.ParameterDirection.Output
-            };
-        }
-
-
+    
         public virtual DbSet<T_ACTUALIZAR_STOCK> T_ACTUALIZAR_STOCK { get; set; }
         public virtual DbSet<T_ANULAR_CORTE> T_ANULAR_CORTE { get; set; }
         public virtual DbSet<T_ANULAR_VENTA> T_ANULAR_VENTA { get; set; }

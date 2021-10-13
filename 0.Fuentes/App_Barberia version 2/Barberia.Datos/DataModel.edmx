@@ -715,7 +715,6 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_COTIZACION' no tiene defin
           <Property Name="EMPRESA_EXTERNA" Type="varchar" MaxLength="200" />
           <Property Name="NUM_COTIZACION" Type="varchar" MaxLength="20" />
           <Property Name="FECHA" Type="date" />
-          <Property Name="NOMBRES" Type="varchar" MaxLength="1202" />
           <Property Name="ASUNTO" Type="varchar" MaxLength="1000" />
           <Property Name="FORMA_PAGO" Type="varchar" MaxLength="50" />
           <Property Name="GARANTIA" Type="varchar" MaxLength="100" />
@@ -821,7 +820,6 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_M_ORDEN_COMPRA' no tiene d
           <Property Name="NUM_COTIZACION_REF" Type="varchar" MaxLength="20" />
           <Property Name="NUM_ORDEN_COMPRA" Type="varchar" MaxLength="20" />
           <Property Name="FECHA" Type="date" />
-          <Property Name="NOMBRES" Type="varchar" MaxLength="1202" />
           <Property Name="ASUNTO" Type="varchar" MaxLength="1000" />
           <Property Name="FORMA_PAGO" Type="varchar" MaxLength="50" />
           <Property Name="GARANTIA" Type="varchar" MaxLength="100" />
@@ -900,7 +898,6 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_ORDEN_COMPRA' no tiene def
           <Property Name="NUM_COTIZACION_REF" Type="varchar" MaxLength="20" />
           <Property Name="NUM_ORDEN_COMPRA" Type="varchar" MaxLength="20" />
           <Property Name="FECHA" Type="date" />
-          <Property Name="NOMBRES" Type="varchar" MaxLength="1202" />
           <Property Name="ASUNTO" Type="varchar" MaxLength="1000" />
           <Property Name="FORMA_PAGO" Type="varchar" MaxLength="50" />
           <Property Name="GARANTIA" Type="varchar" MaxLength="100" />
@@ -1382,7 +1379,6 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
     [V_COTIZACION].[EMPRESA_EXTERNA] AS [EMPRESA_EXTERNA], 
     [V_COTIZACION].[NUM_COTIZACION] AS [NUM_COTIZACION], 
     [V_COTIZACION].[FECHA] AS [FECHA], 
-    [V_COTIZACION].[NOMBRES] AS [NOMBRES], 
     [V_COTIZACION].[ASUNTO] AS [ASUNTO], 
     [V_COTIZACION].[FORMA_PAGO] AS [FORMA_PAGO], 
     [V_COTIZACION].[GARANTIA] AS [GARANTIA], 
@@ -1473,7 +1469,6 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
     [V_M_ORDEN_COMPRA].[NUM_COTIZACION_REF] AS [NUM_COTIZACION_REF], 
     [V_M_ORDEN_COMPRA].[NUM_ORDEN_COMPRA] AS [NUM_ORDEN_COMPRA], 
     [V_M_ORDEN_COMPRA].[FECHA] AS [FECHA], 
-    [V_M_ORDEN_COMPRA].[NOMBRES] AS [NOMBRES], 
     [V_M_ORDEN_COMPRA].[ASUNTO] AS [ASUNTO], 
     [V_M_ORDEN_COMPRA].[FORMA_PAGO] AS [FORMA_PAGO], 
     [V_M_ORDEN_COMPRA].[GARANTIA] AS [GARANTIA], 
@@ -1534,7 +1529,6 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
     [V_ORDEN_COMPRA].[NUM_COTIZACION_REF] AS [NUM_COTIZACION_REF], 
     [V_ORDEN_COMPRA].[NUM_ORDEN_COMPRA] AS [NUM_ORDEN_COMPRA], 
     [V_ORDEN_COMPRA].[FECHA] AS [FECHA], 
-    [V_ORDEN_COMPRA].[NOMBRES] AS [NOMBRES], 
     [V_ORDEN_COMPRA].[ASUNTO] AS [ASUNTO], 
     [V_ORDEN_COMPRA].[FORMA_PAGO] AS [FORMA_PAGO], 
     [V_ORDEN_COMPRA].[GARANTIA] AS [GARANTIA], 
@@ -2482,7 +2476,6 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           <Property Name="EMPRESA_EXTERNA" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Name="NUM_COTIZACION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="FECHA" Type="DateTime" Precision="0" />
-          <Property Name="NOMBRES" Type="String" MaxLength="1202" FixedLength="false" Unicode="false" />
           <Property Name="ASUNTO" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
           <Property Name="FORMA_PAGO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="GARANTIA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
@@ -2580,7 +2573,6 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           <Property Name="NUM_COTIZACION_REF" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="NUM_ORDEN_COMPRA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="FECHA" Type="DateTime" Precision="0" />
-          <Property Name="NOMBRES" Type="String" MaxLength="1202" FixedLength="false" Unicode="false" />
           <Property Name="ASUNTO" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
           <Property Name="FORMA_PAGO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="GARANTIA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
@@ -2653,7 +2645,6 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           <Property Name="NUM_COTIZACION_REF" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="NUM_ORDEN_COMPRA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="FECHA" Type="DateTime" Precision="0" />
-          <Property Name="NOMBRES" Type="String" MaxLength="1202" FixedLength="false" Unicode="false" />
           <Property Name="ASUNTO" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
           <Property Name="FORMA_PAGO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="GARANTIA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
@@ -3916,7 +3907,6 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
                 <ScalarProperty Name="EMPRESA_EXTERNA" ColumnName="EMPRESA_EXTERNA" />
                 <ScalarProperty Name="NUM_COTIZACION" ColumnName="NUM_COTIZACION" />
                 <ScalarProperty Name="FECHA" ColumnName="FECHA" />
-                <ScalarProperty Name="NOMBRES" ColumnName="NOMBRES" />
                 <ScalarProperty Name="ASUNTO" ColumnName="ASUNTO" />
                 <ScalarProperty Name="FORMA_PAGO" ColumnName="FORMA_PAGO" />
                 <ScalarProperty Name="GARANTIA" ColumnName="GARANTIA" />
@@ -4015,7 +4005,6 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
                 <ScalarProperty Name="NUM_COTIZACION_REF" ColumnName="NUM_COTIZACION_REF" />
                 <ScalarProperty Name="NUM_ORDEN_COMPRA" ColumnName="NUM_ORDEN_COMPRA" />
                 <ScalarProperty Name="FECHA" ColumnName="FECHA" />
-                <ScalarProperty Name="NOMBRES" ColumnName="NOMBRES" />
                 <ScalarProperty Name="ASUNTO" ColumnName="ASUNTO" />
                 <ScalarProperty Name="FORMA_PAGO" ColumnName="FORMA_PAGO" />
                 <ScalarProperty Name="GARANTIA" ColumnName="GARANTIA" />
@@ -4082,7 +4071,6 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
                 <ScalarProperty Name="NUM_COTIZACION_REF" ColumnName="NUM_COTIZACION_REF" />
                 <ScalarProperty Name="NUM_ORDEN_COMPRA" ColumnName="NUM_ORDEN_COMPRA" />
                 <ScalarProperty Name="FECHA" ColumnName="FECHA" />
-                <ScalarProperty Name="NOMBRES" ColumnName="NOMBRES" />
                 <ScalarProperty Name="ASUNTO" ColumnName="ASUNTO" />
                 <ScalarProperty Name="FORMA_PAGO" ColumnName="FORMA_PAGO" />
                 <ScalarProperty Name="GARANTIA" ColumnName="GARANTIA" />

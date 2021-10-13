@@ -743,7 +743,6 @@
     <Property Name="EMPRESA_EXTERNA" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
     <Property Name="NUM_COTIZACION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="FECHA" Type="DateTime" Precision="0" />
-    <Property Name="NOMBRES" Type="String" MaxLength="1202" FixedLength="false" Unicode="false" />
     <Property Name="ASUNTO" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
     <Property Name="FORMA_PAGO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="GARANTIA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
@@ -841,7 +840,6 @@
     <Property Name="NUM_COTIZACION_REF" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="NUM_ORDEN_COMPRA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="FECHA" Type="DateTime" Precision="0" />
-    <Property Name="NOMBRES" Type="String" MaxLength="1202" FixedLength="false" Unicode="false" />
     <Property Name="ASUNTO" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
     <Property Name="FORMA_PAGO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="GARANTIA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
@@ -914,7 +912,6 @@
     <Property Name="NUM_COTIZACION_REF" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="NUM_ORDEN_COMPRA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="FECHA" Type="DateTime" Precision="0" />
-    <Property Name="NOMBRES" Type="String" MaxLength="1202" FixedLength="false" Unicode="false" />
     <Property Name="ASUNTO" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
     <Property Name="FORMA_PAGO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="GARANTIA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />

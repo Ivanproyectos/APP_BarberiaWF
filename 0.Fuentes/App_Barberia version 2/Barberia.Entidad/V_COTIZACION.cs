@@ -20,7 +20,6 @@ namespace Barberia.Entidad
         public string EMPRESA_EXTERNA { get; set; }
         public string NUM_COTIZACION { get; set; }
         public Nullable<System.DateTime> FECHA { get; set; }
-        public string NOMBRES { get; set; }
         public string ASUNTO { get; set; }
         public string FORMA_PAGO { get; set; }
         public string GARANTIA { get; set; }

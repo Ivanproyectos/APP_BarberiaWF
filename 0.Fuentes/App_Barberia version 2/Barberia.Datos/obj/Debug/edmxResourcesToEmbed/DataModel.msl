@@ -739,7 +739,6 @@
           <ScalarProperty Name="EMPRESA_EXTERNA" ColumnName="EMPRESA_EXTERNA" />
           <ScalarProperty Name="NUM_COTIZACION" ColumnName="NUM_COTIZACION" />
           <ScalarProperty Name="FECHA" ColumnName="FECHA" />
-          <ScalarProperty Name="NOMBRES" ColumnName="NOMBRES" />
           <ScalarProperty Name="ASUNTO" ColumnName="ASUNTO" />
           <ScalarProperty Name="FORMA_PAGO" ColumnName="FORMA_PAGO" />
           <ScalarProperty Name="GARANTIA" ColumnName="GARANTIA" />
@@ -838,7 +837,6 @@
           <ScalarProperty Name="NUM_COTIZACION_REF" ColumnName="NUM_COTIZACION_REF" />
           <ScalarProperty Name="NUM_ORDEN_COMPRA" ColumnName="NUM_ORDEN_COMPRA" />
           <ScalarProperty Name="FECHA" ColumnName="FECHA" />
-          <ScalarProperty Name="NOMBRES" ColumnName="NOMBRES" />
           <ScalarProperty Name="ASUNTO" ColumnName="ASUNTO" />
           <ScalarProperty Name="FORMA_PAGO" ColumnName="FORMA_PAGO" />
           <ScalarProperty Name="GARANTIA" ColumnName="GARANTIA" />
@@ -905,7 +903,6 @@
           <ScalarProperty Name="NUM_COTIZACION_REF" ColumnName="NUM_COTIZACION_REF" />
           <ScalarProperty Name="NUM_ORDEN_COMPRA" ColumnName="NUM_ORDEN_COMPRA" />
           <ScalarProperty Name="FECHA" ColumnName="FECHA" />
-          <ScalarProperty Name="NOMBRES" ColumnName="NOMBRES" />
           <ScalarProperty Name="ASUNTO" ColumnName="ASUNTO" />
           <ScalarProperty Name="FORMA_PAGO" ColumnName="FORMA_PAGO" />
           <ScalarProperty Name="GARANTIA" ColumnName="GARANTIA" />
