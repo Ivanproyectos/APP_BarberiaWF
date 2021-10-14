@@ -5,6 +5,7 @@
       <PropertyRef Name="ID_ACTUALIZAR" />
     </Key>
     <Property Name="ID_ACTUALIZAR" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ID_EMPRESA" Type="Int32" Nullable="false" />
     <Property Name="FACTURA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="GUIA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="NRO_BOLETA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
@@ -18,6 +19,8 @@
     <Property Name="FEC_OPERACION" Type="DateTime" Precision="3" />
     <Property Name="USER_OPERACION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="FLG_ESTADO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="ALMACEN" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CLASE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="T_ANULAR_CORTE">
     <Key>
@@ -652,6 +655,14 @@
     <Property Name="USER_OPERACION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="USER_ANULAR" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
   </EntityType>
+  <EntityType Name="T_TIPO_COMPROBANTE">
+    <Key>
+      <PropertyRef Name="ID_TIPO_COMPROBANTE" />
+    </Key>
+    <Property Name="ID_TIPO_COMPROBANTE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="COD_TIPO_COMPROBANTE" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="DESC_TIPO_COMPROBANTE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
   <EntityType Name="T_TIPO_DOCUMENTO">
     <Key>
       <PropertyRef Name="ID_DOCUMENTO" />
@@ -680,10 +691,11 @@
   <EntityType Name="V_CLIENTE">
     <Key>
       <PropertyRef Name="ID_CLIENTE" />
-      <PropertyRef Name="NUM_DOC" />
       <PropertyRef Name="ID_EMPRESA" />
+      <PropertyRef Name="NUM_DOC" />
     </Key>
     <Property Name="ID_CLIENTE" Type="Int32" Nullable="false" />
+    <Property Name="ID_EMPRESA" Type="Int32" Nullable="false" />
     <Property Name="PERSONA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="NOMBRE" Type="String" MaxLength="1202" FixedLength="false" Unicode="false" />
     <Property Name="R_SOCIAL" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
@@ -703,7 +715,6 @@
     <Property Name="FEC_CREACION" Type="DateTime" Precision="3" />
     <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
-    <Property Name="ID_EMPRESA" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="V_CORTE">
     <Key>
@@ -732,14 +743,15 @@
   <EntityType Name="V_COTIZACION">
     <Key>
       <PropertyRef Name="ID_COTIZACION" />
+      <PropertyRef Name="ID_EMPRESA" />
       <PropertyRef Name="ID_D_COTIZACION" />
       <PropertyRef Name="ID_PRODUCTO" />
       <PropertyRef Name="PRODUCTO" />
       <PropertyRef Name="DESC_PRODUCTO" />
       <PropertyRef Name="DES_MARCA" />
-      <PropertyRef Name="ID_EMPRESA" />
     </Key>
     <Property Name="ID_COTIZACION" Type="Int32" Nullable="false" />
+    <Property Name="ID_EMPRESA" Type="Int32" Nullable="false" />
     <Property Name="EMPRESA_EXTERNA" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
     <Property Name="NUM_COTIZACION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="FECHA" Type="DateTime" Precision="0" />
@@ -765,7 +777,6 @@
     <Property Name="FEC_CREACION" Type="DateTime" Precision="3" />
     <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
-    <Property Name="ID_EMPRESA" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="V_EMPRESA">
     <Key>
@@ -808,6 +819,7 @@
       <PropertyRef Name="ID_EMPRESA" />
     </Key>
     <Property Name="ID_COTIZACION" Type="Int32" Nullable="false" />
+    <Property Name="ID_EMPRESA" Type="Int32" Nullable="false" />
     <Property Name="EMPRESA_EXTERNA" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
     <Property Name="NUM_COTIZACION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="FECHA" Type="DateTime" Precision="0" />
@@ -827,15 +839,15 @@
     <Property Name="FEC_CREACION" Type="DateTime" Precision="3" />
     <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
-    <Property Name="ID_EMPRESA" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="V_M_ORDEN_COMPRA">
     <Key>
       <PropertyRef Name="ID_ORDEN_COMPRA" />
-      <PropertyRef Name="NUMDOC_EXTERNO" />
       <PropertyRef Name="ID_EMPRESA" />
+      <PropertyRef Name="NUMDOC_EXTERNO" />
     </Key>
     <Property Name="ID_ORDEN_COMPRA" Type="Int32" Nullable="false" />
+    <Property Name="ID_EMPRESA" Type="Int32" Nullable="false" />
     <Property Name="EMPRESA_EXTERNA" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
     <Property Name="NUM_COTIZACION_REF" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="NUM_ORDEN_COMPRA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
@@ -855,7 +867,6 @@
     <Property Name="FEC_CREACION" Type="DateTime" Precision="3" />
     <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
-    <Property Name="ID_EMPRESA" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="V_M_PARAMETRO">
     <Key>
@@ -900,14 +911,15 @@
   <EntityType Name="V_ORDEN_COMPRA">
     <Key>
       <PropertyRef Name="ID_ORDEN_COMPRA" />
+      <PropertyRef Name="ID_EMPRESA" />
       <PropertyRef Name="ID_D_ORDEN_COMPRA" />
       <PropertyRef Name="ID_PRODUCTO" />
       <PropertyRef Name="PRODUCTO" />
       <PropertyRef Name="DESC_PRODUCTO" />
       <PropertyRef Name="DES_MARCA" />
-      <PropertyRef Name="ID_EMPRESA" />
     </Key>
     <Property Name="ID_ORDEN_COMPRA" Type="Int32" Nullable="false" />
+    <Property Name="ID_EMPRESA" Type="Int32" Nullable="false" />
     <Property Name="EMPRESA_EXTERNA" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
     <Property Name="NUM_COTIZACION_REF" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="NUM_ORDEN_COMPRA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
@@ -934,7 +946,6 @@
     <Property Name="FEC_CREACION" Type="DateTime" Precision="3" />
     <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
-    <Property Name="ID_EMPRESA" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="V_PARAMETRO">
     <Key>
@@ -965,11 +976,12 @@
   <EntityType Name="V_PERSONAL">
     <Key>
       <PropertyRef Name="ID_PERSONAL" />
+      <PropertyRef Name="ID_EMPRESA" />
       <PropertyRef Name="NOMBRES" />
       <PropertyRef Name="NUM_DOC" />
-      <PropertyRef Name="ID_EMPRESA" />
     </Key>
     <Property Name="ID_PERSONAL" Type="Int32" Nullable="false" />
+    <Property Name="ID_EMPRESA" Type="Int32" Nullable="false" />
     <Property Name="NOMBRE" Type="String" MaxLength="1202" FixedLength="false" Unicode="false" />
     <Property Name="NOMBRES" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="APELLIDO_PAT" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
@@ -987,10 +999,10 @@
     <Property Name="FEC_CREACION" Type="DateTime" Precision="3" />
     <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
-    <Property Name="ID_EMPRESA" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="V_PRODUCTO">
     <Key>
+      <PropertyRef Name="ID_EMPRESA" />
       <PropertyRef Name="ID_PRODUCTO" />
       <PropertyRef Name="DES_ALMACEN" />
       <PropertyRef Name="DES_CLASE" />
@@ -998,8 +1010,8 @@
       <PropertyRef Name="DES_UNIDAD_MEDIDA" />
       <PropertyRef Name="DES_MODELO" />
       <PropertyRef Name="DES_MARCA" />
-      <PropertyRef Name="ID_EMPRESA" />
     </Key>
+    <Property Name="ID_EMPRESA" Type="Int32" Nullable="false" />
     <Property Name="DESC_CATEGORIA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="ID_CATEGORIA" Type="Int32" />
     <Property Name="ID_PRODUCTO" Type="Int32" Nullable="false" />
@@ -1023,15 +1035,15 @@
     <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
     <Property Name="ANIO" Type="Int32" />
     <Property Name="MES" Type="Int32" />
-    <Property Name="ID_EMPRESA" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="V_VENTA">
     <Key>
       <PropertyRef Name="ID_VENTA" />
-      <PropertyRef Name="PRODUCTO" />
       <PropertyRef Name="ID_EMPRESA" />
+      <PropertyRef Name="PRODUCTO" />
     </Key>
     <Property Name="ID_VENTA" Type="Int32" Nullable="false" />
+    <Property Name="ID_EMPRESA" Type="Int32" Nullable="false" />
     <Property Name="VOUCHER" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="PERSONAL" Type="String" MaxLength="602" FixedLength="false" Unicode="false" />
     <Property Name="CLIENTE" Type="String" MaxLength="1202" FixedLength="false" Unicode="false" />
@@ -1049,7 +1061,6 @@
     <Property Name="FEC_VENTA" Type="DateTime" Precision="3" />
     <Property Name="ANIO" Type="Int32" />
     <Property Name="MES" Type="Int32" />
-    <Property Name="ID_EMPRESA" Type="Int32" Nullable="false" />
   </EntityType>
   <Association Name="FK_ID_PERFIL">
     <End Role="T_M_PERFIL" Type="Self.T_M_PERFIL" Multiplicity="0..1" />
@@ -1334,6 +1345,7 @@
     <EntitySet Name="T_M_USUARIO" EntityType="Self.T_M_USUARIO" />
     <EntitySet Name="T_M_VENTA" EntityType="Self.T_M_VENTA" />
     <EntitySet Name="T_STOCK_ANULAR" EntityType="Self.T_STOCK_ANULAR" />
+    <EntitySet Name="T_TIPO_COMPROBANTE" EntityType="Self.T_TIPO_COMPROBANTE" />
     <EntitySet Name="T_TIPO_DOCUMENTO" EntityType="Self.T_TIPO_DOCUMENTO" />
     <EntitySet Name="T_TIPO_PERSONA" EntityType="Self.T_TIPO_PERSONA" />
     <EntitySet Name="T_VOUCHER" EntityType="Self.T_VOUCHER" />

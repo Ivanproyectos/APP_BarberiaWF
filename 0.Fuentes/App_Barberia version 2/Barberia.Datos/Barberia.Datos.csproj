@@ -72,6 +72,7 @@
     <Compile Include="Cls_Dat_OrdenCompra.cs" />
     <Compile Include="Cls_Dat_Cotizacion.cs" />
     <Compile Include="Cls_Dat_D_Cotizacion.cs" />
+    <Compile Include="Cls_Dat_Tipo_Comprobante.cs" />
     <Compile Include="Cls_Dat_Voucher.cs" />
     <Compile Include="Cls_Dat_DocumentoVenta.cs" />
     <Compile Include="Cls_Dat_V_M_Parametro.cs" />

@@ -15,6 +15,7 @@ namespace Barberia.Entidad
     public partial class T_ACTUALIZAR_STOCK
     {
         public int ID_ACTUALIZAR { get; set; }
+        public int ID_EMPRESA { get; set; }
         public string FACTURA { get; set; }
         public string GUIA { get; set; }
         public string NRO_BOLETA { get; set; }
@@ -28,5 +29,7 @@ namespace Barberia.Entidad
         public Nullable<System.DateTime> FEC_OPERACION { get; set; }
         public string USER_OPERACION { get; set; }
         public string FLG_ESTADO { get; set; }
+        public string ALMACEN { get; set; }
+        public string CLASE { get; set; }
     }
 }

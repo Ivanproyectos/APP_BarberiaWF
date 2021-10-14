@@ -5,6 +5,7 @@
       <PropertyRef Name="ID_ACTUALIZAR" />
     </Key>
     <Property Name="ID_ACTUALIZAR" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_EMPRESA" Type="int" Nullable="false" />
     <Property Name="FACTURA" Type="varchar" MaxLength="100" />
     <Property Name="GUIA" Type="varchar" MaxLength="100" />
     <Property Name="NRO_BOLETA" Type="varchar" MaxLength="100" />
@@ -18,6 +19,8 @@
     <Property Name="FEC_OPERACION" Type="datetime" />
     <Property Name="USER_OPERACION" Type="varchar" MaxLength="20" />
     <Property Name="FLG_ESTADO" Type="char" MaxLength="1" />
+    <Property Name="ALMACEN" Type="varchar" MaxLength="100" />
+    <Property Name="CLASE" Type="varchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="T_ANULAR_CORTE">
     <Key>
@@ -611,6 +614,14 @@
     <Property Name="FEC_ANULAR" Type="datetime" />
     <Property Name="USER_OPERACION" Type="varchar" MaxLength="20" />
     <Property Name="USER_ANULAR" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="T_TIPO_COMPROBANTE">
+    <Key>
+      <PropertyRef Name="ID_TIPO_COMPROBANTE" />
+    </Key>
+    <Property Name="ID_TIPO_COMPROBANTE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="COD_TIPO_COMPROBANTE" Type="char" MaxLength="2" />
+    <Property Name="DESC_TIPO_COMPROBANTE" Type="varchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="T_TIPO_DOCUMENTO">
     <Key>
@@ -1322,6 +1333,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
     <EntitySet Name="T_M_USUARIO" EntityType="Self.T_M_USUARIO" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_M_VENTA" EntityType="Self.T_M_VENTA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_STOCK_ANULAR" EntityType="Self.T_STOCK_ANULAR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_TIPO_COMPROBANTE" EntityType="Self.T_TIPO_COMPROBANTE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_TIPO_DOCUMENTO" EntityType="Self.T_TIPO_DOCUMENTO" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_TIPO_PERSONA" EntityType="Self.T_TIPO_PERSONA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_VOUCHER" EntityType="Self.T_VOUCHER" Schema="dbo" store:Type="Tables" />

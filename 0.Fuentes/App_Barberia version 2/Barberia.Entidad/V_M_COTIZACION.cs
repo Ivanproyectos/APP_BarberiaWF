@@ -16,11 +16,9 @@ namespace Barberia.Entidad
     {
         public int ID_COTIZACION { get; set; }
         public int ID_EMPRESA { get; set; }
-
         public string EMPRESA_EXTERNA { get; set; }
         public string NUM_COTIZACION { get; set; }
         public Nullable<System.DateTime> FECHA { get; set; }
-
         public string REPRESENTANTE_LEGAL { get; set; }
         public string CORREO { get; set; }
         public string TELEFONO { get; set; }
@@ -33,7 +31,6 @@ namespace Barberia.Entidad
         public Nullable<decimal> DESCUENTO { get; set; }
         public Nullable<decimal> TOTAL { get; set; }
         public string FLG_ESTADO { get; set; }
-
         public string USU_CREACION { get; set; }
         public Nullable<System.DateTime> FEC_CREACION { get; set; }
         public string USU_MODIFICA { get; set; }

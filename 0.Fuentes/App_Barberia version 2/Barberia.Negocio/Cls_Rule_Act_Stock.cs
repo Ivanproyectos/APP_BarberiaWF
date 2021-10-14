@@ -9,12 +9,26 @@ namespace Barberia.Negocio
     {
         private Cls_Dat_Act_Stock Obj = new Cls_Dat_Act_Stock();
 
-        public List<T_ACTUALIZAR_STOCK> Listar_Act_Stock(ref Cls_Ent_Auditoria auditoria)
+        public List<T_ACTUALIZAR_STOCK> Listar_Act_Stock(int idEmpresa, ref Cls_Ent_Auditoria auditoria)
         {
             List<T_ACTUALIZAR_STOCK> lista = new List<T_ACTUALIZAR_STOCK>();
             try
             {
-                lista = Obj.Listar_Act_Stock(ref auditoria);
+                lista = Obj.Listar_Act_Stock(idEmpresa, ref auditoria);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return lista;
+        }
+
+        public T_ACTUALIZAR_STOCK ListarUno_Act_Stock(int id, ref Cls_Ent_Auditoria auditoria)
+        {
+            T_ACTUALIZAR_STOCK lista = new T_ACTUALIZAR_STOCK();
+            try
+            {
+                lista = Obj.ListarUno_Act_Stock(id, ref auditoria);
             }
             catch (Exception ex)
             {

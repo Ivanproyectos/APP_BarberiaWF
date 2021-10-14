@@ -7,7 +7,7 @@ namespace Barberia.Datos
 {
     public class Cls_Dat_Act_Stock : Repository<T_ACTUALIZAR_STOCK>
     {
-        public List<T_ACTUALIZAR_STOCK> Listar_Act_Stock(ref Cls_Ent_Auditoria auditoria)
+        public List<T_ACTUALIZAR_STOCK> Listar_Act_Stock(int idEmpresa, ref Cls_Ent_Auditoria auditoria)
         {
             List<T_ACTUALIZAR_STOCK> lista = new List<T_ACTUALIZAR_STOCK>();
             auditoria.Limpiar();
@@ -17,13 +17,31 @@ namespace Barberia.Datos
                 //{
                 //    lista = db.T_ACTUALIZAR_STOCK.Where(x => x.FLG_ESTADO == "1").OrderByDescending(x => x.ID_CARGO).ToList();
                 //}
-                lista = GetAll().Where(x => x.FLG_ESTADO == "1").ToList();
+                lista = GetAll().Where(x => x.FLG_ESTADO == "1" && x.ID_EMPRESA == idEmpresa).ToList();
             }
             catch (Exception ex)
             {
                 auditoria.Error(ex);
             }
             return lista;
+        }
+
+        public T_ACTUALIZAR_STOCK ListarUno_Act_Stock(int id, ref Cls_Ent_Auditoria auditoria)
+        {
+            auditoria.Limpiar();
+            T_ACTUALIZAR_STOCK entidad = new T_ACTUALIZAR_STOCK();
+            try
+            {
+                using (DB_BARBERIAEntities1 db = new DB_BARBERIAEntities1())
+                {
+                    entidad = db.T_ACTUALIZAR_STOCK.Find(id); //.Where(x => x.ID_CARGO == id && x.FLG_ESTADO == "1").OrderByDescending(x => x.ID_CARGO);
+                }
+            }
+            catch (Exception ex)
+            {
+                auditoria.Error(ex);
+            }
+            return entidad;
         }
 
         public List<T_ACTUALIZAR_STOCK> Buscar_Act_Stock(T_ACTUALIZAR_STOCK entidad, string fechaInicio, string fechaFin, ref Cls_Ent_Auditoria auditoria)
@@ -43,7 +61,28 @@ namespace Barberia.Datos
                 if (!string.IsNullOrEmpty(entidad.NRO_BOLETA))
                     query = query.Where(w => w.NRO_BOLETA == entidad.NRO_BOLETA && w.FLG_ESTADO == "1");
 
-                lista = query.ToList();
+                if (string.IsNullOrEmpty(fechaInicio) && string.IsNullOrEmpty(fechaFin))
+                {
+                    string fecha = DateTime.Today.ToString("yyyy-MM") + "-01";
+                    DateTime fechaNueva = DateTime.Parse(fecha);
+                    query = query.Where(w => w.FEC_OPERACION >= fechaNueva);
+                }
+                else
+                {
+                    if (!string.IsNullOrEmpty(fechaInicio) && fechaFin == "")
+                    {
+                        DateTime fec = DateTime.Parse(fechaInicio);
+                        query = query.Where(w => w.FEC_OPERACION >= fec);
+                    }
+                    else if (fechaInicio != "" && fechaFin != "")
+                    {
+                        DateTime fechaNuevaInicio = DateTime.Parse(fechaInicio);
+                        DateTime fechaNuevaFin = DateTime.Parse(fechaFin + " 11:59:59 pm");
+                        query = query.Where(w => w.FEC_OPERACION >= fechaNuevaInicio && w.FEC_OPERACION <= fechaNuevaFin);
+                    }
+                }
+
+                lista = query.Where(w => w.ID_EMPRESA == entidad.ID_EMPRESA).ToList();
             }
             catch (Exception ex)
             {

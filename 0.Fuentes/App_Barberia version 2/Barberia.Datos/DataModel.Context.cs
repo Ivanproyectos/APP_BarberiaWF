@@ -68,6 +68,7 @@ namespace Barberia.Datos
         public virtual DbSet<T_M_USUARIO> T_M_USUARIO { get; set; }
         public virtual DbSet<T_M_VENTA> T_M_VENTA { get; set; }
         public virtual DbSet<T_STOCK_ANULAR> T_STOCK_ANULAR { get; set; }
+        public virtual DbSet<T_TIPO_COMPROBANTE> T_TIPO_COMPROBANTE { get; set; }
         public virtual DbSet<T_TIPO_DOCUMENTO> T_TIPO_DOCUMENTO { get; set; }
         public virtual DbSet<T_TIPO_PERSONA> T_TIPO_PERSONA { get; set; }
         public virtual DbSet<T_VOUCHER> T_VOUCHER { get; set; }

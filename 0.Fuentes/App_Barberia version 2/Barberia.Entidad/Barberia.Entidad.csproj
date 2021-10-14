@@ -193,6 +193,9 @@
     <Compile Include="T_STOCK_ANULAR.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="T_TIPO_COMPROBANTE.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="T_TIPO_DOCUMENTO.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>

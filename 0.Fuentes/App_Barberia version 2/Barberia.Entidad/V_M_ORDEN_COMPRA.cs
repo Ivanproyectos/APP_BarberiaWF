@@ -28,7 +28,6 @@ namespace Barberia.Entidad
         public Nullable<decimal> IGV { get; set; }
         public Nullable<decimal> DESCUENTO { get; set; }
         public Nullable<decimal> TOTAL { get; set; }
-
         public string DIRECCION_EXTERNO { get; set; }
         public string NUMDOC_EXTERNO { get; set; }
         public string FLG_ESTADO { get; set; }

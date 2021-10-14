@@ -58,6 +58,7 @@
     <Compile Include="Cls_Rule_D_Cotizacion.cs" />
     <Compile Include="Cls_Rule_M_OrdenCompra.cs" />
     <Compile Include="Cls_Rule_M_Cotizacion.cs" />
+    <Compile Include="Cls_Rule_Tipo_Compobante.cs" />
     <Compile Include="Cls_Rule_Voucher.cs" />
     <Compile Include="Cls_Rule_DocumentoVenta.cs" />
     <Compile Include="Cls_Rule_V_M_OrdenCompra.cs" />

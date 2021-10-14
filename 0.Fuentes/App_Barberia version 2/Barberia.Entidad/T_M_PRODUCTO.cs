@@ -17,7 +17,7 @@ namespace Barberia.Entidad
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public T_M_PRODUCTO()
         {
-            //this.T_D_VENTA = new HashSet<T_D_VENTA>();
+           // this.T_D_VENTA = new HashSet<T_D_VENTA>();
         }
     
         public int ID_PRODUCTO { get; set; }
