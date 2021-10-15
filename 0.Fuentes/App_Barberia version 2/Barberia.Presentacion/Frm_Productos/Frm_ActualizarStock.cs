@@ -142,42 +142,42 @@ namespace Barberia.Presentacion.Frm_Productos
                         else
                         {
                             
-                            T_ACTUALIZAR_STOCK entActStock = new T_ACTUALIZAR_STOCK();
-                            int nuevoStock = int.Parse(txtCantidad.Text) + (int)_parametro[5];
-                            entActStock.PRODUCTO = _parametro[1].ToString();
-                            entActStock.FACTURA = txtFactura.Text;
-                            entActStock.GUIA = txtGuia.Text;
-                            entActStock.NRO_BOLETA = txtNroBoleta.Text;
-                            entActStock.MARCA = cmbMarca.Text;
-                            entActStock.MODELO = cmbModelo.Text;
-                            entActStock.UND_MEDIDA = cmbUndMedida.Text;
-                            entActStock.CANTIDAD = int.Parse(txtCantidad.Text);
-                            entActStock.PRE_COMPRA = decimal.Parse(txtPrecCompra.Text);
-                            entActStock.PRE_VENTA_UND = decimal.Parse(txtPrecVenta.Text);
-                            entActStock.FEC_OPERACION = dtpFecha.Value;
-                            entActStock.USER_OPERACION = _parametro[6].ToString();
-                            entActStock.FLG_ESTADO = "1";
+                            //T_ACTUALIZAR_STOCK entActStock = new T_ACTUALIZAR_STOCK();
+                            //int nuevoStock = int.Parse(txtCantidad.Text) + (int)_parametro[5];
+                            //entActStock.PRODUCTO = _parametro[1].ToString();
+                            //entActStock.FACTURA = txtFactura.Text;
+                            //entActStock.GUIA = txtGuia.Text;
+                            //entActStock.NRO_BOLETA = txtNroBoleta.Text;
+                            //entActStock.MARCA = cmbMarca.Text;
+                            //entActStock.MODELO = cmbModelo.Text;
+                            //entActStock.UND_MEDIDA = cmbUndMedida.Text;
+                            //entActStock.CANTIDAD = int.Parse(txtCantidad.Text);
+                            //entActStock.PRE_COMPRA = decimal.Parse(txtPrecCompra.Text);
+                            //entActStock.PRE_VENTA_UND = decimal.Parse(txtPrecVenta.Text);
+                            //entActStock.FEC_OPERACION = dtpFecha.Value;
+                            //entActStock.USER_OPERACION = _parametro[6].ToString();
+                            //entActStock.FLG_ESTADO = "1";
 
-                            exito = objActStock.Insertar_Act_Stock(entActStock, ref auditoria);
-                            if (exito)
-                            {
-                                T_M_PRODUCTO entProducto = new T_M_PRODUCTO();
-                                //objProducto.NuevoStock_Producto((int)_parametro[0], nuevoStock);
-                                entProducto.ID_PRODUCTO = (int)_parametro[0];
-                                entProducto.PRODUCTO = txtProducto.Text;
-                                entProducto.ID_MARCA = int.Parse(cmbMarca.SelectedValue.ToString());
-                                entProducto.ID_MODELO = int.Parse(cmbModelo.SelectedValue.ToString());
-                                entProducto.ID_UNIDAD_MEDIDA = int.Parse(cmbUndMedida.SelectedValue.ToString());
-                                entProducto.STOCK = nuevoStock;
-                                entProducto.PRECIO_COMPRA = decimal.Parse(txtPrecCompra.Text);
-                                entProducto.PRECIO_VENTA = decimal.Parse(txtPrecVenta.Text);
-                                entProducto.FEC_COMPRA = dtpFecha.Value;
-                                entProducto.USU_MODIFICA = _parametro[6].ToString();
-                                entProducto.FEC_MODIFICA = DateTime.Now;
-                                objProducto.Actualizar_Producto(entProducto, ref auditoria);
-                                Limpiar();
-                                MessageBox.Show("El stock ha sido actualizado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            }
+                            //exito = objActStock.Insertar_Act_Stock(entActStock, ref auditoria);
+                            //if (exito)
+                            //{
+                            //    T_M_PRODUCTO entProducto = new T_M_PRODUCTO();
+                            //    //objProducto.NuevoStock_Producto((int)_parametro[0], nuevoStock);
+                            //    entProducto.ID_PRODUCTO = (int)_parametro[0];
+                            //    entProducto.PRODUCTO = txtProducto.Text;
+                            //    entProducto.ID_MARCA = int.Parse(cmbMarca.SelectedValue.ToString());
+                            //    entProducto.ID_MODELO = int.Parse(cmbModelo.SelectedValue.ToString());
+                            //    entProducto.ID_UNIDAD_MEDIDA = int.Parse(cmbUndMedida.SelectedValue.ToString());
+                            //    entProducto.STOCK = nuevoStock;
+                            //    entProducto.PRECIO_COMPRA = decimal.Parse(txtPrecCompra.Text);
+                            //    entProducto.PRECIO_VENTA = decimal.Parse(txtPrecVenta.Text);
+                            //    entProducto.FEC_COMPRA = dtpFecha.Value;
+                            //    entProducto.USU_MODIFICA = _parametro[6].ToString();
+                            //    entProducto.FEC_MODIFICA = DateTime.Now;
+                            //    objProducto.Actualizar_Producto(entProducto, ref auditoria);
+                            //    Limpiar();
+                            //    MessageBox.Show("El stock ha sido actualizado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            //}
                         }
 
                     }

@@ -44,45 +44,43 @@ namespace Barberia.Datos
             return entidad;
         }
 
-        public List<T_ACTUALIZAR_STOCK> Buscar_Act_Stock(T_ACTUALIZAR_STOCK entidad, string fechaInicio, string fechaFin, ref Cls_Ent_Auditoria auditoria)
+        public List<V_ACTUALIZAR_STOCK> Buscar_Act_Stock(V_ACTUALIZAR_STOCK entidad, string fechaInicio, string fechaFin, ref Cls_Ent_Auditoria auditoria)
         {
-            List<T_ACTUALIZAR_STOCK> lista = new List<T_ACTUALIZAR_STOCK>();
+            List<V_ACTUALIZAR_STOCK> lista = new List<V_ACTUALIZAR_STOCK>();
+            
             auditoria.Limpiar();
-            IQueryable<T_ACTUALIZAR_STOCK> query = Entities;
+
+            
             try
             {
-
-                if (!string.IsNullOrEmpty(entidad.FACTURA))
-                    query = query.Where(w => w.FACTURA == entidad.FACTURA && w.FLG_ESTADO == "1");
-
-                if (!string.IsNullOrEmpty(entidad.GUIA))
-                    query = query.Where(w => w.GUIA == entidad.GUIA && w.FLG_ESTADO == "1");
-
-                if (!string.IsNullOrEmpty(entidad.NRO_BOLETA))
-                    query = query.Where(w => w.NRO_BOLETA == entidad.NRO_BOLETA && w.FLG_ESTADO == "1");
-
-                if (string.IsNullOrEmpty(fechaInicio) && string.IsNullOrEmpty(fechaFin))
+                using (DB_BARBERIAEntities1 db = new DB_BARBERIAEntities1())
                 {
-                    string fecha = DateTime.Today.ToString("yyyy-MM") + "-01";
-                    DateTime fechaNueva = DateTime.Parse(fecha);
-                    query = query.Where(w => w.FEC_OPERACION >= fechaNueva);
-                }
-                else
-                {
-                    if (!string.IsNullOrEmpty(fechaInicio) && fechaFin == "")
-                    {
-                        DateTime fec = DateTime.Parse(fechaInicio);
-                        query = query.Where(w => w.FEC_OPERACION >= fec);
-                    }
-                    else if (fechaInicio != "" && fechaFin != "")
-                    {
-                        DateTime fechaNuevaInicio = DateTime.Parse(fechaInicio);
-                        DateTime fechaNuevaFin = DateTime.Parse(fechaFin + " 11:59:59 pm");
-                        query = query.Where(w => w.FEC_OPERACION >= fechaNuevaInicio && w.FEC_OPERACION <= fechaNuevaFin);
-                    }
-                }
+                    IQueryable<V_ACTUALIZAR_STOCK> query = db.V_ACTUALIZAR_STOCK;
 
-                lista = query.Where(w => w.ID_EMPRESA == entidad.ID_EMPRESA).ToList();
+                    if (string.IsNullOrEmpty(fechaInicio) && string.IsNullOrEmpty(fechaFin))
+                    {
+                        string fecha = DateTime.Today.ToString("yyyy-MM") + "-01";
+                        DateTime fechaNueva = DateTime.Parse(fecha);
+                        query = query.Where(w => w.FEC_OPERACION >= fechaNueva);
+                    }
+                    else
+                    {
+                        if (!string.IsNullOrEmpty(fechaInicio) && fechaFin == "")
+                        {
+                            DateTime fec = DateTime.Parse(fechaInicio);
+                            query = query.Where(w => w.FEC_OPERACION >= fec);
+                        }
+                        else if (fechaInicio != "" && fechaFin != "")
+                        {
+                            DateTime fechaNuevaInicio = DateTime.Parse(fechaInicio);
+                            DateTime fechaNuevaFin = DateTime.Parse(fechaFin + " 11:59:59 pm");
+                            query = query.Where(w => w.FEC_OPERACION >= fechaNuevaInicio && w.FEC_OPERACION <= fechaNuevaFin);
+                        }
+                    }
+
+                    lista = query.Where(w => w.ID_EMPRESA == entidad.ID_EMPRESA).ToList();
+                }
+                
             }
             catch (Exception ex)
             {
@@ -138,25 +136,26 @@ namespace Barberia.Datos
 
         }
 
-        public bool Anular_Act_Stock(int id, ref Cls_Ent_Auditoria auditoria)
+        public bool Anular_Act_Stock(T_ACTUALIZAR_STOCK entidad, ref Cls_Ent_Auditoria auditoria)
         {
-            bool exito = false;
+            bool exito = true;
             auditoria.Limpiar();
             try
             {
                 T_ACTUALIZAR_STOCK lista = new T_ACTUALIZAR_STOCK();
-                lista = Find(x => x.ID_ACTUALIZAR == id);
+                lista = Find(x => x.ID_ACTUALIZAR == entidad.ID_ACTUALIZAR);
                 if (lista != null)
                 {
-                    exito = true;
-
-                    lista.FLG_ESTADO = "0";
-                        Update(lista, lista.ID_ACTUALIZAR);
+                    
+                    lista.USU_MODIFICA = entidad.USU_MODIFICA;
+                    lista.FEC_MODIFICA = entidad.FEC_MODIFICA;
+                    lista.FLG_ESTADO = entidad.FLG_ESTADO;
+                    Update(lista, lista.ID_ACTUALIZAR);
                 }
             }
             catch (Exception ex)
             {
-
+                exito = false;
                 auditoria.Error(ex);
             }
             return exito;

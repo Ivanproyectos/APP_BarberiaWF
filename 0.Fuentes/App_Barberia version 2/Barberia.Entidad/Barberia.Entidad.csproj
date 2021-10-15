@@ -205,6 +205,9 @@
     <Compile Include="T_VOUCHER.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="V_ACTUALIZAR_STOCK.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="V_CLIENTE.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>

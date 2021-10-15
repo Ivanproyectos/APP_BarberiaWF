@@ -209,6 +209,36 @@ namespace Barberia.Datos
             return exito;
         }
 
+        public bool ActualizarIngreso_Producto(T_M_PRODUCTO entidad, ref Cls_Ent_Auditoria auditoria)
+        {
+            T_M_PRODUCTO lista = new T_M_PRODUCTO();
+            bool exito = true;
+            auditoria.Limpiar();
+            try
+            {
+                lista = Find(x => x.ID_PRODUCTO == entidad.ID_PRODUCTO);
+                if (lista == null)
+                {
+                        exito = false;
+                }
+
+                if (exito)
+                {
+                    lista.STOCK = entidad.STOCK;
+                    lista.PRECIO_COMPRA = entidad.PRECIO_COMPRA;
+                    lista.PRECIO_VENTA = entidad.PRECIO_VENTA;
+                    lista.FEC_COMPRA = entidad.FEC_COMPRA;
+                    Update(lista, lista.ID_PRODUCTO);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                auditoria.Error(ex);
+            }
+            return exito;
+        }
+
         public bool ActualizarIMG_Producto(T_M_PRODUCTO entidad, ref Cls_Ent_Auditoria auditoria)
         {
             T_M_PRODUCTO lista = new T_M_PRODUCTO();

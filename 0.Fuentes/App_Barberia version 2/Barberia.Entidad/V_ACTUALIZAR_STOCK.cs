@@ -12,27 +12,28 @@ namespace Barberia.Entidad
     using System;
     using System.Collections.Generic;
     
-    public partial class T_M_ALMACEN
+    public partial class V_ACTUALIZAR_STOCK
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public T_M_ALMACEN()
-        {
-            this.T_ACTUALIZAR_STOCK = new HashSet<T_ACTUALIZAR_STOCK>();
-            //this.T_M_PRODUCTO = new HashSet<T_M_PRODUCTO>();
-        }
-    
-        public int ID_ALMACEN { get; set; }
+        public int ID_ACTUALIZAR { get; set; }
         public int ID_EMPRESA { get; set; }
+        public string DESC_TIPO_COMPROBANTE { get; set; }
+        public string NUMERO_DOCUMENTO { get; set; }
+        public string GUIA { get; set; }
+        public int ID_PRODUCTO { get; set; }
+        public string PRODUCTO { get; set; }
         public string DES_ALMACEN { get; set; }
+        public string DES_CLASE { get; set; }
+        public string DES_UNIDAD_MEDIDA { get; set; }
+        public string DES_MODELO { get; set; }
+        public string DES_MARCA { get; set; }
+        public Nullable<int> CANTIDAD { get; set; }
+        public Nullable<decimal> PRE_COMPRA { get; set; }
+        public Nullable<decimal> PRE_VENTA_UND { get; set; }
+        public Nullable<System.DateTime> FEC_OPERACION { get; set; }
         public string FLG_ESTADO { get; set; }
         public string USU_CREACION { get; set; }
         public Nullable<System.DateTime> FEC_CREACION { get; set; }
         public string USU_MODIFICA { get; set; }
         public Nullable<System.DateTime> FEC_MODIFICA { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<T_ACTUALIZAR_STOCK> T_ACTUALIZAR_STOCK { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public  ICollection<T_M_PRODUCTO> T_M_PRODUCTO { get; set; }
     }
 }

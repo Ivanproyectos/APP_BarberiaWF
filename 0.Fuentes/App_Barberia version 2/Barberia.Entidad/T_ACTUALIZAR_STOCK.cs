@@ -16,20 +16,29 @@ namespace Barberia.Entidad
     {
         public int ID_ACTUALIZAR { get; set; }
         public int ID_EMPRESA { get; set; }
-        public string FACTURA { get; set; }
+        public int ID_TIPO_COMPROBANTE { get; set; }
+        public string NUMERO_DOCUMENTO { get; set; }
         public string GUIA { get; set; }
-        public string NRO_BOLETA { get; set; }
-        public string PRODUCTO { get; set; }
-        public string MARCA { get; set; }
-        public string MODELO { get; set; }
-        public string UND_MEDIDA { get; set; }
+        public int ID_PRODUCTO { get; set; }
+        public int ID_ALMACEN { get; set; }
+        public int ID_CLASE { get; set; }
+        public int ID_MARCA { get; set; }
+        public int ID_MODELO { get; set; }
+        public int ID_UNIDAD_MEDIDA { get; set; }
         public Nullable<int> CANTIDAD { get; set; }
         public Nullable<decimal> PRE_COMPRA { get; set; }
         public Nullable<decimal> PRE_VENTA_UND { get; set; }
         public Nullable<System.DateTime> FEC_OPERACION { get; set; }
-        public string USER_OPERACION { get; set; }
+        public string USU_CREACION { get; set; }
+        public Nullable<System.DateTime> FEC_CREACION { get; set; }
+        public string USU_MODIFICA { get; set; }
+        public Nullable<System.DateTime> FEC_MODIFICA { get; set; }
         public string FLG_ESTADO { get; set; }
-        public string ALMACEN { get; set; }
-        public string CLASE { get; set; }
+    
+        public virtual T_M_ALMACEN T_M_ALMACEN { get; set; }
+        public virtual T_M_CLASE T_M_CLASE { get; set; }
+        public virtual T_M_MARCA T_M_MARCA { get; set; }
+        public virtual T_M_MODELO T_M_MODELO { get; set; }
+        public virtual T_M_UNIDAD_MEDIDA T_M_UNIDAD_MEDIDA { get; set; }
     }
 }

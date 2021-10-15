@@ -6,21 +6,29 @@
     </Key>
     <Property Name="ID_ACTUALIZAR" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="ID_EMPRESA" Type="Int32" Nullable="false" />
-    <Property Name="FACTURA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="GUIA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="NRO_BOLETA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="PRODUCTO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="MARCA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="MODELO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="UND_MEDIDA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ID_TIPO_COMPROBANTE" Type="Int32" Nullable="false" />
+    <Property Name="NUMERO_DOCUMENTO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GUIA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ID_PRODUCTO" Type="Int32" Nullable="false" />
+    <Property Name="ID_ALMACEN" Type="Int32" Nullable="false" />
+    <Property Name="ID_CLASE" Type="Int32" Nullable="false" />
+    <Property Name="ID_MARCA" Type="Int32" Nullable="false" />
+    <Property Name="ID_MODELO" Type="Int32" Nullable="false" />
+    <Property Name="ID_UNIDAD_MEDIDA" Type="Int32" Nullable="false" />
     <Property Name="CANTIDAD" Type="Int32" />
     <Property Name="PRE_COMPRA" Type="Decimal" Precision="10" Scale="2" />
     <Property Name="PRE_VENTA_UND" Type="Decimal" Precision="10" Scale="2" />
-    <Property Name="FEC_OPERACION" Type="DateTime" Precision="3" />
-    <Property Name="USER_OPERACION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="FEC_OPERACION" Type="DateTime" Precision="0" />
+    <Property Name="USU_CREACION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="FEC_CREACION" Type="DateTime" Precision="3" />
+    <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
     <Property Name="FLG_ESTADO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
-    <Property Name="ALMACEN" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="CLASE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="T_M_ALMACEN" Relationship="Self.FK_STOCK_ID_ALMACEN" FromRole="T_ACTUALIZAR_STOCK" ToRole="T_M_ALMACEN" />
+    <NavigationProperty Name="T_M_CLASE" Relationship="Self.FK_STOCK_ID_CLASE" FromRole="T_ACTUALIZAR_STOCK" ToRole="T_M_CLASE" />
+    <NavigationProperty Name="T_M_MARCA" Relationship="Self.FK_STOCK_ID_MARCA" FromRole="T_ACTUALIZAR_STOCK" ToRole="T_M_MARCA" />
+    <NavigationProperty Name="T_M_MODELO" Relationship="Self.FK_STOCK_ID_MODELO" FromRole="T_ACTUALIZAR_STOCK" ToRole="T_M_MODELO" />
+    <NavigationProperty Name="T_M_UNIDAD_MEDIDA" Relationship="Self.FK_STOCK_ID_UNIDAD_MEDIDA" FromRole="T_ACTUALIZAR_STOCK" ToRole="T_M_UNIDAD_MEDIDA" />
   </EntityType>
   <EntityType Name="T_ANULAR_CORTE">
     <Key>
@@ -226,6 +234,7 @@
     <Property Name="FEC_CREACION" Type="DateTime" Precision="3" />
     <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="T_ACTUALIZAR_STOCK" Relationship="Self.FK_STOCK_ID_ALMACEN" FromRole="T_M_ALMACEN" ToRole="T_ACTUALIZAR_STOCK" />
     <NavigationProperty Name="T_M_PRODUCTO" Relationship="Self.FK_ID_ALMACEN" FromRole="T_M_ALMACEN" ToRole="T_M_PRODUCTO" />
   </EntityType>
   <EntityType Name="T_M_CARGO">
@@ -268,6 +277,7 @@
     <Property Name="FEC_CREACION" Type="DateTime" Precision="3" />
     <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="T_ACTUALIZAR_STOCK" Relationship="Self.FK_STOCK_ID_CLASE" FromRole="T_M_CLASE" ToRole="T_ACTUALIZAR_STOCK" />
     <NavigationProperty Name="T_M_PRODUCTO" Relationship="Self.FK_ID_CLASE" FromRole="T_M_CLASE" ToRole="T_M_PRODUCTO" />
   </EntityType>
   <EntityType Name="T_M_CLIENTES">
@@ -426,6 +436,7 @@
     <Property Name="FEC_CREACION" Type="DateTime" Precision="3" />
     <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="T_ACTUALIZAR_STOCK" Relationship="Self.FK_STOCK_ID_MARCA" FromRole="T_M_MARCA" ToRole="T_ACTUALIZAR_STOCK" />
     <NavigationProperty Name="T_M_PRODUCTO" Relationship="Self.FK_ID_MARCA" FromRole="T_M_MARCA" ToRole="T_M_PRODUCTO" />
   </EntityType>
   <EntityType Name="T_M_MODELO">
@@ -440,6 +451,7 @@
     <Property Name="FEC_CREACION" Type="DateTime" Precision="3" />
     <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="T_ACTUALIZAR_STOCK" Relationship="Self.FK_STOCK_ID_MODELO" FromRole="T_M_MODELO" ToRole="T_ACTUALIZAR_STOCK" />
     <NavigationProperty Name="T_M_PRODUCTO" Relationship="Self.FK_ID_MODELO" FromRole="T_M_MODELO" ToRole="T_M_PRODUCTO" />
   </EntityType>
   <EntityType Name="T_M_ORDEN_COMPRA">
@@ -597,6 +609,7 @@
     <Property Name="FEC_CREACION" Type="DateTime" Precision="3" />
     <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="T_ACTUALIZAR_STOCK" Relationship="Self.FK_STOCK_ID_UNIDAD_MEDIDA" FromRole="T_M_UNIDAD_MEDIDA" ToRole="T_ACTUALIZAR_STOCK" />
     <NavigationProperty Name="T_M_PRODUCTO" Relationship="Self.FK_ID_UNIDAD_MEDIDA" FromRole="T_M_UNIDAD_MEDIDA" ToRole="T_M_PRODUCTO" />
   </EntityType>
   <EntityType Name="T_M_USUARIO">
@@ -687,6 +700,40 @@
     <Property Name="ANIO" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
     <Property Name="SERIE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
     <Property Name="NUMERO" Type="Int32" />
+  </EntityType>
+  <EntityType Name="V_ACTUALIZAR_STOCK">
+    <Key>
+      <PropertyRef Name="ID_ACTUALIZAR" />
+      <PropertyRef Name="ID_EMPRESA" />
+      <PropertyRef Name="PRODUCTO" />
+      <PropertyRef Name="DES_ALMACEN" />
+      <PropertyRef Name="DES_CLASE" />
+      <PropertyRef Name="DES_UNIDAD_MEDIDA" />
+      <PropertyRef Name="DES_MODELO" />
+      <PropertyRef Name="DES_MARCA" />
+      <PropertyRef Name="ID_PRODUCTO" />
+    </Key>
+    <Property Name="ID_ACTUALIZAR" Type="Int32" Nullable="false" />
+    <Property Name="ID_EMPRESA" Type="Int32" Nullable="false" />
+    <Property Name="DESC_TIPO_COMPROBANTE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="NUMERO_DOCUMENTO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GUIA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PRODUCTO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DES_ALMACEN" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DES_CLASE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DES_UNIDAD_MEDIDA" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DES_MODELO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DES_MARCA" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CANTIDAD" Type="Int32" />
+    <Property Name="PRE_COMPRA" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="PRE_VENTA_UND" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="FEC_OPERACION" Type="DateTime" Precision="0" />
+    <Property Name="FLG_ESTADO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="USU_CREACION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="FEC_CREACION" Type="DateTime" Precision="3" />
+    <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
+    <Property Name="ID_PRODUCTO" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="V_CLIENTE">
     <Key>
@@ -1062,6 +1109,66 @@
     <Property Name="ANIO" Type="Int32" />
     <Property Name="MES" Type="Int32" />
   </EntityType>
+  <Association Name="FK_STOCK_ID_ALMACEN">
+    <End Role="T_M_ALMACEN" Type="Self.T_M_ALMACEN" Multiplicity="1" />
+    <End Role="T_ACTUALIZAR_STOCK" Type="Self.T_ACTUALIZAR_STOCK" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_M_ALMACEN">
+        <PropertyRef Name="ID_ALMACEN" />
+      </Principal>
+      <Dependent Role="T_ACTUALIZAR_STOCK">
+        <PropertyRef Name="ID_ALMACEN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STOCK_ID_CLASE">
+    <End Role="T_M_CLASE" Type="Self.T_M_CLASE" Multiplicity="1" />
+    <End Role="T_ACTUALIZAR_STOCK" Type="Self.T_ACTUALIZAR_STOCK" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_M_CLASE">
+        <PropertyRef Name="ID_CLASE" />
+      </Principal>
+      <Dependent Role="T_ACTUALIZAR_STOCK">
+        <PropertyRef Name="ID_CLASE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STOCK_ID_MARCA">
+    <End Role="T_M_MARCA" Type="Self.T_M_MARCA" Multiplicity="1" />
+    <End Role="T_ACTUALIZAR_STOCK" Type="Self.T_ACTUALIZAR_STOCK" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_M_MARCA">
+        <PropertyRef Name="ID_MARCA" />
+      </Principal>
+      <Dependent Role="T_ACTUALIZAR_STOCK">
+        <PropertyRef Name="ID_MARCA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STOCK_ID_MODELO">
+    <End Role="T_M_MODELO" Type="Self.T_M_MODELO" Multiplicity="1" />
+    <End Role="T_ACTUALIZAR_STOCK" Type="Self.T_ACTUALIZAR_STOCK" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_M_MODELO">
+        <PropertyRef Name="ID_MODELO" />
+      </Principal>
+      <Dependent Role="T_ACTUALIZAR_STOCK">
+        <PropertyRef Name="ID_MODELO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STOCK_ID_UNIDAD_MEDIDA">
+    <End Role="T_M_UNIDAD_MEDIDA" Type="Self.T_M_UNIDAD_MEDIDA" Multiplicity="1" />
+    <End Role="T_ACTUALIZAR_STOCK" Type="Self.T_ACTUALIZAR_STOCK" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_M_UNIDAD_MEDIDA">
+        <PropertyRef Name="ID_UNIDAD_MEDIDA" />
+      </Principal>
+      <Dependent Role="T_ACTUALIZAR_STOCK">
+        <PropertyRef Name="ID_UNIDAD_MEDIDA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_ID_PERFIL">
     <End Role="T_M_PERFIL" Type="Self.T_M_PERFIL" Multiplicity="0..1" />
     <End Role="T_C_PERFIL" Type="Self.T_C_PERFIL" Multiplicity="*" />
@@ -1349,6 +1456,7 @@
     <EntitySet Name="T_TIPO_DOCUMENTO" EntityType="Self.T_TIPO_DOCUMENTO" />
     <EntitySet Name="T_TIPO_PERSONA" EntityType="Self.T_TIPO_PERSONA" />
     <EntitySet Name="T_VOUCHER" EntityType="Self.T_VOUCHER" />
+    <EntitySet Name="V_ACTUALIZAR_STOCK" EntityType="Self.V_ACTUALIZAR_STOCK" />
     <EntitySet Name="V_CLIENTE" EntityType="Self.V_CLIENTE" />
     <EntitySet Name="V_CORTE" EntityType="Self.V_CORTE" />
     <EntitySet Name="V_COTIZACION" EntityType="Self.V_COTIZACION" />
@@ -1363,6 +1471,26 @@
     <EntitySet Name="V_PERSONAL" EntityType="Self.V_PERSONAL" />
     <EntitySet Name="V_PRODUCTO" EntityType="Self.V_PRODUCTO" />
     <EntitySet Name="V_VENTA" EntityType="Self.V_VENTA" />
+    <AssociationSet Name="FK_STOCK_ID_ALMACEN" Association="Self.FK_STOCK_ID_ALMACEN">
+      <End Role="T_M_ALMACEN" EntitySet="T_M_ALMACEN" />
+      <End Role="T_ACTUALIZAR_STOCK" EntitySet="T_ACTUALIZAR_STOCK" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STOCK_ID_CLASE" Association="Self.FK_STOCK_ID_CLASE">
+      <End Role="T_M_CLASE" EntitySet="T_M_CLASE" />
+      <End Role="T_ACTUALIZAR_STOCK" EntitySet="T_ACTUALIZAR_STOCK" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STOCK_ID_MARCA" Association="Self.FK_STOCK_ID_MARCA">
+      <End Role="T_M_MARCA" EntitySet="T_M_MARCA" />
+      <End Role="T_ACTUALIZAR_STOCK" EntitySet="T_ACTUALIZAR_STOCK" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STOCK_ID_MODELO" Association="Self.FK_STOCK_ID_MODELO">
+      <End Role="T_M_MODELO" EntitySet="T_M_MODELO" />
+      <End Role="T_ACTUALIZAR_STOCK" EntitySet="T_ACTUALIZAR_STOCK" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STOCK_ID_UNIDAD_MEDIDA" Association="Self.FK_STOCK_ID_UNIDAD_MEDIDA">
+      <End Role="T_M_UNIDAD_MEDIDA" EntitySet="T_M_UNIDAD_MEDIDA" />
+      <End Role="T_ACTUALIZAR_STOCK" EntitySet="T_ACTUALIZAR_STOCK" />
+    </AssociationSet>
     <AssociationSet Name="FK_ID_PERFIL" Association="Self.FK_ID_PERFIL">
       <End Role="T_M_PERFIL" EntitySet="T_M_PERFIL" />
       <End Role="T_C_PERFIL" EntitySet="T_C_PERFIL" />

@@ -17,6 +17,7 @@ namespace Barberia.Entidad
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public T_M_MARCA()
         {
+            this.T_ACTUALIZAR_STOCK = new HashSet<T_ACTUALIZAR_STOCK>();
             //this.T_M_PRODUCTO = new HashSet<T_M_PRODUCTO>();
         }
     
@@ -29,6 +30,8 @@ namespace Barberia.Entidad
         public string USU_MODIFICA { get; set; }
         public Nullable<System.DateTime> FEC_MODIFICA { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<T_ACTUALIZAR_STOCK> T_ACTUALIZAR_STOCK { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public  ICollection<T_M_PRODUCTO> T_M_PRODUCTO { get; set; }
     }

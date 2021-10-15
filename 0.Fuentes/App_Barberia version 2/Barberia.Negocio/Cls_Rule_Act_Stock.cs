@@ -66,9 +66,9 @@ namespace Barberia.Negocio
             return exito;
         }
 
-        public List<T_ACTUALIZAR_STOCK> Buscar_Act_Stock(T_ACTUALIZAR_STOCK entidad, string fechaInicio, string fechaFin, ref Cls_Ent_Auditoria auditoria)
+        public List<V_ACTUALIZAR_STOCK> Buscar_Act_Stock(V_ACTUALIZAR_STOCK entidad, string fechaInicio, string fechaFin, ref Cls_Ent_Auditoria auditoria)
         {
-            List<T_ACTUALIZAR_STOCK> lista = new List<T_ACTUALIZAR_STOCK>();
+            List<V_ACTUALIZAR_STOCK> lista = new List<V_ACTUALIZAR_STOCK>();
             try
             {
                 lista = Obj.Buscar_Act_Stock(entidad, fechaInicio, fechaFin, ref auditoria);
@@ -80,11 +80,11 @@ namespace Barberia.Negocio
             return lista;
         }
 
-        public bool Anular_Act_Stock(int id, ref Cls_Ent_Auditoria auditoria)
+        public bool Anular_Act_Stock(T_ACTUALIZAR_STOCK entidad, ref Cls_Ent_Auditoria auditoria)
         {
             try
             {
-                return Obj.Anular_Act_Stock(id, ref auditoria);
+                return Obj.Anular_Act_Stock(entidad, ref auditoria);
             }
             catch (Exception ex)
             {

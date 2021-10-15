@@ -68,6 +68,20 @@ namespace Barberia.Negocio
             return exito;
         }
 
+        public bool ActualizarIngreso_Producto(T_M_PRODUCTO entidad, ref Cls_Ent_Auditoria auditoria)
+        {
+            bool exito = false;
+            try
+            {
+                exito = ObjProducto.ActualizarIngreso_Producto(entidad, ref auditoria);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return exito;
+        }
+
         public bool ActualizarIMG_Producto(T_M_PRODUCTO entidad, ref Cls_Ent_Auditoria auditoria)
         {
             bool exito = false;

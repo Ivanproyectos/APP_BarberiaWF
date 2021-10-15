@@ -6,21 +6,24 @@
         <MappingFragment StoreEntitySet="T_ACTUALIZAR_STOCK">
           <ScalarProperty Name="ID_ACTUALIZAR" ColumnName="ID_ACTUALIZAR" />
           <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
-          <ScalarProperty Name="FACTURA" ColumnName="FACTURA" />
+          <ScalarProperty Name="ID_TIPO_COMPROBANTE" ColumnName="ID_TIPO_COMPROBANTE" />
+          <ScalarProperty Name="NUMERO_DOCUMENTO" ColumnName="NUMERO_DOCUMENTO" />
           <ScalarProperty Name="GUIA" ColumnName="GUIA" />
-          <ScalarProperty Name="NRO_BOLETA" ColumnName="NRO_BOLETA" />
-          <ScalarProperty Name="PRODUCTO" ColumnName="PRODUCTO" />
-          <ScalarProperty Name="MARCA" ColumnName="MARCA" />
-          <ScalarProperty Name="MODELO" ColumnName="MODELO" />
-          <ScalarProperty Name="UND_MEDIDA" ColumnName="UND_MEDIDA" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="ID_ALMACEN" ColumnName="ID_ALMACEN" />
+          <ScalarProperty Name="ID_CLASE" ColumnName="ID_CLASE" />
+          <ScalarProperty Name="ID_MARCA" ColumnName="ID_MARCA" />
+          <ScalarProperty Name="ID_MODELO" ColumnName="ID_MODELO" />
+          <ScalarProperty Name="ID_UNIDAD_MEDIDA" ColumnName="ID_UNIDAD_MEDIDA" />
           <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
           <ScalarProperty Name="PRE_COMPRA" ColumnName="PRE_COMPRA" />
           <ScalarProperty Name="PRE_VENTA_UND" ColumnName="PRE_VENTA_UND" />
           <ScalarProperty Name="FEC_OPERACION" ColumnName="FEC_OPERACION" />
-          <ScalarProperty Name="USER_OPERACION" ColumnName="USER_OPERACION" />
+          <ScalarProperty Name="USU_CREACION" ColumnName="USU_CREACION" />
+          <ScalarProperty Name="FEC_CREACION" ColumnName="FEC_CREACION" />
+          <ScalarProperty Name="USU_MODIFICA" ColumnName="USU_MODIFICA" />
+          <ScalarProperty Name="FEC_MODIFICA" ColumnName="FEC_MODIFICA" />
           <ScalarProperty Name="FLG_ESTADO" ColumnName="FLG_ESTADO" />
-          <ScalarProperty Name="ALMACEN" ColumnName="ALMACEN" />
-          <ScalarProperty Name="CLASE" ColumnName="CLASE" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -692,6 +695,33 @@
           <ScalarProperty Name="ANIO" ColumnName="ANIO" />
           <ScalarProperty Name="SERIE" ColumnName="SERIE" />
           <ScalarProperty Name="NUMERO" ColumnName="NUMERO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="V_ACTUALIZAR_STOCK">
+      <EntityTypeMapping TypeName="DB_BARBERIAModel.V_ACTUALIZAR_STOCK">
+        <MappingFragment StoreEntitySet="V_ACTUALIZAR_STOCK">
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="ID_ACTUALIZAR" ColumnName="ID_ACTUALIZAR" />
+          <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
+          <ScalarProperty Name="DESC_TIPO_COMPROBANTE" ColumnName="DESC_TIPO_COMPROBANTE" />
+          <ScalarProperty Name="NUMERO_DOCUMENTO" ColumnName="NUMERO_DOCUMENTO" />
+          <ScalarProperty Name="GUIA" ColumnName="GUIA" />
+          <ScalarProperty Name="PRODUCTO" ColumnName="PRODUCTO" />
+          <ScalarProperty Name="DES_ALMACEN" ColumnName="DES_ALMACEN" />
+          <ScalarProperty Name="DES_CLASE" ColumnName="DES_CLASE" />
+          <ScalarProperty Name="DES_UNIDAD_MEDIDA" ColumnName="DES_UNIDAD_MEDIDA" />
+          <ScalarProperty Name="DES_MODELO" ColumnName="DES_MODELO" />
+          <ScalarProperty Name="DES_MARCA" ColumnName="DES_MARCA" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="PRE_COMPRA" ColumnName="PRE_COMPRA" />
+          <ScalarProperty Name="PRE_VENTA_UND" ColumnName="PRE_VENTA_UND" />
+          <ScalarProperty Name="FEC_OPERACION" ColumnName="FEC_OPERACION" />
+          <ScalarProperty Name="FLG_ESTADO" ColumnName="FLG_ESTADO" />
+          <ScalarProperty Name="USU_CREACION" ColumnName="USU_CREACION" />
+          <ScalarProperty Name="FEC_CREACION" ColumnName="FEC_CREACION" />
+          <ScalarProperty Name="USU_MODIFICA" ColumnName="USU_MODIFICA" />
+          <ScalarProperty Name="FEC_MODIFICA" ColumnName="FEC_MODIFICA" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -497,37 +497,37 @@ namespace Barberia.Presentacion.Frm_AnularPryVe
         private void btnBuscarProducto_Click(object sender, EventArgs e)
         {
             Cls_Ent_Auditoria auditoria = new Cls_Ent_Auditoria();
-            if (txtFactura.Text != "" || txtGuia.Text != "" || txtNBoleta.Text != "")
-            {
-                Cls_Rule_Act_Stock objActStock = new Cls_Rule_Act_Stock();
-                List<DataActStock> dataActStock = new List<DataActStock>();
-                T_ACTUALIZAR_STOCK entActualizar = new T_ACTUALIZAR_STOCK();
-                //entActualizar.PRODUCTO = txtProducto.Text.Trim().ToUpper();
-                entActualizar.FACTURA = txtFactura.Text;
-                entActualizar.GUIA = txtGuia.Text;
-                entActualizar.NRO_BOLETA = txtNBoleta.Text;
-                listaActStock = objActStock.Buscar_Act_Stock(entActualizar, fechaInicio, fechaFin, ref auditoria);
-                foreach (var item in listaActStock)
-                {
-                    dataActStock.Add(new DataActStock
-                    {
-                        ID_ACTUALIZAR = item.ID_ACTUALIZAR,
-                        PRODUCTO = item.PRODUCTO,
-                        MARCA = item.MARCA,
-                        CANTIDAD = item.CANTIDAD.ToString(),
-                        PRECIO_UND = (decimal)item.PRE_VENTA_UND,
-                        FECHA_OPERACION = (DateTime)item.FEC_OPERACION,
-                        USER_OPERACION = item.USER_OPERACION
-                    });
+            //if (txtFactura.Text != "" || txtGuia.Text != "" || txtNBoleta.Text != "")
+            //{
+            //    Cls_Rule_Act_Stock objActStock = new Cls_Rule_Act_Stock();
+            //    List<DataActStock> dataActStock = new List<DataActStock>();
+            //    T_ACTUALIZAR_STOCK entActualizar = new T_ACTUALIZAR_STOCK();
+            //    //entActualizar.PRODUCTO = txtProducto.Text.Trim().ToUpper();
+            //    entActualizar.FACTURA = txtFactura.Text;
+            //    entActualizar.GUIA = txtGuia.Text;
+            //    entActualizar.NRO_BOLETA = txtNBoleta.Text;
+            //    listaActStock = objActStock.Buscar_Act_Stock(entActualizar, fechaInicio, fechaFin, ref auditoria);
+            //    foreach (var item in listaActStock)
+            //    {
+            //        dataActStock.Add(new DataActStock
+            //        {
+            //            ID_ACTUALIZAR = item.ID_ACTUALIZAR,
+            //            PRODUCTO = item.PRODUCTO,
+            //            MARCA = item.MARCA,
+            //            CANTIDAD = item.CANTIDAD.ToString(),
+            //            PRECIO_UND = (decimal)item.PRE_VENTA_UND,
+            //            FECHA_OPERACION = (DateTime)item.FEC_OPERACION,
+            //            USER_OPERACION = item.USER_OPERACION
+            //        });
 
-                }
-                dataGridView4.DataSource = dataActStock;
-                dataGridView4.Columns["ID_ACTUALIZAR"].Visible = false;
-                dataGridView4.Columns["PRECIO_UND"].HeaderText = "PRECIO UNIDAD";
-                dataGridView4.Columns["FECHA_OPERACION"].HeaderText = "FECHA";
-                dataGridView4.Columns["USER_OPERACION"].Visible = false;
-                dataGridView4.ClearSelection();
-            }
+            //    }
+            //    dataGridView4.DataSource = dataActStock;
+            //    dataGridView4.Columns["ID_ACTUALIZAR"].Visible = false;
+            //    dataGridView4.Columns["PRECIO_UND"].HeaderText = "PRECIO UNIDAD";
+            //    dataGridView4.Columns["FECHA_OPERACION"].HeaderText = "FECHA";
+            //    dataGridView4.Columns["USER_OPERACION"].Visible = false;
+            //    dataGridView4.ClearSelection();
+            //}
             
         }
 
@@ -545,27 +545,27 @@ namespace Barberia.Presentacion.Frm_AnularPryVe
             if (dataGridView4.Rows.Count > 0)
             {
                 id = int.Parse(dataGridView4.CurrentRow.Cells["ID_ACTUALIZAR"].Value.ToString());
-                if (objActSock.Anular_Act_Stock(id, ref auditoria))
-                {
-                    entAnularStock.DESC_ANULAR = txtMotivoProducto.Text.Trim().ToUpper();
-                    entAnularStock.PRODUCTO = dataGridView4.CurrentRow.Cells["PRODUCTO"].Value.ToString();
-                    entAnularStock.CANTIDAD = int.Parse(dataGridView4.CurrentRow.Cells["CANTIDAD"].Value.ToString());
-                    entAnularStock.FEC_OPERACION = DateTime.Parse(dataGridView4.CurrentRow.Cells["FECHA_OPERACION"].Value.ToString());
-                    entAnularStock.USER_OPERACION = dataGridView4.CurrentRow.Cells["USER_OPERACION"].Value.ToString();
-                    entAnularStock.FEC_ANULAR = DateTime.Now;
-                    entAnularStock.USER_ANULAR = user;
-                    if (objAnularStock.Insertar_Anular_Stock(entAnularStock, ref auditoria))
-                    {
-                        // MODIFICAR EL PRODUCTO
-                        entProducto.PRODUCTO = entAnularStock.PRODUCTO;
-                        listaProducto = objProducto.Buscar_Producto(entProducto, ref auditoria);
-                        nuevoStock = (int)(listaProducto[0].STOCK - entAnularStock.CANTIDAD);
-                        objProducto.NuevoStock_Producto(listaProducto[0].ID_PRODUCTO, nuevoStock, ref auditoria);
-                        MessageBox.Show("El registro ha sido anulado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    listaActStock.Clear();
-                    Limpiar_Producto();
-                }
+                //if (objActSock.Anular_Act_Stock(id, ref auditoria))
+                //{
+                //    entAnularStock.DESC_ANULAR = txtMotivoProducto.Text.Trim().ToUpper();
+                //    entAnularStock.PRODUCTO = dataGridView4.CurrentRow.Cells["PRODUCTO"].Value.ToString();
+                //    entAnularStock.CANTIDAD = int.Parse(dataGridView4.CurrentRow.Cells["CANTIDAD"].Value.ToString());
+                //    entAnularStock.FEC_OPERACION = DateTime.Parse(dataGridView4.CurrentRow.Cells["FECHA_OPERACION"].Value.ToString());
+                //    entAnularStock.USER_OPERACION = dataGridView4.CurrentRow.Cells["USER_OPERACION"].Value.ToString();
+                //    entAnularStock.FEC_ANULAR = DateTime.Now;
+                //    entAnularStock.USER_ANULAR = user;
+                //    if (objAnularStock.Insertar_Anular_Stock(entAnularStock, ref auditoria))
+                //    {
+                //        // MODIFICAR EL PRODUCTO
+                //        entProducto.PRODUCTO = entAnularStock.PRODUCTO;
+                //        listaProducto = objProducto.Buscar_Producto(entProducto, ref auditoria);
+                //        nuevoStock = (int)(listaProducto[0].STOCK - entAnularStock.CANTIDAD);
+                //        objProducto.NuevoStock_Producto(listaProducto[0].ID_PRODUCTO, nuevoStock, ref auditoria);
+                //        MessageBox.Show("El registro ha sido anulado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //    }
+                //    listaActStock.Clear();
+                //    Limpiar_Producto();
+                //}
             }
         }
 

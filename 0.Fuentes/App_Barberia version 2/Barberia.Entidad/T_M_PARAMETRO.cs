@@ -17,7 +17,7 @@ namespace Barberia.Entidad
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public T_M_PARAMETRO()
         {
-           // this.T_D_PARAMETRO = new HashSet<T_D_PARAMETRO>();
+            //this.T_D_PARAMETRO = new HashSet<T_D_PARAMETRO>();
         }
     
         public int ID_PARAMETRO { get; set; }
