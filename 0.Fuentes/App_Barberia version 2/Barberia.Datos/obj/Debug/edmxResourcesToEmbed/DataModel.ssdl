@@ -425,6 +425,14 @@
     <Property Name="USU_MODIFICA" Type="varchar" MaxLength="20" />
     <Property Name="FEC_MODIFICA" Type="datetime" />
   </EntityType>
+  <EntityType Name="T_M_MONEDA">
+    <Key>
+      <PropertyRef Name="ID_MONEDA" />
+    </Key>
+    <Property Name="ID_MONEDA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="COD_MONEDA" Type="char" MaxLength="3" />
+    <Property Name="DESC_MONDEDA" Type="varchar" MaxLength="50" />
+  </EntityType>
   <EntityType Name="T_M_ORDEN_COMPRA">
     <Key>
       <PropertyRef Name="ID_ORDEN_COMPRA" />
@@ -531,6 +539,7 @@
     <Property Name="FEC_CREACION" Type="datetime" />
     <Property Name="USU_MODIFICA" Type="varchar" MaxLength="20" />
     <Property Name="FEC_MODIFICA" Type="datetime" />
+    <Property Name="ID_AFECTACION" Type="int" />
   </EntityType>
   <EntityType Name="T_M_PROVINCIA">
     <Key>
@@ -617,6 +626,18 @@
     <Property Name="FEC_ANULAR" Type="datetime" />
     <Property Name="USER_OPERACION" Type="varchar" MaxLength="20" />
     <Property Name="USER_ANULAR" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="T_TIPO_AFECTACION">
+    <Key>
+      <PropertyRef Name="ID_AFECTACION" />
+    </Key>
+    <Property Name="ID_AFECTACION" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="COD_AFECTACION" Type="char" MaxLength="2" />
+    <Property Name="DESC_AFECTACION" Type="varchar" MaxLength="50" />
+    <Property Name="LETRA" Type="char" MaxLength="1" />
+    <Property Name="COD_TRIBUTO" Type="char" MaxLength="4" />
+    <Property Name="DESC_TRIBUTO" Type="char" MaxLength="3" />
+    <Property Name="TIPO_TRIBUTO" Type="char" MaxLength="3" />
   </EntityType>
   <EntityType Name="T_TIPO_COMPROBANTE">
     <Key>
@@ -1421,6 +1442,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
     <EntitySet Name="T_M_EMPRESA" EntityType="Self.T_M_EMPRESA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_M_MARCA" EntityType="Self.T_M_MARCA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_M_MODELO" EntityType="Self.T_M_MODELO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_M_MONEDA" EntityType="Self.T_M_MONEDA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_M_ORDEN_COMPRA" EntityType="Self.T_M_ORDEN_COMPRA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_M_PARAMETRO" EntityType="Self.T_M_PARAMETRO" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_M_PERFIL" EntityType="Self.T_M_PERFIL" Schema="dbo" store:Type="Tables" />
@@ -1432,6 +1454,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
     <EntitySet Name="T_M_USUARIO" EntityType="Self.T_M_USUARIO" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_M_VENTA" EntityType="Self.T_M_VENTA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_STOCK_ANULAR" EntityType="Self.T_STOCK_ANULAR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_TIPO_AFECTACION" EntityType="Self.T_TIPO_AFECTACION" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_TIPO_COMPROBANTE" EntityType="Self.T_TIPO_COMPROBANTE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_TIPO_DOCUMENTO" EntityType="Self.T_TIPO_DOCUMENTO" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_TIPO_PERSONA" EntityType="Self.T_TIPO_PERSONA" Schema="dbo" store:Type="Tables" />

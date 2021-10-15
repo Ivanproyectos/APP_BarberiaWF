@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="DB_BARBERIAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="DB_BARBERIAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="T_ACTUALIZAR_STOCK">
           <Key>
             <PropertyRef Name="ID_ACTUALIZAR" />
@@ -430,6 +430,14 @@
           <Property Name="USU_MODIFICA" Type="varchar" MaxLength="20" />
           <Property Name="FEC_MODIFICA" Type="datetime" />
         </EntityType>
+        <EntityType Name="T_M_MONEDA">
+          <Key>
+            <PropertyRef Name="ID_MONEDA" />
+          </Key>
+          <Property Name="ID_MONEDA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="COD_MONEDA" Type="char" MaxLength="3" />
+          <Property Name="DESC_MONDEDA" Type="varchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="T_M_ORDEN_COMPRA">
           <Key>
             <PropertyRef Name="ID_ORDEN_COMPRA" />
@@ -536,6 +544,7 @@
           <Property Name="FEC_CREACION" Type="datetime" />
           <Property Name="USU_MODIFICA" Type="varchar" MaxLength="20" />
           <Property Name="FEC_MODIFICA" Type="datetime" />
+          <Property Name="ID_AFECTACION" Type="int" />
         </EntityType>
         <EntityType Name="T_M_PROVINCIA">
           <Key>
@@ -622,6 +631,18 @@
           <Property Name="FEC_ANULAR" Type="datetime" />
           <Property Name="USER_OPERACION" Type="varchar" MaxLength="20" />
           <Property Name="USER_ANULAR" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="T_TIPO_AFECTACION">
+          <Key>
+            <PropertyRef Name="ID_AFECTACION" />
+          </Key>
+          <Property Name="ID_AFECTACION" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="COD_AFECTACION" Type="char" MaxLength="2" />
+          <Property Name="DESC_AFECTACION" Type="varchar" MaxLength="50" />
+          <Property Name="LETRA" Type="char" MaxLength="1" />
+          <Property Name="COD_TRIBUTO" Type="char" MaxLength="4" />
+          <Property Name="DESC_TRIBUTO" Type="char" MaxLength="3" />
+          <Property Name="TIPO_TRIBUTO" Type="char" MaxLength="3" />
         </EntityType>
         <EntityType Name="T_TIPO_COMPROBANTE">
           <Key>
@@ -1426,6 +1447,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           <EntitySet Name="T_M_EMPRESA" EntityType="Self.T_M_EMPRESA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="T_M_MARCA" EntityType="Self.T_M_MARCA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="T_M_MODELO" EntityType="Self.T_M_MODELO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_M_MONEDA" EntityType="Self.T_M_MONEDA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="T_M_ORDEN_COMPRA" EntityType="Self.T_M_ORDEN_COMPRA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="T_M_PARAMETRO" EntityType="Self.T_M_PARAMETRO" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="T_M_PERFIL" EntityType="Self.T_M_PERFIL" Schema="dbo" store:Type="Tables" />
@@ -1437,6 +1459,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           <EntitySet Name="T_M_USUARIO" EntityType="Self.T_M_USUARIO" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="T_M_VENTA" EntityType="Self.T_M_VENTA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="T_STOCK_ANULAR" EntityType="Self.T_STOCK_ANULAR" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_TIPO_AFECTACION" EntityType="Self.T_TIPO_AFECTACION" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="T_TIPO_COMPROBANTE" EntityType="Self.T_TIPO_COMPROBANTE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="T_TIPO_DOCUMENTO" EntityType="Self.T_TIPO_DOCUMENTO" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="T_TIPO_PERSONA" EntityType="Self.T_TIPO_PERSONA" Schema="dbo" store:Type="Tables" />
@@ -1888,7 +1911,8 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
             <End Role="T_M_VENTA" EntitySet="T_M_VENTA" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DB_BARBERIAModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -2346,6 +2370,14 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           <NavigationProperty Name="T_ACTUALIZAR_STOCK" Relationship="Self.FK_STOCK_ID_MODELO" FromRole="T_M_MODELO" ToRole="T_ACTUALIZAR_STOCK" />
           <NavigationProperty Name="T_M_PRODUCTO" Relationship="Self.FK_ID_MODELO" FromRole="T_M_MODELO" ToRole="T_M_PRODUCTO" />
         </EntityType>
+        <EntityType Name="T_M_MONEDA">
+          <Key>
+            <PropertyRef Name="ID_MONEDA" />
+          </Key>
+          <Property Name="ID_MONEDA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="COD_MONEDA" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="DESC_MONDEDA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
         <EntityType Name="T_M_ORDEN_COMPRA">
           <Key>
             <PropertyRef Name="ID_ORDEN_COMPRA" />
@@ -2458,6 +2490,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           <Property Name="FEC_CREACION" Type="DateTime" Precision="3" />
           <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
+          <Property Name="ID_AFECTACION" Type="Int32" />
           <NavigationProperty Name="T_D_VENTA" Relationship="Self.FK_ID_PRODUCTO" FromRole="T_M_PRODUCTO" ToRole="T_D_VENTA" />
           <NavigationProperty Name="T_M_ALMACEN" Relationship="Self.FK_ID_ALMACEN" FromRole="T_M_PRODUCTO" ToRole="T_M_ALMACEN" />
           <NavigationProperty Name="T_M_CATEGORIA" Relationship="Self.FK_ID_CATEGORIA" FromRole="T_M_PRODUCTO" ToRole="T_M_CATEGORIA" />
@@ -2560,6 +2593,18 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           <Property Name="USER_OPERACION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="USER_ANULAR" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
         </EntityType>
+        <EntityType Name="T_TIPO_AFECTACION">
+          <Key>
+            <PropertyRef Name="ID_AFECTACION" />
+          </Key>
+          <Property Name="ID_AFECTACION" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="COD_AFECTACION" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="DESC_AFECTACION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LETRA" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="COD_TRIBUTO" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="DESC_TRIBUTO" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="TIPO_TRIBUTO" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+        </EntityType>
         <EntityType Name="T_TIPO_COMPROBANTE">
           <Key>
             <PropertyRef Name="ID_TIPO_COMPROBANTE" />
@@ -2597,19 +2642,20 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           <Key>
             <PropertyRef Name="ID_ACTUALIZAR" />
             <PropertyRef Name="ID_EMPRESA" />
+            <PropertyRef Name="ID_PRODUCTO" />
             <PropertyRef Name="PRODUCTO" />
             <PropertyRef Name="DES_ALMACEN" />
             <PropertyRef Name="DES_CLASE" />
             <PropertyRef Name="DES_UNIDAD_MEDIDA" />
             <PropertyRef Name="DES_MODELO" />
             <PropertyRef Name="DES_MARCA" />
-            <PropertyRef Name="ID_PRODUCTO" />
           </Key>
           <Property Name="ID_ACTUALIZAR" Type="Int32" Nullable="false" />
           <Property Name="ID_EMPRESA" Type="Int32" Nullable="false" />
           <Property Name="DESC_TIPO_COMPROBANTE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="NUMERO_DOCUMENTO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="GUIA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ID_PRODUCTO" Type="Int32" Nullable="false" />
           <Property Name="PRODUCTO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="DES_ALMACEN" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="DES_CLASE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
@@ -2625,7 +2671,6 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           <Property Name="FEC_CREACION" Type="DateTime" Precision="3" />
           <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
-          <Property Name="ID_PRODUCTO" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="V_CLIENTE">
           <Key>
@@ -3333,6 +3378,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           <EntitySet Name="T_M_EMPRESA" EntityType="Self.T_M_EMPRESA" />
           <EntitySet Name="T_M_MARCA" EntityType="Self.T_M_MARCA" />
           <EntitySet Name="T_M_MODELO" EntityType="Self.T_M_MODELO" />
+          <EntitySet Name="T_M_MONEDA" EntityType="Self.T_M_MONEDA" />
           <EntitySet Name="T_M_ORDEN_COMPRA" EntityType="Self.T_M_ORDEN_COMPRA" />
           <EntitySet Name="T_M_PARAMETRO" EntityType="Self.T_M_PARAMETRO" />
           <EntitySet Name="T_M_PERFIL" EntityType="Self.T_M_PERFIL" />
@@ -3344,6 +3390,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           <EntitySet Name="T_M_USUARIO" EntityType="Self.T_M_USUARIO" />
           <EntitySet Name="T_M_VENTA" EntityType="Self.T_M_VENTA" />
           <EntitySet Name="T_STOCK_ANULAR" EntityType="Self.T_STOCK_ANULAR" />
+          <EntitySet Name="T_TIPO_AFECTACION" EntityType="Self.T_TIPO_AFECTACION" />
           <EntitySet Name="T_TIPO_COMPROBANTE" EntityType="Self.T_TIPO_COMPROBANTE" />
           <EntitySet Name="T_TIPO_DOCUMENTO" EntityType="Self.T_TIPO_DOCUMENTO" />
           <EntitySet Name="T_TIPO_PERSONA" EntityType="Self.T_TIPO_PERSONA" />
@@ -3926,6 +3973,15 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="T_M_MONEDA">
+            <EntityTypeMapping TypeName="DB_BARBERIAModel.T_M_MONEDA">
+              <MappingFragment StoreEntitySet="T_M_MONEDA">
+                <ScalarProperty Name="ID_MONEDA" ColumnName="ID_MONEDA" />
+                <ScalarProperty Name="COD_MONEDA" ColumnName="COD_MONEDA" />
+                <ScalarProperty Name="DESC_MONDEDA" ColumnName="DESC_MONDEDA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="T_M_ORDEN_COMPRA">
             <EntityTypeMapping TypeName="DB_BARBERIAModel.T_M_ORDEN_COMPRA">
               <MappingFragment StoreEntitySet="T_M_ORDEN_COMPRA">
@@ -4035,6 +4091,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
                 <ScalarProperty Name="FEC_CREACION" ColumnName="FEC_CREACION" />
                 <ScalarProperty Name="USU_MODIFICA" ColumnName="USU_MODIFICA" />
                 <ScalarProperty Name="FEC_MODIFICA" ColumnName="FEC_MODIFICA" />
+                <ScalarProperty Name="ID_AFECTACION" ColumnName="ID_AFECTACION" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -4130,6 +4187,19 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="T_TIPO_AFECTACION">
+            <EntityTypeMapping TypeName="DB_BARBERIAModel.T_TIPO_AFECTACION">
+              <MappingFragment StoreEntitySet="T_TIPO_AFECTACION">
+                <ScalarProperty Name="ID_AFECTACION" ColumnName="ID_AFECTACION" />
+                <ScalarProperty Name="COD_AFECTACION" ColumnName="COD_AFECTACION" />
+                <ScalarProperty Name="DESC_AFECTACION" ColumnName="DESC_AFECTACION" />
+                <ScalarProperty Name="LETRA" ColumnName="LETRA" />
+                <ScalarProperty Name="COD_TRIBUTO" ColumnName="COD_TRIBUTO" />
+                <ScalarProperty Name="DESC_TRIBUTO" ColumnName="DESC_TRIBUTO" />
+                <ScalarProperty Name="TIPO_TRIBUTO" ColumnName="TIPO_TRIBUTO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="T_TIPO_COMPROBANTE">
             <EntityTypeMapping TypeName="DB_BARBERIAModel.T_TIPO_COMPROBANTE">
               <MappingFragment StoreEntitySet="T_TIPO_COMPROBANTE">
@@ -4170,12 +4240,12 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           <EntitySetMapping Name="V_ACTUALIZAR_STOCK">
             <EntityTypeMapping TypeName="DB_BARBERIAModel.V_ACTUALIZAR_STOCK">
               <MappingFragment StoreEntitySet="V_ACTUALIZAR_STOCK">
-                <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
                 <ScalarProperty Name="ID_ACTUALIZAR" ColumnName="ID_ACTUALIZAR" />
                 <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
                 <ScalarProperty Name="DESC_TIPO_COMPROBANTE" ColumnName="DESC_TIPO_COMPROBANTE" />
                 <ScalarProperty Name="NUMERO_DOCUMENTO" ColumnName="NUMERO_DOCUMENTO" />
                 <ScalarProperty Name="GUIA" ColumnName="GUIA" />
+                <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
                 <ScalarProperty Name="PRODUCTO" ColumnName="PRODUCTO" />
                 <ScalarProperty Name="DES_ALMACEN" ColumnName="DES_ALMACEN" />
                 <ScalarProperty Name="DES_CLASE" ColumnName="DES_CLASE" />

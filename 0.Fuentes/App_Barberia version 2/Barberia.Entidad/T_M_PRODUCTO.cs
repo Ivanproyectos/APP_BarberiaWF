@@ -17,7 +17,7 @@ namespace Barberia.Entidad
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public T_M_PRODUCTO()
         {
-            //this.T_D_VENTA = new HashSet<T_D_VENTA>();
+           // this.T_D_VENTA = new HashSet<T_D_VENTA>();
         }
     
         public int ID_PRODUCTO { get; set; }
@@ -41,6 +41,7 @@ namespace Barberia.Entidad
         public Nullable<System.DateTime> FEC_CREACION { get; set; }
         public string USU_MODIFICA { get; set; }
         public Nullable<System.DateTime> FEC_MODIFICA { get; set; }
+        public Nullable<int> ID_AFECTACION { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public  ICollection<T_D_VENTA> T_D_VENTA { get; set; }

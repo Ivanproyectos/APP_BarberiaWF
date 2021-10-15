@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Cls_Rule_M_Categoria.cs" />
     <Compile Include="Cls_Rule_D_Parametro.cs" />
+    <Compile Include="Cls_Rule_Tipo_Afectacion.cs" />
     <Compile Include="Cls_Rule_Parametro.cs" />
     <Compile Include="Cls_Rule_Anular_Corte.cs" />
     <Compile Include="Cls_Rule_Anular_Stock.cs" />
@@ -58,6 +59,7 @@
     <Compile Include="Cls_Rule_D_Cotizacion.cs" />
     <Compile Include="Cls_Rule_M_OrdenCompra.cs" />
     <Compile Include="Cls_Rule_M_Cotizacion.cs" />
+    <Compile Include="Cls_Rule_M_Moneda.cs" />
     <Compile Include="Cls_Rule_Tipo_Compobante.cs" />
     <Compile Include="Cls_Rule_Voucher.cs" />
     <Compile Include="Cls_Rule_DocumentoVenta.cs" />

@@ -78,7 +78,7 @@ namespace Barberia.Datos
                         }
                     }
 
-                    lista = query.Where(w => w.ID_EMPRESA == entidad.ID_EMPRESA).ToList();
+                    lista = query.Where(w => w.ID_EMPRESA == entidad.ID_EMPRESA).OrderByDescending(w => w.ID_ACTUALIZAR).ToList();
                 }
                 
             }

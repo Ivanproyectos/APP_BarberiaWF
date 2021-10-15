@@ -457,6 +457,15 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="T_M_MONEDA">
+      <EntityTypeMapping TypeName="DB_BARBERIAModel.T_M_MONEDA">
+        <MappingFragment StoreEntitySet="T_M_MONEDA">
+          <ScalarProperty Name="ID_MONEDA" ColumnName="ID_MONEDA" />
+          <ScalarProperty Name="COD_MONEDA" ColumnName="COD_MONEDA" />
+          <ScalarProperty Name="DESC_MONDEDA" ColumnName="DESC_MONDEDA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="T_M_ORDEN_COMPRA">
       <EntityTypeMapping TypeName="DB_BARBERIAModel.T_M_ORDEN_COMPRA">
         <MappingFragment StoreEntitySet="T_M_ORDEN_COMPRA">
@@ -566,6 +575,7 @@
           <ScalarProperty Name="FEC_CREACION" ColumnName="FEC_CREACION" />
           <ScalarProperty Name="USU_MODIFICA" ColumnName="USU_MODIFICA" />
           <ScalarProperty Name="FEC_MODIFICA" ColumnName="FEC_MODIFICA" />
+          <ScalarProperty Name="ID_AFECTACION" ColumnName="ID_AFECTACION" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -661,6 +671,19 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="T_TIPO_AFECTACION">
+      <EntityTypeMapping TypeName="DB_BARBERIAModel.T_TIPO_AFECTACION">
+        <MappingFragment StoreEntitySet="T_TIPO_AFECTACION">
+          <ScalarProperty Name="ID_AFECTACION" ColumnName="ID_AFECTACION" />
+          <ScalarProperty Name="COD_AFECTACION" ColumnName="COD_AFECTACION" />
+          <ScalarProperty Name="DESC_AFECTACION" ColumnName="DESC_AFECTACION" />
+          <ScalarProperty Name="LETRA" ColumnName="LETRA" />
+          <ScalarProperty Name="COD_TRIBUTO" ColumnName="COD_TRIBUTO" />
+          <ScalarProperty Name="DESC_TRIBUTO" ColumnName="DESC_TRIBUTO" />
+          <ScalarProperty Name="TIPO_TRIBUTO" ColumnName="TIPO_TRIBUTO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="T_TIPO_COMPROBANTE">
       <EntityTypeMapping TypeName="DB_BARBERIAModel.T_TIPO_COMPROBANTE">
         <MappingFragment StoreEntitySet="T_TIPO_COMPROBANTE">
@@ -701,12 +724,12 @@
     <EntitySetMapping Name="V_ACTUALIZAR_STOCK">
       <EntityTypeMapping TypeName="DB_BARBERIAModel.V_ACTUALIZAR_STOCK">
         <MappingFragment StoreEntitySet="V_ACTUALIZAR_STOCK">
-          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
           <ScalarProperty Name="ID_ACTUALIZAR" ColumnName="ID_ACTUALIZAR" />
           <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
           <ScalarProperty Name="DESC_TIPO_COMPROBANTE" ColumnName="DESC_TIPO_COMPROBANTE" />
           <ScalarProperty Name="NUMERO_DOCUMENTO" ColumnName="NUMERO_DOCUMENTO" />
           <ScalarProperty Name="GUIA" ColumnName="GUIA" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
           <ScalarProperty Name="PRODUCTO" ColumnName="PRODUCTO" />
           <ScalarProperty Name="DES_ALMACEN" ColumnName="DES_ALMACEN" />
           <ScalarProperty Name="DES_CLASE" ColumnName="DES_CLASE" />

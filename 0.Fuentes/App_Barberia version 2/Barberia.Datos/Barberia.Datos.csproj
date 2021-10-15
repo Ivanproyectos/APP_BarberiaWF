@@ -58,6 +58,7 @@
     <Compile Include="Cls_Dat_ClientePaginado.cs" />
     <Compile Include="Cls_Dat_M_Categoria.cs" />
     <Compile Include="Cls_Dat_D_Parametro.cs" />
+    <Compile Include="Cls_Dat_Tipo_Afectacion.cs" />
     <Compile Include="Cls_Dat_M_Parametro.cs" />
     <Compile Include="Cls_Dat_Anular_Stock.cs" />
     <Compile Include="Cls_Dat_Anular_Corte.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="Cls_Dat_OrdenCompra.cs" />
     <Compile Include="Cls_Dat_Cotizacion.cs" />
     <Compile Include="Cls_Dat_D_Cotizacion.cs" />
+    <Compile Include="Cls_Dat_M_Moneda.cs" />
     <Compile Include="Cls_Dat_Tipo_Comprobante.cs" />
     <Compile Include="Cls_Dat_Voucher.cs" />
     <Compile Include="Cls_Dat_DocumentoVenta.cs" />

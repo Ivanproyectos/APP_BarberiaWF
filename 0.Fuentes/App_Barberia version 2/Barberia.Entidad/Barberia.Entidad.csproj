@@ -160,6 +160,9 @@
     <Compile Include="T_M_MODELO.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="T_M_MONEDA.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="T_M_ORDEN_COMPRA.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
@@ -191,6 +194,9 @@
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="T_STOCK_ANULAR.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_TIPO_AFECTACION.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="T_TIPO_COMPROBANTE.cs">
