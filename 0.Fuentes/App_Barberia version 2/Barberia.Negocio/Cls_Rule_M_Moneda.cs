@@ -10,7 +10,7 @@ namespace Barberia.Negocio
        
         private Cls_Dat_M_Moneda objeto = new Cls_Dat_M_Moneda();
 
-        public List<T_M_MONEDA> Listar_Tipo_Comprobante(ref Cls_Ent_Auditoria auditoria)
+        public List<T_M_MONEDA> Listar_Moneda(ref Cls_Ent_Auditoria auditoria)
         {
             List<T_M_MONEDA> lista = new List<T_M_MONEDA>();
             try

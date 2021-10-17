@@ -17,5 +17,6 @@ namespace Barberia.Entidad
         public int ID_TIPO_COMPROBANTE { get; set; }
         public string COD_TIPO_COMPROBANTE { get; set; }
         public string DESC_TIPO_COMPROBANTE { get; set; }
+        public string FLG_TIPO { get; set; }
     }
 }

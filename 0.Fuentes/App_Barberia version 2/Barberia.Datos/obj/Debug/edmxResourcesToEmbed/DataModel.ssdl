@@ -24,6 +24,7 @@
     <Property Name="USU_MODIFICA" Type="varchar" MaxLength="20" />
     <Property Name="FEC_MODIFICA" Type="datetime" />
     <Property Name="FLG_ESTADO" Type="char" MaxLength="1" />
+    <Property Name="PRE_VENTA_UND_DOLAR" Type="numeric" Precision="10" Scale="2" />
   </EntityType>
   <EntityType Name="T_ANULAR_CORTE">
     <Key>
@@ -540,6 +541,7 @@
     <Property Name="USU_MODIFICA" Type="varchar" MaxLength="20" />
     <Property Name="FEC_MODIFICA" Type="datetime" />
     <Property Name="ID_AFECTACION" Type="int" />
+    <Property Name="PRECIO_VENTA_DOLAR" Type="numeric" Precision="10" Scale="2" />
   </EntityType>
   <EntityType Name="T_M_PROVINCIA">
     <Key>
@@ -613,6 +615,7 @@
     <Property Name="FEC_ENVIO" Type="varchar" MaxLength="50" />
     <Property Name="USU_MODIFICA" Type="varchar" MaxLength="20" />
     <Property Name="FEC_MODIFICA" Type="datetime" />
+    <Property Name="ID_MONEDA" Type="int" />
   </EntityType>
   <EntityType Name="T_STOCK_ANULAR">
     <Key>
@@ -646,6 +649,7 @@
     <Property Name="ID_TIPO_COMPROBANTE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="COD_TIPO_COMPROBANTE" Type="char" MaxLength="2" />
     <Property Name="DESC_TIPO_COMPROBANTE" Type="varchar" MaxLength="100" />
+    <Property Name="FLG_TIPO" Type="char" MaxLength="1" />
   </EntityType>
   <EntityType Name="T_TIPO_DOCUMENTO">
     <Key>
@@ -1073,6 +1077,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_PRODUCTO' no tiene definid
     <Property Name="STOCK" Type="int" />
     <Property Name="PRECIO_COMPRA" Type="numeric" Precision="10" Scale="2" />
     <Property Name="PRECIO_VENTA" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="PRECIO_VENTA_DOLAR" Type="numeric" Precision="10" Scale="2" />
     <Property Name="FEC_COMPRA" Type="datetime" />
     <Property Name="FLG_ESTADO" Type="char" MaxLength="1" />
     <Property Name="USU_CREACION" Type="varchar" MaxLength="20" />
@@ -1092,6 +1097,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
     </Key>
     <Property Name="ID_VENTA" Type="int" Nullable="false" />
     <Property Name="ID_EMPRESA" Type="int" Nullable="false" />
+    <Property Name="DESC_MONDEDA" Type="varchar" MaxLength="50" />
     <Property Name="VOUCHER" Type="varchar" MaxLength="20" />
     <Property Name="PERSONAL" Type="varchar" MaxLength="602" />
     <Property Name="CLIENTE" Type="varchar" MaxLength="1202" />
@@ -1772,6 +1778,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
     [V_PRODUCTO].[STOCK] AS [STOCK], 
     [V_PRODUCTO].[PRECIO_COMPRA] AS [PRECIO_COMPRA], 
     [V_PRODUCTO].[PRECIO_VENTA] AS [PRECIO_VENTA], 
+    [V_PRODUCTO].[PRECIO_VENTA_DOLAR] AS [PRECIO_VENTA_DOLAR], 
     [V_PRODUCTO].[FEC_COMPRA] AS [FEC_COMPRA], 
     [V_PRODUCTO].[FLG_ESTADO] AS [FLG_ESTADO], 
     [V_PRODUCTO].[USU_CREACION] AS [USU_CREACION], 
@@ -1786,6 +1793,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
       <DefiningQuery>SELECT 
     [V_VENTA].[ID_VENTA] AS [ID_VENTA], 
     [V_VENTA].[ID_EMPRESA] AS [ID_EMPRESA], 
+    [V_VENTA].[DESC_MONDEDA] AS [DESC_MONDEDA], 
     [V_VENTA].[VOUCHER] AS [VOUCHER], 
     [V_VENTA].[PERSONAL] AS [PERSONAL], 
     [V_VENTA].[CLIENTE] AS [CLIENTE], 

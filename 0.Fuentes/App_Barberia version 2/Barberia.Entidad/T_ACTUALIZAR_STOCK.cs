@@ -34,6 +34,7 @@ namespace Barberia.Entidad
         public string USU_MODIFICA { get; set; }
         public Nullable<System.DateTime> FEC_MODIFICA { get; set; }
         public string FLG_ESTADO { get; set; }
+        public Nullable<decimal> PRE_VENTA_UND_DOLAR { get; set; }
     
         public virtual T_M_ALMACEN T_M_ALMACEN { get; set; }
         public virtual T_M_CLASE T_M_CLASE { get; set; }

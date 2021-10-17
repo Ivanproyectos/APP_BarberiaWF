@@ -192,9 +192,11 @@ namespace Barberia.Datos
                     lista.ID_MARCA = entidad.ID_MARCA;
                     lista.ID_MODELO = entidad.ID_MODELO;
                     lista.ID_UNIDAD_MEDIDA = entidad.ID_UNIDAD_MEDIDA;
+                    lista.ID_AFECTACION = entidad.ID_AFECTACION;
                     lista.STOCK = entidad.STOCK;
                     lista.PRECIO_COMPRA = entidad.PRECIO_COMPRA;
                     lista.PRECIO_VENTA = entidad.PRECIO_VENTA;
+                    lista.PRECIO_VENTA_DOLAR = entidad.PRECIO_VENTA_DOLAR;
                     lista.FEC_COMPRA = entidad.FEC_COMPRA;
                     lista.USU_MODIFICA = entidad.USU_MODIFICA;
                     lista.FEC_MODIFICA = entidad.FEC_MODIFICA;
@@ -227,6 +229,7 @@ namespace Barberia.Datos
                     lista.STOCK = entidad.STOCK;
                     lista.PRECIO_COMPRA = entidad.PRECIO_COMPRA;
                     lista.PRECIO_VENTA = entidad.PRECIO_VENTA;
+                    lista.PRECIO_VENTA_DOLAR = entidad.PRECIO_VENTA_DOLAR;
                     lista.FEC_COMPRA = entidad.FEC_COMPRA;
                     Update(lista, lista.ID_PRODUCTO);
 

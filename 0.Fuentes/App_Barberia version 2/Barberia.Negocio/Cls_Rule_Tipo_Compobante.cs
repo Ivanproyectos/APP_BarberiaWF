@@ -10,12 +10,12 @@ namespace Barberia.Negocio
        
         private Cls_Dat_Tipo_Comprobante objeto = new Cls_Dat_Tipo_Comprobante();
 
-        public List<T_TIPO_COMPROBANTE> Listar_Tipo_Comprobante(ref Cls_Ent_Auditoria auditoria)
+        public List<T_TIPO_COMPROBANTE> Listar_Tipo_Comprobante(string tipo, ref Cls_Ent_Auditoria auditoria)
         {
             List<T_TIPO_COMPROBANTE> lista = new List<T_TIPO_COMPROBANTE>();
             try
             {
-                lista = objeto.Listar_Tipo_Comprobante(ref auditoria);
+                lista = objeto.Listar_Tipo_Comprobante(tipo, ref auditoria);
             }
             catch (Exception ex)
             {

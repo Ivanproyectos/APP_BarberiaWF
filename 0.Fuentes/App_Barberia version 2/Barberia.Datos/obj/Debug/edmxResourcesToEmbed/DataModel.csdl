@@ -24,6 +24,7 @@
     <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
     <Property Name="FLG_ESTADO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PRE_VENTA_UND_DOLAR" Type="Decimal" Precision="10" Scale="2" />
     <NavigationProperty Name="T_M_ALMACEN" Relationship="Self.FK_STOCK_ID_ALMACEN" FromRole="T_ACTUALIZAR_STOCK" ToRole="T_M_ALMACEN" />
     <NavigationProperty Name="T_M_CLASE" Relationship="Self.FK_STOCK_ID_CLASE" FromRole="T_ACTUALIZAR_STOCK" ToRole="T_M_CLASE" />
     <NavigationProperty Name="T_M_MARCA" Relationship="Self.FK_STOCK_ID_MARCA" FromRole="T_ACTUALIZAR_STOCK" ToRole="T_M_MARCA" />
@@ -575,6 +576,7 @@
     <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
     <Property Name="ID_AFECTACION" Type="Int32" />
+    <Property Name="PRECIO_VENTA_DOLAR" Type="Decimal" Precision="10" Scale="2" />
     <NavigationProperty Name="T_D_VENTA" Relationship="Self.FK_ID_PRODUCTO" FromRole="T_M_PRODUCTO" ToRole="T_D_VENTA" />
     <NavigationProperty Name="T_M_ALMACEN" Relationship="Self.FK_ID_ALMACEN" FromRole="T_M_PRODUCTO" ToRole="T_M_ALMACEN" />
     <NavigationProperty Name="T_M_CATEGORIA" Relationship="Self.FK_ID_CATEGORIA" FromRole="T_M_PRODUCTO" ToRole="T_M_CATEGORIA" />
@@ -663,6 +665,7 @@
     <NavigationProperty Name="T_D_DOCUMENTOS_VENTAS" Relationship="Self.FK_DOCUMENTOVENTAS" FromRole="T_M_VENTA" ToRole="T_D_DOCUMENTOS_VENTAS" />
     <NavigationProperty Name="T_D_VENTA" Relationship="Self.FK_ID_VENTA" FromRole="T_M_VENTA" ToRole="T_D_VENTA" />
     <NavigationProperty Name="T_M_CLIENTES" Relationship="Self.FK_VENTA_ID_CLIENTE" FromRole="T_M_VENTA" ToRole="T_M_CLIENTES" />
+    <Property Name="ID_MONEDA" Type="Int32" />
   </EntityType>
   <EntityType Name="T_STOCK_ANULAR">
     <Key>
@@ -696,6 +699,7 @@
     <Property Name="ID_TIPO_COMPROBANTE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="COD_TIPO_COMPROBANTE" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
     <Property Name="DESC_TIPO_COMPROBANTE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FLG_TIPO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
   </EntityType>
   <EntityType Name="T_TIPO_DOCUMENTO">
     <Key>
@@ -1103,6 +1107,7 @@
     <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
     <Property Name="ANIO" Type="Int32" />
     <Property Name="MES" Type="Int32" />
+    <Property Name="PRECIO_VENTA_DOLAR" Type="Decimal" Precision="10" Scale="2" />
   </EntityType>
   <EntityType Name="V_VENTA">
     <Key>
@@ -1129,6 +1134,7 @@
     <Property Name="FEC_VENTA" Type="DateTime" Precision="3" />
     <Property Name="ANIO" Type="Int32" />
     <Property Name="MES" Type="Int32" />
+    <Property Name="DESC_MONDEDA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
   <Association Name="FK_STOCK_ID_ALMACEN">
     <End Role="T_M_ALMACEN" Type="Self.T_M_ALMACEN" Multiplicity="1" />
