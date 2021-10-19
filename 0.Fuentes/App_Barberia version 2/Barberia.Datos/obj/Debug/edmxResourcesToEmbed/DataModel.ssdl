@@ -158,6 +158,28 @@
     <Property Name="ID_COMPROBANTE_SUNAT" Type="int" Nullable="false" />
     <Property Name="CONDICION" Type="smallint" />
   </EntityType>
+  <EntityType Name="T_D_KARDEX">
+    <Key>
+      <PropertyRef Name="ID_DETALLE" />
+    </Key>
+    <Property Name="ID_DETALLE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_TIPO_COMPROBANTE" Type="int" />
+    <Property Name="ID_KARDEX" Type="int" />
+    <Property Name="FEC_DETALLE_KARDEX" Type="datetime" />
+    <Property Name="NUM_DOCUMENTO" Type="varchar" MaxLength="100" />
+    <Property Name="CANTIDAD" Type="int" />
+    <Property Name="PRECIO_SOLES" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PRECIO_DOLAR" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TOTAL" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TIPO_TRANSACCION" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="CANTIDAD_SALDO" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PRECIO_SALDO" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TOTAL_SALDO" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="USU_CREACION" Type="varchar" MaxLength="20" />
+    <Property Name="FEC_CREACION" Type="datetime" />
+    <Property Name="USU_MODIFICA" Type="varchar" MaxLength="20" />
+    <Property Name="FEC_MODIFICA" Type="datetime" />
+  </EntityType>
   <EntityType Name="T_D_ORDEN_COMPRA">
     <Key>
       <PropertyRef Name="ID_D_ORDEN_COMPRA" />
@@ -463,6 +485,19 @@
     <Property Name="MENSAJE_SUNAT" Type="varchar" MaxLength="200" />
     <Property Name="CODIGO_SUNAT" Type="varchar" MaxLength="20" />
     <Property Name="ESTADO" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="T_M_KARDEX">
+    <Key>
+      <PropertyRef Name="ID_KARDEX" />
+    </Key>
+    <Property Name="ID_KARDEX" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_PRODUCTO" Type="int" />
+    <Property Name="FEC_KARDEX" Type="datetime" />
+    <Property Name="ID_PERSONAL" Type="int" />
+    <Property Name="USU_CREACION" Type="varchar" MaxLength="20" />
+    <Property Name="FEC_CREACION" Type="datetime" />
+    <Property Name="USU_MODIFICA" Type="varchar" MaxLength="20" />
+    <Property Name="FEC_MODIFICA" Type="datetime" />
   </EntityType>
   <EntityType Name="T_M_MARCA">
     <Key>
@@ -1197,6 +1232,18 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_DETALLE_ID_DETALLE">
+    <End Role="T_M_KARDEX" Type="Self.T_M_KARDEX" Multiplicity="0..1" />
+    <End Role="T_D_KARDEX" Type="Self.T_D_KARDEX" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_M_KARDEX">
+        <PropertyRef Name="ID_KARDEX" />
+      </Principal>
+      <Dependent Role="T_D_KARDEX">
+        <PropertyRef Name="ID_KARDEX" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_DOCUMENTOVENTAS">
     <End Role="T_M_VENTA" Type="Self.T_M_VENTA" Multiplicity="0..1" />
     <End Role="T_D_DOCUMENTOS_VENTAS" Type="Self.T_D_DOCUMENTOS_VENTAS" Multiplicity="*" />
@@ -1449,6 +1496,18 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_KARDEX_ID_PRODUCTO">
+    <End Role="T_M_PRODUCTO" Type="Self.T_M_PRODUCTO" Multiplicity="0..1" />
+    <End Role="T_M_KARDEX" Type="Self.T_M_KARDEX" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_M_PRODUCTO">
+        <PropertyRef Name="ID_PRODUCTO" />
+      </Principal>
+      <Dependent Role="T_M_KARDEX">
+        <PropertyRef Name="ID_PRODUCTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_RESUMEN_ID_COMPROBANTE">
     <End Role="T_M_COMPROBANTE_SUNAT" Type="Self.T_M_COMPROBANTE_SUNAT" Multiplicity="1" />
     <End Role="T_D_ENVIO_RESUMEN" Type="Self.T_D_ENVIO_RESUMEN" Multiplicity="*" />
@@ -1523,6 +1582,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
     <EntitySet Name="T_D_COTIZACION" EntityType="Self.T_D_COTIZACION" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_D_DOCUMENTOS_VENTAS" EntityType="Self.T_D_DOCUMENTOS_VENTAS" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_D_ENVIO_RESUMEN" EntityType="Self.T_D_ENVIO_RESUMEN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_D_KARDEX" EntityType="Self.T_D_KARDEX" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_D_ORDEN_COMPRA" EntityType="Self.T_D_ORDEN_COMPRA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_D_PARAMETRO" EntityType="Self.T_D_PARAMETRO" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_D_VENTA" EntityType="Self.T_D_VENTA" Schema="dbo" store:Type="Tables" />
@@ -1543,6 +1603,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
     <EntitySet Name="T_M_DOCUMENTO_SUNAT" EntityType="Self.T_M_DOCUMENTO_SUNAT" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_M_EMPRESA" EntityType="Self.T_M_EMPRESA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_M_ENVIO_RESUMEN" EntityType="Self.T_M_ENVIO_RESUMEN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_M_KARDEX" EntityType="Self.T_M_KARDEX" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_M_MARCA" EntityType="Self.T_M_MARCA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_M_MODELO" EntityType="Self.T_M_MODELO" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_M_MONEDA" EntityType="Self.T_M_MONEDA" Schema="dbo" store:Type="Tables" />
@@ -1913,6 +1974,10 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
       <End Role="T_M_COMPROBANTE_SUNAT" EntitySet="T_M_COMPROBANTE_SUNAT" />
       <End Role="T_M_CUOTA" EntitySet="T_M_CUOTA" />
     </AssociationSet>
+    <AssociationSet Name="FK_DETALLE_ID_DETALLE" Association="Self.FK_DETALLE_ID_DETALLE">
+      <End Role="T_M_KARDEX" EntitySet="T_M_KARDEX" />
+      <End Role="T_D_KARDEX" EntitySet="T_D_KARDEX" />
+    </AssociationSet>
     <AssociationSet Name="FK_DOCUMENTOVENTAS" Association="Self.FK_DOCUMENTOVENTAS">
       <End Role="T_M_VENTA" EntitySet="T_M_VENTA" />
       <End Role="T_D_DOCUMENTOS_VENTAS" EntitySet="T_D_DOCUMENTOS_VENTAS" />
@@ -1996,6 +2061,10 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
     <AssociationSet Name="FK_ID_VENTA" Association="Self.FK_ID_VENTA">
       <End Role="T_M_VENTA" EntitySet="T_M_VENTA" />
       <End Role="T_D_VENTA" EntitySet="T_D_VENTA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KARDEX_ID_PRODUCTO" Association="Self.FK_KARDEX_ID_PRODUCTO">
+      <End Role="T_M_PRODUCTO" EntitySet="T_M_PRODUCTO" />
+      <End Role="T_M_KARDEX" EntitySet="T_M_KARDEX" />
     </AssociationSet>
     <AssociationSet Name="FK_RESUMEN_ID_COMPROBANTE" Association="Self.FK_RESUMEN_ID_COMPROBANTE">
       <End Role="T_M_COMPROBANTE_SUNAT" EntitySet="T_M_COMPROBANTE_SUNAT" />

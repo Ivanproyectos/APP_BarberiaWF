@@ -39,6 +39,7 @@ namespace Barberia.Datos
         public virtual DbSet<T_D_COTIZACION> T_D_COTIZACION { get; set; }
         public virtual DbSet<T_D_DOCUMENTOS_VENTAS> T_D_DOCUMENTOS_VENTAS { get; set; }
         public virtual DbSet<T_D_ENVIO_RESUMEN> T_D_ENVIO_RESUMEN { get; set; }
+        public virtual DbSet<T_D_KARDEX> T_D_KARDEX { get; set; }
         public virtual DbSet<T_D_ORDEN_COMPRA> T_D_ORDEN_COMPRA { get; set; }
         public virtual DbSet<T_D_PARAMETRO> T_D_PARAMETRO { get; set; }
         public virtual DbSet<T_D_VENTA> T_D_VENTA { get; set; }
@@ -59,6 +60,7 @@ namespace Barberia.Datos
         public virtual DbSet<T_M_DOCUMENTO_SUNAT> T_M_DOCUMENTO_SUNAT { get; set; }
         public virtual DbSet<T_M_EMPRESA> T_M_EMPRESA { get; set; }
         public virtual DbSet<T_M_ENVIO_RESUMEN> T_M_ENVIO_RESUMEN { get; set; }
+        public virtual DbSet<T_M_KARDEX> T_M_KARDEX { get; set; }
         public virtual DbSet<T_M_MARCA> T_M_MARCA { get; set; }
         public virtual DbSet<T_M_MODELO> T_M_MODELO { get; set; }
         public virtual DbSet<T_M_MONEDA> T_M_MONEDA { get; set; }

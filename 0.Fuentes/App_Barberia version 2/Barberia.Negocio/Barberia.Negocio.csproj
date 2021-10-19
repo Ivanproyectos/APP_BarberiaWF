@@ -43,6 +43,8 @@
   <ItemGroup>
     <Compile Include="Cls_Rule_M_Categoria.cs" />
     <Compile Include="Cls_Rule_D_Parametro.cs" />
+    <Compile Include="Cls_Rule_D_Kardex.cs" />
+    <Compile Include="Cls_Rule_M_Kardex.cs" />
     <Compile Include="Cls_Rule_Tipo_Afectacion.cs" />
     <Compile Include="Cls_Rule_Parametro.cs" />
     <Compile Include="Cls_Rule_Anular_Corte.cs" />

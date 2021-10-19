@@ -12,24 +12,25 @@ namespace Barberia.Entidad
     using System;
     using System.Collections.Generic;
     
-    public partial class T_M_CLASE
+    public partial class T_M_KARDEX
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public T_M_CLASE()
+        public T_M_KARDEX()
         {
-            //this.T_M_PRODUCTO = new HashSet<T_M_PRODUCTO>();
+            this.T_D_KARDEX = new HashSet<T_D_KARDEX>();
         }
     
-        public int ID_CLASE { get; set; }
-        public int ID_EMPRESA { get; set; }
-        public string DES_CLASE { get; set; }
-        public string FLG_ESTADO { get; set; }
+        public int ID_KARDEX { get; set; }
+        public Nullable<int> ID_PRODUCTO { get; set; }
+        public Nullable<System.DateTime> FEC_KARDEX { get; set; }
+        public Nullable<int> ID_PERSONAL { get; set; }
         public string USU_CREACION { get; set; }
         public Nullable<System.DateTime> FEC_CREACION { get; set; }
         public string USU_MODIFICA { get; set; }
         public Nullable<System.DateTime> FEC_MODIFICA { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public  ICollection<T_M_PRODUCTO> T_M_PRODUCTO { get; set; }
+        public virtual ICollection<T_D_KARDEX> T_D_KARDEX { get; set; }
+        public virtual T_M_PRODUCTO T_M_PRODUCTO { get; set; }
     }
 }

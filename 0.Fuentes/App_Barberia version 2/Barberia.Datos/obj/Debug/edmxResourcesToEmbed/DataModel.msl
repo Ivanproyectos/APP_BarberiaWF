@@ -172,6 +172,29 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="T_D_KARDEX">
+      <EntityTypeMapping TypeName="DB_BARBERIAModel.T_D_KARDEX">
+        <MappingFragment StoreEntitySet="T_D_KARDEX">
+          <ScalarProperty Name="ID_DETALLE" ColumnName="ID_DETALLE" />
+          <ScalarProperty Name="ID_TIPO_COMPROBANTE" ColumnName="ID_TIPO_COMPROBANTE" />
+          <ScalarProperty Name="ID_KARDEX" ColumnName="ID_KARDEX" />
+          <ScalarProperty Name="FEC_DETALLE_KARDEX" ColumnName="FEC_DETALLE_KARDEX" />
+          <ScalarProperty Name="NUM_DOCUMENTO" ColumnName="NUM_DOCUMENTO" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="PRECIO_SOLES" ColumnName="PRECIO_SOLES" />
+          <ScalarProperty Name="PRECIO_DOLAR" ColumnName="PRECIO_DOLAR" />
+          <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+          <ScalarProperty Name="TIPO_TRANSACCION" ColumnName="TIPO_TRANSACCION" />
+          <ScalarProperty Name="CANTIDAD_SALDO" ColumnName="CANTIDAD_SALDO" />
+          <ScalarProperty Name="PRECIO_SALDO" ColumnName="PRECIO_SALDO" />
+          <ScalarProperty Name="TOTAL_SALDO" ColumnName="TOTAL_SALDO" />
+          <ScalarProperty Name="USU_CREACION" ColumnName="USU_CREACION" />
+          <ScalarProperty Name="FEC_CREACION" ColumnName="FEC_CREACION" />
+          <ScalarProperty Name="USU_MODIFICA" ColumnName="USU_MODIFICA" />
+          <ScalarProperty Name="FEC_MODIFICA" ColumnName="FEC_MODIFICA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="T_D_ORDEN_COMPRA">
       <EntityTypeMapping TypeName="DB_BARBERIAModel.T_D_ORDEN_COMPRA">
         <MappingFragment StoreEntitySet="T_D_ORDEN_COMPRA">
@@ -495,6 +518,20 @@
           <ScalarProperty Name="MENSAJE_SUNAT" ColumnName="MENSAJE_SUNAT" />
           <ScalarProperty Name="CODIGO_SUNAT" ColumnName="CODIGO_SUNAT" />
           <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_M_KARDEX">
+      <EntityTypeMapping TypeName="DB_BARBERIAModel.T_M_KARDEX">
+        <MappingFragment StoreEntitySet="T_M_KARDEX">
+          <ScalarProperty Name="ID_KARDEX" ColumnName="ID_KARDEX" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="FEC_KARDEX" ColumnName="FEC_KARDEX" />
+          <ScalarProperty Name="ID_PERSONAL" ColumnName="ID_PERSONAL" />
+          <ScalarProperty Name="USU_CREACION" ColumnName="USU_CREACION" />
+          <ScalarProperty Name="FEC_CREACION" ColumnName="FEC_CREACION" />
+          <ScalarProperty Name="USU_MODIFICA" ColumnName="USU_MODIFICA" />
+          <ScalarProperty Name="FEC_MODIFICA" ColumnName="FEC_MODIFICA" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

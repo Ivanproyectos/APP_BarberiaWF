@@ -17,7 +17,7 @@ namespace Barberia.Entidad
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public T_M_CARGO()
         {
-            this.T_M_PERSONAL = new HashSet<T_M_PERSONAL>();
+            //this.T_M_PERSONAL = new HashSet<T_M_PERSONAL>();
         }
     
         public int ID_CARGO { get; set; }
@@ -30,6 +30,6 @@ namespace Barberia.Entidad
         public Nullable<System.DateTime> FEC_MODIFICA { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<T_M_PERSONAL> T_M_PERSONAL { get; set; }
+        public  ICollection<T_M_PERSONAL> T_M_PERSONAL { get; set; }
     }
 }

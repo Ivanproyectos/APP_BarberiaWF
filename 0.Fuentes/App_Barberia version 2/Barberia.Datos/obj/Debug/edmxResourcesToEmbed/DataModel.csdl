@@ -166,6 +166,29 @@
     <NavigationProperty Name="T_M_ENVIO_RESUMEN" Relationship="Self.FK_ID_ENVIO_RESUMEN" FromRole="T_D_ENVIO_RESUMEN" ToRole="T_M_ENVIO_RESUMEN" />
     <NavigationProperty Name="T_M_COMPROBANTE_SUNAT" Relationship="Self.FK_RESUMEN_ID_COMPROBANTE" FromRole="T_D_ENVIO_RESUMEN" ToRole="T_M_COMPROBANTE_SUNAT" />
   </EntityType>
+  <EntityType Name="T_D_KARDEX">
+    <Key>
+      <PropertyRef Name="ID_DETALLE" />
+    </Key>
+    <Property Name="ID_DETALLE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ID_TIPO_COMPROBANTE" Type="Int32" />
+    <Property Name="ID_KARDEX" Type="Int32" />
+    <Property Name="FEC_DETALLE_KARDEX" Type="DateTime" Precision="3" />
+    <Property Name="NUM_DOCUMENTO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CANTIDAD" Type="Int32" />
+    <Property Name="PRECIO_SOLES" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PRECIO_DOLAR" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TOTAL" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TIPO_TRANSACCION" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="CANTIDAD_SALDO" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PRECIO_SALDO" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TOTAL_SALDO" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="USU_CREACION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="FEC_CREACION" Type="DateTime" Precision="3" />
+    <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="T_M_KARDEX" Relationship="Self.FK_DETALLE_ID_DETALLE" FromRole="T_D_KARDEX" ToRole="T_M_KARDEX" />
+  </EntityType>
   <EntityType Name="T_D_ORDEN_COMPRA">
     <Key>
       <PropertyRef Name="ID_D_ORDEN_COMPRA" />
@@ -493,6 +516,21 @@
     <Property Name="ESTADO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
     <NavigationProperty Name="T_D_ENVIO_RESUMEN" Relationship="Self.FK_ID_ENVIO_RESUMEN" FromRole="T_M_ENVIO_RESUMEN" ToRole="T_D_ENVIO_RESUMEN" />
   </EntityType>
+  <EntityType Name="T_M_KARDEX">
+    <Key>
+      <PropertyRef Name="ID_KARDEX" />
+    </Key>
+    <Property Name="ID_KARDEX" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ID_PRODUCTO" Type="Int32" />
+    <Property Name="FEC_KARDEX" Type="DateTime" Precision="3" />
+    <Property Name="ID_PERSONAL" Type="Int32" />
+    <Property Name="USU_CREACION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="FEC_CREACION" Type="DateTime" Precision="3" />
+    <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="T_D_KARDEX" Relationship="Self.FK_DETALLE_ID_DETALLE" FromRole="T_M_KARDEX" ToRole="T_D_KARDEX" />
+    <NavigationProperty Name="T_M_PRODUCTO" Relationship="Self.FK_KARDEX_ID_PRODUCTO" FromRole="T_M_KARDEX" ToRole="T_M_PRODUCTO" />
+  </EntityType>
   <EntityType Name="T_M_MARCA">
     <Key>
       <PropertyRef Name="ID_MARCA" />
@@ -649,6 +687,7 @@
     <NavigationProperty Name="T_M_ALMACEN" Relationship="Self.FK_ID_ALMACEN" FromRole="T_M_PRODUCTO" ToRole="T_M_ALMACEN" />
     <NavigationProperty Name="T_M_CATEGORIA" Relationship="Self.FK_ID_CATEGORIA" FromRole="T_M_PRODUCTO" ToRole="T_M_CATEGORIA" />
     <NavigationProperty Name="T_M_CLASE" Relationship="Self.FK_ID_CLASE" FromRole="T_M_PRODUCTO" ToRole="T_M_CLASE" />
+    <NavigationProperty Name="T_M_KARDEX" Relationship="Self.FK_KARDEX_ID_PRODUCTO" FromRole="T_M_PRODUCTO" ToRole="T_M_KARDEX" />
     <NavigationProperty Name="T_M_MARCA" Relationship="Self.FK_ID_MARCA" FromRole="T_M_PRODUCTO" ToRole="T_M_MARCA" />
     <NavigationProperty Name="T_M_MODELO" Relationship="Self.FK_ID_MODELO" FromRole="T_M_PRODUCTO" ToRole="T_M_MODELO" />
     <NavigationProperty Name="T_M_UNIDAD_MEDIDA" Relationship="Self.FK_ID_UNIDAD_MEDIDA" FromRole="T_M_PRODUCTO" ToRole="T_M_UNIDAD_MEDIDA" />
@@ -1305,6 +1344,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_DETALLE_ID_DETALLE">
+    <End Role="T_M_KARDEX" Type="Self.T_M_KARDEX" Multiplicity="0..1" />
+    <End Role="T_D_KARDEX" Type="Self.T_D_KARDEX" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_M_KARDEX">
+        <PropertyRef Name="ID_KARDEX" />
+      </Principal>
+      <Dependent Role="T_D_KARDEX">
+        <PropertyRef Name="ID_KARDEX" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_ID_ORDEN_COMPRA">
     <End Role="T_M_ORDEN_COMPRA" Type="Self.T_M_ORDEN_COMPRA" Multiplicity="0..1" />
     <End Role="T_D_ORDEN_COMPRA" Type="Self.T_D_ORDEN_COMPRA" Multiplicity="*" />
@@ -1473,6 +1524,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_KARDEX_ID_PRODUCTO">
+    <End Role="T_M_PRODUCTO" Type="Self.T_M_PRODUCTO" Multiplicity="0..1" />
+    <End Role="T_M_KARDEX" Type="Self.T_M_KARDEX" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_M_PRODUCTO">
+        <PropertyRef Name="ID_PRODUCTO" />
+      </Principal>
+      <Dependent Role="T_M_KARDEX">
+        <PropertyRef Name="ID_PRODUCTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_ID_MARCA">
     <End Role="T_M_MARCA" Type="Self.T_M_MARCA" Multiplicity="0..1" />
     <End Role="T_M_PRODUCTO" Type="Self.T_M_PRODUCTO" Multiplicity="*" />
@@ -1547,6 +1610,7 @@
     <EntitySet Name="T_D_COTIZACION" EntityType="Self.T_D_COTIZACION" />
     <EntitySet Name="T_D_DOCUMENTOS_VENTAS" EntityType="Self.T_D_DOCUMENTOS_VENTAS" />
     <EntitySet Name="T_D_ENVIO_RESUMEN" EntityType="Self.T_D_ENVIO_RESUMEN" />
+    <EntitySet Name="T_D_KARDEX" EntityType="Self.T_D_KARDEX" />
     <EntitySet Name="T_D_ORDEN_COMPRA" EntityType="Self.T_D_ORDEN_COMPRA" />
     <EntitySet Name="T_D_PARAMETRO" EntityType="Self.T_D_PARAMETRO" />
     <EntitySet Name="T_D_VENTA" EntityType="Self.T_D_VENTA" />
@@ -1567,6 +1631,7 @@
     <EntitySet Name="T_M_DOCUMENTO_SUNAT" EntityType="Self.T_M_DOCUMENTO_SUNAT" />
     <EntitySet Name="T_M_EMPRESA" EntityType="Self.T_M_EMPRESA" />
     <EntitySet Name="T_M_ENVIO_RESUMEN" EntityType="Self.T_M_ENVIO_RESUMEN" />
+    <EntitySet Name="T_M_KARDEX" EntityType="Self.T_M_KARDEX" />
     <EntitySet Name="T_M_MARCA" EntityType="Self.T_M_MARCA" />
     <EntitySet Name="T_M_MODELO" EntityType="Self.T_M_MODELO" />
     <EntitySet Name="T_M_MONEDA" EntityType="Self.T_M_MONEDA" />
@@ -1634,6 +1699,10 @@
       <End Role="T_M_COMPROBANTE_SUNAT" EntitySet="T_M_COMPROBANTE_SUNAT" />
       <End Role="T_D_ENVIO_RESUMEN" EntitySet="T_D_ENVIO_RESUMEN" />
     </AssociationSet>
+    <AssociationSet Name="FK_DETALLE_ID_DETALLE" Association="Self.FK_DETALLE_ID_DETALLE">
+      <End Role="T_M_KARDEX" EntitySet="T_M_KARDEX" />
+      <End Role="T_D_KARDEX" EntitySet="T_D_KARDEX" />
+    </AssociationSet>
     <AssociationSet Name="FK_ID_ORDEN_COMPRA" Association="Self.FK_ID_ORDEN_COMPRA">
       <End Role="T_M_ORDEN_COMPRA" EntitySet="T_M_ORDEN_COMPRA" />
       <End Role="T_D_ORDEN_COMPRA" EntitySet="T_D_ORDEN_COMPRA" />
@@ -1689,6 +1758,10 @@
     <AssociationSet Name="FK_ID_TIPO_COMPROBANTE" Association="Self.FK_ID_TIPO_COMPROBANTE">
       <End Role="T_TIPO_COMPROBANTE" EntitySet="T_TIPO_COMPROBANTE" />
       <End Role="T_M_COMPROBANTE_SUNAT" EntitySet="T_M_COMPROBANTE_SUNAT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KARDEX_ID_PRODUCTO" Association="Self.FK_KARDEX_ID_PRODUCTO">
+      <End Role="T_M_PRODUCTO" EntitySet="T_M_PRODUCTO" />
+      <End Role="T_M_KARDEX" EntitySet="T_M_KARDEX" />
     </AssociationSet>
     <AssociationSet Name="FK_ID_MARCA" Association="Self.FK_ID_MARCA">
       <End Role="T_M_MARCA" EntitySet="T_M_MARCA" />

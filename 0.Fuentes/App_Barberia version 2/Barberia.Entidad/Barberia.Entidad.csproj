@@ -106,6 +106,9 @@
     <Compile Include="T_D_ENVIO_RESUMEN.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="T_D_KARDEX.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="T_D_ORDEN_COMPRA.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
@@ -164,6 +167,9 @@
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="T_M_ENVIO_RESUMEN.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_M_KARDEX.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="T_M_MARCA.cs">
