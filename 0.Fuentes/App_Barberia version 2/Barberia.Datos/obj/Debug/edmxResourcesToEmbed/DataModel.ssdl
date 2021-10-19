@@ -348,6 +348,7 @@
     <Property Name="FEC_CREACION" Type="datetime" />
     <Property Name="USU_MODIFICA" Type="varchar" MaxLength="20" />
     <Property Name="FEC_MODIFICA" Type="datetime" />
+    <Property Name="ID_MONEDA" Type="int" />
   </EntityType>
   <EntityType Name="T_M_DEPARTAMENTO">
     <Key>
@@ -459,6 +460,7 @@
     <Property Name="FEC_CREACION" Type="datetime" />
     <Property Name="USU_MODIFICA" Type="varchar" MaxLength="20" />
     <Property Name="FEC_MODIFICA" Type="datetime" />
+    <Property Name="ID_MONEDA" Type="int" />
   </EntityType>
   <EntityType Name="T_M_PARAMETRO">
     <Key>
@@ -782,6 +784,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_COTIZACION' no tiene defin
     </Key>
     <Property Name="ID_COTIZACION" Type="int" Nullable="false" />
     <Property Name="ID_EMPRESA" Type="int" Nullable="false" />
+    <Property Name="DESC_MONDEDA" Type="varchar" MaxLength="50" />
     <Property Name="EMPRESA_EXTERNA" Type="varchar" MaxLength="200" />
     <Property Name="NUM_COTIZACION" Type="varchar" MaxLength="20" />
     <Property Name="FECHA" Type="date" />
@@ -964,6 +967,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_ORDEN_COMPRA' no tiene def
     </Key>
     <Property Name="ID_ORDEN_COMPRA" Type="int" Nullable="false" />
     <Property Name="ID_EMPRESA" Type="int" Nullable="false" />
+    <Property Name="DESC_MONDEDA" Type="varchar" MaxLength="50" />
     <Property Name="EMPRESA_EXTERNA" Type="varchar" MaxLength="200" />
     <Property Name="NUM_COTIZACION_REF" Type="varchar" MaxLength="20" />
     <Property Name="NUM_ORDEN_COMPRA" Type="varchar" MaxLength="20" />
@@ -1538,6 +1542,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
       <DefiningQuery>SELECT 
     [V_COTIZACION].[ID_COTIZACION] AS [ID_COTIZACION], 
     [V_COTIZACION].[ID_EMPRESA] AS [ID_EMPRESA], 
+    [V_COTIZACION].[DESC_MONDEDA] AS [DESC_MONDEDA], 
     [V_COTIZACION].[EMPRESA_EXTERNA] AS [EMPRESA_EXTERNA], 
     [V_COTIZACION].[NUM_COTIZACION] AS [NUM_COTIZACION], 
     [V_COTIZACION].[FECHA] AS [FECHA], 
@@ -1687,6 +1692,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
       <DefiningQuery>SELECT 
     [V_ORDEN_COMPRA].[ID_ORDEN_COMPRA] AS [ID_ORDEN_COMPRA], 
     [V_ORDEN_COMPRA].[ID_EMPRESA] AS [ID_EMPRESA], 
+    [V_ORDEN_COMPRA].[DESC_MONDEDA] AS [DESC_MONDEDA], 
     [V_ORDEN_COMPRA].[EMPRESA_EXTERNA] AS [EMPRESA_EXTERNA], 
     [V_ORDEN_COMPRA].[NUM_COTIZACION_REF] AS [NUM_COTIZACION_REF], 
     [V_ORDEN_COMPRA].[NUM_ORDEN_COMPRA] AS [NUM_ORDEN_COMPRA], 

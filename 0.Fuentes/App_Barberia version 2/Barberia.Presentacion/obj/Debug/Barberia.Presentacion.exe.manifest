@@ -55,26 +55,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Barberia.Datos.dll" size="449024">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Barberia.Datos.dll" size="450048">
       <assemblyIdentity name="Barberia.Datos" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>hMl7WTf26Z8FuuZKXWou8dISNkgN5GP598LuZxjYutM=</dsig:DigestValue>
+        <dsig:DigestValue>bdcUAFMqRc/ps/9wXfwlcskmLCxFBn+Ss5q75aq3tNw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Barberia.Entidad.dll" size="144896">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Barberia.Entidad.dll" size="145408">
       <assemblyIdentity name="Barberia.Entidad" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>dAllbEo8N1iGFAa444NdDpWB1LtTgHsgyDRxi/gKQX0=</dsig:DigestValue>
+        <dsig:DigestValue>YSDaJ+gVTqjdOZrpho2dwxjYofCgy2fd/p01X4c4T78=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -372,6 +372,7 @@
     <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
     <NavigationProperty Name="T_D_COTIZACION" Relationship="Self.FK_ID_COTIZACION" FromRole="T_M_COTIZACION" ToRole="T_D_COTIZACION" />
+    <Property Name="ID_MONEDA" Type="Int32" />
   </EntityType>
   <EntityType Name="T_M_DEPARTAMENTO">
     <Key>
@@ -489,6 +490,7 @@
     <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
     <NavigationProperty Name="T_D_ORDEN_COMPRA" Relationship="Self.FK_ID_ORDEN_COMPRA" FromRole="T_M_ORDEN_COMPRA" ToRole="T_D_ORDEN_COMPRA" />
+    <Property Name="ID_MONEDA" Type="Int32" />
   </EntityType>
   <EntityType Name="T_M_PARAMETRO">
     <Key>
@@ -849,6 +851,7 @@
     <Property Name="FEC_CREACION" Type="DateTime" Precision="3" />
     <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
+    <Property Name="DESC_MONDEDA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="V_EMPRESA">
     <Key>
@@ -1018,6 +1021,7 @@
     <Property Name="FEC_CREACION" Type="DateTime" Precision="3" />
     <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
+    <Property Name="DESC_MONDEDA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="V_PARAMETRO">
     <Key>

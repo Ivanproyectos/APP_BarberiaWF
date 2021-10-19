@@ -16,6 +16,7 @@ namespace Barberia.Entidad
     {
         public int ID_ORDEN_COMPRA { get; set; }
         public int ID_EMPRESA { get; set; }
+        public string DESC_MONDEDA { get; set; }
         public string EMPRESA_EXTERNA { get; set; }
         public string NUM_COTIZACION_REF { get; set; }
         public string NUM_ORDEN_COMPRA { get; set; }

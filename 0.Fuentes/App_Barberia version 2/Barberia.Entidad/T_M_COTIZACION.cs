@@ -24,6 +24,7 @@ namespace Barberia.Entidad
         public int ID_EMPRESA { get; set; }
         public Nullable<int> ID_EMPRESA_INTERNA { get; set; }
         public Nullable<int> ID_EMPRESA_CONTRATA { get; set; }
+        public Nullable<int> ID_MONEDA { get; set; }
         public string NUM_COTIZACION { get; set; }
         public Nullable<System.DateTime> FECHA { get; set; }
         public Nullable<int> ID_PERSONA { get; set; }
