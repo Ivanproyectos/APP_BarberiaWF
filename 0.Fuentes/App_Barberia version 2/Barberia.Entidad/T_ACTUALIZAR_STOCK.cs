@@ -21,25 +21,17 @@ namespace Barberia.Entidad
         public string GUIA { get; set; }
         public int ID_PRODUCTO { get; set; }
         public int ID_ALMACEN { get; set; }
-        public int ID_CLASE { get; set; }
-        public int ID_MARCA { get; set; }
-        public int ID_MODELO { get; set; }
-        public int ID_UNIDAD_MEDIDA { get; set; }
         public Nullable<int> CANTIDAD { get; set; }
         public Nullable<decimal> PRE_COMPRA { get; set; }
         public Nullable<decimal> PRE_VENTA_UND { get; set; }
+        public Nullable<decimal> PRE_VENTA_UND_DOLAR { get; set; }
         public Nullable<System.DateTime> FEC_OPERACION { get; set; }
         public string USU_CREACION { get; set; }
         public Nullable<System.DateTime> FEC_CREACION { get; set; }
         public string USU_MODIFICA { get; set; }
         public Nullable<System.DateTime> FEC_MODIFICA { get; set; }
         public string FLG_ESTADO { get; set; }
-        public Nullable<decimal> PRE_VENTA_UND_DOLAR { get; set; }
     
         public virtual T_M_ALMACEN T_M_ALMACEN { get; set; }
-        public virtual T_M_CLASE T_M_CLASE { get; set; }
-        public virtual T_M_MARCA T_M_MARCA { get; set; }
-        public virtual T_M_MODELO T_M_MODELO { get; set; }
-        public virtual T_M_UNIDAD_MEDIDA T_M_UNIDAD_MEDIDA { get; set; }
     }
 }

@@ -17,7 +17,7 @@ namespace Barberia.Entidad
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public T_M_PRODUCTO()
         {
-            //this.T_D_VENTA = new HashSet<T_D_VENTA>();
+            this.T_D_VENTA = new HashSet<T_D_VENTA>();
         }
     
         public int ID_PRODUCTO { get; set; }
@@ -30,27 +30,27 @@ namespace Barberia.Entidad
         public Nullable<int> ID_MARCA { get; set; }
         public Nullable<int> ID_ALMACEN { get; set; }
         public Nullable<int> ID_CLASE { get; set; }
+        public Nullable<int> ID_AFECTACION { get; set; }
         public string NOM_FILE { get; set; }
         public string RUTA { get; set; }
         public Nullable<int> STOCK { get; set; }
         public Nullable<decimal> PRECIO_COMPRA { get; set; }
         public Nullable<decimal> PRECIO_VENTA { get; set; }
+        public Nullable<decimal> PRECIO_VENTA_DOLAR { get; set; }
         public Nullable<System.DateTime> FEC_COMPRA { get; set; }
         public string FLG_ESTADO { get; set; }
         public string USU_CREACION { get; set; }
         public Nullable<System.DateTime> FEC_CREACION { get; set; }
         public string USU_MODIFICA { get; set; }
         public Nullable<System.DateTime> FEC_MODIFICA { get; set; }
-        public Nullable<int> ID_AFECTACION { get; set; }
-        public Nullable<decimal> PRECIO_VENTA_DOLAR { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public  ICollection<T_D_VENTA> T_D_VENTA { get; set; }
-        public  T_M_ALMACEN T_M_ALMACEN { get; set; }
-        public  T_M_CATEGORIA T_M_CATEGORIA { get; set; }
-        public  T_M_CLASE T_M_CLASE { get; set; }
-        public  T_M_MARCA T_M_MARCA { get; set; }
-        public  T_M_MODELO T_M_MODELO { get; set; }
-        public  T_M_UNIDAD_MEDIDA T_M_UNIDAD_MEDIDA { get; set; }
+        public virtual ICollection<T_D_VENTA> T_D_VENTA { get; set; }
+        public virtual T_M_ALMACEN T_M_ALMACEN { get; set; }
+        public virtual T_M_CATEGORIA T_M_CATEGORIA { get; set; }
+        public virtual T_M_CLASE T_M_CLASE { get; set; }
+        public virtual T_M_MARCA T_M_MARCA { get; set; }
+        public virtual T_M_MODELO T_M_MODELO { get; set; }
+        public virtual T_M_UNIDAD_MEDIDA T_M_UNIDAD_MEDIDA { get; set; }
     }
 }

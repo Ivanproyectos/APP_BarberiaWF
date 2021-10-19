@@ -12,18 +12,19 @@ namespace Barberia.Entidad
     using System;
     using System.Collections.Generic;
     
-    public partial class T_TIPO_COMPROBANTE
+    public partial class T_M_SERIE
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public T_TIPO_COMPROBANTE()
+        public T_M_SERIE()
         {
             this.T_M_COMPROBANTE_SUNAT = new HashSet<T_M_COMPROBANTE_SUNAT>();
         }
     
-        public int ID_TIPO_COMPROBANTE { get; set; }
-        public string COD_TIPO_COMPROBANTE { get; set; }
-        public string DESC_TIPO_COMPROBANTE { get; set; }
-        public string FLG_TIPO { get; set; }
+        public int ID_SERIE { get; set; }
+        public Nullable<int> ID_EMPRESA { get; set; }
+        public Nullable<int> ID_TIPO_COMPROBANTE { get; set; }
+        public string SERIE { get; set; }
+        public Nullable<int> CORRELATIVO { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<T_M_COMPROBANTE_SUNAT> T_M_COMPROBANTE_SUNAT { get; set; }

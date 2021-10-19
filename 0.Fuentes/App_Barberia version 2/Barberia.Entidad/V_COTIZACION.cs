@@ -16,8 +16,8 @@ namespace Barberia.Entidad
     {
         public int ID_COTIZACION { get; set; }
         public int ID_EMPRESA { get; set; }
-        public string EMPRESA_EXTERNA { get; set; }
         public string DESC_MONDEDA { get; set; }
+        public string EMPRESA_EXTERNA { get; set; }
         public string NUM_COTIZACION { get; set; }
         public Nullable<System.DateTime> FECHA { get; set; }
         public string ASUNTO { get; set; }

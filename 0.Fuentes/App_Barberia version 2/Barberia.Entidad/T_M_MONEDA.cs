@@ -14,8 +14,17 @@ namespace Barberia.Entidad
     
     public partial class T_M_MONEDA
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public T_M_MONEDA()
+        {
+            this.T_M_COMPROBANTE_SUNAT = new HashSet<T_M_COMPROBANTE_SUNAT>();
+        }
+    
         public int ID_MONEDA { get; set; }
         public string COD_MONEDA { get; set; }
         public string DESC_MONDEDA { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<T_M_COMPROBANTE_SUNAT> T_M_COMPROBANTE_SUNAT { get; set; }
     }
 }

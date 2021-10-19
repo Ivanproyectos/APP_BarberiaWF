@@ -11,20 +11,16 @@
     <Property Name="GUIA" Type="varchar" MaxLength="50" />
     <Property Name="ID_PRODUCTO" Type="int" Nullable="false" />
     <Property Name="ID_ALMACEN" Type="int" Nullable="false" />
-    <Property Name="ID_CLASE" Type="int" Nullable="false" />
-    <Property Name="ID_MARCA" Type="int" Nullable="false" />
-    <Property Name="ID_MODELO" Type="int" Nullable="false" />
-    <Property Name="ID_UNIDAD_MEDIDA" Type="int" Nullable="false" />
     <Property Name="CANTIDAD" Type="int" />
     <Property Name="PRE_COMPRA" Type="numeric" Precision="10" Scale="2" />
     <Property Name="PRE_VENTA_UND" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="PRE_VENTA_UND_DOLAR" Type="numeric" Precision="10" Scale="2" />
     <Property Name="FEC_OPERACION" Type="date" />
     <Property Name="USU_CREACION" Type="varchar" MaxLength="20" />
     <Property Name="FEC_CREACION" Type="datetime" />
     <Property Name="USU_MODIFICA" Type="varchar" MaxLength="20" />
     <Property Name="FEC_MODIFICA" Type="datetime" />
     <Property Name="FLG_ESTADO" Type="char" MaxLength="1" />
-    <Property Name="PRE_VENTA_UND_DOLAR" Type="numeric" Precision="10" Scale="2" />
   </EntityType>
   <EntityType Name="T_ANULAR_CORTE">
     <Key>
@@ -152,6 +148,15 @@
     <Property Name="USU_CREACCION" Type="varchar" MaxLength="200" />
     <Property Name="FEC_MODIFICACION" Type="datetime" />
     <Property Name="USU_MODIFICACION" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="T_D_ENVIO_RESUMEN">
+    <Key>
+      <PropertyRef Name="ID_DETALLE" />
+    </Key>
+    <Property Name="ID_DETALLE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_ENVIO_RESUMEN" Type="int" Nullable="false" />
+    <Property Name="ID_COMPROBANTE_SUNAT" Type="int" Nullable="false" />
+    <Property Name="CONDICION" Type="smallint" />
   </EntityType>
   <EntityType Name="T_D_ORDEN_COMPRA">
     <Key>
@@ -303,6 +308,38 @@
     <Property Name="USU_MODIFICA" Type="varchar" MaxLength="20" />
     <Property Name="FEC_MODIFICA" Type="datetime" />
   </EntityType>
+  <EntityType Name="T_M_COMPROBANTE_SUNAT">
+    <Key>
+      <PropertyRef Name="ID_COMPROBANTE_SUNAT" />
+    </Key>
+    <Property Name="ID_COMPROBANTE_SUNAT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_EMPRESA" Type="int" Nullable="false" />
+    <Property Name="ID_TIPO_COMPROBANTE" Type="int" Nullable="false" />
+    <Property Name="ID_SERIE" Type="int" Nullable="false" />
+    <Property Name="SERIE" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="CORRELATIVO" Type="int" Nullable="false" />
+    <Property Name="FORMA_PAGO" Type="varchar" MaxLength="50" />
+    <Property Name="FECHA_EMISION" Type="date" />
+    <Property Name="FECHA_VENCIMIENTO" Type="date" />
+    <Property Name="ID_MONEDA" Type="int" Nullable="false" />
+    <Property Name="OP_GRAVADAS" Type="decimal" Precision="11" Scale="2" />
+    <Property Name="OP_EXONERADAS" Type="decimal" Precision="11" Scale="2" />
+    <Property Name="OP_INAFECTAS" Type="decimal" Precision="11" Scale="2" />
+    <Property Name="IGV" Type="decimal" Precision="11" Scale="2" />
+    <Property Name="TOTAL" Type="decimal" Precision="11" Scale="2" />
+    <Property Name="ID_CLIENTE" Type="int" Nullable="false" />
+    <Property Name="TIPO_COMPROBANTE_REF_ID" Type="char" MaxLength="2" />
+    <Property Name="SERIE_REF" Type="char" MaxLength="4" />
+    <Property Name="CORRELATIVO_REF" Type="int" />
+    <Property Name="COD_MOTIVO" Type="varchar" MaxLength="5" />
+    <Property Name="NOMBRE_XML" Type="varchar" MaxLength="50" />
+    <Property Name="XML_BASE64" Type="text" />
+    <Property Name="COD_HASH" Type="text" />
+    <Property Name="CDR_BASE64" Type="text" />
+    <Property Name="COD_SUNAT" Type="varchar" MaxLength="20" />
+    <Property Name="MENSAJE_SUNAT" Type="varchar" MaxLength="100" />
+    <Property Name="ESTADO_COMPROBANTE" Type="char" MaxLength="1" />
+  </EntityType>
   <EntityType Name="T_M_CORTE">
     <Key>
       <PropertyRef Name="ID_CORTE" />
@@ -332,6 +369,7 @@
     <Property Name="ID_EMPRESA" Type="int" Nullable="false" />
     <Property Name="ID_EMPRESA_INTERNA" Type="int" />
     <Property Name="ID_EMPRESA_CONTRATA" Type="int" />
+    <Property Name="ID_MONEDA" Type="int" />
     <Property Name="NUM_COTIZACION" Type="varchar" MaxLength="20" />
     <Property Name="FECHA" Type="date" />
     <Property Name="ID_PERSONA" Type="int" />
@@ -348,7 +386,17 @@
     <Property Name="FEC_CREACION" Type="datetime" />
     <Property Name="USU_MODIFICA" Type="varchar" MaxLength="20" />
     <Property Name="FEC_MODIFICA" Type="datetime" />
-    <Property Name="ID_MONEDA" Type="int" />
+  </EntityType>
+  <EntityType Name="T_M_CUOTA">
+    <Key>
+      <PropertyRef Name="ID_CUOTA" />
+    </Key>
+    <Property Name="ID_CUOTA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_COMPROBANTE_SUNAT" Type="int" Nullable="false" />
+    <Property Name="NUMERO" Type="varchar" MaxLength="3" />
+    <Property Name="IMPORTE" Type="decimal" Precision="15" Scale="6" />
+    <Property Name="FECHA_VENCIMIENTO" Type="date" />
+    <Property Name="ESTADO" Type="char" MaxLength="1" />
   </EntityType>
   <EntityType Name="T_M_DEPARTAMENTO">
     <Key>
@@ -401,6 +449,21 @@
     <Property Name="USU_MODIFICA" Type="varchar" MaxLength="20" />
     <Property Name="FEC_MODIFICA" Type="datetime" />
   </EntityType>
+  <EntityType Name="T_M_ENVIO_RESUMEN">
+    <Key>
+      <PropertyRef Name="ID_ENVIO_RESUMEN" />
+    </Key>
+    <Property Name="ID_ENVIO_RESUMEN" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FECHA_ENVIO" Type="date" />
+    <Property Name="FECHA_REFERENCIA" Type="date" />
+    <Property Name="CORRELATIVO" Type="int" />
+    <Property Name="RESUMEN" Type="int" />
+    <Property Name="BAJA" Type="int" />
+    <Property Name="NOMBRE_XML" Type="varchar" MaxLength="50" />
+    <Property Name="MENSAJE_SUNAT" Type="varchar" MaxLength="200" />
+    <Property Name="CODIGO_SUNAT" Type="varchar" MaxLength="20" />
+    <Property Name="ESTADO" Type="char" MaxLength="1" />
+  </EntityType>
   <EntityType Name="T_M_MARCA">
     <Key>
       <PropertyRef Name="ID_MARCA" />
@@ -443,6 +506,7 @@
     <Property Name="ID_EMPRESA" Type="int" Nullable="false" />
     <Property Name="ID_EMPRESA_INTERNA" Type="int" />
     <Property Name="ID_EMPRESA_CONTRATA" Type="int" />
+    <Property Name="ID_MONEDA" Type="int" />
     <Property Name="NUM_ORDEN_COMPRA" Type="varchar" MaxLength="20" />
     <Property Name="NUM_COTIZACION_REF" Type="varchar" MaxLength="20" />
     <Property Name="FECHA" Type="date" />
@@ -460,7 +524,6 @@
     <Property Name="FEC_CREACION" Type="datetime" />
     <Property Name="USU_MODIFICA" Type="varchar" MaxLength="20" />
     <Property Name="FEC_MODIFICA" Type="datetime" />
-    <Property Name="ID_MONEDA" Type="int" />
   </EntityType>
   <EntityType Name="T_M_PARAMETRO">
     <Key>
@@ -531,19 +594,19 @@
     <Property Name="ID_MARCA" Type="int" />
     <Property Name="ID_ALMACEN" Type="int" />
     <Property Name="ID_CLASE" Type="int" />
+    <Property Name="ID_AFECTACION" Type="int" />
     <Property Name="NOM_FILE" Type="varchar" MaxLength="100" />
     <Property Name="RUTA" Type="varchar" MaxLength="100" />
     <Property Name="STOCK" Type="int" />
     <Property Name="PRECIO_COMPRA" Type="numeric" Precision="10" Scale="2" />
     <Property Name="PRECIO_VENTA" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="PRECIO_VENTA_DOLAR" Type="numeric" Precision="10" Scale="2" />
     <Property Name="FEC_COMPRA" Type="datetime" />
     <Property Name="FLG_ESTADO" Type="char" MaxLength="1" />
     <Property Name="USU_CREACION" Type="varchar" MaxLength="20" />
     <Property Name="FEC_CREACION" Type="datetime" />
     <Property Name="USU_MODIFICA" Type="varchar" MaxLength="20" />
     <Property Name="FEC_MODIFICA" Type="datetime" />
-    <Property Name="ID_AFECTACION" Type="int" />
-    <Property Name="PRECIO_VENTA_DOLAR" Type="numeric" Precision="10" Scale="2" />
   </EntityType>
   <EntityType Name="T_M_PROVINCIA">
     <Key>
@@ -553,6 +616,16 @@
     <Property Name="COD_DEPARTAMENTO" Type="char" MaxLength="2" />
     <Property Name="COD_PROVINCIA" Type="char" MaxLength="2" />
     <Property Name="PROVINCIA" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="T_M_SERIE">
+    <Key>
+      <PropertyRef Name="ID_SERIE" />
+    </Key>
+    <Property Name="ID_SERIE" Type="int" Nullable="false" />
+    <Property Name="ID_EMPRESA" Type="int" />
+    <Property Name="ID_TIPO_COMPROBANTE" Type="int" />
+    <Property Name="SERIE" Type="char" MaxLength="4" />
+    <Property Name="CORRELATIVO" Type="int" />
   </EntityType>
   <EntityType Name="T_M_SERVICIO">
     <Key>
@@ -603,6 +676,7 @@
     <Property Name="ID_VENTA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="ID_EMPRESA" Type="int" Nullable="false" />
     <Property Name="ID_CLIENTE" Type="int" Nullable="false" />
+    <Property Name="ID_MONEDA" Type="int" />
     <Property Name="VOUCHER" Type="varchar" MaxLength="20" />
     <Property Name="TOTAL_IMPORTE" Type="numeric" Precision="10" Scale="2" />
     <Property Name="DESCT_TOTAL" Type="numeric" Precision="10" Scale="2" />
@@ -617,7 +691,6 @@
     <Property Name="FEC_ENVIO" Type="varchar" MaxLength="50" />
     <Property Name="USU_MODIFICA" Type="varchar" MaxLength="20" />
     <Property Name="FEC_MODIFICA" Type="datetime" />
-    <Property Name="ID_MONEDA" Type="int" />
   </EntityType>
   <EntityType Name="T_STOCK_ANULAR">
     <Key>
@@ -687,10 +760,6 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_ACTUALIZAR_STOCK' no tiene
       <PropertyRef Name="ID_PRODUCTO" />
       <PropertyRef Name="PRODUCTO" />
       <PropertyRef Name="DES_ALMACEN" />
-      <PropertyRef Name="DES_CLASE" />
-      <PropertyRef Name="DES_UNIDAD_MEDIDA" />
-      <PropertyRef Name="DES_MODELO" />
-      <PropertyRef Name="DES_MARCA" />
     </Key>
     <Property Name="ID_ACTUALIZAR" Type="int" Nullable="false" />
     <Property Name="ID_EMPRESA" Type="int" Nullable="false" />
@@ -700,10 +769,6 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_ACTUALIZAR_STOCK' no tiene
     <Property Name="ID_PRODUCTO" Type="int" Nullable="false" />
     <Property Name="PRODUCTO" Type="varchar" MaxLength="200" Nullable="false" />
     <Property Name="DES_ALMACEN" Type="varchar" MaxLength="200" Nullable="false" />
-    <Property Name="DES_CLASE" Type="varchar" MaxLength="200" Nullable="false" />
-    <Property Name="DES_UNIDAD_MEDIDA" Type="varchar" MaxLength="200" Nullable="false" />
-    <Property Name="DES_MODELO" Type="varchar" MaxLength="200" Nullable="false" />
-    <Property Name="DES_MARCA" Type="varchar" MaxLength="200" Nullable="false" />
     <Property Name="CANTIDAD" Type="int" />
     <Property Name="PRE_COMPRA" Type="numeric" Precision="10" Scale="2" />
     <Property Name="PRE_VENTA_UND" Type="numeric" Precision="10" Scale="2" />
@@ -1120,6 +1185,18 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
     <Property Name="ANIO" Type="int" />
     <Property Name="MES" Type="int" />
   </EntityType>
+  <Association Name="FK_CUOTA_ID_COMPROBANTE_SUNAT">
+    <End Role="T_M_COMPROBANTE_SUNAT" Type="Self.T_M_COMPROBANTE_SUNAT" Multiplicity="1" />
+    <End Role="T_M_CUOTA" Type="Self.T_M_CUOTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_M_COMPROBANTE_SUNAT">
+        <PropertyRef Name="ID_COMPROBANTE_SUNAT" />
+      </Principal>
+      <Dependent Role="T_M_CUOTA">
+        <PropertyRef Name="ID_COMPROBANTE_SUNAT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_DOCUMENTOVENTAS">
     <End Role="T_M_VENTA" Type="Self.T_M_VENTA" Multiplicity="0..1" />
     <End Role="T_D_DOCUMENTOS_VENTAS" Type="Self.T_D_DOCUMENTOS_VENTAS" Multiplicity="*" />
@@ -1204,6 +1281,18 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_ID_ENVIO_RESUMEN">
+    <End Role="T_M_ENVIO_RESUMEN" Type="Self.T_M_ENVIO_RESUMEN" Multiplicity="1" />
+    <End Role="T_D_ENVIO_RESUMEN" Type="Self.T_D_ENVIO_RESUMEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_M_ENVIO_RESUMEN">
+        <PropertyRef Name="ID_ENVIO_RESUMEN" />
+      </Principal>
+      <Dependent Role="T_D_ENVIO_RESUMEN">
+        <PropertyRef Name="ID_ENVIO_RESUMEN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_ID_MARCA">
     <End Role="T_M_MARCA" Type="Self.T_M_MARCA" Multiplicity="0..1" />
     <End Role="T_M_PRODUCTO" Type="Self.T_M_PRODUCTO" Multiplicity="*" />
@@ -1225,6 +1314,18 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
       </Principal>
       <Dependent Role="T_M_PRODUCTO">
         <PropertyRef Name="ID_MODELO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ID_MONEDA">
+    <End Role="T_M_MONEDA" Type="Self.T_M_MONEDA" Multiplicity="1" />
+    <End Role="T_M_COMPROBANTE_SUNAT" Type="Self.T_M_COMPROBANTE_SUNAT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_M_MONEDA">
+        <PropertyRef Name="ID_MONEDA" />
+      </Principal>
+      <Dependent Role="T_M_COMPROBANTE_SUNAT">
+        <PropertyRef Name="ID_MONEDA" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -1276,6 +1377,18 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_ID_SERIE">
+    <End Role="T_M_SERIE" Type="Self.T_M_SERIE" Multiplicity="1" />
+    <End Role="T_M_COMPROBANTE_SUNAT" Type="Self.T_M_COMPROBANTE_SUNAT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_M_SERIE">
+        <PropertyRef Name="ID_SERIE" />
+      </Principal>
+      <Dependent Role="T_M_COMPROBANTE_SUNAT">
+        <PropertyRef Name="ID_SERIE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_ID_SERVICIO">
     <End Role="T_M_SERVICIO" Type="Self.T_M_SERVICIO" Multiplicity="1" />
     <End Role="T_D_CORTE" Type="Self.T_D_CORTE" Multiplicity="*" />
@@ -1285,6 +1398,18 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
       </Principal>
       <Dependent Role="T_D_CORTE">
         <PropertyRef Name="ID_SERVICIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ID_TIPO_COMPROBANTE">
+    <End Role="T_TIPO_COMPROBANTE" Type="Self.T_TIPO_COMPROBANTE" Multiplicity="1" />
+    <End Role="T_M_COMPROBANTE_SUNAT" Type="Self.T_M_COMPROBANTE_SUNAT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_TIPO_COMPROBANTE">
+        <PropertyRef Name="ID_TIPO_COMPROBANTE" />
+      </Principal>
+      <Dependent Role="T_M_COMPROBANTE_SUNAT">
+        <PropertyRef Name="ID_TIPO_COMPROBANTE" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -1324,6 +1449,18 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_RESUMEN_ID_COMPROBANTE">
+    <End Role="T_M_COMPROBANTE_SUNAT" Type="Self.T_M_COMPROBANTE_SUNAT" Multiplicity="1" />
+    <End Role="T_D_ENVIO_RESUMEN" Type="Self.T_D_ENVIO_RESUMEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_M_COMPROBANTE_SUNAT">
+        <PropertyRef Name="ID_COMPROBANTE_SUNAT" />
+      </Principal>
+      <Dependent Role="T_D_ENVIO_RESUMEN">
+        <PropertyRef Name="ID_COMPROBANTE_SUNAT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_STOCK_ID_ALMACEN">
     <End Role="T_M_ALMACEN" Type="Self.T_M_ALMACEN" Multiplicity="1" />
     <End Role="T_ACTUALIZAR_STOCK" Type="Self.T_ACTUALIZAR_STOCK" Multiplicity="*" />
@@ -1333,54 +1470,6 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
       </Principal>
       <Dependent Role="T_ACTUALIZAR_STOCK">
         <PropertyRef Name="ID_ALMACEN" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_STOCK_ID_CLASE">
-    <End Role="T_M_CLASE" Type="Self.T_M_CLASE" Multiplicity="1" />
-    <End Role="T_ACTUALIZAR_STOCK" Type="Self.T_ACTUALIZAR_STOCK" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="T_M_CLASE">
-        <PropertyRef Name="ID_CLASE" />
-      </Principal>
-      <Dependent Role="T_ACTUALIZAR_STOCK">
-        <PropertyRef Name="ID_CLASE" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_STOCK_ID_MARCA">
-    <End Role="T_M_MARCA" Type="Self.T_M_MARCA" Multiplicity="1" />
-    <End Role="T_ACTUALIZAR_STOCK" Type="Self.T_ACTUALIZAR_STOCK" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="T_M_MARCA">
-        <PropertyRef Name="ID_MARCA" />
-      </Principal>
-      <Dependent Role="T_ACTUALIZAR_STOCK">
-        <PropertyRef Name="ID_MARCA" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_STOCK_ID_MODELO">
-    <End Role="T_M_MODELO" Type="Self.T_M_MODELO" Multiplicity="1" />
-    <End Role="T_ACTUALIZAR_STOCK" Type="Self.T_ACTUALIZAR_STOCK" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="T_M_MODELO">
-        <PropertyRef Name="ID_MODELO" />
-      </Principal>
-      <Dependent Role="T_ACTUALIZAR_STOCK">
-        <PropertyRef Name="ID_MODELO" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_STOCK_ID_UNIDAD_MEDIDA">
-    <End Role="T_M_UNIDAD_MEDIDA" Type="Self.T_M_UNIDAD_MEDIDA" Multiplicity="1" />
-    <End Role="T_ACTUALIZAR_STOCK" Type="Self.T_ACTUALIZAR_STOCK" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="T_M_UNIDAD_MEDIDA">
-        <PropertyRef Name="ID_UNIDAD_MEDIDA" />
-      </Principal>
-      <Dependent Role="T_ACTUALIZAR_STOCK">
-        <PropertyRef Name="ID_UNIDAD_MEDIDA" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -1433,6 +1522,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
     <EntitySet Name="T_D_CORTE" EntityType="Self.T_D_CORTE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_D_COTIZACION" EntityType="Self.T_D_COTIZACION" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_D_DOCUMENTOS_VENTAS" EntityType="Self.T_D_DOCUMENTOS_VENTAS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_D_ENVIO_RESUMEN" EntityType="Self.T_D_ENVIO_RESUMEN" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_D_ORDEN_COMPRA" EntityType="Self.T_D_ORDEN_COMPRA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_D_PARAMETRO" EntityType="Self.T_D_PARAMETRO" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_D_VENTA" EntityType="Self.T_D_VENTA" Schema="dbo" store:Type="Tables" />
@@ -1444,12 +1534,15 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
     <EntitySet Name="T_M_CLASE" EntityType="Self.T_M_CLASE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_M_CLIENTES" EntityType="Self.T_M_CLIENTES" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_M_COMPROBANTE" EntityType="Self.T_M_COMPROBANTE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_M_COMPROBANTE_SUNAT" EntityType="Self.T_M_COMPROBANTE_SUNAT" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_M_CORTE" EntityType="Self.T_M_CORTE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_M_COTIZACION" EntityType="Self.T_M_COTIZACION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_M_CUOTA" EntityType="Self.T_M_CUOTA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_M_DEPARTAMENTO" EntityType="Self.T_M_DEPARTAMENTO" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_M_DISTRITO" EntityType="Self.T_M_DISTRITO" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_M_DOCUMENTO_SUNAT" EntityType="Self.T_M_DOCUMENTO_SUNAT" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_M_EMPRESA" EntityType="Self.T_M_EMPRESA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_M_ENVIO_RESUMEN" EntityType="Self.T_M_ENVIO_RESUMEN" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_M_MARCA" EntityType="Self.T_M_MARCA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_M_MODELO" EntityType="Self.T_M_MODELO" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_M_MONEDA" EntityType="Self.T_M_MONEDA" Schema="dbo" store:Type="Tables" />
@@ -1459,6 +1552,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
     <EntitySet Name="T_M_PERSONAL" EntityType="Self.T_M_PERSONAL" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_M_PRODUCTO" EntityType="Self.T_M_PRODUCTO" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_M_PROVINCIA" EntityType="Self.T_M_PROVINCIA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_M_SERIE" EntityType="Self.T_M_SERIE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_M_SERVICIO" EntityType="Self.T_M_SERVICIO" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_M_UNIDAD_MEDIDA" EntityType="Self.T_M_UNIDAD_MEDIDA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_M_USUARIO" EntityType="Self.T_M_USUARIO" Schema="dbo" store:Type="Tables" />
@@ -1479,10 +1573,6 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
     [V_ACTUALIZAR_STOCK].[ID_PRODUCTO] AS [ID_PRODUCTO], 
     [V_ACTUALIZAR_STOCK].[PRODUCTO] AS [PRODUCTO], 
     [V_ACTUALIZAR_STOCK].[DES_ALMACEN] AS [DES_ALMACEN], 
-    [V_ACTUALIZAR_STOCK].[DES_CLASE] AS [DES_CLASE], 
-    [V_ACTUALIZAR_STOCK].[DES_UNIDAD_MEDIDA] AS [DES_UNIDAD_MEDIDA], 
-    [V_ACTUALIZAR_STOCK].[DES_MODELO] AS [DES_MODELO], 
-    [V_ACTUALIZAR_STOCK].[DES_MARCA] AS [DES_MARCA], 
     [V_ACTUALIZAR_STOCK].[CANTIDAD] AS [CANTIDAD], 
     [V_ACTUALIZAR_STOCK].[PRE_COMPRA] AS [PRE_COMPRA], 
     [V_ACTUALIZAR_STOCK].[PRE_VENTA_UND] AS [PRE_VENTA_UND], 
@@ -1819,6 +1909,10 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
     [V_VENTA].[MES] AS [MES]
     FROM [dbo].[V_VENTA] AS [V_VENTA]</DefiningQuery>
     </EntitySet>
+    <AssociationSet Name="FK_CUOTA_ID_COMPROBANTE_SUNAT" Association="Self.FK_CUOTA_ID_COMPROBANTE_SUNAT">
+      <End Role="T_M_COMPROBANTE_SUNAT" EntitySet="T_M_COMPROBANTE_SUNAT" />
+      <End Role="T_M_CUOTA" EntitySet="T_M_CUOTA" />
+    </AssociationSet>
     <AssociationSet Name="FK_DOCUMENTOVENTAS" Association="Self.FK_DOCUMENTOVENTAS">
       <End Role="T_M_VENTA" EntitySet="T_M_VENTA" />
       <End Role="T_D_DOCUMENTOS_VENTAS" EntitySet="T_D_DOCUMENTOS_VENTAS" />
@@ -1847,6 +1941,10 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
       <End Role="T_M_COTIZACION" EntitySet="T_M_COTIZACION" />
       <End Role="T_D_COTIZACION" EntitySet="T_D_COTIZACION" />
     </AssociationSet>
+    <AssociationSet Name="FK_ID_ENVIO_RESUMEN" Association="Self.FK_ID_ENVIO_RESUMEN">
+      <End Role="T_M_ENVIO_RESUMEN" EntitySet="T_M_ENVIO_RESUMEN" />
+      <End Role="T_D_ENVIO_RESUMEN" EntitySet="T_D_ENVIO_RESUMEN" />
+    </AssociationSet>
     <AssociationSet Name="FK_ID_MARCA" Association="Self.FK_ID_MARCA">
       <End Role="T_M_MARCA" EntitySet="T_M_MARCA" />
       <End Role="T_M_PRODUCTO" EntitySet="T_M_PRODUCTO" />
@@ -1854,6 +1952,10 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
     <AssociationSet Name="FK_ID_MODELO" Association="Self.FK_ID_MODELO">
       <End Role="T_M_MODELO" EntitySet="T_M_MODELO" />
       <End Role="T_M_PRODUCTO" EntitySet="T_M_PRODUCTO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ID_MONEDA" Association="Self.FK_ID_MONEDA">
+      <End Role="T_M_MONEDA" EntitySet="T_M_MONEDA" />
+      <End Role="T_M_COMPROBANTE_SUNAT" EntitySet="T_M_COMPROBANTE_SUNAT" />
     </AssociationSet>
     <AssociationSet Name="FK_ID_ORDEN_COMPRA" Association="Self.FK_ID_ORDEN_COMPRA">
       <End Role="T_M_ORDEN_COMPRA" EntitySet="T_M_ORDEN_COMPRA" />
@@ -1871,9 +1973,17 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
       <End Role="T_M_PRODUCTO" EntitySet="T_M_PRODUCTO" />
       <End Role="T_D_VENTA" EntitySet="T_D_VENTA" />
     </AssociationSet>
+    <AssociationSet Name="FK_ID_SERIE" Association="Self.FK_ID_SERIE">
+      <End Role="T_M_SERIE" EntitySet="T_M_SERIE" />
+      <End Role="T_M_COMPROBANTE_SUNAT" EntitySet="T_M_COMPROBANTE_SUNAT" />
+    </AssociationSet>
     <AssociationSet Name="FK_ID_SERVICIO" Association="Self.FK_ID_SERVICIO">
       <End Role="T_M_SERVICIO" EntitySet="T_M_SERVICIO" />
       <End Role="T_D_CORTE" EntitySet="T_D_CORTE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ID_TIPO_COMPROBANTE" Association="Self.FK_ID_TIPO_COMPROBANTE">
+      <End Role="T_TIPO_COMPROBANTE" EntitySet="T_TIPO_COMPROBANTE" />
+      <End Role="T_M_COMPROBANTE_SUNAT" EntitySet="T_M_COMPROBANTE_SUNAT" />
     </AssociationSet>
     <AssociationSet Name="FK_ID_TIPO_DOCUMENTO" Association="Self.FK_ID_TIPO_DOCUMENTO">
       <End Role="T_M_DOCUMENTO_SUNAT" EntitySet="T_M_DOCUMENTO_SUNAT" />
@@ -1887,24 +1997,12 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
       <End Role="T_M_VENTA" EntitySet="T_M_VENTA" />
       <End Role="T_D_VENTA" EntitySet="T_D_VENTA" />
     </AssociationSet>
+    <AssociationSet Name="FK_RESUMEN_ID_COMPROBANTE" Association="Self.FK_RESUMEN_ID_COMPROBANTE">
+      <End Role="T_M_COMPROBANTE_SUNAT" EntitySet="T_M_COMPROBANTE_SUNAT" />
+      <End Role="T_D_ENVIO_RESUMEN" EntitySet="T_D_ENVIO_RESUMEN" />
+    </AssociationSet>
     <AssociationSet Name="FK_STOCK_ID_ALMACEN" Association="Self.FK_STOCK_ID_ALMACEN">
       <End Role="T_M_ALMACEN" EntitySet="T_M_ALMACEN" />
-      <End Role="T_ACTUALIZAR_STOCK" EntitySet="T_ACTUALIZAR_STOCK" />
-    </AssociationSet>
-    <AssociationSet Name="FK_STOCK_ID_CLASE" Association="Self.FK_STOCK_ID_CLASE">
-      <End Role="T_M_CLASE" EntitySet="T_M_CLASE" />
-      <End Role="T_ACTUALIZAR_STOCK" EntitySet="T_ACTUALIZAR_STOCK" />
-    </AssociationSet>
-    <AssociationSet Name="FK_STOCK_ID_MARCA" Association="Self.FK_STOCK_ID_MARCA">
-      <End Role="T_M_MARCA" EntitySet="T_M_MARCA" />
-      <End Role="T_ACTUALIZAR_STOCK" EntitySet="T_ACTUALIZAR_STOCK" />
-    </AssociationSet>
-    <AssociationSet Name="FK_STOCK_ID_MODELO" Association="Self.FK_STOCK_ID_MODELO">
-      <End Role="T_M_MODELO" EntitySet="T_M_MODELO" />
-      <End Role="T_ACTUALIZAR_STOCK" EntitySet="T_ACTUALIZAR_STOCK" />
-    </AssociationSet>
-    <AssociationSet Name="FK_STOCK_ID_UNIDAD_MEDIDA" Association="Self.FK_STOCK_ID_UNIDAD_MEDIDA">
-      <End Role="T_M_UNIDAD_MEDIDA" EntitySet="T_M_UNIDAD_MEDIDA" />
       <End Role="T_ACTUALIZAR_STOCK" EntitySet="T_ACTUALIZAR_STOCK" />
     </AssociationSet>
     <AssociationSet Name="FK_USUARIO_ID_PERFIL" Association="Self.FK_USUARIO_ID_PERFIL">

@@ -103,6 +103,9 @@
     <Compile Include="T_D_DOCUMENTOS_VENTAS.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="T_D_ENVIO_RESUMEN.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="T_D_ORDEN_COMPRA.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
@@ -136,10 +139,16 @@
     <Compile Include="T_M_COMPROBANTE.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="T_M_COMPROBANTE_SUNAT.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="T_M_CORTE.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="T_M_COTIZACION.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_M_CUOTA.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="T_M_DEPARTAMENTO.cs">
@@ -152,6 +161,9 @@
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="T_M_EMPRESA.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_M_ENVIO_RESUMEN.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="T_M_MARCA.cs">
@@ -179,6 +191,9 @@
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="T_M_PROVINCIA.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_M_SERIE.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="T_M_SERVICIO.cs">

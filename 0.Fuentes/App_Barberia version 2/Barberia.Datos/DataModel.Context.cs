@@ -38,6 +38,7 @@ namespace Barberia.Datos
         public virtual DbSet<T_D_CORTE> T_D_CORTE { get; set; }
         public virtual DbSet<T_D_COTIZACION> T_D_COTIZACION { get; set; }
         public virtual DbSet<T_D_DOCUMENTOS_VENTAS> T_D_DOCUMENTOS_VENTAS { get; set; }
+        public virtual DbSet<T_D_ENVIO_RESUMEN> T_D_ENVIO_RESUMEN { get; set; }
         public virtual DbSet<T_D_ORDEN_COMPRA> T_D_ORDEN_COMPRA { get; set; }
         public virtual DbSet<T_D_PARAMETRO> T_D_PARAMETRO { get; set; }
         public virtual DbSet<T_D_VENTA> T_D_VENTA { get; set; }
@@ -49,12 +50,15 @@ namespace Barberia.Datos
         public virtual DbSet<T_M_CLASE> T_M_CLASE { get; set; }
         public virtual DbSet<T_M_CLIENTES> T_M_CLIENTES { get; set; }
         public virtual DbSet<T_M_COMPROBANTE> T_M_COMPROBANTE { get; set; }
+        public virtual DbSet<T_M_COMPROBANTE_SUNAT> T_M_COMPROBANTE_SUNAT { get; set; }
         public virtual DbSet<T_M_CORTE> T_M_CORTE { get; set; }
         public virtual DbSet<T_M_COTIZACION> T_M_COTIZACION { get; set; }
+        public virtual DbSet<T_M_CUOTA> T_M_CUOTA { get; set; }
         public virtual DbSet<T_M_DEPARTAMENTO> T_M_DEPARTAMENTO { get; set; }
         public virtual DbSet<T_M_DISTRITO> T_M_DISTRITO { get; set; }
         public virtual DbSet<T_M_DOCUMENTO_SUNAT> T_M_DOCUMENTO_SUNAT { get; set; }
         public virtual DbSet<T_M_EMPRESA> T_M_EMPRESA { get; set; }
+        public virtual DbSet<T_M_ENVIO_RESUMEN> T_M_ENVIO_RESUMEN { get; set; }
         public virtual DbSet<T_M_MARCA> T_M_MARCA { get; set; }
         public virtual DbSet<T_M_MODELO> T_M_MODELO { get; set; }
         public virtual DbSet<T_M_MONEDA> T_M_MONEDA { get; set; }
@@ -64,6 +68,7 @@ namespace Barberia.Datos
         public virtual DbSet<T_M_PERSONAL> T_M_PERSONAL { get; set; }
         public virtual DbSet<T_M_PRODUCTO> T_M_PRODUCTO { get; set; }
         public virtual DbSet<T_M_PROVINCIA> T_M_PROVINCIA { get; set; }
+        public virtual DbSet<T_M_SERIE> T_M_SERIE { get; set; }
         public virtual DbSet<T_M_SERVICIO> T_M_SERVICIO { get; set; }
         public virtual DbSet<T_M_UNIDAD_MEDIDA> T_M_UNIDAD_MEDIDA { get; set; }
         public virtual DbSet<T_M_USUARIO> T_M_USUARIO { get; set; }

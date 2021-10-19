@@ -22,10 +22,6 @@ namespace Barberia.Entidad
         public int ID_PRODUCTO { get; set; }
         public string PRODUCTO { get; set; }
         public string DES_ALMACEN { get; set; }
-        public string DES_CLASE { get; set; }
-        public string DES_UNIDAD_MEDIDA { get; set; }
-        public string DES_MODELO { get; set; }
-        public string DES_MARCA { get; set; }
         public Nullable<int> CANTIDAD { get; set; }
         public Nullable<decimal> PRE_COMPRA { get; set; }
         public Nullable<decimal> PRE_VENTA_UND { get; set; }
