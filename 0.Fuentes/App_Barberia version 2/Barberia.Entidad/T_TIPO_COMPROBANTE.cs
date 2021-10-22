@@ -17,6 +17,7 @@ namespace Barberia.Entidad
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public T_TIPO_COMPROBANTE()
         {
+            this.T_D_KARDEX = new HashSet<T_D_KARDEX>();
             this.T_M_COMPROBANTE_SUNAT = new HashSet<T_M_COMPROBANTE_SUNAT>();
         }
     
@@ -25,6 +26,8 @@ namespace Barberia.Entidad
         public string DESC_TIPO_COMPROBANTE { get; set; }
         public string FLG_TIPO { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<T_D_KARDEX> T_D_KARDEX { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<T_M_COMPROBANTE_SUNAT> T_M_COMPROBANTE_SUNAT { get; set; }
     }

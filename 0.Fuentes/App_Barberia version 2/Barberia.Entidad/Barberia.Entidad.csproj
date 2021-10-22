@@ -247,6 +247,9 @@
     <Compile Include="V_EMPRESA.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="V_KARDEX.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="V_M_CORTE.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>

@@ -12,16 +12,21 @@ namespace Barberia.Entidad
     using System;
     using System.Collections.Generic;
     
-    public partial class T_D_KARDEX
+    public partial class V_KARDEX
     {
-        public int ID_DETALLE { get; set; }
-        public Nullable<int> ID_TIPO_COMPROBANTE { get; set; }
-        public Nullable<int> ID_KARDEX { get; set; }
+        public int ID_KARDEX { get; set; }
+        public int ID_PRODUCTO { get; set; }
+        public string PRODUCTO { get; set; }
+        public Nullable<int> STOCK { get; set; }
+        public Nullable<decimal> PRECIO_COMPRA { get; set; }
+        public Nullable<decimal> PRECIO_VENTA { get; set; }
+        public Nullable<System.DateTime> FEC_KARDEX { get; set; }
+        public string DESC_TIPO_COMPROBANTE { get; set; }
         public Nullable<System.DateTime> FEC_DETALLE_KARDEX { get; set; }
         public string NUM_DOCUMENTO { get; set; }
         public Nullable<int> CANTIDAD { get; set; }
-        public Nullable<decimal> PRECIO_SOLES { get; set; }
-        public Nullable<decimal> PRECIO_DOLAR { get; set; }
+        public decimal PRECIO_SOLES { get; set; }
+        public decimal PRECIO_DOLAR { get; set; }
         public Nullable<decimal> TOTAL { get; set; }
         public string TIPO_TRANSACCION { get; set; }
         public Nullable<decimal> CANTIDAD_SALDO { get; set; }
@@ -29,10 +34,5 @@ namespace Barberia.Entidad
         public Nullable<decimal> TOTAL_SALDO { get; set; }
         public string USU_CREACION { get; set; }
         public Nullable<System.DateTime> FEC_CREACION { get; set; }
-        public string USU_MODIFICA { get; set; }
-        public Nullable<System.DateTime> FEC_MODIFICA { get; set; }
-    
-        public virtual T_M_KARDEX T_M_KARDEX { get; set; }
-        public virtual T_TIPO_COMPROBANTE T_TIPO_COMPROBANTE { get; set; }
     }
 }

@@ -86,6 +86,7 @@ namespace Barberia.Datos
         public virtual DbSet<V_CORTE> V_CORTE { get; set; }
         public virtual DbSet<V_COTIZACION> V_COTIZACION { get; set; }
         public virtual DbSet<V_EMPRESA> V_EMPRESA { get; set; }
+        public virtual DbSet<V_KARDEX> V_KARDEX { get; set; }
         public virtual DbSet<V_M_CORTE> V_M_CORTE { get; set; }
         public virtual DbSet<V_M_COTIZACION> V_M_COTIZACION { get; set; }
         public virtual DbSet<V_M_ORDEN_COMPRA> V_M_ORDEN_COMPRA { get; set; }

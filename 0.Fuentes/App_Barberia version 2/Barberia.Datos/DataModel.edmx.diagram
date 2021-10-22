@@ -4,78 +4,78 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="ac72ee4369844691bea9db2966429c25" Name="Diagram1">
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_ACTUALIZAR_STOCK" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_ANULAR_CORTE" Width="1.5" PointX="0.75" PointY="3" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_ANULAR_VENTA" Width="1.5" PointX="0.75" PointY="14" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_BOLETA" Width="1.5" PointX="14.75" PointY="16" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_C_ANULAR" Width="1.5" PointX="0.75" PointY="19" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_C_PERFIL" Width="1.5" PointX="15" PointY="18.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_CORRELATIVO_COTIZACION" Width="1.5" PointX="0.75" PointY="22" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_CORRELATIVO_ORDENCOMPRA" Width="1.5" PointX="10.75" PointY="23" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_CORRELATIVO_PRODUCTO" Width="1.5" PointX="17.75" PointY="23" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_D_CORTE" Width="1.5" PointX="8" PointY="18" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_D_COTIZACION" Width="1.5" PointX="23" PointY="18.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_D_DOCUMENTOS_VENTAS" Width="1.5" PointX="8.25" PointY="4" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_D_ENVIO_RESUMEN" Width="1.5" PointX="17.25" PointY="4.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_D_KARDEX" Width="1.5" PointX="10.5" PointY="11.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_D_ORDEN_COMPRA" Width="1.5" PointX="22" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_D_PARAMETRO" Width="1.5" PointX="20" PointY="12.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_D_VENTA" Width="1.5" PointX="8.25" PointY="7.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_FACTURA" Width="1.5" PointX="21.75" PointY="9" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_FORMA_PAGO" Width="1.5" PointX="19.75" PointY="24" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_ALMACEN" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_CARGO" Width="1.5" PointX="13.5" PointY="23.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_CATEGORIA" Width="1.5" PointX="3.75" PointY="13.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_CLASE" Width="1.5" PointX="3.75" PointY="17.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_CLIENTES" Width="1.5" PointX="3.75" PointY="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_COMPROBANTE" Width="1.5" PointX="8" PointY="23.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_COMPROBANTE_SUNAT" Width="1.5" PointX="15" PointY="3.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_CORTE" Width="1.5" PointX="5.75" PointY="17.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_COTIZACION" Width="1.5" PointX="20.75" PointY="17.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_CUOTA" Width="1.5" PointX="17.25" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_DEPARTAMENTO" Width="1.5" PointX="21.75" PointY="24" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_DISTRITO" Width="1.5" PointX="0.75" PointY="25" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_DOCUMENTO_SUNAT" Width="1.5" PointX="5.75" PointY="23.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_EMPRESA" Width="1.5" PointX="22.75" PointY="12" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_ENVIO_RESUMEN" Width="1.5" PointX="15" PointY="11.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_KARDEX" Width="1.5" PointX="8.25" PointY="12.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_MARCA" Width="1.5" PointX="3.75" PointY="20.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_MODELO" Width="1.5" PointX="3.75" PointY="24.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_MONEDA" Width="1.5" PointX="12.75" PointY="6.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_ORDEN_COMPRA" Width="1.5" PointX="19.75" PointY="3.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_PARAMETRO" Width="1.5" PointX="17.75" PointY="12.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_PERFIL" Width="1.5" PointX="12.75" PointY="18.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_PERSONAL" Width="1.5" PointX="15.75" PointY="22.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_PRODUCTO" Width="1.5" PointX="6" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_PROVINCIA" Width="1.5" PointX="23.75" PointY="9" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_SERIE" Width="1.5" PointX="12.75" PointY="2.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_SERVICIO" Width="1.5" PointX="5.75" PointY="32" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_UNIDAD_MEDIDA" Width="1.5" PointX="3.75" PointY="27.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_USUARIO" Width="1.5" PointX="18" PointY="18.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_VENTA" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_STOCK_ANULAR" Width="1.5" PointX="10.75" PointY="26" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_TIPO_AFECTACION" Width="1.5" PointX="23.75" PointY="22" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_TIPO_COMPROBANTE" Width="1.5" PointX="12.75" PointY="9.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_TIPO_DOCUMENTO" Width="1.5" PointX="23.75" PointY="26" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_TIPO_PERSONA" Width="1.5" PointX="24.75" PointY="3" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.T_VOUCHER" Width="1.5" PointX="24.75" PointY="6" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.V_ACTUALIZAR_STOCK" Width="1.5" PointX="24.75" PointY="12" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.V_CLIENTE" Width="1.5" PointX="17.75" PointY="27" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.V_CORTE" Width="1.5" PointX="19.75" PointY="27" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.V_COTIZACION" Width="1.5" PointX="0.75" PointY="28" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.V_EMPRESA" Width="1.5" PointX="7.75" PointY="28" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.V_M_CORTE" Width="1.5" PointX="12.75" PointY="28" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.V_M_COTIZACION" Width="1.5" PointX="25.75" PointY="18" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.V_M_ORDEN_COMPRA" Width="1.5" PointX="25.75" PointY="24" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.V_M_PARAMETRO" Width="1.5" PointX="26.75" PointY="3" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.V_M_VENTA" Width="1.5" PointX="26.75" PointY="8" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.V_ORDEN_COMPRA" Width="1.5" PointX="14.75" PointY="29" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.V_PARAMETRO" Width="1.5" PointX="21.75" PointY="29" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.V_PERSONAL" Width="1.5" PointX="9.75" PointY="30" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.V_PRODUCTO" Width="1.5" PointX="27.75" PointY="13" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_BARBERIAModel.V_VENTA" Width="1.5" PointX="27.75" PointY="20" IsExpanded="true" />
-        <AssociationConnector Association="DB_BARBERIAModel.FK_STOCK_ID_ALMACEN" ManuallyRouted="false" />
+      <Diagram DiagramId="df8c543685284d53873570299e99f3ce" Name="Diagram1" ZoomLevel="78">
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_ACTUALIZAR_STOCK" Width="1.5" PointX="13.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_ANULAR_CORTE" Width="1.5" PointX="19.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_ANULAR_VENTA" Width="1.5" PointX="19.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_BOLETA" Width="1.5" PointX="11.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_C_ANULAR" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_C_PERFIL" Width="1.5" PointX="12" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_CORRELATIVO_COTIZACION" Width="1.5" PointX="15.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_CORRELATIVO_ORDENCOMPRA" Width="1.5" PointX="2.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_CORRELATIVO_PRODUCTO" Width="1.5" PointX="4.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_D_CORTE" Width="1.5" PointX="14" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_D_COTIZACION" Width="1.5" PointX="21" PointY="20.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_D_DOCUMENTOS_VENTAS" Width="1.5" PointX="5.25" PointY="27.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_D_ENVIO_RESUMEN" Width="1.5" PointX="9.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_D_KARDEX" Width="1.5" PointX="7.5" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_D_ORDEN_COMPRA" Width="1.5" PointX="19" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_D_PARAMETRO" Width="1.5" PointX="17" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_D_VENTA" Width="1.5" PointX="5.25" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_FACTURA" Width="1.5" PointX="21.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_FORMA_PAGO" Width="1.5" PointX="13.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_ALMACEN" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_CARGO" Width="1.5" PointX="10.5" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_CATEGORIA" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_CLASE" Width="1.5" PointX="0.75" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_CLIENTES" Width="1.5" PointX="0.75" PointY="26.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_COMPROBANTE" Width="1.5" PointX="20" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_COMPROBANTE_SUNAT" Width="1.5" PointX="7.5" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_CORTE" Width="1.5" PointX="11.75" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_COTIZACION" Width="1.5" PointX="18.75" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_CUOTA" Width="1.5" PointX="9.75" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_DEPARTAMENTO" Width="1.5" PointX="21.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_DISTRITO" Width="1.5" PointX="21.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_DOCUMENTO_SUNAT" Width="1.5" PointX="17.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_EMPRESA" Width="1.5" PointX="21.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_ENVIO_RESUMEN" Width="1.5" PointX="7.5" PointY="20.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_KARDEX" Width="1.5" PointX="5.25" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_MARCA" Width="1.5" PointX="0.75" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_MODELO" Width="1.5" PointX="0.75" PointY="19.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_MONEDA" Width="1.5" PointX="5.25" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_ORDEN_COMPRA" Width="1.5" PointX="16.75" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_PARAMETRO" Width="1.5" PointX="14.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_PERFIL" Width="1.5" PointX="9.75" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_PERSONAL" Width="1.5" PointX="12.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_PRODUCTO" Width="1.5" PointX="3" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_PROVINCIA" Width="1.5" PointX="22.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_SERIE" Width="1.5" PointX="5.25" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_SERVICIO" Width="1.5" PointX="11.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_UNIDAD_MEDIDA" Width="1.5" PointX="0.75" PointY="22.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_USUARIO" Width="1.5" PointX="15" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_M_VENTA" Width="1.5" PointX="3" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_STOCK_ANULAR" Width="1.5" PointX="15.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_TIPO_AFECTACION" Width="1.5" PointX="23.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_TIPO_COMPROBANTE" Width="1.5" PointX="5.25" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_TIPO_DOCUMENTO" Width="1.5" PointX="23.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_TIPO_PERSONA" Width="1.5" PointX="23.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.T_VOUCHER" Width="1.5" PointX="23.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.V_ACTUALIZAR_STOCK" Width="1.5" PointX="23.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.V_CLIENTE" Width="1.5" PointX="20.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.V_CORTE" Width="1.5" PointX="23.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.V_COTIZACION" Width="1.5" PointX="7.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.V_EMPRESA" Width="1.5" PointX="9.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.V_KARDEX" Width="1.5" PointX="11.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.V_M_CORTE" Width="1.5" PointX="25.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.V_M_COTIZACION" Width="1.5" PointX="25.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.V_M_ORDEN_COMPRA" Width="1.5" PointX="25.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.V_M_PARAMETRO" Width="1.5" PointX="25.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.V_M_VENTA" Width="1.5" PointX="17.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.V_ORDEN_COMPRA" Width="1.5" PointX="25.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.V_PARAMETRO" Width="1.5" PointX="13.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.V_PERSONAL" Width="1.5" PointX="27.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.V_PRODUCTO" Width="1.5" PointX="27.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_BARBERIAModel.V_VENTA" Width="1.5" PointX="27.75" PointY="13.75" IsExpanded="true" />
         <AssociationConnector Association="DB_BARBERIAModel.FK_ID_PERFIL" ManuallyRouted="false" />
         <AssociationConnector Association="DB_BARBERIAModel.FK_ID_CORTE" ManuallyRouted="false" />
         <AssociationConnector Association="DB_BARBERIAModel.FK_ID_SERVICIO" ManuallyRouted="false" />
@@ -84,6 +84,7 @@
         <AssociationConnector Association="DB_BARBERIAModel.FK_ID_ENVIO_RESUMEN" ManuallyRouted="false" />
         <AssociationConnector Association="DB_BARBERIAModel.FK_RESUMEN_ID_COMPROBANTE" ManuallyRouted="false" />
         <AssociationConnector Association="DB_BARBERIAModel.FK_DETALLE_ID_DETALLE" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_BARBERIAModel.FK_DETALLE_ID_TIPO_COMPRO" ManuallyRouted="false" />
         <AssociationConnector Association="DB_BARBERIAModel.FK_ID_ORDEN_COMPRA" ManuallyRouted="false" />
         <AssociationConnector Association="DB_BARBERIAModel.FK_ID_PARAMETRO" ManuallyRouted="false" />
         <AssociationConnector Association="DB_BARBERIAModel.FK_ID_PRODUCTO" ManuallyRouted="false" />

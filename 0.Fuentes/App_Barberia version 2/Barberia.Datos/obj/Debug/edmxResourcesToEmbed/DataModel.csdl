@@ -10,7 +10,7 @@
     <Property Name="NUMERO_DOCUMENTO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="GUIA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="ID_PRODUCTO" Type="Int32" Nullable="false" />
-    <Property Name="ID_ALMACEN" Type="Int32" Nullable="false" />
+    <Property Name="ID_ALMACEN" Type="Int32" />
     <Property Name="CANTIDAD" Type="Int32" />
     <Property Name="PRE_COMPRA" Type="Decimal" Precision="10" Scale="2" />
     <Property Name="PRE_VENTA_UND" Type="Decimal" Precision="10" Scale="2" />
@@ -21,7 +21,6 @@
     <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
     <Property Name="FLG_ESTADO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
-    <NavigationProperty Name="T_M_ALMACEN" Relationship="Self.FK_STOCK_ID_ALMACEN" FromRole="T_ACTUALIZAR_STOCK" ToRole="T_M_ALMACEN" />
   </EntityType>
   <EntityType Name="T_ANULAR_CORTE">
     <Key>
@@ -188,6 +187,7 @@
     <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
     <NavigationProperty Name="T_M_KARDEX" Relationship="Self.FK_DETALLE_ID_DETALLE" FromRole="T_D_KARDEX" ToRole="T_M_KARDEX" />
+    <NavigationProperty Name="T_TIPO_COMPROBANTE" Relationship="Self.FK_DETALLE_ID_TIPO_COMPRO" FromRole="T_D_KARDEX" ToRole="T_TIPO_COMPROBANTE" />
   </EntityType>
   <EntityType Name="T_D_ORDEN_COMPRA">
     <Key>
@@ -261,7 +261,6 @@
     <Property Name="FEC_CREACION" Type="DateTime" Precision="3" />
     <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
-    <NavigationProperty Name="T_ACTUALIZAR_STOCK" Relationship="Self.FK_STOCK_ID_ALMACEN" FromRole="T_M_ALMACEN" ToRole="T_ACTUALIZAR_STOCK" />
     <NavigationProperty Name="T_M_PRODUCTO" Relationship="Self.FK_ID_ALMACEN" FromRole="T_M_ALMACEN" ToRole="T_M_PRODUCTO" />
   </EntityType>
   <EntityType Name="T_M_CARGO">
@@ -817,6 +816,7 @@
     <Property Name="COD_TIPO_COMPROBANTE" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
     <Property Name="DESC_TIPO_COMPROBANTE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="FLG_TIPO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="T_D_KARDEX" Relationship="Self.FK_DETALLE_ID_TIPO_COMPRO" FromRole="T_TIPO_COMPROBANTE" ToRole="T_D_KARDEX" />
     <NavigationProperty Name="T_M_COMPROBANTE_SUNAT" Relationship="Self.FK_ID_TIPO_COMPROBANTE" FromRole="T_TIPO_COMPROBANTE" ToRole="T_M_COMPROBANTE_SUNAT" />
   </EntityType>
   <EntityType Name="T_TIPO_DOCUMENTO">
@@ -978,6 +978,37 @@
     <Property Name="FEC_CREACION" Type="DateTime" Precision="3" />
     <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="V_KARDEX">
+    <Key>
+      <PropertyRef Name="ID_KARDEX" />
+      <PropertyRef Name="ID_PRODUCTO" />
+      <PropertyRef Name="PRODUCTO" />
+      <PropertyRef Name="DESC_TIPO_COMPROBANTE" />
+      <PropertyRef Name="NUM_DOCUMENTO" />
+      <PropertyRef Name="PRECIO_SOLES" />
+      <PropertyRef Name="PRECIO_DOLAR" />
+    </Key>
+    <Property Name="ID_KARDEX" Type="Int32" Nullable="false" />
+    <Property Name="ID_PRODUCTO" Type="Int32" Nullable="false" />
+    <Property Name="PRODUCTO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FEC_KARDEX" Type="DateTime" Precision="3" />
+    <Property Name="DESC_TIPO_COMPROBANTE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FEC_DETALLE_KARDEX" Type="DateTime" Precision="3" />
+    <Property Name="NUM_DOCUMENTO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CANTIDAD" Type="Int32" />
+    <Property Name="PRECIO_SOLES" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PRECIO_DOLAR" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TOTAL" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TIPO_TRANSACCION" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Name="CANTIDAD_SALDO" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PRECIO_SALDO" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TOTAL_SALDO" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="USU_CREACION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="FEC_CREACION" Type="DateTime" Precision="3" />
+    <Property Name="STOCK" Type="Int32" />
+    <Property Name="PRECIO_COMPRA" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="PRECIO_VENTA" Type="Decimal" Precision="10" Scale="2" />
   </EntityType>
   <EntityType Name="V_M_CORTE">
     <Key>
@@ -1248,18 +1279,6 @@
     <Property Name="ANIO" Type="Int32" />
     <Property Name="MES" Type="Int32" />
   </EntityType>
-  <Association Name="FK_STOCK_ID_ALMACEN">
-    <End Role="T_M_ALMACEN" Type="Self.T_M_ALMACEN" Multiplicity="1" />
-    <End Role="T_ACTUALIZAR_STOCK" Type="Self.T_ACTUALIZAR_STOCK" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="T_M_ALMACEN">
-        <PropertyRef Name="ID_ALMACEN" />
-      </Principal>
-      <Dependent Role="T_ACTUALIZAR_STOCK">
-        <PropertyRef Name="ID_ALMACEN" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_ID_PERFIL">
     <End Role="T_M_PERFIL" Type="Self.T_M_PERFIL" Multiplicity="0..1" />
     <End Role="T_C_PERFIL" Type="Self.T_C_PERFIL" Multiplicity="*" />
@@ -1353,6 +1372,18 @@
       </Principal>
       <Dependent Role="T_D_KARDEX">
         <PropertyRef Name="ID_KARDEX" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DETALLE_ID_TIPO_COMPRO">
+    <End Role="T_TIPO_COMPROBANTE" Type="Self.T_TIPO_COMPROBANTE" Multiplicity="0..1" />
+    <End Role="T_D_KARDEX" Type="Self.T_D_KARDEX" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_TIPO_COMPROBANTE">
+        <PropertyRef Name="ID_TIPO_COMPROBANTE" />
+      </Principal>
+      <Dependent Role="T_D_KARDEX">
+        <PropertyRef Name="ID_TIPO_COMPROBANTE" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -1657,6 +1688,7 @@
     <EntitySet Name="V_CORTE" EntityType="Self.V_CORTE" />
     <EntitySet Name="V_COTIZACION" EntityType="Self.V_COTIZACION" />
     <EntitySet Name="V_EMPRESA" EntityType="Self.V_EMPRESA" />
+    <EntitySet Name="V_KARDEX" EntityType="Self.V_KARDEX" />
     <EntitySet Name="V_M_CORTE" EntityType="Self.V_M_CORTE" />
     <EntitySet Name="V_M_COTIZACION" EntityType="Self.V_M_COTIZACION" />
     <EntitySet Name="V_M_ORDEN_COMPRA" EntityType="Self.V_M_ORDEN_COMPRA" />
@@ -1667,10 +1699,6 @@
     <EntitySet Name="V_PERSONAL" EntityType="Self.V_PERSONAL" />
     <EntitySet Name="V_PRODUCTO" EntityType="Self.V_PRODUCTO" />
     <EntitySet Name="V_VENTA" EntityType="Self.V_VENTA" />
-    <AssociationSet Name="FK_STOCK_ID_ALMACEN" Association="Self.FK_STOCK_ID_ALMACEN">
-      <End Role="T_M_ALMACEN" EntitySet="T_M_ALMACEN" />
-      <End Role="T_ACTUALIZAR_STOCK" EntitySet="T_ACTUALIZAR_STOCK" />
-    </AssociationSet>
     <AssociationSet Name="FK_ID_PERFIL" Association="Self.FK_ID_PERFIL">
       <End Role="T_M_PERFIL" EntitySet="T_M_PERFIL" />
       <End Role="T_C_PERFIL" EntitySet="T_C_PERFIL" />
@@ -1701,6 +1729,10 @@
     </AssociationSet>
     <AssociationSet Name="FK_DETALLE_ID_DETALLE" Association="Self.FK_DETALLE_ID_DETALLE">
       <End Role="T_M_KARDEX" EntitySet="T_M_KARDEX" />
+      <End Role="T_D_KARDEX" EntitySet="T_D_KARDEX" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DETALLE_ID_TIPO_COMPRO" Association="Self.FK_DETALLE_ID_TIPO_COMPRO">
+      <End Role="T_TIPO_COMPROBANTE" EntitySet="T_TIPO_COMPROBANTE" />
       <End Role="T_D_KARDEX" EntitySet="T_D_KARDEX" />
     </AssociationSet>
     <AssociationSet Name="FK_ID_ORDEN_COMPRA" Association="Self.FK_ID_ORDEN_COMPRA">

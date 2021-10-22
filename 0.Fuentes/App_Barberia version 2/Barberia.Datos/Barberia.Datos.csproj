@@ -81,6 +81,7 @@
     <Compile Include="Cls_Dat_DocumentoVenta.cs" />
     <Compile Include="Cls_Dat_V_M_Parametro.cs" />
     <Compile Include="Cls_Dat_V_M_OrdenCompra.cs" />
+    <Compile Include="Cls_Dat_V_Kardex.cs" />
     <Compile Include="Cls_Dat_V_OrdenCompra.cs" />
     <Compile Include="Cls_Dat_V_Empresa.cs" />
     <Compile Include="Cls_Dat_Empresa.cs" />

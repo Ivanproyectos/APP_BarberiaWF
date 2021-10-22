@@ -17,7 +17,7 @@ namespace Barberia.Entidad
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public T_M_PARAMETRO()
         {
-            //this.T_D_PARAMETRO = new HashSet<T_D_PARAMETRO>();
+            this.T_D_PARAMETRO = new HashSet<T_D_PARAMETRO>();
         }
     
         public int ID_PARAMETRO { get; set; }
@@ -35,6 +35,6 @@ namespace Barberia.Entidad
         public Nullable<System.DateTime> FEC_MODIFICA { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public  ICollection<T_D_PARAMETRO> T_D_PARAMETRO { get; set; }
+        public virtual ICollection<T_D_PARAMETRO> T_D_PARAMETRO { get; set; }
     }
 }

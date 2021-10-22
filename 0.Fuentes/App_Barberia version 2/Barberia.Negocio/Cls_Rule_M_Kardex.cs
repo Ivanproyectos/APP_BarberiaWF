@@ -10,18 +10,18 @@ namespace Barberia.Negocio
        
         private Cls_Dat_M_Kardex objeto = new Cls_Dat_M_Kardex();
 
-        public bool Insertar_Kardex(T_M_KARDEX entidad, ref Cls_Ent_Auditoria auditoria)
+        public int Insertar_Kardex(T_M_KARDEX entidad, ref Cls_Ent_Auditoria auditoria)
         {
-            bool exito = true;
+            int id ;
             try
             {
-                exito = objeto.Insertar_Kardex(entidad, ref auditoria);
+                id = objeto.Insertar_Kardex(entidad, ref auditoria);
             }
             catch (Exception ex)
             {
                 throw ex;
             }
-            return exito;
+            return id;
         }
 
     }

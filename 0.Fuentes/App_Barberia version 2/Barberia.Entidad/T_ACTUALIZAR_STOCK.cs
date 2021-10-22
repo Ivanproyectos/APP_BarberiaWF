@@ -20,7 +20,7 @@ namespace Barberia.Entidad
         public string NUMERO_DOCUMENTO { get; set; }
         public string GUIA { get; set; }
         public int ID_PRODUCTO { get; set; }
-        public int ID_ALMACEN { get; set; }
+        public Nullable<int> ID_ALMACEN { get; set; }
         public Nullable<int> CANTIDAD { get; set; }
         public Nullable<decimal> PRE_COMPRA { get; set; }
         public Nullable<decimal> PRE_VENTA_UND { get; set; }
@@ -31,7 +31,5 @@ namespace Barberia.Entidad
         public string USU_MODIFICA { get; set; }
         public Nullable<System.DateTime> FEC_MODIFICA { get; set; }
         public string FLG_ESTADO { get; set; }
-    
-        public virtual T_M_ALMACEN T_M_ALMACEN { get; set; }
     }
 }

@@ -27,23 +27,23 @@ namespace Barberia.Datos
         }
 
 
-        public bool Insertar_Kardex(T_M_KARDEX entidad, ref Cls_Ent_Auditoria auditoria)
+        public int Insertar_Kardex(T_M_KARDEX entidad, ref Cls_Ent_Auditoria auditoria)
         {
 
-            bool exito = true;
+            int idKardex;
             auditoria.Limpiar();
             try
             {
 
-                    Add(entidad);
+                idKardex = Add(entidad).ID_KARDEX;
 
             }
             catch (Exception ex)
             {
-                exito = false;
+                idKardex = 0;
                 auditoria.Error(ex);
             }
-            return exito;
+            return idKardex;
         }
 
       

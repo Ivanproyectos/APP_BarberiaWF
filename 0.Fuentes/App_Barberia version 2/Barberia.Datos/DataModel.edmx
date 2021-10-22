@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DB_BARBERIAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DB_BARBERIAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="T_ACTUALIZAR_STOCK">
           <Key>
             <PropertyRef Name="ID_ACTUALIZAR" />
@@ -15,7 +15,7 @@
           <Property Name="NUMERO_DOCUMENTO" Type="varchar" MaxLength="50" />
           <Property Name="GUIA" Type="varchar" MaxLength="50" />
           <Property Name="ID_PRODUCTO" Type="int" Nullable="false" />
-          <Property Name="ID_ALMACEN" Type="int" Nullable="false" />
+          <Property Name="ID_ALMACEN" Type="int" />
           <Property Name="CANTIDAD" Type="int" />
           <Property Name="PRE_COMPRA" Type="numeric" Precision="10" Scale="2" />
           <Property Name="PRE_VENTA_UND" Type="numeric" Precision="10" Scale="2" />
@@ -937,6 +937,39 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_EMPRESA' no tiene definida
           <Property Name="FEC_MODIFICA" Type="datetime" />
         </EntityType>
         <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_KARDEX' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="V_KARDEX">
+          <Key>
+            <PropertyRef Name="ID_KARDEX" />
+            <PropertyRef Name="ID_PRODUCTO" />
+            <PropertyRef Name="PRODUCTO" />
+            <PropertyRef Name="DESC_TIPO_COMPROBANTE" />
+            <PropertyRef Name="NUM_DOCUMENTO" />
+            <PropertyRef Name="PRECIO_SOLES" />
+            <PropertyRef Name="PRECIO_DOLAR" />
+          </Key>
+          <Property Name="ID_KARDEX" Type="int" Nullable="false" />
+          <Property Name="ID_PRODUCTO" Type="int" Nullable="false" />
+          <Property Name="PRODUCTO" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="STOCK" Type="int" />
+          <Property Name="PRECIO_COMPRA" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="PRECIO_VENTA" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="FEC_KARDEX" Type="datetime" />
+          <Property Name="DESC_TIPO_COMPROBANTE" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="FEC_DETALLE_KARDEX" Type="datetime" />
+          <Property Name="NUM_DOCUMENTO" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="CANTIDAD" Type="int" />
+          <Property Name="PRECIO_SOLES" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="PRECIO_DOLAR" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="TOTAL" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="TIPO_TRANSACCION" Type="varchar" MaxLength="7" />
+          <Property Name="CANTIDAD_SALDO" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="PRECIO_SALDO" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="TOTAL_SALDO" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="USU_CREACION" Type="varchar" MaxLength="20" />
+          <Property Name="FEC_CREACION" Type="datetime" />
+        </EntityType>
+        <!--Errores durante la generación:
 advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_M_CORTE' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="V_M_CORTE">
           <Key>
@@ -1249,6 +1282,18 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_DETALLE_ID_TIPO_COMPRO">
+          <End Role="T_TIPO_COMPROBANTE" Type="Self.T_TIPO_COMPROBANTE" Multiplicity="0..1" />
+          <End Role="T_D_KARDEX" Type="Self.T_D_KARDEX" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_TIPO_COMPROBANTE">
+              <PropertyRef Name="ID_TIPO_COMPROBANTE" />
+            </Principal>
+            <Dependent Role="T_D_KARDEX">
+              <PropertyRef Name="ID_TIPO_COMPROBANTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_DOCUMENTOVENTAS">
           <End Role="T_M_VENTA" Type="Self.T_M_VENTA" Multiplicity="0..1" />
           <End Role="T_D_DOCUMENTOS_VENTAS" Type="Self.T_D_DOCUMENTOS_VENTAS" Multiplicity="*" />
@@ -1525,18 +1570,6 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_STOCK_ID_ALMACEN">
-          <End Role="T_M_ALMACEN" Type="Self.T_M_ALMACEN" Multiplicity="1" />
-          <End Role="T_ACTUALIZAR_STOCK" Type="Self.T_ACTUALIZAR_STOCK" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="T_M_ALMACEN">
-              <PropertyRef Name="ID_ALMACEN" />
-            </Principal>
-            <Dependent Role="T_ACTUALIZAR_STOCK">
-              <PropertyRef Name="ID_ALMACEN" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_USUARIO_ID_PERFIL">
           <End Role="T_M_PERFIL" Type="Self.T_M_PERFIL" Multiplicity="1" />
           <End Role="T_M_USUARIO" Type="Self.T_M_USUARIO" Multiplicity="*" />
@@ -1742,6 +1775,30 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
     [V_EMPRESA].[USU_MODIFICA] AS [USU_MODIFICA], 
     [V_EMPRESA].[FEC_MODIFICA] AS [FEC_MODIFICA]
     FROM [dbo].[V_EMPRESA] AS [V_EMPRESA]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_KARDEX" EntityType="Self.V_KARDEX" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [V_KARDEX].[ID_KARDEX] AS [ID_KARDEX], 
+    [V_KARDEX].[ID_PRODUCTO] AS [ID_PRODUCTO], 
+    [V_KARDEX].[PRODUCTO] AS [PRODUCTO], 
+    [V_KARDEX].[STOCK] AS [STOCK], 
+    [V_KARDEX].[PRECIO_COMPRA] AS [PRECIO_COMPRA], 
+    [V_KARDEX].[PRECIO_VENTA] AS [PRECIO_VENTA], 
+    [V_KARDEX].[FEC_KARDEX] AS [FEC_KARDEX], 
+    [V_KARDEX].[DESC_TIPO_COMPROBANTE] AS [DESC_TIPO_COMPROBANTE], 
+    [V_KARDEX].[FEC_DETALLE_KARDEX] AS [FEC_DETALLE_KARDEX], 
+    [V_KARDEX].[NUM_DOCUMENTO] AS [NUM_DOCUMENTO], 
+    [V_KARDEX].[CANTIDAD] AS [CANTIDAD], 
+    [V_KARDEX].[PRECIO_SOLES] AS [PRECIO_SOLES], 
+    [V_KARDEX].[PRECIO_DOLAR] AS [PRECIO_DOLAR], 
+    [V_KARDEX].[TOTAL] AS [TOTAL], 
+    [V_KARDEX].[TIPO_TRANSACCION] AS [TIPO_TRANSACCION], 
+    [V_KARDEX].[CANTIDAD_SALDO] AS [CANTIDAD_SALDO], 
+    [V_KARDEX].[PRECIO_SALDO] AS [PRECIO_SALDO], 
+    [V_KARDEX].[TOTAL_SALDO] AS [TOTAL_SALDO], 
+    [V_KARDEX].[USU_CREACION] AS [USU_CREACION], 
+    [V_KARDEX].[FEC_CREACION] AS [FEC_CREACION]
+    FROM [dbo].[V_KARDEX] AS [V_KARDEX]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="V_M_CORTE" EntityType="Self.V_M_CORTE" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
@@ -1983,6 +2040,10 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
             <End Role="T_M_KARDEX" EntitySet="T_M_KARDEX" />
             <End Role="T_D_KARDEX" EntitySet="T_D_KARDEX" />
           </AssociationSet>
+          <AssociationSet Name="FK_DETALLE_ID_TIPO_COMPRO" Association="Self.FK_DETALLE_ID_TIPO_COMPRO">
+            <End Role="T_TIPO_COMPROBANTE" EntitySet="T_TIPO_COMPROBANTE" />
+            <End Role="T_D_KARDEX" EntitySet="T_D_KARDEX" />
+          </AssociationSet>
           <AssociationSet Name="FK_DOCUMENTOVENTAS" Association="Self.FK_DOCUMENTOVENTAS">
             <End Role="T_M_VENTA" EntitySet="T_M_VENTA" />
             <End Role="T_D_DOCUMENTOS_VENTAS" EntitySet="T_D_DOCUMENTOS_VENTAS" />
@@ -2075,10 +2136,6 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
             <End Role="T_M_COMPROBANTE_SUNAT" EntitySet="T_M_COMPROBANTE_SUNAT" />
             <End Role="T_D_ENVIO_RESUMEN" EntitySet="T_D_ENVIO_RESUMEN" />
           </AssociationSet>
-          <AssociationSet Name="FK_STOCK_ID_ALMACEN" Association="Self.FK_STOCK_ID_ALMACEN">
-            <End Role="T_M_ALMACEN" EntitySet="T_M_ALMACEN" />
-            <End Role="T_ACTUALIZAR_STOCK" EntitySet="T_ACTUALIZAR_STOCK" />
-          </AssociationSet>
           <AssociationSet Name="FK_USUARIO_ID_PERFIL" Association="Self.FK_USUARIO_ID_PERFIL">
             <End Role="T_M_PERFIL" EntitySet="T_M_PERFIL" />
             <End Role="T_M_USUARIO" EntitySet="T_M_USUARIO" />
@@ -2092,8 +2149,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
             <End Role="T_M_VENTA" EntitySet="T_M_VENTA" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DB_BARBERIAModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -2107,7 +2163,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           <Property Name="NUMERO_DOCUMENTO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="GUIA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="ID_PRODUCTO" Type="Int32" Nullable="false" />
-          <Property Name="ID_ALMACEN" Type="Int32" Nullable="false" />
+          <Property Name="ID_ALMACEN" Type="Int32" />
           <Property Name="CANTIDAD" Type="Int32" />
           <Property Name="PRE_COMPRA" Type="Decimal" Precision="10" Scale="2" />
           <Property Name="PRE_VENTA_UND" Type="Decimal" Precision="10" Scale="2" />
@@ -2118,7 +2174,6 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
           <Property Name="FLG_ESTADO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
-          <NavigationProperty Name="T_M_ALMACEN" Relationship="Self.FK_STOCK_ID_ALMACEN" FromRole="T_ACTUALIZAR_STOCK" ToRole="T_M_ALMACEN" />
         </EntityType>
         <EntityType Name="T_ANULAR_CORTE">
           <Key>
@@ -2285,6 +2340,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
           <NavigationProperty Name="T_M_KARDEX" Relationship="Self.FK_DETALLE_ID_DETALLE" FromRole="T_D_KARDEX" ToRole="T_M_KARDEX" />
+          <NavigationProperty Name="T_TIPO_COMPROBANTE" Relationship="Self.FK_DETALLE_ID_TIPO_COMPRO" FromRole="T_D_KARDEX" ToRole="T_TIPO_COMPROBANTE" />
         </EntityType>
         <EntityType Name="T_D_ORDEN_COMPRA">
           <Key>
@@ -2358,7 +2414,6 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           <Property Name="FEC_CREACION" Type="DateTime" Precision="3" />
           <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="T_ACTUALIZAR_STOCK" Relationship="Self.FK_STOCK_ID_ALMACEN" FromRole="T_M_ALMACEN" ToRole="T_ACTUALIZAR_STOCK" />
           <NavigationProperty Name="T_M_PRODUCTO" Relationship="Self.FK_ID_ALMACEN" FromRole="T_M_ALMACEN" ToRole="T_M_PRODUCTO" />
         </EntityType>
         <EntityType Name="T_M_CARGO">
@@ -2914,6 +2969,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           <Property Name="COD_TIPO_COMPROBANTE" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
           <Property Name="DESC_TIPO_COMPROBANTE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="FLG_TIPO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="T_D_KARDEX" Relationship="Self.FK_DETALLE_ID_TIPO_COMPRO" FromRole="T_TIPO_COMPROBANTE" ToRole="T_D_KARDEX" />
           <NavigationProperty Name="T_M_COMPROBANTE_SUNAT" Relationship="Self.FK_ID_TIPO_COMPROBANTE" FromRole="T_TIPO_COMPROBANTE" ToRole="T_M_COMPROBANTE_SUNAT" />
         </EntityType>
         <EntityType Name="T_TIPO_DOCUMENTO">
@@ -3075,6 +3131,37 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           <Property Name="FEC_CREACION" Type="DateTime" Precision="3" />
           <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="V_KARDEX">
+          <Key>
+            <PropertyRef Name="ID_KARDEX" />
+            <PropertyRef Name="ID_PRODUCTO" />
+            <PropertyRef Name="PRODUCTO" />
+            <PropertyRef Name="DESC_TIPO_COMPROBANTE" />
+            <PropertyRef Name="NUM_DOCUMENTO" />
+            <PropertyRef Name="PRECIO_SOLES" />
+            <PropertyRef Name="PRECIO_DOLAR" />
+          </Key>
+          <Property Name="ID_KARDEX" Type="Int32" Nullable="false" />
+          <Property Name="ID_PRODUCTO" Type="Int32" Nullable="false" />
+          <Property Name="PRODUCTO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FEC_KARDEX" Type="DateTime" Precision="3" />
+          <Property Name="DESC_TIPO_COMPROBANTE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FEC_DETALLE_KARDEX" Type="DateTime" Precision="3" />
+          <Property Name="NUM_DOCUMENTO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CANTIDAD" Type="Int32" />
+          <Property Name="PRECIO_SOLES" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="PRECIO_DOLAR" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="TOTAL" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="TIPO_TRANSACCION" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="CANTIDAD_SALDO" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="PRECIO_SALDO" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="TOTAL_SALDO" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="USU_CREACION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="FEC_CREACION" Type="DateTime" Precision="3" />
+          <Property Name="STOCK" Type="Int32" />
+          <Property Name="PRECIO_COMPRA" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="PRECIO_VENTA" Type="Decimal" Precision="10" Scale="2" />
         </EntityType>
         <EntityType Name="V_M_CORTE">
           <Key>
@@ -3345,18 +3432,6 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           <Property Name="ANIO" Type="Int32" />
           <Property Name="MES" Type="Int32" />
         </EntityType>
-        <Association Name="FK_STOCK_ID_ALMACEN">
-          <End Role="T_M_ALMACEN" Type="Self.T_M_ALMACEN" Multiplicity="1" />
-          <End Role="T_ACTUALIZAR_STOCK" Type="Self.T_ACTUALIZAR_STOCK" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="T_M_ALMACEN">
-              <PropertyRef Name="ID_ALMACEN" />
-            </Principal>
-            <Dependent Role="T_ACTUALIZAR_STOCK">
-              <PropertyRef Name="ID_ALMACEN" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_ID_PERFIL">
           <End Role="T_M_PERFIL" Type="Self.T_M_PERFIL" Multiplicity="0..1" />
           <End Role="T_C_PERFIL" Type="Self.T_C_PERFIL" Multiplicity="*" />
@@ -3450,6 +3525,18 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
             </Principal>
             <Dependent Role="T_D_KARDEX">
               <PropertyRef Name="ID_KARDEX" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DETALLE_ID_TIPO_COMPRO">
+          <End Role="T_TIPO_COMPROBANTE" Type="Self.T_TIPO_COMPROBANTE" Multiplicity="0..1" />
+          <End Role="T_D_KARDEX" Type="Self.T_D_KARDEX" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_TIPO_COMPROBANTE">
+              <PropertyRef Name="ID_TIPO_COMPROBANTE" />
+            </Principal>
+            <Dependent Role="T_D_KARDEX">
+              <PropertyRef Name="ID_TIPO_COMPROBANTE" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -3754,6 +3841,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           <EntitySet Name="V_CORTE" EntityType="Self.V_CORTE" />
           <EntitySet Name="V_COTIZACION" EntityType="Self.V_COTIZACION" />
           <EntitySet Name="V_EMPRESA" EntityType="Self.V_EMPRESA" />
+          <EntitySet Name="V_KARDEX" EntityType="Self.V_KARDEX" />
           <EntitySet Name="V_M_CORTE" EntityType="Self.V_M_CORTE" />
           <EntitySet Name="V_M_COTIZACION" EntityType="Self.V_M_COTIZACION" />
           <EntitySet Name="V_M_ORDEN_COMPRA" EntityType="Self.V_M_ORDEN_COMPRA" />
@@ -3764,10 +3852,6 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           <EntitySet Name="V_PERSONAL" EntityType="Self.V_PERSONAL" />
           <EntitySet Name="V_PRODUCTO" EntityType="Self.V_PRODUCTO" />
           <EntitySet Name="V_VENTA" EntityType="Self.V_VENTA" />
-          <AssociationSet Name="FK_STOCK_ID_ALMACEN" Association="Self.FK_STOCK_ID_ALMACEN">
-            <End Role="T_M_ALMACEN" EntitySet="T_M_ALMACEN" />
-            <End Role="T_ACTUALIZAR_STOCK" EntitySet="T_ACTUALIZAR_STOCK" />
-          </AssociationSet>
           <AssociationSet Name="FK_ID_PERFIL" Association="Self.FK_ID_PERFIL">
             <End Role="T_M_PERFIL" EntitySet="T_M_PERFIL" />
             <End Role="T_C_PERFIL" EntitySet="T_C_PERFIL" />
@@ -3798,6 +3882,10 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           </AssociationSet>
           <AssociationSet Name="FK_DETALLE_ID_DETALLE" Association="Self.FK_DETALLE_ID_DETALLE">
             <End Role="T_M_KARDEX" EntitySet="T_M_KARDEX" />
+            <End Role="T_D_KARDEX" EntitySet="T_D_KARDEX" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DETALLE_ID_TIPO_COMPRO" Association="Self.FK_DETALLE_ID_TIPO_COMPRO">
+            <End Role="T_TIPO_COMPROBANTE" EntitySet="T_TIPO_COMPROBANTE" />
             <End Role="T_D_KARDEX" EntitySet="T_D_KARDEX" />
           </AssociationSet>
           <AssociationSet Name="FK_ID_ORDEN_COMPRA" Association="Self.FK_ID_ORDEN_COMPRA">
@@ -4849,6 +4937,32 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
                 <ScalarProperty Name="FEC_CREACION" ColumnName="FEC_CREACION" />
                 <ScalarProperty Name="USU_MODIFICA" ColumnName="USU_MODIFICA" />
                 <ScalarProperty Name="FEC_MODIFICA" ColumnName="FEC_MODIFICA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="V_KARDEX">
+            <EntityTypeMapping TypeName="DB_BARBERIAModel.V_KARDEX">
+              <MappingFragment StoreEntitySet="V_KARDEX">
+                <ScalarProperty Name="PRECIO_VENTA" ColumnName="PRECIO_VENTA" />
+                <ScalarProperty Name="PRECIO_COMPRA" ColumnName="PRECIO_COMPRA" />
+                <ScalarProperty Name="STOCK" ColumnName="STOCK" />
+                <ScalarProperty Name="ID_KARDEX" ColumnName="ID_KARDEX" />
+                <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+                <ScalarProperty Name="PRODUCTO" ColumnName="PRODUCTO" />
+                <ScalarProperty Name="FEC_KARDEX" ColumnName="FEC_KARDEX" />
+                <ScalarProperty Name="DESC_TIPO_COMPROBANTE" ColumnName="DESC_TIPO_COMPROBANTE" />
+                <ScalarProperty Name="FEC_DETALLE_KARDEX" ColumnName="FEC_DETALLE_KARDEX" />
+                <ScalarProperty Name="NUM_DOCUMENTO" ColumnName="NUM_DOCUMENTO" />
+                <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+                <ScalarProperty Name="PRECIO_SOLES" ColumnName="PRECIO_SOLES" />
+                <ScalarProperty Name="PRECIO_DOLAR" ColumnName="PRECIO_DOLAR" />
+                <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+                <ScalarProperty Name="TIPO_TRANSACCION" ColumnName="TIPO_TRANSACCION" />
+                <ScalarProperty Name="CANTIDAD_SALDO" ColumnName="CANTIDAD_SALDO" />
+                <ScalarProperty Name="PRECIO_SALDO" ColumnName="PRECIO_SALDO" />
+                <ScalarProperty Name="TOTAL_SALDO" ColumnName="TOTAL_SALDO" />
+                <ScalarProperty Name="USU_CREACION" ColumnName="USU_CREACION" />
+                <ScalarProperty Name="FEC_CREACION" ColumnName="FEC_CREACION" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
