@@ -10,23 +10,24 @@ namespace Barberia.Datos
 {
     public class Cls_Dat_V_Kardex : Repository<V_KARDEX>
     {
-        public List<V_KARDEX> Listar_Venta(ref Cls_Ent_Auditoria auditoria)
+        public V_KARDEX Listar_Ultimo_Kardex(int idProducto, ref Cls_Ent_Auditoria auditoria)
         {
-            List<V_KARDEX> lista = new List<V_KARDEX>();
+            V_KARDEX entidad = new V_KARDEX();
             auditoria.Limpiar();
             try
             {
-                using (DB_BARBERIAEntities1 db = new DB_BARBERIAEntities1())
-                {
+                //using (DB_BARBERIAEntities1 db = new DB_BARBERIAEntities1())
+                //{
 
-                    lista = db.V_KARDEX.OrderByDescending(t => t.ID_KARDEX).ToList();
-                }
+                //    lista = db.V_KARDEX.fial.OrderByDescending(t => t.ID_KARDEX).ToList();
+                //}
+                entidad = FindAll(x => x.ID_PRODUCTO == idProducto).LastOrDefault();
             }
             catch (Exception ex)
             {
                 auditoria.Error(ex);
             }
-            return lista;
+            return entidad;
         }
 
 
@@ -40,8 +41,8 @@ namespace Barberia.Datos
             {
 
 
-                //if (!string.IsNullOrEmpty(entidad.CLIENTE))
-                //    query = query.Where(w => w.CLIENTE == entidad.CLIENTE);
+                if (!string.IsNullOrEmpty(entidad.PRODUCTO))
+                    query = query.Where(w => w.PRODUCTO == entidad.PRODUCTO);
 
 
 
