@@ -31,11 +31,9 @@ namespace Barberia.Datos
         public virtual DbSet<T_ANULAR_VENTA> T_ANULAR_VENTA { get; set; }
         public virtual DbSet<T_BOLETA> T_BOLETA { get; set; }
         public virtual DbSet<T_C_ANULAR> T_C_ANULAR { get; set; }
-        public virtual DbSet<T_C_PERFIL> T_C_PERFIL { get; set; }
         public virtual DbSet<T_CORRELATIVO_COTIZACION> T_CORRELATIVO_COTIZACION { get; set; }
         public virtual DbSet<T_CORRELATIVO_ORDENCOMPRA> T_CORRELATIVO_ORDENCOMPRA { get; set; }
         public virtual DbSet<T_CORRELATIVO_PRODUCTO> T_CORRELATIVO_PRODUCTO { get; set; }
-        public virtual DbSet<T_D_CORTE> T_D_CORTE { get; set; }
         public virtual DbSet<T_D_COTIZACION> T_D_COTIZACION { get; set; }
         public virtual DbSet<T_D_DOCUMENTOS_VENTAS> T_D_DOCUMENTOS_VENTAS { get; set; }
         public virtual DbSet<T_D_ENVIO_RESUMEN> T_D_ENVIO_RESUMEN { get; set; }
@@ -46,13 +44,11 @@ namespace Barberia.Datos
         public virtual DbSet<T_FACTURA> T_FACTURA { get; set; }
         public virtual DbSet<T_FORMA_PAGO> T_FORMA_PAGO { get; set; }
         public virtual DbSet<T_M_ALMACEN> T_M_ALMACEN { get; set; }
-        public virtual DbSet<T_M_CARGO> T_M_CARGO { get; set; }
         public virtual DbSet<T_M_CATEGORIA> T_M_CATEGORIA { get; set; }
         public virtual DbSet<T_M_CLASE> T_M_CLASE { get; set; }
         public virtual DbSet<T_M_CLIENTES> T_M_CLIENTES { get; set; }
         public virtual DbSet<T_M_COMPROBANTE> T_M_COMPROBANTE { get; set; }
         public virtual DbSet<T_M_COMPROBANTE_SUNAT> T_M_COMPROBANTE_SUNAT { get; set; }
-        public virtual DbSet<T_M_CORTE> T_M_CORTE { get; set; }
         public virtual DbSet<T_M_COTIZACION> T_M_COTIZACION { get; set; }
         public virtual DbSet<T_M_CUOTA> T_M_CUOTA { get; set; }
         public virtual DbSet<T_M_DEPARTAMENTO> T_M_DEPARTAMENTO { get; set; }
@@ -66,14 +62,11 @@ namespace Barberia.Datos
         public virtual DbSet<T_M_MONEDA> T_M_MONEDA { get; set; }
         public virtual DbSet<T_M_ORDEN_COMPRA> T_M_ORDEN_COMPRA { get; set; }
         public virtual DbSet<T_M_PARAMETRO> T_M_PARAMETRO { get; set; }
-        public virtual DbSet<T_M_PERFIL> T_M_PERFIL { get; set; }
-        public virtual DbSet<T_M_PERSONAL> T_M_PERSONAL { get; set; }
         public virtual DbSet<T_M_PRODUCTO> T_M_PRODUCTO { get; set; }
         public virtual DbSet<T_M_PROVINCIA> T_M_PROVINCIA { get; set; }
         public virtual DbSet<T_M_SERIE> T_M_SERIE { get; set; }
         public virtual DbSet<T_M_SERVICIO> T_M_SERVICIO { get; set; }
         public virtual DbSet<T_M_UNIDAD_MEDIDA> T_M_UNIDAD_MEDIDA { get; set; }
-        public virtual DbSet<T_M_USUARIO> T_M_USUARIO { get; set; }
         public virtual DbSet<T_M_VENTA> T_M_VENTA { get; set; }
         public virtual DbSet<T_STOCK_ANULAR> T_STOCK_ANULAR { get; set; }
         public virtual DbSet<T_TIPO_AFECTACION> T_TIPO_AFECTACION { get; set; }
@@ -83,18 +76,15 @@ namespace Barberia.Datos
         public virtual DbSet<T_VOUCHER> T_VOUCHER { get; set; }
         public virtual DbSet<V_ACTUALIZAR_STOCK> V_ACTUALIZAR_STOCK { get; set; }
         public virtual DbSet<V_CLIENTE> V_CLIENTE { get; set; }
-        public virtual DbSet<V_CORTE> V_CORTE { get; set; }
         public virtual DbSet<V_COTIZACION> V_COTIZACION { get; set; }
         public virtual DbSet<V_EMPRESA> V_EMPRESA { get; set; }
         public virtual DbSet<V_KARDEX> V_KARDEX { get; set; }
-        public virtual DbSet<V_M_CORTE> V_M_CORTE { get; set; }
         public virtual DbSet<V_M_COTIZACION> V_M_COTIZACION { get; set; }
         public virtual DbSet<V_M_ORDEN_COMPRA> V_M_ORDEN_COMPRA { get; set; }
         public virtual DbSet<V_M_PARAMETRO> V_M_PARAMETRO { get; set; }
         public virtual DbSet<V_M_VENTA> V_M_VENTA { get; set; }
         public virtual DbSet<V_ORDEN_COMPRA> V_ORDEN_COMPRA { get; set; }
         public virtual DbSet<V_PARAMETRO> V_PARAMETRO { get; set; }
-        public virtual DbSet<V_PERSONAL> V_PERSONAL { get; set; }
         public virtual DbSet<V_PRODUCTO> V_PRODUCTO { get; set; }
         public virtual DbSet<V_VENTA> V_VENTA { get; set; }
     }

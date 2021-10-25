@@ -15,7 +15,7 @@ namespace Barberia.Presentacion.Frm_AnularPryVe
     public partial class Frm_Anular : Form
     {
         
-        List<V_CORTE> listaCorte = new List<V_CORTE>();
+        //List<V_CORTE> listaCorte = new List<V_CORTE>();
         List<T_ACTUALIZAR_STOCK> listaActStock = new List<T_ACTUALIZAR_STOCK>();
          Cls_Rule_Producto objProducto = new Cls_Rule_Producto();
         Cls_Rule_Venta objVenta = new Cls_Rule_Venta();
@@ -97,30 +97,30 @@ namespace Barberia.Presentacion.Frm_AnularPryVe
             {
                 if (txtVoucher.Text != "")
                 {
-                    Cls_Rule_V_Corte objVCorte = new Cls_Rule_V_Corte();
-                    List<DataCorte> dataCorte = new List<DataCorte>();
-                    V_CORTE entCorte = new V_CORTE();
-                    entCorte.VOUCHER = txtVoucher.Text;
-                    listaCorte = objVCorte.Buscar_Corte(entCorte, fechaInicio, fechaFin, ref auditoria);
-                    foreach (var item in listaCorte)
-                    {
-                        if (item.TOTAL != null)
-                        {
-                            dataCorte.Add(new DataCorte
-                            {
-                                VOUCHER = item.VOUCHER,
-                                CLIENTE = item.CLIENTE,
-                                TOTAL = item.TOTAL.ToString(),
-                                FECHA_OPERACION = (DateTime)item.FEC_CORTE,
-                                USER_OPERACION = item.USUARIO
-                            });
-                            break;
-                        }
-                    }
-                    dataGridView2.DataSource = dataCorte;
-                    dataGridView2.Columns["FECHA_OPERACION"].Visible = false;
-                    dataGridView2.Columns["USER_OPERACION"].Visible = false;
-                    dataGridView2.ClearSelection();
+                    //Cls_Rule_V_Corte objVCorte = new Cls_Rule_V_Corte();
+                    //List<DataCorte> dataCorte = new List<DataCorte>();
+                    //V_CORTE entCorte = new V_CORTE();
+                    //entCorte.VOUCHER = txtVoucher.Text;
+                    //listaCorte = objVCorte.Buscar_Corte(entCorte, fechaInicio, fechaFin, ref auditoria);
+                    //foreach (var item in listaCorte)
+                    //{
+                    //    if (item.TOTAL != null)
+                    //    {
+                    //        dataCorte.Add(new DataCorte
+                    //        {
+                    //            VOUCHER = item.VOUCHER,
+                    //            CLIENTE = item.CLIENTE,
+                    //            TOTAL = item.TOTAL.ToString(),
+                    //            FECHA_OPERACION = (DateTime)item.FEC_CORTE,
+                    //            USER_OPERACION = item.USUARIO
+                    //        });
+                    //        break;
+                    //    }
+                    //}
+                    //dataGridView2.DataSource = dataCorte;
+                    //dataGridView2.Columns["FECHA_OPERACION"].Visible = false;
+                    //dataGridView2.Columns["USER_OPERACION"].Visible = false;
+                    //dataGridView2.ClearSelection();
                 }
             }
             catch (Exception ex)
@@ -135,33 +135,33 @@ namespace Barberia.Presentacion.Frm_AnularPryVe
             try
             {
                 Cls_Rule_Anular_Corte objAnularCorte = new Cls_Rule_Anular_Corte();
-                Cls_Rule_M_Corte objCorte = new Cls_Rule_M_Corte();
+                //Cls_Rule_M_Corte objCorte = new Cls_Rule_M_Corte();
                 T_ANULAR_CORTE entAnularCorte = new T_ANULAR_CORTE();
                 Cls_Ent_Auditoria auditoria = new Cls_Ent_Auditoria();
                 string voucher;
 
                 if (dataGridView2.Rows.Count > 0)
                 {
-                    voucher = dataGridView2.CurrentRow.Cells["VOUCHER"].Value.ToString();
-                    if (objCorte.Anular_Corte(voucher, ref auditoria))
-                    {
-                        entAnularCorte.DESC_ANULAR = txtMotivoServicio.Text.Trim().ToUpper();
-                        entAnularCorte.VOUCHER = voucher;
-                        entAnularCorte.PERSONAL = listaCorte[0].PERSONAL;
-                        entAnularCorte.CLIENTE = listaCorte[0].CLIENTE;
-                        entAnularCorte.TOTAL = decimal.Parse(dataGridView2.CurrentRow.Cells["TOTAL"].Value.ToString());
-                        entAnularCorte.FEC_OPERACION = DateTime.Parse(dataGridView2.CurrentRow.Cells["FECHA_OPERACION"].Value.ToString());
-                        entAnularCorte.FEC_ANULAR = DateTime.Now;
-                        entAnularCorte.USER_OPERACION = dataGridView2.CurrentRow.Cells["USER_OPERACION"].Value.ToString();
-                        entAnularCorte.USER_ANULAR = user;
-                        if (objAnularCorte.Insertar_Anular_Corte(entAnularCorte, ref auditoria))
-                        {
-                            MessageBox.Show("El registro ha sido anulado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        listaCorte.Clear();
-                        Limpiar_Servicio();
-                        Boton_Disable(btnEliminarServicio);
-                    }
+                    //voucher = dataGridView2.CurrentRow.Cells["VOUCHER"].Value.ToString();
+                    //if (objCorte.Anular_Corte(voucher, ref auditoria))
+                    //{
+                    //    entAnularCorte.DESC_ANULAR = txtMotivoServicio.Text.Trim().ToUpper();
+                    //    entAnularCorte.VOUCHER = voucher;
+                    //    entAnularCorte.PERSONAL = listaCorte[0].PERSONAL;
+                    //    entAnularCorte.CLIENTE = listaCorte[0].CLIENTE;
+                    //    entAnularCorte.TOTAL = decimal.Parse(dataGridView2.CurrentRow.Cells["TOTAL"].Value.ToString());
+                    //    entAnularCorte.FEC_OPERACION = DateTime.Parse(dataGridView2.CurrentRow.Cells["FECHA_OPERACION"].Value.ToString());
+                    //    entAnularCorte.FEC_ANULAR = DateTime.Now;
+                    //    entAnularCorte.USER_OPERACION = dataGridView2.CurrentRow.Cells["USER_OPERACION"].Value.ToString();
+                    //    entAnularCorte.USER_ANULAR = user;
+                    //    if (objAnularCorte.Insertar_Anular_Corte(entAnularCorte, ref auditoria))
+                    //    {
+                    //        MessageBox.Show("El registro ha sido anulado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //    }
+                    //    listaCorte.Clear();
+                    //    Limpiar_Servicio();
+                    //    Boton_Disable(btnEliminarServicio);
+                    //}
                 }
             }
             catch (Exception ex)

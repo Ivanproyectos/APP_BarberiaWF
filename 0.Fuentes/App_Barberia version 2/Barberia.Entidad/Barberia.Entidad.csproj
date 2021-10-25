@@ -91,12 +91,6 @@
     <Compile Include="T_C_ANULAR.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="T_C_PERFIL.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="T_D_CORTE.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="T_D_COTIZACION.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
@@ -127,9 +121,6 @@
     <Compile Include="T_M_ALMACEN.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="T_M_CARGO.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="T_M_CATEGORIA.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
@@ -143,9 +134,6 @@
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="T_M_COMPROBANTE_SUNAT.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="T_M_CORTE.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="T_M_COTIZACION.cs">
@@ -187,12 +175,6 @@
     <Compile Include="T_M_PARAMETRO.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="T_M_PERFIL.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="T_M_PERSONAL.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="T_M_PRODUCTO.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
@@ -206,9 +188,6 @@
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="T_M_UNIDAD_MEDIDA.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="T_M_USUARIO.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="T_M_VENTA.cs">
@@ -238,9 +217,6 @@
     <Compile Include="V_CLIENTE.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="V_CORTE.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="V_COTIZACION.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
@@ -248,9 +224,6 @@
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="V_KARDEX.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="V_M_CORTE.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="V_M_COTIZACION.cs">
@@ -269,9 +242,6 @@
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="V_PARAMETRO.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="V_PERSONAL.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="V_PRODUCTO.cs">

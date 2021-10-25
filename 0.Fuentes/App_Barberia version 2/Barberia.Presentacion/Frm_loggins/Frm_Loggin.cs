@@ -16,7 +16,7 @@ namespace Barberia.Presentacion.Frm_loggins
 {
     public partial class Frm_Loggin : Form
     {
-        Cls_Rule_Usuario objUsuario = new Cls_Rule_Usuario();
+        //Cls_Rule_Usuario objUsuario = new Cls_Rule_Usuario();
         public Frm_Loggin()
         {
             InitializeComponent();
@@ -69,19 +69,19 @@ namespace Barberia.Presentacion.Frm_loggins
                 byte[] hash = md5.ComputeHash(Encoding.UTF8.GetBytes(txtPassword.Text.Trim().ToUpper()));
                 string result = BitConverter.ToString(hash).Replace("-", "");
                 Cls_Ent_Auditoria auditoria = new Cls_Ent_Auditoria();
-                mensaje = objUsuario.Login_Usuario(txtUsuario.Text, result, out int IdPerfil, out int IdPersonal, ref auditoria);
+                //mensaje = objUsuario.Login_Usuario(txtUsuario.Text, result, out int IdPerfil, out int IdPersonal, ref auditoria);
 
-                if (mensaje == "")
-                {
-                    Frm_Inicio form = new Frm_Inicio(txtUsuario.Text.ToUpper(), IdPerfil, IdPersonal);
-                    this.Hide();
-                    form.Show();
+                //if (mensaje == "")
+                //{
+                //    Frm_Inicio form = new Frm_Inicio(txtUsuario.Text.ToUpper(), IdPerfil, IdPersonal);
+                //    this.Hide();
+                //    form.Show();
                     
-                }
-                else
-                {
-                    MessageBox.Show(mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                //}
+                //else
+                //{
+                //    MessageBox.Show(mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //}
             }
             else
             {

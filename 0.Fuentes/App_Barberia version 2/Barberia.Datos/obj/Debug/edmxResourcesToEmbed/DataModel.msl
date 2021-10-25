@@ -77,20 +77,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="T_C_PERFIL">
-      <EntityTypeMapping TypeName="DB_BARBERIAModel.T_C_PERFIL">
-        <MappingFragment StoreEntitySet="T_C_PERFIL">
-          <ScalarProperty Name="ID_CONFIG" ColumnName="ID_CONFIG" />
-          <ScalarProperty Name="ID_PERFIL" ColumnName="ID_PERFIL" />
-          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
-          <ScalarProperty Name="FLG_ESTADO" ColumnName="FLG_ESTADO" />
-          <ScalarProperty Name="USU_CREACION" ColumnName="USU_CREACION" />
-          <ScalarProperty Name="FEC_CREACION" ColumnName="FEC_CREACION" />
-          <ScalarProperty Name="USU_MODIFICA" ColumnName="USU_MODIFICA" />
-          <ScalarProperty Name="FEC_MODIFICA" ColumnName="FEC_MODIFICA" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="T_CORRELATIVO_COTIZACION">
       <EntityTypeMapping TypeName="DB_BARBERIAModel.T_CORRELATIVO_COTIZACION">
         <MappingFragment StoreEntitySet="T_CORRELATIVO_COTIZACION">
@@ -118,19 +104,6 @@
           <ScalarProperty Name="NUM_CORRELATIVO" ColumnName="NUM_CORRELATIVO" />
           <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
           <ScalarProperty Name="ANIO" ColumnName="ANIO" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="T_D_CORTE">
-      <EntityTypeMapping TypeName="DB_BARBERIAModel.T_D_CORTE">
-        <MappingFragment StoreEntitySet="T_D_CORTE">
-          <ScalarProperty Name="ID_DETALLE" ColumnName="ID_DETALLE" />
-          <ScalarProperty Name="ID_CORTE" ColumnName="ID_CORTE" />
-          <ScalarProperty Name="ID_SERVICIO" ColumnName="ID_SERVICIO" />
-          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
-          <ScalarProperty Name="PRECIO" ColumnName="PRECIO" />
-          <ScalarProperty Name="IMPORTE" ColumnName="IMPORTE" />
-          <ScalarProperty Name="DESCUENTO" ColumnName="DESCUENTO" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -270,20 +243,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="T_M_CARGO">
-      <EntityTypeMapping TypeName="DB_BARBERIAModel.T_M_CARGO">
-        <MappingFragment StoreEntitySet="T_M_CARGO">
-          <ScalarProperty Name="ID_CARGO" ColumnName="ID_CARGO" />
-          <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
-          <ScalarProperty Name="DESC_CARGO" ColumnName="DESC_CARGO" />
-          <ScalarProperty Name="FLG_ESTADO" ColumnName="FLG_ESTADO" />
-          <ScalarProperty Name="USU_CREACION" ColumnName="USU_CREACION" />
-          <ScalarProperty Name="FEC_CREACION" ColumnName="FEC_CREACION" />
-          <ScalarProperty Name="USU_MODIFICA" ColumnName="USU_MODIFICA" />
-          <ScalarProperty Name="FEC_MODIFICA" ColumnName="FEC_MODIFICA" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="T_M_CATEGORIA">
       <EntityTypeMapping TypeName="DB_BARBERIAModel.T_M_CATEGORIA">
         <MappingFragment StoreEntitySet="T_M_CATEGORIA">
@@ -386,28 +345,6 @@
           <ScalarProperty Name="COD_SUNAT" ColumnName="COD_SUNAT" />
           <ScalarProperty Name="MENSAJE_SUNAT" ColumnName="MENSAJE_SUNAT" />
           <ScalarProperty Name="ESTADO_COMPROBANTE" ColumnName="ESTADO_COMPROBANTE" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="T_M_CORTE">
-      <EntityTypeMapping TypeName="DB_BARBERIAModel.T_M_CORTE">
-        <MappingFragment StoreEntitySet="T_M_CORTE">
-          <ScalarProperty Name="ID_CORTE" ColumnName="ID_CORTE" />
-          <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
-          <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
-          <ScalarProperty Name="ID_PERSONAL" ColumnName="ID_PERSONAL" />
-          <ScalarProperty Name="VOUCHER" ColumnName="VOUCHER" />
-          <ScalarProperty Name="TOTAL_IMPORTE" ColumnName="TOTAL_IMPORTE" />
-          <ScalarProperty Name="DESCT_TOTAL" ColumnName="DESCT_TOTAL" />
-          <ScalarProperty Name="IGV" ColumnName="IGV" />
-          <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
-          <ScalarProperty Name="EFECTIVO" ColumnName="EFECTIVO" />
-          <ScalarProperty Name="VUELTO" ColumnName="VUELTO" />
-          <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
-          <ScalarProperty Name="FLG_ESTADO" ColumnName="FLG_ESTADO" />
-          <ScalarProperty Name="FEC_CORTE" ColumnName="FEC_CORTE" />
-          <ScalarProperty Name="USU_MODIFICA" ColumnName="USU_MODIFICA" />
-          <ScalarProperty Name="FEC_MODIFICA" ColumnName="FEC_MODIFICA" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -619,45 +556,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="T_M_PERFIL">
-      <EntityTypeMapping TypeName="DB_BARBERIAModel.T_M_PERFIL">
-        <MappingFragment StoreEntitySet="T_M_PERFIL">
-          <ScalarProperty Name="ID_PERFIL" ColumnName="ID_PERFIL" />
-          <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
-          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
-          <ScalarProperty Name="FLG_ESTADO" ColumnName="FLG_ESTADO" />
-          <ScalarProperty Name="USU_CREACION" ColumnName="USU_CREACION" />
-          <ScalarProperty Name="FEC_CREACION" ColumnName="FEC_CREACION" />
-          <ScalarProperty Name="USU_MODIFICA" ColumnName="USU_MODIFICA" />
-          <ScalarProperty Name="FEC_MODIFICA" ColumnName="FEC_MODIFICA" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="T_M_PERSONAL">
-      <EntityTypeMapping TypeName="DB_BARBERIAModel.T_M_PERSONAL">
-        <MappingFragment StoreEntitySet="T_M_PERSONAL">
-          <ScalarProperty Name="ID_PERSONAL" ColumnName="ID_PERSONAL" />
-          <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
-          <ScalarProperty Name="NOMBRES" ColumnName="NOMBRES" />
-          <ScalarProperty Name="APELLIDO_PAT" ColumnName="APELLIDO_PAT" />
-          <ScalarProperty Name="APELLIDO_MAT" ColumnName="APELLIDO_MAT" />
-          <ScalarProperty Name="TIPO_DOC" ColumnName="TIPO_DOC" />
-          <ScalarProperty Name="NUM_DOC" ColumnName="NUM_DOC" />
-          <ScalarProperty Name="COD_DEPARTAMENTO" ColumnName="COD_DEPARTAMENTO" />
-          <ScalarProperty Name="COD_PROVINCIA" ColumnName="COD_PROVINCIA" />
-          <ScalarProperty Name="COD_DISTRITO" ColumnName="COD_DISTRITO" />
-          <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
-          <ScalarProperty Name="CORREO" ColumnName="CORREO" />
-          <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
-          <ScalarProperty Name="ID_CARGO" ColumnName="ID_CARGO" />
-          <ScalarProperty Name="FLG_ESTADO" ColumnName="FLG_ESTADO" />
-          <ScalarProperty Name="USU_CREACION" ColumnName="USU_CREACION" />
-          <ScalarProperty Name="FEC_CREACION" ColumnName="FEC_CREACION" />
-          <ScalarProperty Name="USU_MODIFICA" ColumnName="USU_MODIFICA" />
-          <ScalarProperty Name="FEC_MODIFICA" ColumnName="FEC_MODIFICA" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="T_M_PRODUCTO">
       <EntityTypeMapping TypeName="DB_BARBERIAModel.T_M_PRODUCTO">
         <MappingFragment StoreEntitySet="T_M_PRODUCTO">
@@ -728,23 +626,6 @@
           <ScalarProperty Name="ID_UNIDAD_MEDIDA" ColumnName="ID_UNIDAD_MEDIDA" />
           <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
           <ScalarProperty Name="DES_UNIDAD_MEDIDA" ColumnName="DES_UNIDAD_MEDIDA" />
-          <ScalarProperty Name="FLG_ESTADO" ColumnName="FLG_ESTADO" />
-          <ScalarProperty Name="USU_CREACION" ColumnName="USU_CREACION" />
-          <ScalarProperty Name="FEC_CREACION" ColumnName="FEC_CREACION" />
-          <ScalarProperty Name="USU_MODIFICA" ColumnName="USU_MODIFICA" />
-          <ScalarProperty Name="FEC_MODIFICA" ColumnName="FEC_MODIFICA" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="T_M_USUARIO">
-      <EntityTypeMapping TypeName="DB_BARBERIAModel.T_M_USUARIO">
-        <MappingFragment StoreEntitySet="T_M_USUARIO">
-          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
-          <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
-          <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
-          <ScalarProperty Name="CLAVE" ColumnName="CLAVE" />
-          <ScalarProperty Name="ID_PERFIL" ColumnName="ID_PERFIL" />
-          <ScalarProperty Name="ID_PERSONAL" ColumnName="ID_PERSONAL" />
           <ScalarProperty Name="FLG_ESTADO" ColumnName="FLG_ESTADO" />
           <ScalarProperty Name="USU_CREACION" ColumnName="USU_CREACION" />
           <ScalarProperty Name="FEC_CREACION" ColumnName="FEC_CREACION" />
@@ -892,27 +773,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="V_CORTE">
-      <EntityTypeMapping TypeName="DB_BARBERIAModel.V_CORTE">
-        <MappingFragment StoreEntitySet="V_CORTE">
-          <ScalarProperty Name="ID_DETALLE" ColumnName="ID_DETALLE" />
-          <ScalarProperty Name="ID_CORTE" ColumnName="ID_CORTE" />
-          <ScalarProperty Name="VOUCHER" ColumnName="VOUCHER" />
-          <ScalarProperty Name="PERSONAL" ColumnName="PERSONAL" />
-          <ScalarProperty Name="CLIENTE" ColumnName="CLIENTE" />
-          <ScalarProperty Name="DES_SERVICIO" ColumnName="DES_SERVICIO" />
-          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
-          <ScalarProperty Name="PRECIO" ColumnName="PRECIO" />
-          <ScalarProperty Name="DESCUENTO" ColumnName="DESCUENTO" />
-          <ScalarProperty Name="IMPORTE" ColumnName="IMPORTE" />
-          <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
-          <ScalarProperty Name="FEC_CORTE" ColumnName="FEC_CORTE" />
-          <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
-          <ScalarProperty Name="ANIO" ColumnName="ANIO" />
-          <ScalarProperty Name="MES" ColumnName="MES" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="V_COTIZACION">
       <EntityTypeMapping TypeName="DB_BARBERIAModel.V_COTIZACION">
         <MappingFragment StoreEntitySet="V_COTIZACION">
@@ -969,12 +829,12 @@
     <EntitySetMapping Name="V_KARDEX">
       <EntityTypeMapping TypeName="DB_BARBERIAModel.V_KARDEX">
         <MappingFragment StoreEntitySet="V_KARDEX">
-          <ScalarProperty Name="PRECIO_VENTA" ColumnName="PRECIO_VENTA" />
-          <ScalarProperty Name="PRECIO_COMPRA" ColumnName="PRECIO_COMPRA" />
-          <ScalarProperty Name="STOCK" ColumnName="STOCK" />
           <ScalarProperty Name="ID_KARDEX" ColumnName="ID_KARDEX" />
           <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
           <ScalarProperty Name="PRODUCTO" ColumnName="PRODUCTO" />
+          <ScalarProperty Name="STOCK" ColumnName="STOCK" />
+          <ScalarProperty Name="PRECIO_COMPRA" ColumnName="PRECIO_COMPRA" />
+          <ScalarProperty Name="PRECIO_VENTA" ColumnName="PRECIO_VENTA" />
           <ScalarProperty Name="FEC_KARDEX" ColumnName="FEC_KARDEX" />
           <ScalarProperty Name="DESC_TIPO_COMPROBANTE" ColumnName="DESC_TIPO_COMPROBANTE" />
           <ScalarProperty Name="FEC_DETALLE_KARDEX" ColumnName="FEC_DETALLE_KARDEX" />
@@ -989,24 +849,6 @@
           <ScalarProperty Name="TOTAL_SALDO" ColumnName="TOTAL_SALDO" />
           <ScalarProperty Name="USU_CREACION" ColumnName="USU_CREACION" />
           <ScalarProperty Name="FEC_CREACION" ColumnName="FEC_CREACION" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="V_M_CORTE">
-      <EntityTypeMapping TypeName="DB_BARBERIAModel.V_M_CORTE">
-        <MappingFragment StoreEntitySet="V_M_CORTE">
-          <ScalarProperty Name="ID_CORTE" ColumnName="ID_CORTE" />
-          <ScalarProperty Name="VOUCHER" ColumnName="VOUCHER" />
-          <ScalarProperty Name="PERSONAL" ColumnName="PERSONAL" />
-          <ScalarProperty Name="CLIENTE" ColumnName="CLIENTE" />
-          <ScalarProperty Name="TOTAL_IMPORTE" ColumnName="TOTAL_IMPORTE" />
-          <ScalarProperty Name="IGV" ColumnName="IGV" />
-          <ScalarProperty Name="DESCT_TOTAL" ColumnName="DESCT_TOTAL" />
-          <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
-          <ScalarProperty Name="EFECTIVO" ColumnName="EFECTIVO" />
-          <ScalarProperty Name="VUELTO" ColumnName="VUELTO" />
-          <ScalarProperty Name="FEC_CORTE" ColumnName="FEC_CORTE" />
-          <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -1155,31 +997,6 @@
           <ScalarProperty Name="FEC_INICIO" ColumnName="FEC_INICIO" />
           <ScalarProperty Name="FEC_FIN" ColumnName="FEC_FIN" />
           <ScalarProperty Name="FLG_ESTADO" ColumnName="FLG_ESTADO" />
-          <ScalarProperty Name="USU_CREACION" ColumnName="USU_CREACION" />
-          <ScalarProperty Name="FEC_CREACION" ColumnName="FEC_CREACION" />
-          <ScalarProperty Name="USU_MODIFICA" ColumnName="USU_MODIFICA" />
-          <ScalarProperty Name="FEC_MODIFICA" ColumnName="FEC_MODIFICA" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="V_PERSONAL">
-      <EntityTypeMapping TypeName="DB_BARBERIAModel.V_PERSONAL">
-        <MappingFragment StoreEntitySet="V_PERSONAL">
-          <ScalarProperty Name="ID_PERSONAL" ColumnName="ID_PERSONAL" />
-          <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
-          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
-          <ScalarProperty Name="NOMBRES" ColumnName="NOMBRES" />
-          <ScalarProperty Name="APELLIDO_PAT" ColumnName="APELLIDO_PAT" />
-          <ScalarProperty Name="APELLIDO_MAT" ColumnName="APELLIDO_MAT" />
-          <ScalarProperty Name="DOCUMENTO" ColumnName="DOCUMENTO" />
-          <ScalarProperty Name="NUM_DOC" ColumnName="NUM_DOC" />
-          <ScalarProperty Name="DEPARTAMENTO" ColumnName="DEPARTAMENTO" />
-          <ScalarProperty Name="PROVINCIA" ColumnName="PROVINCIA" />
-          <ScalarProperty Name="DISTRITO" ColumnName="DISTRITO" />
-          <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
-          <ScalarProperty Name="CORREO" ColumnName="CORREO" />
-          <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
-          <ScalarProperty Name="DESC_CARGO" ColumnName="DESC_CARGO" />
           <ScalarProperty Name="USU_CREACION" ColumnName="USU_CREACION" />
           <ScalarProperty Name="FEC_CREACION" ColumnName="FEC_CREACION" />
           <ScalarProperty Name="USU_MODIFICA" ColumnName="USU_MODIFICA" />

@@ -12,12 +12,12 @@ namespace Barberia.Presentacion.Frm_Ventas
 {
     public partial class Frm_Buscar : Form
     {
-        private Cls_Rule_Personal ObjPersonal = new Cls_Rule_Personal();
+        //private Cls_Rule_Personal ObjPersonal = new Cls_Rule_Personal();
         private Cls_Rule_Producto ObjProducto = new Cls_Rule_Producto();
         //private Cls_Rule_Clientes ObjCliente = new Cls_Rule_Clientes();
         private Cls_Rule_V_Cliente ObjVCliente = new Cls_Rule_V_Cliente();
         //private T_M_CLIENTES entCliente = new T_M_CLIENTES();
-        private T_M_PERSONAL entPersonal = new T_M_PERSONAL();
+       // private T_M_PERSONAL entPersonal = new T_M_PERSONAL();
         private T_M_PRODUCTO entProducto = new T_M_PRODUCTO();
         //Cls_Ent_Auditoria auditoria = new Cls_Ent_Auditoria();
         List<string> lista = new List<string>();
@@ -77,9 +77,9 @@ namespace Barberia.Presentacion.Frm_Ventas
 
             if (_opcion == "PERSONAL")
             {
-                entPersonal.NOMBRES = txtNombre.Text.Trim().ToUpper();
-                lista = ObjPersonal.Buscar_Personal(entPersonal, ref auditoria).OrderBy(x => x.NOMBRES).Select(x => x.NOMBRES + " " + x.APELLIDO_PAT + " " + x.APELLIDO_MAT).ToList();
-                dataGridView1.Columns.Add("NOMBRES", "NOMBRES Y APELLIDOS");
+                //entPersonal.NOMBRES = txtNombre.Text.Trim().ToUpper();
+                //lista = ObjPersonal.Buscar_Personal(entPersonal, ref auditoria).OrderBy(x => x.NOMBRES).Select(x => x.NOMBRES + " " + x.APELLIDO_PAT + " " + x.APELLIDO_MAT).ToList();
+                //dataGridView1.Columns.Add("NOMBRES", "NOMBRES Y APELLIDOS");
             }
             else if (_opcion == "PRODUCTO")
             {

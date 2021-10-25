@@ -779,7 +779,7 @@
             this.btnPerfil.TabIndex = 2;
             this.btnPerfil.Text = "Perfil";
             this.btnPerfil.UseVisualStyleBackColor = false;
-            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
+
             // 
             // panel5
             // 
@@ -824,7 +824,7 @@
             this.btnCargo.TabIndex = 2;
             this.btnCargo.Text = "Cargo";
             this.btnCargo.UseVisualStyleBackColor = false;
-            this.btnCargo.Click += new System.EventHandler(this.btnCargo_Click);
+
             // 
             // pnlPersonal
             // 
@@ -861,7 +861,7 @@
             this.btnPersonal.TabIndex = 0;
             this.btnPersonal.Text = "Personal";
             this.btnPersonal.UseVisualStyleBackColor = false;
-            this.btnPersonal.Click += new System.EventHandler(this.btnPersonal_Click);
+
             // 
             // pnlCliente
             // 

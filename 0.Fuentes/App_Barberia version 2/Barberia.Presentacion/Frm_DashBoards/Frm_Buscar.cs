@@ -15,9 +15,9 @@ namespace Barberia.Presentacion.Frm_DashBoards
     public partial class Frm_Buscar : Form
     {
         private Cls_Rule_Clientes ObjCliente = new Cls_Rule_Clientes();
-        private Cls_Rule_Personal ObjPersonal = new Cls_Rule_Personal();
+        //private Cls_Rule_Personal ObjPersonal = new Cls_Rule_Personal();
         private T_M_CLIENTES entCliente = new T_M_CLIENTES();
-        private T_M_PERSONAL entPersonal = new T_M_PERSONAL();
+        //private T_M_PERSONAL entPersonal = new T_M_PERSONAL();
         private string _opcion;
         public string DevolverNombre;
         public Frm_Buscar(string opcion)
@@ -51,9 +51,9 @@ namespace Barberia.Presentacion.Frm_DashBoards
             }
             else if (_opcion == "PERSONAL")
             {
-                entPersonal.NOMBRES = txtNombre.Text.Trim().ToUpper();
-                lista = ObjPersonal.Buscar_Personal(entPersonal, ref auditoria).Select(x => x.NOMBRES + " " + x.APELLIDO_PAT + " " + x.APELLIDO_MAT).ToList();
-                dataGridView1.Columns.Add("NOMBRES", "NOMBRES Y APELLIDOS");
+                //entPersonal.NOMBRES = txtNombre.Text.Trim().ToUpper();
+                //lista = ObjPersonal.Buscar_Personal(entPersonal, ref auditoria).Select(x => x.NOMBRES + " " + x.APELLIDO_PAT + " " + x.APELLIDO_MAT).ToList();
+                //dataGridView1.Columns.Add("NOMBRES", "NOMBRES Y APELLIDOS");
             }
 
             for (int i = 0; i < lista.Count(); i++)

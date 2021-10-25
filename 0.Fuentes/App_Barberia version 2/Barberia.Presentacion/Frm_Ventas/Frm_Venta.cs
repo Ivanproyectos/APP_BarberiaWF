@@ -20,7 +20,7 @@ namespace Barberia.Presentacion.Frm_Ventas
     public partial class Frm_Venta : Form
     {
         private Cls_Rule_Producto objProducto = new Cls_Rule_Producto();
-        private Cls_Rule_Personal objPersonal = new Cls_Rule_Personal();
+        //private Cls_Rule_Personal objPersonal = new Cls_Rule_Personal();
         private Cls_Rule_Clientes ObjCliente = new Cls_Rule_Clientes();
         private Cls_Rule_V_Cliente ObjVCliente = new Cls_Rule_V_Cliente();
         private Cls_Rule_V_Empresa ObjVEmpresa = new Cls_Rule_V_Empresa();
@@ -117,24 +117,24 @@ namespace Barberia.Presentacion.Frm_Ventas
         private void Frm_Venta_Load(object sender, EventArgs e)
         {
             Cls_Ent_Auditoria auditoria = new Cls_Ent_Auditoria();
-            List<T_M_PERSONAL> listPersonal = new List<T_M_PERSONAL>();
+            //List<T_M_PERSONAL> listPersonal = new List<T_M_PERSONAL>();
 
             cmbTipoDoc.Items.Add("FACTURA");
             cmbTipoDoc.Items.Add("BOLETA");
             cmbTipoDoc.SelectedIndex = 0;
             Cargar_Cliente();
 
-            listPersonal = objPersonal.Listar_Personal(1, ref auditoria).OrderBy(x => x.NOMBRES).Select(x => new T_M_PERSONAL
-            {
-                NOMBRES = x.NOMBRES + " " + x.APELLIDO_PAT + " " + x.APELLIDO_MAT,
-                ID_PERSONAL = x.ID_PERSONAL
-            }).ToList();
-            cmbPersonal.DataSource = listPersonal;
-            listPersonal.Insert(0, new T_M_PERSONAL
-            {
-                ID_PERSONAL = 0,
-                NOMBRES = "-- SELECCIONE --"
-            });
+            //listPersonal = objPersonal.Listar_Personal(1, ref auditoria).OrderBy(x => x.NOMBRES).Select(x => new T_M_PERSONAL
+            //{
+            //    NOMBRES = x.NOMBRES + " " + x.APELLIDO_PAT + " " + x.APELLIDO_MAT,
+            //    ID_PERSONAL = x.ID_PERSONAL
+            //}).ToList();
+            //cmbPersonal.DataSource = listPersonal;
+            //listPersonal.Insert(0, new T_M_PERSONAL
+            //{
+            //    ID_PERSONAL = 0,
+            //    NOMBRES = "-- SELECCIONE --"
+            //});
             cmbPersonal.DisplayMember = "NOMBRES";
             cmbPersonal.ValueMember = "ID_PERSONAL";
             cmbPersonal.SelectedValue = _idPersonal;

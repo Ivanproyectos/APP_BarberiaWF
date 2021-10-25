@@ -11,7 +11,7 @@ namespace Barberia.Presentacion.Frm_DashBoards
     {
         private Cls_Rule_V_Venta objVVenta = new Cls_Rule_V_Venta();
         private Cls_Rule_Clientes ObjCliente = new Cls_Rule_Clientes();
-        private Cls_Rule_Personal ObjPersonal = new Cls_Rule_Personal();
+
 
         public Frm_ReporteAnular()
         {

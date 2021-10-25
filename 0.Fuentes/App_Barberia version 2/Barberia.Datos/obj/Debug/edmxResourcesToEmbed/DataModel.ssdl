@@ -71,19 +71,6 @@
     <Property Name="FECHA" Type="datetime" />
     <Property Name="NUMERO" Type="varchar" MaxLength="5" />
   </EntityType>
-  <EntityType Name="T_C_PERFIL">
-    <Key>
-      <PropertyRef Name="ID_CONFIG" />
-    </Key>
-    <Property Name="ID_CONFIG" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="ID_PERFIL" Type="int" />
-    <Property Name="DESCRIPCION" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="FLG_ESTADO" Type="char" MaxLength="1" />
-    <Property Name="USU_CREACION" Type="varchar" MaxLength="20" />
-    <Property Name="FEC_CREACION" Type="datetime" />
-    <Property Name="USU_MODIFICA" Type="varchar" MaxLength="20" />
-    <Property Name="FEC_MODIFICA" Type="datetime" />
-  </EntityType>
   <EntityType Name="T_CORRELATIVO_COTIZACION">
     <Key>
       <PropertyRef Name="ID_CORRELATIVO" />
@@ -110,18 +97,6 @@
     <Property Name="NUM_CORRELATIVO" Type="varchar" MaxLength="20" />
     <Property Name="ID_EMPRESA" Type="int" />
     <Property Name="ANIO" Type="char" MaxLength="4" />
-  </EntityType>
-  <EntityType Name="T_D_CORTE">
-    <Key>
-      <PropertyRef Name="ID_DETALLE" />
-    </Key>
-    <Property Name="ID_DETALLE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="ID_CORTE" Type="int" Nullable="false" />
-    <Property Name="ID_SERVICIO" Type="int" Nullable="false" />
-    <Property Name="CANTIDAD" Type="int" Nullable="false" />
-    <Property Name="PRECIO" Type="numeric" Precision="10" Scale="2" Nullable="false" />
-    <Property Name="IMPORTE" Type="numeric" Precision="10" Scale="2" />
-    <Property Name="DESCUENTO" Type="numeric" Precision="10" Scale="2" />
   </EntityType>
   <EntityType Name="T_D_COTIZACION">
     <Key>
@@ -249,19 +224,6 @@
     <Property Name="USU_MODIFICA" Type="varchar" MaxLength="20" />
     <Property Name="FEC_MODIFICA" Type="datetime" />
   </EntityType>
-  <EntityType Name="T_M_CARGO">
-    <Key>
-      <PropertyRef Name="ID_CARGO" />
-    </Key>
-    <Property Name="ID_CARGO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="ID_EMPRESA" Type="int" Nullable="false" />
-    <Property Name="DESC_CARGO" Type="varchar" MaxLength="300" />
-    <Property Name="FLG_ESTADO" Type="char" MaxLength="1" />
-    <Property Name="USU_CREACION" Type="varchar" MaxLength="20" />
-    <Property Name="FEC_CREACION" Type="datetime" />
-    <Property Name="USU_MODIFICA" Type="varchar" MaxLength="20" />
-    <Property Name="FEC_MODIFICA" Type="datetime" />
-  </EntityType>
   <EntityType Name="T_M_CATEGORIA">
     <Key>
       <PropertyRef Name="ID_CATEGORIA" />
@@ -361,27 +323,6 @@
     <Property Name="COD_SUNAT" Type="varchar" MaxLength="20" />
     <Property Name="MENSAJE_SUNAT" Type="varchar" MaxLength="100" />
     <Property Name="ESTADO_COMPROBANTE" Type="char" MaxLength="1" />
-  </EntityType>
-  <EntityType Name="T_M_CORTE">
-    <Key>
-      <PropertyRef Name="ID_CORTE" />
-    </Key>
-    <Property Name="ID_CORTE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="ID_EMPRESA" Type="int" Nullable="false" />
-    <Property Name="ID_CLIENTE" Type="int" Nullable="false" />
-    <Property Name="ID_PERSONAL" Type="int" Nullable="false" />
-    <Property Name="VOUCHER" Type="varchar" MaxLength="20" />
-    <Property Name="TOTAL_IMPORTE" Type="numeric" Precision="10" Scale="2" />
-    <Property Name="DESCT_TOTAL" Type="numeric" Precision="10" Scale="2" />
-    <Property Name="IGV" Type="numeric" Precision="10" Scale="2" />
-    <Property Name="TOTAL" Type="numeric" Precision="10" Scale="2" />
-    <Property Name="EFECTIVO" Type="varchar" MaxLength="20" />
-    <Property Name="VUELTO" Type="varchar" MaxLength="20" />
-    <Property Name="USUARIO" Type="varchar" MaxLength="20" />
-    <Property Name="FLG_ESTADO" Type="char" MaxLength="1" />
-    <Property Name="FEC_CORTE" Type="datetime" />
-    <Property Name="USU_MODIFICA" Type="varchar" MaxLength="20" />
-    <Property Name="FEC_MODIFICA" Type="datetime" />
   </EntityType>
   <EntityType Name="T_M_COTIZACION">
     <Key>
@@ -578,43 +519,6 @@
     <Property Name="USU_MODIFICA" Type="varchar" MaxLength="20" />
     <Property Name="FEC_MODIFICA" Type="datetime" />
   </EntityType>
-  <EntityType Name="T_M_PERFIL">
-    <Key>
-      <PropertyRef Name="ID_PERFIL" />
-    </Key>
-    <Property Name="ID_PERFIL" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="ID_EMPRESA" Type="int" Nullable="false" />
-    <Property Name="DESCRIPCION" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="FLG_ESTADO" Type="char" MaxLength="1" />
-    <Property Name="USU_CREACION" Type="varchar" MaxLength="20" />
-    <Property Name="FEC_CREACION" Type="datetime" />
-    <Property Name="USU_MODIFICA" Type="varchar" MaxLength="20" />
-    <Property Name="FEC_MODIFICA" Type="datetime" />
-  </EntityType>
-  <EntityType Name="T_M_PERSONAL">
-    <Key>
-      <PropertyRef Name="ID_PERSONAL" />
-    </Key>
-    <Property Name="ID_PERSONAL" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="ID_EMPRESA" Type="int" Nullable="false" />
-    <Property Name="NOMBRES" Type="varchar" MaxLength="200" Nullable="false" />
-    <Property Name="APELLIDO_PAT" Type="varchar" MaxLength="500" />
-    <Property Name="APELLIDO_MAT" Type="varchar" MaxLength="500" />
-    <Property Name="TIPO_DOC" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="NUM_DOC" Type="varchar" MaxLength="12" Nullable="false" />
-    <Property Name="COD_DEPARTAMENTO" Type="char" MaxLength="2" />
-    <Property Name="COD_PROVINCIA" Type="char" MaxLength="2" />
-    <Property Name="COD_DISTRITO" Type="char" MaxLength="2" />
-    <Property Name="DIRECCION" Type="varchar" MaxLength="200" />
-    <Property Name="CORREO" Type="varchar" MaxLength="100" />
-    <Property Name="TELEFONO" Type="varchar" MaxLength="11" />
-    <Property Name="ID_CARGO" Type="int" />
-    <Property Name="FLG_ESTADO" Type="char" MaxLength="1" />
-    <Property Name="USU_CREACION" Type="varchar" MaxLength="20" />
-    <Property Name="FEC_CREACION" Type="datetime" />
-    <Property Name="USU_MODIFICA" Type="varchar" MaxLength="20" />
-    <Property Name="FEC_MODIFICA" Type="datetime" />
-  </EntityType>
   <EntityType Name="T_M_PRODUCTO">
     <Key>
       <PropertyRef Name="ID_PRODUCTO" />
@@ -682,22 +586,6 @@
     <Property Name="ID_UNIDAD_MEDIDA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="ID_EMPRESA" Type="int" Nullable="false" />
     <Property Name="DES_UNIDAD_MEDIDA" Type="varchar" MaxLength="200" Nullable="false" />
-    <Property Name="FLG_ESTADO" Type="char" MaxLength="1" />
-    <Property Name="USU_CREACION" Type="varchar" MaxLength="20" />
-    <Property Name="FEC_CREACION" Type="datetime" />
-    <Property Name="USU_MODIFICA" Type="varchar" MaxLength="20" />
-    <Property Name="FEC_MODIFICA" Type="datetime" />
-  </EntityType>
-  <EntityType Name="T_M_USUARIO">
-    <Key>
-      <PropertyRef Name="ID_USUARIO" />
-    </Key>
-    <Property Name="ID_USUARIO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="ID_EMPRESA" Type="int" Nullable="false" />
-    <Property Name="USUARIO" Type="varchar" MaxLength="20" Nullable="false" />
-    <Property Name="CLAVE" Type="varchar" MaxLength="500" Nullable="false" />
-    <Property Name="ID_PERFIL" Type="int" Nullable="false" />
-    <Property Name="ID_PERSONAL" Type="int" Nullable="false" />
     <Property Name="FLG_ESTADO" Type="char" MaxLength="1" />
     <Property Name="USU_CREACION" Type="varchar" MaxLength="20" />
     <Property Name="FEC_CREACION" Type="datetime" />
@@ -845,32 +733,6 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_CLIENTE' no tiene definida
     <Property Name="FEC_MODIFICA" Type="datetime" />
   </EntityType>
   <!--Errores durante la generación:
-advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_CORTE' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
-  <EntityType Name="V_CORTE">
-    <Key>
-      <PropertyRef Name="ID_DETALLE" />
-      <PropertyRef Name="ID_CORTE" />
-      <PropertyRef Name="DES_SERVICIO" />
-      <PropertyRef Name="CANTIDAD" />
-      <PropertyRef Name="PRECIO" />
-    </Key>
-    <Property Name="ID_DETALLE" Type="int" Nullable="false" />
-    <Property Name="ID_CORTE" Type="int" Nullable="false" />
-    <Property Name="VOUCHER" Type="varchar" MaxLength="20" />
-    <Property Name="PERSONAL" Type="varchar" MaxLength="1202" />
-    <Property Name="CLIENTE" Type="varchar" MaxLength="1202" />
-    <Property Name="DES_SERVICIO" Type="varchar" MaxLength="200" Nullable="false" />
-    <Property Name="CANTIDAD" Type="int" Nullable="false" />
-    <Property Name="PRECIO" Type="numeric" Precision="10" Scale="2" Nullable="false" />
-    <Property Name="DESCUENTO" Type="numeric" Precision="10" Scale="2" />
-    <Property Name="IMPORTE" Type="numeric" Precision="10" Scale="2" />
-    <Property Name="TOTAL" Type="numeric" Precision="10" Scale="2" />
-    <Property Name="FEC_CORTE" Type="datetime" />
-    <Property Name="USUARIO" Type="varchar" MaxLength="20" />
-    <Property Name="ANIO" Type="int" />
-    <Property Name="MES" Type="int" />
-  </EntityType>
-  <!--Errores durante la generación:
 advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_COTIZACION' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
   <EntityType Name="V_COTIZACION">
     <Key>
@@ -963,25 +825,6 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_KARDEX' no tiene definida 
     <Property Name="TOTAL_SALDO" Type="decimal" Precision="18" Scale="2" />
     <Property Name="USU_CREACION" Type="varchar" MaxLength="20" />
     <Property Name="FEC_CREACION" Type="datetime" />
-  </EntityType>
-  <!--Errores durante la generación:
-advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_M_CORTE' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
-  <EntityType Name="V_M_CORTE">
-    <Key>
-      <PropertyRef Name="ID_CORTE" />
-    </Key>
-    <Property Name="ID_CORTE" Type="int" Nullable="false" />
-    <Property Name="VOUCHER" Type="varchar" MaxLength="20" />
-    <Property Name="PERSONAL" Type="varchar" MaxLength="1202" />
-    <Property Name="CLIENTE" Type="varchar" MaxLength="1202" />
-    <Property Name="TOTAL_IMPORTE" Type="numeric" Precision="10" Scale="2" />
-    <Property Name="IGV" Type="numeric" Precision="10" Scale="2" />
-    <Property Name="DESCT_TOTAL" Type="numeric" Precision="10" Scale="2" />
-    <Property Name="TOTAL" Type="numeric" Precision="10" Scale="2" />
-    <Property Name="EFECTIVO" Type="varchar" MaxLength="20" />
-    <Property Name="VUELTO" Type="varchar" MaxLength="20" />
-    <Property Name="FEC_CORTE" Type="datetime" />
-    <Property Name="USUARIO" Type="varchar" MaxLength="20" />
   </EntityType>
   <!--Errores durante la generación:
 advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_M_COTIZACION' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
@@ -1157,35 +1000,6 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_PARAMETRO' no tiene defini
     <Property Name="FEC_MODIFICA" Type="datetime" />
   </EntityType>
   <!--Errores durante la generación:
-advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_PERSONAL' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
-  <EntityType Name="V_PERSONAL">
-    <Key>
-      <PropertyRef Name="ID_PERSONAL" />
-      <PropertyRef Name="ID_EMPRESA" />
-      <PropertyRef Name="NOMBRES" />
-      <PropertyRef Name="NUM_DOC" />
-    </Key>
-    <Property Name="ID_PERSONAL" Type="int" Nullable="false" />
-    <Property Name="ID_EMPRESA" Type="int" Nullable="false" />
-    <Property Name="NOMBRE" Type="varchar" MaxLength="1202" />
-    <Property Name="NOMBRES" Type="varchar" MaxLength="200" Nullable="false" />
-    <Property Name="APELLIDO_PAT" Type="varchar" MaxLength="500" />
-    <Property Name="APELLIDO_MAT" Type="varchar" MaxLength="500" />
-    <Property Name="DOCUMENTO" Type="varchar" MaxLength="20" />
-    <Property Name="NUM_DOC" Type="varchar" MaxLength="12" Nullable="false" />
-    <Property Name="DEPARTAMENTO" Type="varchar" MaxLength="25" />
-    <Property Name="PROVINCIA" Type="varchar" MaxLength="50" />
-    <Property Name="DISTRITO" Type="varchar" MaxLength="50" />
-    <Property Name="DIRECCION" Type="varchar" MaxLength="200" />
-    <Property Name="CORREO" Type="varchar" MaxLength="100" />
-    <Property Name="TELEFONO" Type="varchar" MaxLength="11" />
-    <Property Name="DESC_CARGO" Type="varchar" MaxLength="300" />
-    <Property Name="USU_CREACION" Type="varchar" MaxLength="20" />
-    <Property Name="FEC_CREACION" Type="datetime" />
-    <Property Name="USU_MODIFICA" Type="varchar" MaxLength="20" />
-    <Property Name="FEC_MODIFICA" Type="datetime" />
-  </EntityType>
-  <!--Errores durante la generación:
 advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_PRODUCTO' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
   <EntityType Name="V_PRODUCTO">
     <Key>
@@ -1313,18 +1127,6 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_ID_CARGO">
-    <End Role="T_M_CARGO" Type="Self.T_M_CARGO" Multiplicity="0..1" />
-    <End Role="T_M_PERSONAL" Type="Self.T_M_PERSONAL" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="T_M_CARGO">
-        <PropertyRef Name="ID_CARGO" />
-      </Principal>
-      <Dependent Role="T_M_PERSONAL">
-        <PropertyRef Name="ID_CARGO" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_ID_CATEGORIA">
     <End Role="T_M_CATEGORIA" Type="Self.T_M_CATEGORIA" Multiplicity="0..1" />
     <End Role="T_M_PRODUCTO" Type="Self.T_M_PRODUCTO" Multiplicity="*" />
@@ -1346,18 +1148,6 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
       </Principal>
       <Dependent Role="T_M_PRODUCTO">
         <PropertyRef Name="ID_CLASE" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_ID_CORTE">
-    <End Role="T_M_CORTE" Type="Self.T_M_CORTE" Multiplicity="1" />
-    <End Role="T_D_CORTE" Type="Self.T_D_CORTE" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="T_M_CORTE">
-        <PropertyRef Name="ID_CORTE" />
-      </Principal>
-      <Dependent Role="T_D_CORTE">
-        <PropertyRef Name="ID_CORTE" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -1445,18 +1235,6 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_ID_PERFIL">
-    <End Role="T_M_PERFIL" Type="Self.T_M_PERFIL" Multiplicity="0..1" />
-    <End Role="T_C_PERFIL" Type="Self.T_C_PERFIL" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="T_M_PERFIL">
-        <PropertyRef Name="ID_PERFIL" />
-      </Principal>
-      <Dependent Role="T_C_PERFIL">
-        <PropertyRef Name="ID_PERFIL" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_ID_PRODUCTO">
     <End Role="T_M_PRODUCTO" Type="Self.T_M_PRODUCTO" Multiplicity="1" />
     <End Role="T_D_VENTA" Type="Self.T_D_VENTA" Multiplicity="*" />
@@ -1478,18 +1256,6 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
       </Principal>
       <Dependent Role="T_M_COMPROBANTE_SUNAT">
         <PropertyRef Name="ID_SERIE" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_ID_SERVICIO">
-    <End Role="T_M_SERVICIO" Type="Self.T_M_SERVICIO" Multiplicity="1" />
-    <End Role="T_D_CORTE" Type="Self.T_D_CORTE" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="T_M_SERVICIO">
-        <PropertyRef Name="ID_SERVICIO" />
-      </Principal>
-      <Dependent Role="T_D_CORTE">
-        <PropertyRef Name="ID_SERVICIO" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -1565,30 +1331,6 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_USUARIO_ID_PERFIL">
-    <End Role="T_M_PERFIL" Type="Self.T_M_PERFIL" Multiplicity="1" />
-    <End Role="T_M_USUARIO" Type="Self.T_M_USUARIO" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="T_M_PERFIL">
-        <PropertyRef Name="ID_PERFIL" />
-      </Principal>
-      <Dependent Role="T_M_USUARIO">
-        <PropertyRef Name="ID_PERFIL" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_USUARIO_ID_PERSONAL">
-    <End Role="T_M_PERSONAL" Type="Self.T_M_PERSONAL" Multiplicity="1" />
-    <End Role="T_M_USUARIO" Type="Self.T_M_USUARIO" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="T_M_PERSONAL">
-        <PropertyRef Name="ID_PERSONAL" />
-      </Principal>
-      <Dependent Role="T_M_USUARIO">
-        <PropertyRef Name="ID_PERSONAL" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_VENTA_ID_CLIENTE">
     <End Role="T_M_CLIENTES" Type="Self.T_M_CLIENTES" Multiplicity="1" />
     <End Role="T_M_VENTA" Type="Self.T_M_VENTA" Multiplicity="*" />
@@ -1607,11 +1349,9 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
     <EntitySet Name="T_ANULAR_VENTA" EntityType="Self.T_ANULAR_VENTA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_BOLETA" EntityType="Self.T_BOLETA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_C_ANULAR" EntityType="Self.T_C_ANULAR" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="T_C_PERFIL" EntityType="Self.T_C_PERFIL" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_CORRELATIVO_COTIZACION" EntityType="Self.T_CORRELATIVO_COTIZACION" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_CORRELATIVO_ORDENCOMPRA" EntityType="Self.T_CORRELATIVO_ORDENCOMPRA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_CORRELATIVO_PRODUCTO" EntityType="Self.T_CORRELATIVO_PRODUCTO" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="T_D_CORTE" EntityType="Self.T_D_CORTE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_D_COTIZACION" EntityType="Self.T_D_COTIZACION" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_D_DOCUMENTOS_VENTAS" EntityType="Self.T_D_DOCUMENTOS_VENTAS" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_D_ENVIO_RESUMEN" EntityType="Self.T_D_ENVIO_RESUMEN" Schema="dbo" store:Type="Tables" />
@@ -1622,13 +1362,11 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
     <EntitySet Name="T_FACTURA" EntityType="Self.T_FACTURA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_FORMA_PAGO" EntityType="Self.T_FORMA_PAGO" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_M_ALMACEN" EntityType="Self.T_M_ALMACEN" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="T_M_CARGO" EntityType="Self.T_M_CARGO" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_M_CATEGORIA" EntityType="Self.T_M_CATEGORIA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_M_CLASE" EntityType="Self.T_M_CLASE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_M_CLIENTES" EntityType="Self.T_M_CLIENTES" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_M_COMPROBANTE" EntityType="Self.T_M_COMPROBANTE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_M_COMPROBANTE_SUNAT" EntityType="Self.T_M_COMPROBANTE_SUNAT" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="T_M_CORTE" EntityType="Self.T_M_CORTE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_M_COTIZACION" EntityType="Self.T_M_COTIZACION" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_M_CUOTA" EntityType="Self.T_M_CUOTA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_M_DEPARTAMENTO" EntityType="Self.T_M_DEPARTAMENTO" Schema="dbo" store:Type="Tables" />
@@ -1642,14 +1380,11 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
     <EntitySet Name="T_M_MONEDA" EntityType="Self.T_M_MONEDA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_M_ORDEN_COMPRA" EntityType="Self.T_M_ORDEN_COMPRA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_M_PARAMETRO" EntityType="Self.T_M_PARAMETRO" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="T_M_PERFIL" EntityType="Self.T_M_PERFIL" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="T_M_PERSONAL" EntityType="Self.T_M_PERSONAL" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_M_PRODUCTO" EntityType="Self.T_M_PRODUCTO" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_M_PROVINCIA" EntityType="Self.T_M_PROVINCIA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_M_SERIE" EntityType="Self.T_M_SERIE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_M_SERVICIO" EntityType="Self.T_M_SERVICIO" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_M_UNIDAD_MEDIDA" EntityType="Self.T_M_UNIDAD_MEDIDA" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="T_M_USUARIO" EntityType="Self.T_M_USUARIO" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_M_VENTA" EntityType="Self.T_M_VENTA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_STOCK_ANULAR" EntityType="Self.T_STOCK_ANULAR" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="T_TIPO_AFECTACION" EntityType="Self.T_TIPO_AFECTACION" Schema="dbo" store:Type="Tables" />
@@ -1702,25 +1437,6 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
     [V_CLIENTE].[USU_MODIFICA] AS [USU_MODIFICA], 
     [V_CLIENTE].[FEC_MODIFICA] AS [FEC_MODIFICA]
     FROM [dbo].[V_CLIENTE] AS [V_CLIENTE]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="V_CORTE" EntityType="Self.V_CORTE" store:Type="Views" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [V_CORTE].[ID_DETALLE] AS [ID_DETALLE], 
-    [V_CORTE].[ID_CORTE] AS [ID_CORTE], 
-    [V_CORTE].[VOUCHER] AS [VOUCHER], 
-    [V_CORTE].[PERSONAL] AS [PERSONAL], 
-    [V_CORTE].[CLIENTE] AS [CLIENTE], 
-    [V_CORTE].[DES_SERVICIO] AS [DES_SERVICIO], 
-    [V_CORTE].[CANTIDAD] AS [CANTIDAD], 
-    [V_CORTE].[PRECIO] AS [PRECIO], 
-    [V_CORTE].[DESCUENTO] AS [DESCUENTO], 
-    [V_CORTE].[IMPORTE] AS [IMPORTE], 
-    [V_CORTE].[TOTAL] AS [TOTAL], 
-    [V_CORTE].[FEC_CORTE] AS [FEC_CORTE], 
-    [V_CORTE].[USUARIO] AS [USUARIO], 
-    [V_CORTE].[ANIO] AS [ANIO], 
-    [V_CORTE].[MES] AS [MES]
-    FROM [dbo].[V_CORTE] AS [V_CORTE]</DefiningQuery>
     </EntitySet>
     <EntitySet Name="V_COTIZACION" EntityType="Self.V_COTIZACION" store:Type="Views" store:Schema="dbo">
       <DefiningQuery>SELECT 
@@ -1794,22 +1510,6 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
     [V_KARDEX].[USU_CREACION] AS [USU_CREACION], 
     [V_KARDEX].[FEC_CREACION] AS [FEC_CREACION]
     FROM [dbo].[V_KARDEX] AS [V_KARDEX]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="V_M_CORTE" EntityType="Self.V_M_CORTE" store:Type="Views" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [V_M_CORTE].[ID_CORTE] AS [ID_CORTE], 
-    [V_M_CORTE].[VOUCHER] AS [VOUCHER], 
-    [V_M_CORTE].[PERSONAL] AS [PERSONAL], 
-    [V_M_CORTE].[CLIENTE] AS [CLIENTE], 
-    [V_M_CORTE].[TOTAL_IMPORTE] AS [TOTAL_IMPORTE], 
-    [V_M_CORTE].[IGV] AS [IGV], 
-    [V_M_CORTE].[DESCT_TOTAL] AS [DESCT_TOTAL], 
-    [V_M_CORTE].[TOTAL] AS [TOTAL], 
-    [V_M_CORTE].[EFECTIVO] AS [EFECTIVO], 
-    [V_M_CORTE].[VUELTO] AS [VUELTO], 
-    [V_M_CORTE].[FEC_CORTE] AS [FEC_CORTE], 
-    [V_M_CORTE].[USUARIO] AS [USUARIO]
-    FROM [dbo].[V_M_CORTE] AS [V_M_CORTE]</DefiningQuery>
     </EntitySet>
     <EntitySet Name="V_M_COTIZACION" EntityType="Self.V_M_COTIZACION" store:Type="Views" store:Schema="dbo">
       <DefiningQuery>SELECT 
@@ -1951,29 +1651,6 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
     [V_PARAMETRO].[FEC_MODIFICA] AS [FEC_MODIFICA]
     FROM [dbo].[V_PARAMETRO] AS [V_PARAMETRO]</DefiningQuery>
     </EntitySet>
-    <EntitySet Name="V_PERSONAL" EntityType="Self.V_PERSONAL" store:Type="Views" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [V_PERSONAL].[ID_PERSONAL] AS [ID_PERSONAL], 
-    [V_PERSONAL].[ID_EMPRESA] AS [ID_EMPRESA], 
-    [V_PERSONAL].[NOMBRE] AS [NOMBRE], 
-    [V_PERSONAL].[NOMBRES] AS [NOMBRES], 
-    [V_PERSONAL].[APELLIDO_PAT] AS [APELLIDO_PAT], 
-    [V_PERSONAL].[APELLIDO_MAT] AS [APELLIDO_MAT], 
-    [V_PERSONAL].[DOCUMENTO] AS [DOCUMENTO], 
-    [V_PERSONAL].[NUM_DOC] AS [NUM_DOC], 
-    [V_PERSONAL].[DEPARTAMENTO] AS [DEPARTAMENTO], 
-    [V_PERSONAL].[PROVINCIA] AS [PROVINCIA], 
-    [V_PERSONAL].[DISTRITO] AS [DISTRITO], 
-    [V_PERSONAL].[DIRECCION] AS [DIRECCION], 
-    [V_PERSONAL].[CORREO] AS [CORREO], 
-    [V_PERSONAL].[TELEFONO] AS [TELEFONO], 
-    [V_PERSONAL].[DESC_CARGO] AS [DESC_CARGO], 
-    [V_PERSONAL].[USU_CREACION] AS [USU_CREACION], 
-    [V_PERSONAL].[FEC_CREACION] AS [FEC_CREACION], 
-    [V_PERSONAL].[USU_MODIFICA] AS [USU_MODIFICA], 
-    [V_PERSONAL].[FEC_MODIFICA] AS [FEC_MODIFICA]
-    FROM [dbo].[V_PERSONAL] AS [V_PERSONAL]</DefiningQuery>
-    </EntitySet>
     <EntitySet Name="V_PRODUCTO" EntityType="Self.V_PRODUCTO" store:Type="Views" store:Schema="dbo">
       <DefiningQuery>SELECT 
     [V_PRODUCTO].[ID_EMPRESA] AS [ID_EMPRESA], 
@@ -2047,10 +1724,6 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
       <End Role="T_M_ALMACEN" EntitySet="T_M_ALMACEN" />
       <End Role="T_M_PRODUCTO" EntitySet="T_M_PRODUCTO" />
     </AssociationSet>
-    <AssociationSet Name="FK_ID_CARGO" Association="Self.FK_ID_CARGO">
-      <End Role="T_M_CARGO" EntitySet="T_M_CARGO" />
-      <End Role="T_M_PERSONAL" EntitySet="T_M_PERSONAL" />
-    </AssociationSet>
     <AssociationSet Name="FK_ID_CATEGORIA" Association="Self.FK_ID_CATEGORIA">
       <End Role="T_M_CATEGORIA" EntitySet="T_M_CATEGORIA" />
       <End Role="T_M_PRODUCTO" EntitySet="T_M_PRODUCTO" />
@@ -2058,10 +1731,6 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
     <AssociationSet Name="FK_ID_CLASE" Association="Self.FK_ID_CLASE">
       <End Role="T_M_CLASE" EntitySet="T_M_CLASE" />
       <End Role="T_M_PRODUCTO" EntitySet="T_M_PRODUCTO" />
-    </AssociationSet>
-    <AssociationSet Name="FK_ID_CORTE" Association="Self.FK_ID_CORTE">
-      <End Role="T_M_CORTE" EntitySet="T_M_CORTE" />
-      <End Role="T_D_CORTE" EntitySet="T_D_CORTE" />
     </AssociationSet>
     <AssociationSet Name="FK_ID_COTIZACION" Association="Self.FK_ID_COTIZACION">
       <End Role="T_M_COTIZACION" EntitySet="T_M_COTIZACION" />
@@ -2091,10 +1760,6 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
       <End Role="T_M_PARAMETRO" EntitySet="T_M_PARAMETRO" />
       <End Role="T_D_PARAMETRO" EntitySet="T_D_PARAMETRO" />
     </AssociationSet>
-    <AssociationSet Name="FK_ID_PERFIL" Association="Self.FK_ID_PERFIL">
-      <End Role="T_M_PERFIL" EntitySet="T_M_PERFIL" />
-      <End Role="T_C_PERFIL" EntitySet="T_C_PERFIL" />
-    </AssociationSet>
     <AssociationSet Name="FK_ID_PRODUCTO" Association="Self.FK_ID_PRODUCTO">
       <End Role="T_M_PRODUCTO" EntitySet="T_M_PRODUCTO" />
       <End Role="T_D_VENTA" EntitySet="T_D_VENTA" />
@@ -2102,10 +1767,6 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
     <AssociationSet Name="FK_ID_SERIE" Association="Self.FK_ID_SERIE">
       <End Role="T_M_SERIE" EntitySet="T_M_SERIE" />
       <End Role="T_M_COMPROBANTE_SUNAT" EntitySet="T_M_COMPROBANTE_SUNAT" />
-    </AssociationSet>
-    <AssociationSet Name="FK_ID_SERVICIO" Association="Self.FK_ID_SERVICIO">
-      <End Role="T_M_SERVICIO" EntitySet="T_M_SERVICIO" />
-      <End Role="T_D_CORTE" EntitySet="T_D_CORTE" />
     </AssociationSet>
     <AssociationSet Name="FK_ID_TIPO_COMPROBANTE" Association="Self.FK_ID_TIPO_COMPROBANTE">
       <End Role="T_TIPO_COMPROBANTE" EntitySet="T_TIPO_COMPROBANTE" />
@@ -2130,14 +1791,6 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
     <AssociationSet Name="FK_RESUMEN_ID_COMPROBANTE" Association="Self.FK_RESUMEN_ID_COMPROBANTE">
       <End Role="T_M_COMPROBANTE_SUNAT" EntitySet="T_M_COMPROBANTE_SUNAT" />
       <End Role="T_D_ENVIO_RESUMEN" EntitySet="T_D_ENVIO_RESUMEN" />
-    </AssociationSet>
-    <AssociationSet Name="FK_USUARIO_ID_PERFIL" Association="Self.FK_USUARIO_ID_PERFIL">
-      <End Role="T_M_PERFIL" EntitySet="T_M_PERFIL" />
-      <End Role="T_M_USUARIO" EntitySet="T_M_USUARIO" />
-    </AssociationSet>
-    <AssociationSet Name="FK_USUARIO_ID_PERSONAL" Association="Self.FK_USUARIO_ID_PERSONAL">
-      <End Role="T_M_PERSONAL" EntitySet="T_M_PERSONAL" />
-      <End Role="T_M_USUARIO" EntitySet="T_M_USUARIO" />
     </AssociationSet>
     <AssociationSet Name="FK_VENTA_ID_CLIENTE" Association="Self.FK_VENTA_ID_CLIENTE">
       <End Role="T_M_CLIENTES" EntitySet="T_M_CLIENTES" />

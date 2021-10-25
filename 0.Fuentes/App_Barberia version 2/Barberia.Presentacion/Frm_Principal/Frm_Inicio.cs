@@ -1,14 +1,13 @@
 ﻿using Barberia.Entidad;
 using Barberia.Negocio;
-using Barberia.Presentacion.Frm_Cargos;
+
 using Barberia.Presentacion.Frm_Cliente;
-using Barberia.Presentacion.Frm_Cortes;
+
 using Barberia.Presentacion.Frm_DashBoards;
 using Barberia.Presentacion.Frm_loggins;
-using Barberia.Presentacion.Frm_Perfiles;
-using Barberia.Presentacion.Frm_Personal;
+
 using Barberia.Presentacion.Frm_Productos;
-using Barberia.Presentacion.Frm_Usuarios;
+
 using Barberia.Presentacion.Frm_Ventas;
 using Barberia.Presentacion.Frm_Configuracion;
 using Barberia.Presentacion.Frm_AnularPryVe;
@@ -23,9 +22,9 @@ namespace Barberia.Presentacion.Frm_Principal
 {
     public partial class Frm_Inicio : Form
     {
-        Cls_Rule_C_Perfil objCPerfil = new Cls_Rule_C_Perfil();
-        Cls_Rule_M_Perfil objMPerfil = new Cls_Rule_M_Perfil();
-        Cls_Rule_Personal objPersonal = new Cls_Rule_Personal();
+        //Cls_Rule_C_Perfil objCPerfil = new Cls_Rule_C_Perfil();
+        //Cls_Rule_M_Perfil objMPerfil = new Cls_Rule_M_Perfil();
+        //Cls_Rule_Personal objPersonal = new Cls_Rule_Personal();
         Cls_Rule_Backup objBackup = new Cls_Rule_Backup();
         int _idPersonal;
 
@@ -37,21 +36,21 @@ namespace Barberia.Presentacion.Frm_Principal
             lblUsuario.Text = user;
             _idPersonal = IdPersonal;
             List<Cls_Ent_Perfil> lista = new List<Cls_Ent_Perfil>();
-            List<T_M_PERFIL> listMPerfil = new List<T_M_PERFIL>();
-            T_M_PERFIL entMPerfil = new T_M_PERFIL();
-            List<T_M_PERSONAL> listMPersonal = new List<T_M_PERSONAL>();
-            T_M_PERSONAL entMPersonal = new T_M_PERSONAL();
+            //List<T_M_PERFIL> listMPerfil = new List<T_M_PERFIL>();
+            //T_M_PERFIL entMPerfil = new T_M_PERFIL();
+            //List<T_M_PERSONAL> listMPersonal = new List<T_M_PERSONAL>();
+            //T_M_PERSONAL entMPersonal = new T_M_PERSONAL();
             Cls_Ent_Auditoria auditoria = new Cls_Ent_Auditoria();
 
-            entMPerfil.ID_PERFIL = IdPerfil;
-            listMPerfil = objMPerfil.Buscar_Perfil(entMPerfil, ref auditoria);
-            lblPerfil.Text = listMPerfil[0].DESCRIPCION;
+            //entMPerfil.ID_PERFIL = IdPerfil;
+            //listMPerfil = objMPerfil.Buscar_Perfil(entMPerfil, ref auditoria);
+            //lblPerfil.Text = listMPerfil[0].DESCRIPCION;
 
-            entMPersonal.ID_PERSONAL = IdPersonal;
-            listMPersonal = objPersonal.Buscar_Personal(entMPersonal, ref auditoria);
-            lblNombrePersonal.Text = listMPersonal[0].NOMBRES;
+            //entMPersonal.ID_PERSONAL = IdPersonal;
+            //listMPersonal = objPersonal.Buscar_Personal(entMPersonal, ref auditoria);
+            //lblNombrePersonal.Text = listMPersonal[0].NOMBRES;
 
-            lista = objCPerfil.Listar_Perfil(ref auditoria).Where(x => x.ID_PERFIL == IdPerfil).ToList();
+            lista = new List<Cls_Ent_Perfil>();//objCPerfil.Listar_Perfil(ref auditoria).Where(x => x.ID_PERFIL == IdPerfil).ToList();
             foreach (var item in lista)
             {
                 if (item.DESCRIPCION == btnPersonal.Text.ToUpper())
@@ -140,17 +139,7 @@ namespace Barberia.Presentacion.Frm_Principal
         }
 
 
-        private void btnPersonal_Click(object sender, EventArgs e)
-        {
- 
-            visible(false);
-            visible2(false);
-            SeguirFlecha(pnlPersonal);
-            Frm_Personales form = new Frm_Personales(lblUsuario.Text);
-            Agregar_Form(form);
-            form.dataGridView1.ClearSelection();
-        }
-        
+
         private void btnCliente_Click(object sender, EventArgs e)
         {
 
@@ -163,25 +152,11 @@ namespace Barberia.Presentacion.Frm_Principal
             form.dataGridView1.ClearSelection();
         }
 
-        private void btnCargo_Click(object sender, EventArgs e)
-        {
-
-            visible(false);
-            visible2(false);
-            SeguirFlecha(pnlCargo);
-            Frm_Cargo form = new Frm_Cargo(lblUsuario.Text);
-            Agregar_Form(form);
-            form.dataGridView1.ClearSelection();
-        }
 
         private void btnCorte_Click(object sender, EventArgs e)
         {
 
-            visible(false);
-            visible2(false);
-            SeguirFlecha(pnlCorte);
-            Frm_Corte form = new Frm_Corte(_idPersonal, lblUsuario.Text);
-            Agregar_Form(form);
+
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -195,26 +170,16 @@ namespace Barberia.Presentacion.Frm_Principal
             
         }
 
-        private void btnPerfil_Click(object sender, EventArgs e)
-        {
-
-            visible(false);
-            visible2(false);
-            SeguirFlecha(pnlPerfil);
-            Frm_Perfil form = new Frm_Perfil(lblUsuario.Text);
-            Agregar_Form(form);
-            form.dataGridView1.ClearSelection();
-        }
 
         private void btnUsuario_Click(object sender, EventArgs e)
         {
   
-            visible(false);
-            visible2(false);
-            SeguirFlecha(pnlUsuario);
-            Frm_Usuario form = new Frm_Usuario(lblUsuario.Text);
-            Agregar_Form(form);
-            form.dataGridView1.ClearSelection();
+            //visible(false);
+            //visible2(false);
+            //SeguirFlecha(pnlUsuario);
+            //Frm_Usuario form = new Frm_Usuario(lblUsuario.Text);
+            //Agregar_Form(form);
+            //form.dataGridView1.ClearSelection();
         }
 
 
@@ -260,20 +225,17 @@ namespace Barberia.Presentacion.Frm_Principal
         private void btnReporte2_Click(object sender, EventArgs e)
         {
 
-            visible2(false);
-            SeguirFlecha(pnlSubReporte);
-            Frm_ReporteCorte form = new Frm_ReporteCorte();
-            Agregar_Form(form);
+      
         }
 
         private void btnReporteVenta_Click(object sender, EventArgs e)
         {
 
-            visible2(false);
-            picFlecha.Top = pnlSubReporte.Top + ((Button)sender).Top;
-            picFlecha.Visible = true;
-            Frm_ReporteVenta form = new Frm_ReporteVenta();
-            Agregar_Form(form);
+            //visible2(false);
+            //picFlecha.Top = pnlSubReporte.Top + ((Button)sender).Top;
+            //picFlecha.Visible = true;
+            //Frm_ReporteVenta form = new Frm_ReporteVenta();
+            //Agregar_Form(form);
         }
 
         

@@ -14,7 +14,7 @@ namespace Barberia.Presentacion.Frm_DashBoards
     {
         private Cls_Rule_V_Venta objVVenta = new Cls_Rule_V_Venta();
         private Cls_Rule_Clientes ObjCliente = new Cls_Rule_Clientes();
-        private Cls_Rule_Personal ObjPersonal = new Cls_Rule_Personal();
+        
         private Cls_Rule_Producto ObjProducto = new Cls_Rule_Producto();
         //private Cls_Rule_Voucher_Venta ObjVoucherVenta = new Cls_Rule_Voucher_Venta();
         public Frm_ReporteProducto()
@@ -25,7 +25,7 @@ namespace Barberia.Presentacion.Frm_DashBoards
         void EventoCarga()
         {
             List<T_M_CLIENTES> lisCliente = new List<T_M_CLIENTES>();
-            List<T_M_PERSONAL> lisPersonal = new List<T_M_PERSONAL>();
+           
             Cls_Ent_Auditoria auditoria = new Cls_Ent_Auditoria();
 
             lisCliente = ObjCliente.Listar_Clientes(1,ref auditoria).Select(x => new T_M_CLIENTES
@@ -50,17 +50,7 @@ namespace Barberia.Presentacion.Frm_DashBoards
 
             }
 
-            lisPersonal = ObjPersonal.Listar_Personal(1, ref auditoria).Select(x => new T_M_PERSONAL
-            {
-                NOMBRES = x.NOMBRES + " " + x.APELLIDO_PAT + " " + x.APELLIDO_MAT,
-                ID_PERSONAL = x.ID_PERSONAL
-            }).ToList();
 
-            lisPersonal.Insert(0, new T_M_PERSONAL
-            {
-                ID_PERSONAL = 0,
-                NOMBRES = "-- SELECCIONE --"
-            });
 
         }
         private void Frm_ReporteVenta_Load(object sender, EventArgs e)

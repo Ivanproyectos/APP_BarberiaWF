@@ -126,12 +126,6 @@
     <Compile Include="Frm_AnularPryVe\Frm_Anular.Designer.cs">
       <DependentUpon>Frm_Anular.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Cargos\Frm_Cargo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm_Cargos\Frm_Cargo.Designer.cs">
-      <DependentUpon>Frm_Cargo.cs</DependentUpon>
-    </Compile>
     <Compile Include="Frm_Cliente\Frm_RegistrarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,26 +156,6 @@
     <Compile Include="Frm_Configuracion\Frm_Modelo.Designer.cs">
       <DependentUpon>Frm_Modelo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Cortes\Data_Corte2.cs" />
-    <Compile Include="Frm_Cortes\Data_Corte.cs" />
-    <Compile Include="Frm_Cortes\Frm_Buscar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm_Cortes\Frm_Buscar.Designer.cs">
-      <DependentUpon>Frm_Buscar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Frm_Cortes\Frm_Corte.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm_Cortes\Frm_Corte.Designer.cs">
-      <DependentUpon>Frm_Corte.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Frm_Cortes\Frm_Historial.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm_Cortes\Frm_Historial.Designer.cs">
-      <DependentUpon>Frm_Historial.cs</DependentUpon>
-    </Compile>
     <Compile Include="Frm_DashBoards\DataProducto.cs" />
     <Compile Include="Frm_DashBoards\DataTotal.cs" />
     <Compile Include="Frm_DashBoards\Frm_Buscar.cs">
@@ -202,12 +176,6 @@
     <Compile Include="Frm_DashBoards\Frm_Dashboard.Designer.cs">
       <DependentUpon>Frm_Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_DashBoards\Frm_ReporteCorte.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm_DashBoards\Frm_ReporteCorte.Designer.cs">
-      <DependentUpon>Frm_ReporteCorte.cs</DependentUpon>
-    </Compile>
     <Compile Include="Frm_DashBoards\Frm_ReporteAnular.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -220,25 +188,7 @@
     <Compile Include="Frm_DashBoards\Frm_ReporteProducto.Designer.cs">
       <DependentUpon>Frm_ReporteProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_DashBoards\Frm_ReporteVenta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm_DashBoards\Frm_ReporteVenta.Designer.cs">
-      <DependentUpon>Frm_ReporteVenta.cs</DependentUpon>
-    </Compile>
     <Compile Include="Frm_DashBoards\ventaDatos.cs" />
-    <Compile Include="Frm_Perfiles\Frm_Perfil.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm_Perfiles\Frm_Perfil.Designer.cs">
-      <DependentUpon>Frm_Perfil.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Frm_Personal\Frm_Personal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm_Personal\Frm_Personal.Designer.cs">
-      <DependentUpon>Frm_Personal.cs</DependentUpon>
-    </Compile>
     <Compile Include="Frm_Principal\Frm_Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -268,12 +218,6 @@
     </Compile>
     <Compile Include="Frm_Configuracion\Frm_Servicio.Designer.cs">
       <DependentUpon>Frm_Servicio.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Frm_Usuarios\Frm_Usuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm_Usuarios\Frm_Usuario.Designer.cs">
-      <DependentUpon>Frm_Usuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_Ventas\Data_Venta.cs" />
     <Compile Include="Frm_Ventas\Data_Venta2.cs" />
@@ -317,9 +261,6 @@
     <EmbeddedResource Include="Frm_AnularPryVe\Frm_Anular.resx">
       <DependentUpon>Frm_Anular.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Cargos\Frm_Cargo.resx">
-      <DependentUpon>Frm_Cargo.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Frm_Cliente\Frm_RegistrarCliente.resx">
       <DependentUpon>Frm_RegistrarCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -335,15 +276,6 @@
     <EmbeddedResource Include="Frm_Configuracion\Frm_Modelo.resx">
       <DependentUpon>Frm_Modelo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Cortes\Frm_Buscar.resx">
-      <DependentUpon>Frm_Buscar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Cortes\Frm_Corte.resx">
-      <DependentUpon>Frm_Corte.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Cortes\Frm_Historial.resx">
-      <DependentUpon>Frm_Historial.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Frm_DashBoards\Frm_Buscar.resx">
       <DependentUpon>Frm_Buscar.cs</DependentUpon>
     </EmbeddedResource>
@@ -353,23 +285,11 @@
     <EmbeddedResource Include="Frm_DashBoards\Frm_Dashboard.resx">
       <DependentUpon>Frm_Dashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_DashBoards\Frm_ReporteCorte.resx">
-      <DependentUpon>Frm_ReporteCorte.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Frm_DashBoards\Frm_ReporteAnular.resx">
       <DependentUpon>Frm_ReporteAnular.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_DashBoards\Frm_ReporteProducto.resx">
       <DependentUpon>Frm_ReporteProducto.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm_DashBoards\Frm_ReporteVenta.resx">
-      <DependentUpon>Frm_ReporteVenta.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Perfiles\Frm_Perfil.resx">
-      <DependentUpon>Frm_Perfil.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Personal\Frm_Personal.resx">
-      <DependentUpon>Frm_Personal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Principal\Frm_Inicio.resx">
       <DependentUpon>Frm_Inicio.cs</DependentUpon>
@@ -385,9 +305,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Configuracion\Frm_Servicio.resx">
       <DependentUpon>Frm_Servicio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Usuarios\Frm_Usuario.resx">
-      <DependentUpon>Frm_Usuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Ventas\Frm_Buscar.resx">
       <DependentUpon>Frm_Buscar.cs</DependentUpon>

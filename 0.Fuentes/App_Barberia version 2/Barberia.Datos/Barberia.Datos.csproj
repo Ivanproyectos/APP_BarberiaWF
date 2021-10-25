@@ -96,27 +96,17 @@
     <Compile Include="Cls_Dat_Modelo.cs" />
     <Compile Include="Cls_Dat_Marca.cs" />
     <Compile Include="Cls_Dat_Servicio.cs" />
-    <Compile Include="Cls_Dat_Cargo.cs" />
     <Compile Include="Cls_Dat_Venta.cs" />
     <Compile Include="Cls_Dat_Producto.cs" />
-    <Compile Include="Cls_Dat_C_Perfil.cs" />
-    <Compile Include="Cls_Dat_M_Perfil.cs" />
-    <Compile Include="Cls_Dat_Usuario.cs" />
-    <Compile Include="Cls_Dat_M_Corte.cs" />
-    <Compile Include="Cls_Dat_D_Corte.cs" />
     <Compile Include="Cls_Dat_Boleta.cs" />
     <Compile Include="Cls_Dat_Factura.cs" />
     <Compile Include="Cls_Dat_V_M_Cotizacion.cs" />
-    <Compile Include="Cls_Dat_V_M_Corte.cs" />
     <Compile Include="Cls_Dat_V_M_Producto.cs" />
     <Compile Include="Cls_Dat_V_M_Venta.cs" />
     <Compile Include="Cls_Dat_Forma_Pago.cs" />
     <Compile Include="Cls_Dat_V_Cotizacion.cs" />
     <Compile Include="Cls_Dat_V_Venta.cs" />
-    <Compile Include="Cls_Dat_V_Corte.cs" />
     <Compile Include="Cls_Dat_Departamento.cs" />
-    <Compile Include="Cls_V_Personal.cs" />
-    <Compile Include="Cls_Dat_Personal.cs" />
     <Compile Include="Cls_Dat_Clientes.cs" />
     <Compile Include="DataModel.Context.cs">
       <AutoGen>True</AutoGen>

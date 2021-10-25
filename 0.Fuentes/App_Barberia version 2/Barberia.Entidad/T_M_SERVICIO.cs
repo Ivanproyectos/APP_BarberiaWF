@@ -14,12 +14,6 @@ namespace Barberia.Entidad
     
     public partial class T_M_SERVICIO
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public T_M_SERVICIO()
-        {
-            this.T_D_CORTE = new HashSet<T_D_CORTE>();
-        }
-    
         public int ID_SERVICIO { get; set; }
         public int ID_EMPRESA { get; set; }
         public string DES_SERVICIO { get; set; }
@@ -28,8 +22,5 @@ namespace Barberia.Entidad
         public Nullable<System.DateTime> FEC_CREACION { get; set; }
         public string USU_MODIFICA { get; set; }
         public Nullable<System.DateTime> FEC_MODIFICA { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<T_D_CORTE> T_D_CORTE { get; set; }
     }
 }

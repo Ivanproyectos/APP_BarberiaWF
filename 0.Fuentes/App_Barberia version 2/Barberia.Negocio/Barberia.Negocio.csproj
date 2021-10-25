@@ -84,26 +84,15 @@
     <Compile Include="Cls_Rule_Modelo.cs" />
     <Compile Include="Cls_Rule_Marca.cs" />
     <Compile Include="Cls_Rule_Servicio.cs" />
-    <Compile Include="Cls_Rule_Cargo.cs" />
     <Compile Include="Cls_Rule_Venta.cs" />
     <Compile Include="Cls_Rule_Producto.cs" />
-    <Compile Include="Cls_Rule_C_Perfil.cs" />
-    <Compile Include="Cls_Rule_M_Perfil.cs" />
-    <Compile Include="Cls_Rule_Usuario.cs" />
-    <Compile Include="Cls_Rule_Corte.cs" />
-    <Compile Include="Cls_Rule_M_Corte.cs" />
-    <Compile Include="Cls_Rule_D_Corte.cs" />
     <Compile Include="Cls_Rule_Departamento.cs" />
     <Compile Include="Cls_Rule_V_M_Cotizacion.cs" />
-    <Compile Include="Cls_Rule_V_M_Corte.cs" />
     <Compile Include="Cls_Rule_V_M_Producto.cs" />
     <Compile Include="Cls_Rule_V_M_Venta.cs" />
     <Compile Include="Cls_Rule_Forma_Pago.cs" />
     <Compile Include="Cls_Rule_V_Cotizacion.cs" />
     <Compile Include="Cls_Rule_V_Venta.cs" />
-    <Compile Include="Cls_Rule_V_Corte.cs" />
-    <Compile Include="Cls_Rule_V_Personal.cs" />
-    <Compile Include="Cls_Rule_Personal.cs" />
     <Compile Include="Cls_Rule_Clientes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

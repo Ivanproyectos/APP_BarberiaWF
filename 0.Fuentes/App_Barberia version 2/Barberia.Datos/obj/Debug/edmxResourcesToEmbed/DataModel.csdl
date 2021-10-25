@@ -71,20 +71,6 @@
     <Property Name="FECHA" Type="DateTime" Precision="3" />
     <Property Name="NUMERO" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
   </EntityType>
-  <EntityType Name="T_C_PERFIL">
-    <Key>
-      <PropertyRef Name="ID_CONFIG" />
-    </Key>
-    <Property Name="ID_CONFIG" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="ID_PERFIL" Type="Int32" />
-    <Property Name="DESCRIPCION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="FLG_ESTADO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
-    <Property Name="USU_CREACION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="FEC_CREACION" Type="DateTime" Precision="3" />
-    <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
-    <NavigationProperty Name="T_M_PERFIL" Relationship="Self.FK_ID_PERFIL" FromRole="T_C_PERFIL" ToRole="T_M_PERFIL" />
-  </EntityType>
   <EntityType Name="T_CORRELATIVO_COTIZACION">
     <Key>
       <PropertyRef Name="ID_CORRELATIVO" />
@@ -111,20 +97,6 @@
     <Property Name="NUM_CORRELATIVO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="ID_EMPRESA" Type="Int32" />
     <Property Name="ANIO" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
-  </EntityType>
-  <EntityType Name="T_D_CORTE">
-    <Key>
-      <PropertyRef Name="ID_DETALLE" />
-    </Key>
-    <Property Name="ID_DETALLE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="ID_CORTE" Type="Int32" Nullable="false" />
-    <Property Name="ID_SERVICIO" Type="Int32" Nullable="false" />
-    <Property Name="CANTIDAD" Type="Int32" Nullable="false" />
-    <Property Name="PRECIO" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
-    <Property Name="IMPORTE" Type="Decimal" Precision="10" Scale="2" />
-    <Property Name="DESCUENTO" Type="Decimal" Precision="10" Scale="2" />
-    <NavigationProperty Name="T_M_CORTE" Relationship="Self.FK_ID_CORTE" FromRole="T_D_CORTE" ToRole="T_M_CORTE" />
-    <NavigationProperty Name="T_M_SERVICIO" Relationship="Self.FK_ID_SERVICIO" FromRole="T_D_CORTE" ToRole="T_M_SERVICIO" />
   </EntityType>
   <EntityType Name="T_D_COTIZACION">
     <Key>
@@ -263,20 +235,6 @@
     <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
     <NavigationProperty Name="T_M_PRODUCTO" Relationship="Self.FK_ID_ALMACEN" FromRole="T_M_ALMACEN" ToRole="T_M_PRODUCTO" />
   </EntityType>
-  <EntityType Name="T_M_CARGO">
-    <Key>
-      <PropertyRef Name="ID_CARGO" />
-    </Key>
-    <Property Name="ID_CARGO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="ID_EMPRESA" Type="Int32" Nullable="false" />
-    <Property Name="DESC_CARGO" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
-    <Property Name="FLG_ESTADO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
-    <Property Name="USU_CREACION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="FEC_CREACION" Type="DateTime" Precision="3" />
-    <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
-    <NavigationProperty Name="T_M_PERSONAL" Relationship="Self.FK_ID_CARGO" FromRole="T_M_CARGO" ToRole="T_M_PERSONAL" />
-  </EntityType>
   <EntityType Name="T_M_CATEGORIA">
     <Key>
       <PropertyRef Name="ID_CATEGORIA" />
@@ -385,28 +343,6 @@
     <NavigationProperty Name="T_M_MONEDA" Relationship="Self.FK_ID_MONEDA" FromRole="T_M_COMPROBANTE_SUNAT" ToRole="T_M_MONEDA" />
     <NavigationProperty Name="T_M_SERIE" Relationship="Self.FK_ID_SERIE" FromRole="T_M_COMPROBANTE_SUNAT" ToRole="T_M_SERIE" />
     <NavigationProperty Name="T_TIPO_COMPROBANTE" Relationship="Self.FK_ID_TIPO_COMPROBANTE" FromRole="T_M_COMPROBANTE_SUNAT" ToRole="T_TIPO_COMPROBANTE" />
-  </EntityType>
-  <EntityType Name="T_M_CORTE">
-    <Key>
-      <PropertyRef Name="ID_CORTE" />
-    </Key>
-    <Property Name="ID_CORTE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="ID_EMPRESA" Type="Int32" Nullable="false" />
-    <Property Name="ID_CLIENTE" Type="Int32" Nullable="false" />
-    <Property Name="ID_PERSONAL" Type="Int32" Nullable="false" />
-    <Property Name="VOUCHER" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="TOTAL_IMPORTE" Type="Decimal" Precision="10" Scale="2" />
-    <Property Name="DESCT_TOTAL" Type="Decimal" Precision="10" Scale="2" />
-    <Property Name="IGV" Type="Decimal" Precision="10" Scale="2" />
-    <Property Name="TOTAL" Type="Decimal" Precision="10" Scale="2" />
-    <Property Name="EFECTIVO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="VUELTO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="USUARIO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="FLG_ESTADO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
-    <Property Name="FEC_CORTE" Type="DateTime" Precision="3" />
-    <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
-    <NavigationProperty Name="T_D_CORTE" Relationship="Self.FK_ID_CORTE" FromRole="T_M_CORTE" ToRole="T_D_CORTE" />
   </EntityType>
   <EntityType Name="T_M_COTIZACION">
     <Key>
@@ -614,47 +550,6 @@
     <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
     <NavigationProperty Name="T_D_PARAMETRO" Relationship="Self.FK_ID_PARAMETRO" FromRole="T_M_PARAMETRO" ToRole="T_D_PARAMETRO" />
   </EntityType>
-  <EntityType Name="T_M_PERFIL">
-    <Key>
-      <PropertyRef Name="ID_PERFIL" />
-    </Key>
-    <Property Name="ID_PERFIL" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="ID_EMPRESA" Type="Int32" Nullable="false" />
-    <Property Name="DESCRIPCION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="FLG_ESTADO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
-    <Property Name="USU_CREACION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="FEC_CREACION" Type="DateTime" Precision="3" />
-    <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
-    <NavigationProperty Name="T_C_PERFIL" Relationship="Self.FK_ID_PERFIL" FromRole="T_M_PERFIL" ToRole="T_C_PERFIL" />
-    <NavigationProperty Name="T_M_USUARIO" Relationship="Self.FK_USUARIO_ID_PERFIL" FromRole="T_M_PERFIL" ToRole="T_M_USUARIO" />
-  </EntityType>
-  <EntityType Name="T_M_PERSONAL">
-    <Key>
-      <PropertyRef Name="ID_PERSONAL" />
-    </Key>
-    <Property Name="ID_PERSONAL" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="ID_EMPRESA" Type="Int32" Nullable="false" />
-    <Property Name="NOMBRES" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="APELLIDO_PAT" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
-    <Property Name="APELLIDO_MAT" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
-    <Property Name="TIPO_DOC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="NUM_DOC" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="COD_DEPARTAMENTO" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
-    <Property Name="COD_PROVINCIA" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
-    <Property Name="COD_DISTRITO" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
-    <Property Name="DIRECCION" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-    <Property Name="CORREO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="TELEFONO" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
-    <Property Name="ID_CARGO" Type="Int32" />
-    <Property Name="FLG_ESTADO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
-    <Property Name="USU_CREACION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="FEC_CREACION" Type="DateTime" Precision="3" />
-    <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
-    <NavigationProperty Name="T_M_CARGO" Relationship="Self.FK_ID_CARGO" FromRole="T_M_PERSONAL" ToRole="T_M_CARGO" />
-    <NavigationProperty Name="T_M_USUARIO" Relationship="Self.FK_USUARIO_ID_PERSONAL" FromRole="T_M_PERSONAL" ToRole="T_M_USUARIO" />
-  </EntityType>
   <EntityType Name="T_M_PRODUCTO">
     <Key>
       <PropertyRef Name="ID_PRODUCTO" />
@@ -723,7 +618,6 @@
     <Property Name="FEC_CREACION" Type="DateTime" Precision="3" />
     <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
-    <NavigationProperty Name="T_D_CORTE" Relationship="Self.FK_ID_SERVICIO" FromRole="T_M_SERVICIO" ToRole="T_D_CORTE" />
   </EntityType>
   <EntityType Name="T_M_UNIDAD_MEDIDA">
     <Key>
@@ -738,24 +632,6 @@
     <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
     <NavigationProperty Name="T_M_PRODUCTO" Relationship="Self.FK_ID_UNIDAD_MEDIDA" FromRole="T_M_UNIDAD_MEDIDA" ToRole="T_M_PRODUCTO" />
-  </EntityType>
-  <EntityType Name="T_M_USUARIO">
-    <Key>
-      <PropertyRef Name="ID_USUARIO" />
-    </Key>
-    <Property Name="ID_USUARIO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="ID_EMPRESA" Type="Int32" Nullable="false" />
-    <Property Name="USUARIO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="CLAVE" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="ID_PERFIL" Type="Int32" Nullable="false" />
-    <Property Name="ID_PERSONAL" Type="Int32" Nullable="false" />
-    <Property Name="FLG_ESTADO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
-    <Property Name="USU_CREACION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="FEC_CREACION" Type="DateTime" Precision="3" />
-    <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
-    <NavigationProperty Name="T_M_PERFIL" Relationship="Self.FK_USUARIO_ID_PERFIL" FromRole="T_M_USUARIO" ToRole="T_M_PERFIL" />
-    <NavigationProperty Name="T_M_PERSONAL" Relationship="Self.FK_USUARIO_ID_PERSONAL" FromRole="T_M_USUARIO" ToRole="T_M_PERSONAL" />
   </EntityType>
   <EntityType Name="T_M_VENTA">
     <Key>
@@ -898,30 +774,6 @@
     <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
   </EntityType>
-  <EntityType Name="V_CORTE">
-    <Key>
-      <PropertyRef Name="ID_DETALLE" />
-      <PropertyRef Name="ID_CORTE" />
-      <PropertyRef Name="DES_SERVICIO" />
-      <PropertyRef Name="CANTIDAD" />
-      <PropertyRef Name="PRECIO" />
-    </Key>
-    <Property Name="ID_DETALLE" Type="Int32" Nullable="false" />
-    <Property Name="ID_CORTE" Type="Int32" Nullable="false" />
-    <Property Name="VOUCHER" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="PERSONAL" Type="String" MaxLength="1202" FixedLength="false" Unicode="false" />
-    <Property Name="CLIENTE" Type="String" MaxLength="1202" FixedLength="false" Unicode="false" />
-    <Property Name="DES_SERVICIO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="CANTIDAD" Type="Int32" Nullable="false" />
-    <Property Name="PRECIO" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
-    <Property Name="DESCUENTO" Type="Decimal" Precision="10" Scale="2" />
-    <Property Name="IMPORTE" Type="Decimal" Precision="10" Scale="2" />
-    <Property Name="TOTAL" Type="Decimal" Precision="10" Scale="2" />
-    <Property Name="FEC_CORTE" Type="DateTime" Precision="3" />
-    <Property Name="USUARIO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="ANIO" Type="Int32" />
-    <Property Name="MES" Type="Int32" />
-  </EntityType>
   <EntityType Name="V_COTIZACION">
     <Key>
       <PropertyRef Name="ID_COTIZACION" />
@@ -992,6 +844,9 @@
     <Property Name="ID_KARDEX" Type="Int32" Nullable="false" />
     <Property Name="ID_PRODUCTO" Type="Int32" Nullable="false" />
     <Property Name="PRODUCTO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STOCK" Type="Int32" />
+    <Property Name="PRECIO_COMPRA" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="PRECIO_VENTA" Type="Decimal" Precision="10" Scale="2" />
     <Property Name="FEC_KARDEX" Type="DateTime" Precision="3" />
     <Property Name="DESC_TIPO_COMPROBANTE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="FEC_DETALLE_KARDEX" Type="DateTime" Precision="3" />
@@ -1006,26 +861,6 @@
     <Property Name="TOTAL_SALDO" Type="Decimal" Precision="18" Scale="2" />
     <Property Name="USU_CREACION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="FEC_CREACION" Type="DateTime" Precision="3" />
-    <Property Name="STOCK" Type="Int32" />
-    <Property Name="PRECIO_COMPRA" Type="Decimal" Precision="10" Scale="2" />
-    <Property Name="PRECIO_VENTA" Type="Decimal" Precision="10" Scale="2" />
-  </EntityType>
-  <EntityType Name="V_M_CORTE">
-    <Key>
-      <PropertyRef Name="ID_CORTE" />
-    </Key>
-    <Property Name="ID_CORTE" Type="Int32" Nullable="false" />
-    <Property Name="VOUCHER" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="PERSONAL" Type="String" MaxLength="1202" FixedLength="false" Unicode="false" />
-    <Property Name="CLIENTE" Type="String" MaxLength="1202" FixedLength="false" Unicode="false" />
-    <Property Name="TOTAL_IMPORTE" Type="Decimal" Precision="10" Scale="2" />
-    <Property Name="IGV" Type="Decimal" Precision="10" Scale="2" />
-    <Property Name="DESCT_TOTAL" Type="Decimal" Precision="10" Scale="2" />
-    <Property Name="TOTAL" Type="Decimal" Precision="10" Scale="2" />
-    <Property Name="EFECTIVO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="VUELTO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="FEC_CORTE" Type="DateTime" Precision="3" />
-    <Property Name="USUARIO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="V_M_COTIZACION">
     <Key>
@@ -1188,33 +1023,6 @@
     <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
   </EntityType>
-  <EntityType Name="V_PERSONAL">
-    <Key>
-      <PropertyRef Name="ID_PERSONAL" />
-      <PropertyRef Name="ID_EMPRESA" />
-      <PropertyRef Name="NOMBRES" />
-      <PropertyRef Name="NUM_DOC" />
-    </Key>
-    <Property Name="ID_PERSONAL" Type="Int32" Nullable="false" />
-    <Property Name="ID_EMPRESA" Type="Int32" Nullable="false" />
-    <Property Name="NOMBRE" Type="String" MaxLength="1202" FixedLength="false" Unicode="false" />
-    <Property Name="NOMBRES" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="APELLIDO_PAT" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
-    <Property Name="APELLIDO_MAT" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
-    <Property Name="DOCUMENTO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="NUM_DOC" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="DEPARTAMENTO" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
-    <Property Name="PROVINCIA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="DISTRITO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="DIRECCION" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-    <Property Name="CORREO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="TELEFONO" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
-    <Property Name="DESC_CARGO" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
-    <Property Name="USU_CREACION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="FEC_CREACION" Type="DateTime" Precision="3" />
-    <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
-  </EntityType>
   <EntityType Name="V_PRODUCTO">
     <Key>
       <PropertyRef Name="ID_EMPRESA" />
@@ -1279,42 +1087,6 @@
     <Property Name="ANIO" Type="Int32" />
     <Property Name="MES" Type="Int32" />
   </EntityType>
-  <Association Name="FK_ID_PERFIL">
-    <End Role="T_M_PERFIL" Type="Self.T_M_PERFIL" Multiplicity="0..1" />
-    <End Role="T_C_PERFIL" Type="Self.T_C_PERFIL" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="T_M_PERFIL">
-        <PropertyRef Name="ID_PERFIL" />
-      </Principal>
-      <Dependent Role="T_C_PERFIL">
-        <PropertyRef Name="ID_PERFIL" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_ID_CORTE">
-    <End Role="T_M_CORTE" Type="Self.T_M_CORTE" Multiplicity="1" />
-    <End Role="T_D_CORTE" Type="Self.T_D_CORTE" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="T_M_CORTE">
-        <PropertyRef Name="ID_CORTE" />
-      </Principal>
-      <Dependent Role="T_D_CORTE">
-        <PropertyRef Name="ID_CORTE" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_ID_SERVICIO">
-    <End Role="T_M_SERVICIO" Type="Self.T_M_SERVICIO" Multiplicity="1" />
-    <End Role="T_D_CORTE" Type="Self.T_D_CORTE" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="T_M_SERVICIO">
-        <PropertyRef Name="ID_SERVICIO" />
-      </Principal>
-      <Dependent Role="T_D_CORTE">
-        <PropertyRef Name="ID_SERVICIO" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_ID_COTIZACION">
     <End Role="T_M_COTIZACION" Type="Self.T_M_COTIZACION" Multiplicity="0..1" />
     <End Role="T_D_COTIZACION" Type="Self.T_D_COTIZACION" Multiplicity="*" />
@@ -1444,18 +1216,6 @@
       </Principal>
       <Dependent Role="T_M_PRODUCTO">
         <PropertyRef Name="ID_ALMACEN" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_ID_CARGO">
-    <End Role="T_M_CARGO" Type="Self.T_M_CARGO" Multiplicity="0..1" />
-    <End Role="T_M_PERSONAL" Type="Self.T_M_PERSONAL" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="T_M_CARGO">
-        <PropertyRef Name="ID_CARGO" />
-      </Principal>
-      <Dependent Role="T_M_PERSONAL">
-        <PropertyRef Name="ID_CARGO" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -1591,30 +1351,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_USUARIO_ID_PERFIL">
-    <End Role="T_M_PERFIL" Type="Self.T_M_PERFIL" Multiplicity="1" />
-    <End Role="T_M_USUARIO" Type="Self.T_M_USUARIO" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="T_M_PERFIL">
-        <PropertyRef Name="ID_PERFIL" />
-      </Principal>
-      <Dependent Role="T_M_USUARIO">
-        <PropertyRef Name="ID_PERFIL" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_USUARIO_ID_PERSONAL">
-    <End Role="T_M_PERSONAL" Type="Self.T_M_PERSONAL" Multiplicity="1" />
-    <End Role="T_M_USUARIO" Type="Self.T_M_USUARIO" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="T_M_PERSONAL">
-        <PropertyRef Name="ID_PERSONAL" />
-      </Principal>
-      <Dependent Role="T_M_USUARIO">
-        <PropertyRef Name="ID_PERSONAL" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_ID_UNIDAD_MEDIDA">
     <End Role="T_M_UNIDAD_MEDIDA" Type="Self.T_M_UNIDAD_MEDIDA" Multiplicity="0..1" />
     <End Role="T_M_PRODUCTO" Type="Self.T_M_PRODUCTO" Multiplicity="*" />
@@ -1633,11 +1369,9 @@
     <EntitySet Name="T_ANULAR_VENTA" EntityType="Self.T_ANULAR_VENTA" />
     <EntitySet Name="T_BOLETA" EntityType="Self.T_BOLETA" />
     <EntitySet Name="T_C_ANULAR" EntityType="Self.T_C_ANULAR" />
-    <EntitySet Name="T_C_PERFIL" EntityType="Self.T_C_PERFIL" />
     <EntitySet Name="T_CORRELATIVO_COTIZACION" EntityType="Self.T_CORRELATIVO_COTIZACION" />
     <EntitySet Name="T_CORRELATIVO_ORDENCOMPRA" EntityType="Self.T_CORRELATIVO_ORDENCOMPRA" />
     <EntitySet Name="T_CORRELATIVO_PRODUCTO" EntityType="Self.T_CORRELATIVO_PRODUCTO" />
-    <EntitySet Name="T_D_CORTE" EntityType="Self.T_D_CORTE" />
     <EntitySet Name="T_D_COTIZACION" EntityType="Self.T_D_COTIZACION" />
     <EntitySet Name="T_D_DOCUMENTOS_VENTAS" EntityType="Self.T_D_DOCUMENTOS_VENTAS" />
     <EntitySet Name="T_D_ENVIO_RESUMEN" EntityType="Self.T_D_ENVIO_RESUMEN" />
@@ -1648,13 +1382,11 @@
     <EntitySet Name="T_FACTURA" EntityType="Self.T_FACTURA" />
     <EntitySet Name="T_FORMA_PAGO" EntityType="Self.T_FORMA_PAGO" />
     <EntitySet Name="T_M_ALMACEN" EntityType="Self.T_M_ALMACEN" />
-    <EntitySet Name="T_M_CARGO" EntityType="Self.T_M_CARGO" />
     <EntitySet Name="T_M_CATEGORIA" EntityType="Self.T_M_CATEGORIA" />
     <EntitySet Name="T_M_CLASE" EntityType="Self.T_M_CLASE" />
     <EntitySet Name="T_M_CLIENTES" EntityType="Self.T_M_CLIENTES" />
     <EntitySet Name="T_M_COMPROBANTE" EntityType="Self.T_M_COMPROBANTE" />
     <EntitySet Name="T_M_COMPROBANTE_SUNAT" EntityType="Self.T_M_COMPROBANTE_SUNAT" />
-    <EntitySet Name="T_M_CORTE" EntityType="Self.T_M_CORTE" />
     <EntitySet Name="T_M_COTIZACION" EntityType="Self.T_M_COTIZACION" />
     <EntitySet Name="T_M_CUOTA" EntityType="Self.T_M_CUOTA" />
     <EntitySet Name="T_M_DEPARTAMENTO" EntityType="Self.T_M_DEPARTAMENTO" />
@@ -1668,14 +1400,11 @@
     <EntitySet Name="T_M_MONEDA" EntityType="Self.T_M_MONEDA" />
     <EntitySet Name="T_M_ORDEN_COMPRA" EntityType="Self.T_M_ORDEN_COMPRA" />
     <EntitySet Name="T_M_PARAMETRO" EntityType="Self.T_M_PARAMETRO" />
-    <EntitySet Name="T_M_PERFIL" EntityType="Self.T_M_PERFIL" />
-    <EntitySet Name="T_M_PERSONAL" EntityType="Self.T_M_PERSONAL" />
     <EntitySet Name="T_M_PRODUCTO" EntityType="Self.T_M_PRODUCTO" />
     <EntitySet Name="T_M_PROVINCIA" EntityType="Self.T_M_PROVINCIA" />
     <EntitySet Name="T_M_SERIE" EntityType="Self.T_M_SERIE" />
     <EntitySet Name="T_M_SERVICIO" EntityType="Self.T_M_SERVICIO" />
     <EntitySet Name="T_M_UNIDAD_MEDIDA" EntityType="Self.T_M_UNIDAD_MEDIDA" />
-    <EntitySet Name="T_M_USUARIO" EntityType="Self.T_M_USUARIO" />
     <EntitySet Name="T_M_VENTA" EntityType="Self.T_M_VENTA" />
     <EntitySet Name="T_STOCK_ANULAR" EntityType="Self.T_STOCK_ANULAR" />
     <EntitySet Name="T_TIPO_AFECTACION" EntityType="Self.T_TIPO_AFECTACION" />
@@ -1685,32 +1414,17 @@
     <EntitySet Name="T_VOUCHER" EntityType="Self.T_VOUCHER" />
     <EntitySet Name="V_ACTUALIZAR_STOCK" EntityType="Self.V_ACTUALIZAR_STOCK" />
     <EntitySet Name="V_CLIENTE" EntityType="Self.V_CLIENTE" />
-    <EntitySet Name="V_CORTE" EntityType="Self.V_CORTE" />
     <EntitySet Name="V_COTIZACION" EntityType="Self.V_COTIZACION" />
     <EntitySet Name="V_EMPRESA" EntityType="Self.V_EMPRESA" />
     <EntitySet Name="V_KARDEX" EntityType="Self.V_KARDEX" />
-    <EntitySet Name="V_M_CORTE" EntityType="Self.V_M_CORTE" />
     <EntitySet Name="V_M_COTIZACION" EntityType="Self.V_M_COTIZACION" />
     <EntitySet Name="V_M_ORDEN_COMPRA" EntityType="Self.V_M_ORDEN_COMPRA" />
     <EntitySet Name="V_M_PARAMETRO" EntityType="Self.V_M_PARAMETRO" />
     <EntitySet Name="V_M_VENTA" EntityType="Self.V_M_VENTA" />
     <EntitySet Name="V_ORDEN_COMPRA" EntityType="Self.V_ORDEN_COMPRA" />
     <EntitySet Name="V_PARAMETRO" EntityType="Self.V_PARAMETRO" />
-    <EntitySet Name="V_PERSONAL" EntityType="Self.V_PERSONAL" />
     <EntitySet Name="V_PRODUCTO" EntityType="Self.V_PRODUCTO" />
     <EntitySet Name="V_VENTA" EntityType="Self.V_VENTA" />
-    <AssociationSet Name="FK_ID_PERFIL" Association="Self.FK_ID_PERFIL">
-      <End Role="T_M_PERFIL" EntitySet="T_M_PERFIL" />
-      <End Role="T_C_PERFIL" EntitySet="T_C_PERFIL" />
-    </AssociationSet>
-    <AssociationSet Name="FK_ID_CORTE" Association="Self.FK_ID_CORTE">
-      <End Role="T_M_CORTE" EntitySet="T_M_CORTE" />
-      <End Role="T_D_CORTE" EntitySet="T_D_CORTE" />
-    </AssociationSet>
-    <AssociationSet Name="FK_ID_SERVICIO" Association="Self.FK_ID_SERVICIO">
-      <End Role="T_M_SERVICIO" EntitySet="T_M_SERVICIO" />
-      <End Role="T_D_CORTE" EntitySet="T_D_CORTE" />
-    </AssociationSet>
     <AssociationSet Name="FK_ID_COTIZACION" Association="Self.FK_ID_COTIZACION">
       <End Role="T_M_COTIZACION" EntitySet="T_M_COTIZACION" />
       <End Role="T_D_COTIZACION" EntitySet="T_D_COTIZACION" />
@@ -1755,10 +1469,6 @@
       <End Role="T_M_ALMACEN" EntitySet="T_M_ALMACEN" />
       <End Role="T_M_PRODUCTO" EntitySet="T_M_PRODUCTO" />
     </AssociationSet>
-    <AssociationSet Name="FK_ID_CARGO" Association="Self.FK_ID_CARGO">
-      <End Role="T_M_CARGO" EntitySet="T_M_CARGO" />
-      <End Role="T_M_PERSONAL" EntitySet="T_M_PERSONAL" />
-    </AssociationSet>
     <AssociationSet Name="FK_ID_CATEGORIA" Association="Self.FK_ID_CATEGORIA">
       <End Role="T_M_CATEGORIA" EntitySet="T_M_CATEGORIA" />
       <End Role="T_M_PRODUCTO" EntitySet="T_M_PRODUCTO" />
@@ -1802,14 +1512,6 @@
     <AssociationSet Name="FK_ID_MODELO" Association="Self.FK_ID_MODELO">
       <End Role="T_M_MODELO" EntitySet="T_M_MODELO" />
       <End Role="T_M_PRODUCTO" EntitySet="T_M_PRODUCTO" />
-    </AssociationSet>
-    <AssociationSet Name="FK_USUARIO_ID_PERFIL" Association="Self.FK_USUARIO_ID_PERFIL">
-      <End Role="T_M_PERFIL" EntitySet="T_M_PERFIL" />
-      <End Role="T_M_USUARIO" EntitySet="T_M_USUARIO" />
-    </AssociationSet>
-    <AssociationSet Name="FK_USUARIO_ID_PERSONAL" Association="Self.FK_USUARIO_ID_PERSONAL">
-      <End Role="T_M_PERSONAL" EntitySet="T_M_PERSONAL" />
-      <End Role="T_M_USUARIO" EntitySet="T_M_USUARIO" />
     </AssociationSet>
     <AssociationSet Name="FK_ID_UNIDAD_MEDIDA" Association="Self.FK_ID_UNIDAD_MEDIDA">
       <End Role="T_M_UNIDAD_MEDIDA" EntitySet="T_M_UNIDAD_MEDIDA" />
