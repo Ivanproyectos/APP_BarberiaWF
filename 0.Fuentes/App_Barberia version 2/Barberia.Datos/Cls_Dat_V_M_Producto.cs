@@ -87,6 +87,59 @@ namespace Barberia.Datos
             return lista;
         }
 
+        public List<V_PRODUCTO> Buscar_Producto(V_PRODUCTO entidad, string fechaInicio, string fechaFin, string optReporte, ref Cls_Ent_Auditoria auditoria)
+        {
+            List<V_PRODUCTO> lista = new List<V_PRODUCTO>();
+            auditoria.Limpiar();
+            IQueryable<V_PRODUCTO> query = Entities;
+
+            try
+            {
+                query = query.Where(c => c.ID_EMPRESA == entidad.ID_EMPRESA);
+
+                if (optReporte == "optStockProducto")
+                {
+
+                }
+                else if (optReporte == "optProductoFaltante")
+                {
+                    query = query.Where(c => c.STOCK <= 5);
+                }
+                else if (optReporte == "optProductoVendido")
+                {
+                    if (string.IsNullOrEmpty(fechaInicio) && string.IsNullOrEmpty(fechaFin))
+                    {
+                        string fecha = DateTime.Today.ToString("yyyy-MM") + "-01";
+                        DateTime fechaNueva = DateTime.Parse(fecha);
+                        query = query.Where(w => w.FEC_CREACION >= fechaNueva);
+                    }
+                    else
+                    {
+                        if (!string.IsNullOrEmpty(fechaInicio) && fechaFin == "")
+                        {
+                            DateTime fec = DateTime.Parse(fechaInicio);
+                            query = query.Where(w => w.FEC_CREACION >= fec);
+                        }
+                        else if (fechaInicio != "" && fechaFin != "")
+                        {
+                            DateTime fechaNuevaInicio = DateTime.Parse(fechaInicio);
+                            DateTime fechaNuevaFin = DateTime.Parse(fechaFin + " 11:59:59 pm");
+                            query = query.Where(w => w.FEC_CREACION >= fechaNuevaInicio && w.FEC_CREACION <= fechaNuevaFin);
+                        }
+                    }
+                }
+
+                
+
+                lista = query.ToList();
+            }
+            catch (Exception ex)
+            {
+                auditoria.Error(ex);
+            }
+            return lista;
+        }
+
         public List<V_PRODUCTO> Buscar_Producto(V_PRODUCTO entidad, ref Cls_Ent_Auditoria auditoria)
         {
             List<V_PRODUCTO> lista = new List<V_PRODUCTO>();

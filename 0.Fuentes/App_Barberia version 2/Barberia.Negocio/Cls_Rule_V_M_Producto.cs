@@ -53,6 +53,20 @@ namespace Barberia.Negocio
             return lista;
         }
 
+        public List<V_PRODUCTO> Buscar_Producto(V_PRODUCTO entidad, string fechaInicio, string fechaFin, string optReporte, ref Cls_Ent_Auditoria auditoria)
+        {
+            List<V_PRODUCTO> lista = new List<V_PRODUCTO>();
+            try
+            {
+                lista = VistaVenta.Buscar_Producto(entidad, fechaInicio, fechaFin, optReporte, ref auditoria);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return lista;
+        }
+
         public List<V_PRODUCTO> Buscar_Producto(V_PRODUCTO entidad, ref Cls_Ent_Auditoria auditoria)
         {
             List<V_PRODUCTO> lista = new List<V_PRODUCTO>();
