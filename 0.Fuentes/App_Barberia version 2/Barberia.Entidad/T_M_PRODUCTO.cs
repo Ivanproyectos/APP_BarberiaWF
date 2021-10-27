@@ -32,9 +32,11 @@ namespace Barberia.Entidad
         public Nullable<int> ID_ALMACEN { get; set; }
         public Nullable<int> ID_CLASE { get; set; }
         public Nullable<int> ID_AFECTACION { get; set; }
+        public Nullable<int> ID_MONEDA { get; set; }
         public string NOM_FILE { get; set; }
         public string RUTA { get; set; }
         public Nullable<int> STOCK { get; set; }
+        public Nullable<decimal> GANANCIA_MAX { get; set; }
         public Nullable<decimal> PRECIO_COMPRA { get; set; }
         public Nullable<decimal> PRECIO_VENTA { get; set; }
         public Nullable<decimal> PRECIO_VENTA_DOLAR { get; set; }

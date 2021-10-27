@@ -546,6 +546,8 @@
     <Property Name="FEC_CREACION" Type="datetime" />
     <Property Name="USU_MODIFICA" Type="varchar" MaxLength="20" />
     <Property Name="FEC_MODIFICA" Type="datetime" />
+    <Property Name="ID_MONEDA" Type="int" />
+    <Property Name="GANANCIA_MAX" Type="numeric" Precision="10" Scale="2" />
   </EntityType>
   <EntityType Name="T_M_PROVINCIA">
     <Key>

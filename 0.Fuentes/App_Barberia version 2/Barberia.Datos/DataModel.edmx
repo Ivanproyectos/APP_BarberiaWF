@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DB_BARBERIAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DB_BARBERIAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="T_ACTUALIZAR_STOCK">
           <Key>
             <PropertyRef Name="ID_ACTUALIZAR" />
@@ -551,6 +551,8 @@
           <Property Name="FEC_CREACION" Type="datetime" />
           <Property Name="USU_MODIFICA" Type="varchar" MaxLength="20" />
           <Property Name="FEC_MODIFICA" Type="datetime" />
+          <Property Name="ID_MONEDA" Type="int" />
+          <Property Name="GANANCIA_MAX" Type="numeric" Precision="10" Scale="2" />
         </EntityType>
         <EntityType Name="T_M_PROVINCIA">
           <Key>
@@ -1802,8 +1804,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
             <End Role="T_M_VENTA" EntitySet="T_M_VENTA" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DB_BARBERIAModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -2392,6 +2393,8 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           <NavigationProperty Name="T_M_MARCA" Relationship="Self.FK_ID_MARCA" FromRole="T_M_PRODUCTO" ToRole="T_M_MARCA" />
           <NavigationProperty Name="T_M_MODELO" Relationship="Self.FK_ID_MODELO" FromRole="T_M_PRODUCTO" ToRole="T_M_MODELO" />
           <NavigationProperty Name="T_M_UNIDAD_MEDIDA" Relationship="Self.FK_ID_UNIDAD_MEDIDA" FromRole="T_M_PRODUCTO" ToRole="T_M_UNIDAD_MEDIDA" />
+          <Property Name="ID_MONEDA" Type="Int32" />
+          <Property Name="GANANCIA_MAX" Type="Decimal" Precision="10" Scale="2" />
         </EntityType>
         <EntityType Name="T_M_PROVINCIA">
           <Key>
@@ -3889,6 +3892,8 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           <EntitySetMapping Name="T_M_PRODUCTO">
             <EntityTypeMapping TypeName="DB_BARBERIAModel.T_M_PRODUCTO">
               <MappingFragment StoreEntitySet="T_M_PRODUCTO">
+                <ScalarProperty Name="GANANCIA_MAX" ColumnName="GANANCIA_MAX" />
+                <ScalarProperty Name="ID_MONEDA" ColumnName="ID_MONEDA" />
                 <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
                 <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
                 <ScalarProperty Name="ID_CATEGORIA" ColumnName="ID_CATEGORIA" />

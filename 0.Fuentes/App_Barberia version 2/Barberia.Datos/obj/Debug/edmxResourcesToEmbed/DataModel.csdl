@@ -585,6 +585,8 @@
     <NavigationProperty Name="T_M_MARCA" Relationship="Self.FK_ID_MARCA" FromRole="T_M_PRODUCTO" ToRole="T_M_MARCA" />
     <NavigationProperty Name="T_M_MODELO" Relationship="Self.FK_ID_MODELO" FromRole="T_M_PRODUCTO" ToRole="T_M_MODELO" />
     <NavigationProperty Name="T_M_UNIDAD_MEDIDA" Relationship="Self.FK_ID_UNIDAD_MEDIDA" FromRole="T_M_PRODUCTO" ToRole="T_M_UNIDAD_MEDIDA" />
+    <Property Name="ID_MONEDA" Type="Int32" />
+    <Property Name="GANANCIA_MAX" Type="Decimal" Precision="10" Scale="2" />
   </EntityType>
   <EntityType Name="T_M_PROVINCIA">
     <Key>

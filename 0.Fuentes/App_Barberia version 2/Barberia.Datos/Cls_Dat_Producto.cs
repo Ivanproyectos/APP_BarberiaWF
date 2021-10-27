@@ -191,9 +191,11 @@ namespace Barberia.Datos
                     lista.ID_CLASE = entidad.ID_CLASE;
                     lista.ID_MARCA = entidad.ID_MARCA;
                     lista.ID_MODELO = entidad.ID_MODELO;
+                    lista.ID_MONEDA = entidad.ID_MONEDA;
                     lista.ID_UNIDAD_MEDIDA = entidad.ID_UNIDAD_MEDIDA;
                     lista.ID_AFECTACION = entidad.ID_AFECTACION;
                     lista.STOCK = entidad.STOCK;
+                    lista.GANANCIA_MAX = entidad.GANANCIA_MAX;
                     lista.PRECIO_COMPRA = entidad.PRECIO_COMPRA;
                     lista.PRECIO_VENTA = entidad.PRECIO_VENTA;
                     lista.PRECIO_VENTA_DOLAR = entidad.PRECIO_VENTA_DOLAR;
