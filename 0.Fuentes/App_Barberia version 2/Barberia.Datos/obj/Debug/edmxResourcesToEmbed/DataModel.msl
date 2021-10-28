@@ -559,6 +559,7 @@
     <EntitySetMapping Name="T_M_PRODUCTO">
       <EntityTypeMapping TypeName="DB_BARBERIAModel.T_M_PRODUCTO">
         <MappingFragment StoreEntitySet="T_M_PRODUCTO">
+          <ScalarProperty Name="TIPO_CAMBIO" ColumnName="TIPO_CAMBIO" />
           <ScalarProperty Name="GANANCIA_MAX" ColumnName="GANANCIA_MAX" />
           <ScalarProperty Name="ID_MONEDA" ColumnName="ID_MONEDA" />
           <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
@@ -831,6 +832,8 @@
     <EntitySetMapping Name="V_KARDEX">
       <EntityTypeMapping TypeName="DB_BARBERIAModel.V_KARDEX">
         <MappingFragment StoreEntitySet="V_KARDEX">
+          <ScalarProperty Name="TIPO_CAMBIO" ColumnName="TIPO_CAMBIO" />
+          <ScalarProperty Name="ID_MONEDA" ColumnName="ID_MONEDA" />
           <ScalarProperty Name="ID_KARDEX" ColumnName="ID_KARDEX" />
           <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
           <ScalarProperty Name="PRODUCTO" ColumnName="PRODUCTO" />
@@ -1009,6 +1012,7 @@
     <EntitySetMapping Name="V_PRODUCTO">
       <EntityTypeMapping TypeName="DB_BARBERIAModel.V_PRODUCTO">
         <MappingFragment StoreEntitySet="V_PRODUCTO">
+          <ScalarProperty Name="DESC_MONDEDA" ColumnName="DESC_MONDEDA" />
           <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
           <ScalarProperty Name="DESC_CATEGORIA" ColumnName="DESC_CATEGORIA" />
           <ScalarProperty Name="ID_CATEGORIA" ColumnName="ID_CATEGORIA" />

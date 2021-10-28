@@ -40,6 +40,8 @@ namespace Barberia.Entidad
         public Nullable<decimal> PRECIO_COMPRA { get; set; }
         public Nullable<decimal> PRECIO_VENTA { get; set; }
         public Nullable<decimal> PRECIO_VENTA_DOLAR { get; set; }
+        public Nullable<decimal> TIPO_CAMBIO { get; set; }
+        
         public Nullable<System.DateTime> FEC_COMPRA { get; set; }
         public string FLG_ESTADO { get; set; }
         public string USU_CREACION { get; set; }

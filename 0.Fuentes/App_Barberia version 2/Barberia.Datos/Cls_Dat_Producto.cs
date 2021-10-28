@@ -199,6 +199,7 @@ namespace Barberia.Datos
                     lista.PRECIO_COMPRA = entidad.PRECIO_COMPRA;
                     lista.PRECIO_VENTA = entidad.PRECIO_VENTA;
                     lista.PRECIO_VENTA_DOLAR = entidad.PRECIO_VENTA_DOLAR;
+                    lista.TIPO_CAMBIO = entidad.TIPO_CAMBIO;
                     lista.FEC_COMPRA = entidad.FEC_COMPRA;
                     lista.USU_MODIFICA = entidad.USU_MODIFICA;
                     lista.FEC_MODIFICA = entidad.FEC_MODIFICA;

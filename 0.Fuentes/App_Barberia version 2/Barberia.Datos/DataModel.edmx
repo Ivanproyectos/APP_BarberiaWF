@@ -553,6 +553,7 @@
           <Property Name="FEC_MODIFICA" Type="datetime" />
           <Property Name="ID_MONEDA" Type="int" />
           <Property Name="GANANCIA_MAX" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="TIPO_CAMBIO" Type="numeric" Precision="10" Scale="2" />
         </EntityType>
         <EntityType Name="T_M_PROVINCIA">
           <Key>
@@ -818,6 +819,8 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_KARDEX' no tiene definida 
           <Property Name="STOCK" Type="int" />
           <Property Name="PRECIO_COMPRA" Type="numeric" Precision="10" Scale="2" />
           <Property Name="PRECIO_VENTA" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="ID_MONEDA" Type="int" />
+          <Property Name="TIPO_CAMBIO" Type="numeric" Precision="10" Scale="2" />
           <Property Name="FEC_KARDEX" Type="datetime" />
           <Property Name="DESC_TIPO_COMPROBANTE" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="FEC_DETALLE_KARDEX" Type="datetime" />
@@ -1033,6 +1036,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_PRODUCTO' no tiene definid
           <Property Name="NOM_FILE" Type="varchar" MaxLength="100" />
           <Property Name="RUTA" Type="varchar" MaxLength="100" />
           <Property Name="STOCK" Type="int" />
+          <Property Name="DESC_MONDEDA" Type="varchar" MaxLength="50" />
           <Property Name="PRECIO_COMPRA" Type="numeric" Precision="10" Scale="2" />
           <Property Name="PRECIO_VENTA" Type="numeric" Precision="10" Scale="2" />
           <Property Name="PRECIO_VENTA_DOLAR" Type="numeric" Precision="10" Scale="2" />
@@ -1502,6 +1506,8 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
     [V_KARDEX].[STOCK] AS [STOCK], 
     [V_KARDEX].[PRECIO_COMPRA] AS [PRECIO_COMPRA], 
     [V_KARDEX].[PRECIO_VENTA] AS [PRECIO_VENTA], 
+    [V_KARDEX].[ID_MONEDA] AS [ID_MONEDA], 
+    [V_KARDEX].[TIPO_CAMBIO] AS [TIPO_CAMBIO], 
     [V_KARDEX].[FEC_KARDEX] AS [FEC_KARDEX], 
     [V_KARDEX].[DESC_TIPO_COMPROBANTE] AS [DESC_TIPO_COMPROBANTE], 
     [V_KARDEX].[FEC_DETALLE_KARDEX] AS [FEC_DETALLE_KARDEX], 
@@ -1674,6 +1680,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
     [V_PRODUCTO].[NOM_FILE] AS [NOM_FILE], 
     [V_PRODUCTO].[RUTA] AS [RUTA], 
     [V_PRODUCTO].[STOCK] AS [STOCK], 
+    [V_PRODUCTO].[DESC_MONDEDA] AS [DESC_MONDEDA], 
     [V_PRODUCTO].[PRECIO_COMPRA] AS [PRECIO_COMPRA], 
     [V_PRODUCTO].[PRECIO_VENTA] AS [PRECIO_VENTA], 
     [V_PRODUCTO].[PRECIO_VENTA_DOLAR] AS [PRECIO_VENTA_DOLAR], 
@@ -2395,6 +2402,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           <NavigationProperty Name="T_M_UNIDAD_MEDIDA" Relationship="Self.FK_ID_UNIDAD_MEDIDA" FromRole="T_M_PRODUCTO" ToRole="T_M_UNIDAD_MEDIDA" />
           <Property Name="ID_MONEDA" Type="Int32" />
           <Property Name="GANANCIA_MAX" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="TIPO_CAMBIO" Type="Decimal" Precision="10" Scale="2" />
         </EntityType>
         <EntityType Name="T_M_PROVINCIA">
           <Key>
@@ -2671,6 +2679,8 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           <Property Name="TOTAL_SALDO" Type="Decimal" Precision="18" Scale="2" />
           <Property Name="USU_CREACION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="FEC_CREACION" Type="DateTime" Precision="3" />
+          <Property Name="ID_MONEDA" Type="Int32" />
+          <Property Name="TIPO_CAMBIO" Type="Decimal" Precision="10" Scale="2" />
         </EntityType>
         <EntityType Name="V_M_COTIZACION">
           <Key>
@@ -2869,6 +2879,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
           <Property Name="ANIO" Type="Int32" />
           <Property Name="MES" Type="Int32" />
+          <Property Name="DESC_MONDEDA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="V_VENTA">
           <Key>
@@ -3892,6 +3903,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           <EntitySetMapping Name="T_M_PRODUCTO">
             <EntityTypeMapping TypeName="DB_BARBERIAModel.T_M_PRODUCTO">
               <MappingFragment StoreEntitySet="T_M_PRODUCTO">
+                <ScalarProperty Name="TIPO_CAMBIO" ColumnName="TIPO_CAMBIO" />
                 <ScalarProperty Name="GANANCIA_MAX" ColumnName="GANANCIA_MAX" />
                 <ScalarProperty Name="ID_MONEDA" ColumnName="ID_MONEDA" />
                 <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
@@ -4164,6 +4176,8 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           <EntitySetMapping Name="V_KARDEX">
             <EntityTypeMapping TypeName="DB_BARBERIAModel.V_KARDEX">
               <MappingFragment StoreEntitySet="V_KARDEX">
+                <ScalarProperty Name="TIPO_CAMBIO" ColumnName="TIPO_CAMBIO" />
+                <ScalarProperty Name="ID_MONEDA" ColumnName="ID_MONEDA" />
                 <ScalarProperty Name="ID_KARDEX" ColumnName="ID_KARDEX" />
                 <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
                 <ScalarProperty Name="PRODUCTO" ColumnName="PRODUCTO" />
@@ -4342,6 +4356,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           <EntitySetMapping Name="V_PRODUCTO">
             <EntityTypeMapping TypeName="DB_BARBERIAModel.V_PRODUCTO">
               <MappingFragment StoreEntitySet="V_PRODUCTO">
+                <ScalarProperty Name="DESC_MONDEDA" ColumnName="DESC_MONDEDA" />
                 <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
                 <ScalarProperty Name="DESC_CATEGORIA" ColumnName="DESC_CATEGORIA" />
                 <ScalarProperty Name="ID_CATEGORIA" ColumnName="ID_CATEGORIA" />

@@ -587,6 +587,7 @@
     <NavigationProperty Name="T_M_UNIDAD_MEDIDA" Relationship="Self.FK_ID_UNIDAD_MEDIDA" FromRole="T_M_PRODUCTO" ToRole="T_M_UNIDAD_MEDIDA" />
     <Property Name="ID_MONEDA" Type="Int32" />
     <Property Name="GANANCIA_MAX" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="TIPO_CAMBIO" Type="Decimal" Precision="10" Scale="2" />
   </EntityType>
   <EntityType Name="T_M_PROVINCIA">
     <Key>
@@ -863,6 +864,8 @@
     <Property Name="TOTAL_SALDO" Type="Decimal" Precision="18" Scale="2" />
     <Property Name="USU_CREACION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="FEC_CREACION" Type="DateTime" Precision="3" />
+    <Property Name="ID_MONEDA" Type="Int32" />
+    <Property Name="TIPO_CAMBIO" Type="Decimal" Precision="10" Scale="2" />
   </EntityType>
   <EntityType Name="V_M_COTIZACION">
     <Key>
@@ -1061,6 +1064,7 @@
     <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
     <Property Name="ANIO" Type="Int32" />
     <Property Name="MES" Type="Int32" />
+    <Property Name="DESC_MONDEDA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="V_VENTA">
     <Key>

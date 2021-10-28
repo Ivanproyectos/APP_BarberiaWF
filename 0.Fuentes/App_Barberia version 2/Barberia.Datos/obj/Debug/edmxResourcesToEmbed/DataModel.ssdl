@@ -548,6 +548,7 @@
     <Property Name="FEC_MODIFICA" Type="datetime" />
     <Property Name="ID_MONEDA" Type="int" />
     <Property Name="GANANCIA_MAX" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="TIPO_CAMBIO" Type="numeric" Precision="10" Scale="2" />
   </EntityType>
   <EntityType Name="T_M_PROVINCIA">
     <Key>
@@ -813,6 +814,8 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_KARDEX' no tiene definida 
     <Property Name="STOCK" Type="int" />
     <Property Name="PRECIO_COMPRA" Type="numeric" Precision="10" Scale="2" />
     <Property Name="PRECIO_VENTA" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="ID_MONEDA" Type="int" />
+    <Property Name="TIPO_CAMBIO" Type="numeric" Precision="10" Scale="2" />
     <Property Name="FEC_KARDEX" Type="datetime" />
     <Property Name="DESC_TIPO_COMPROBANTE" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="FEC_DETALLE_KARDEX" Type="datetime" />
@@ -1028,6 +1031,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_PRODUCTO' no tiene definid
     <Property Name="NOM_FILE" Type="varchar" MaxLength="100" />
     <Property Name="RUTA" Type="varchar" MaxLength="100" />
     <Property Name="STOCK" Type="int" />
+    <Property Name="DESC_MONDEDA" Type="varchar" MaxLength="50" />
     <Property Name="PRECIO_COMPRA" Type="numeric" Precision="10" Scale="2" />
     <Property Name="PRECIO_VENTA" Type="numeric" Precision="10" Scale="2" />
     <Property Name="PRECIO_VENTA_DOLAR" Type="numeric" Precision="10" Scale="2" />
@@ -1497,6 +1501,8 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
     [V_KARDEX].[STOCK] AS [STOCK], 
     [V_KARDEX].[PRECIO_COMPRA] AS [PRECIO_COMPRA], 
     [V_KARDEX].[PRECIO_VENTA] AS [PRECIO_VENTA], 
+    [V_KARDEX].[ID_MONEDA] AS [ID_MONEDA], 
+    [V_KARDEX].[TIPO_CAMBIO] AS [TIPO_CAMBIO], 
     [V_KARDEX].[FEC_KARDEX] AS [FEC_KARDEX], 
     [V_KARDEX].[DESC_TIPO_COMPROBANTE] AS [DESC_TIPO_COMPROBANTE], 
     [V_KARDEX].[FEC_DETALLE_KARDEX] AS [FEC_DETALLE_KARDEX], 
@@ -1669,6 +1675,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
     [V_PRODUCTO].[NOM_FILE] AS [NOM_FILE], 
     [V_PRODUCTO].[RUTA] AS [RUTA], 
     [V_PRODUCTO].[STOCK] AS [STOCK], 
+    [V_PRODUCTO].[DESC_MONDEDA] AS [DESC_MONDEDA], 
     [V_PRODUCTO].[PRECIO_COMPRA] AS [PRECIO_COMPRA], 
     [V_PRODUCTO].[PRECIO_VENTA] AS [PRECIO_VENTA], 
     [V_PRODUCTO].[PRECIO_VENTA_DOLAR] AS [PRECIO_VENTA_DOLAR], 
