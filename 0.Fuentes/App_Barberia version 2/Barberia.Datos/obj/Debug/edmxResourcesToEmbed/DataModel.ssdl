@@ -801,6 +801,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_KARDEX' no tiene definida 
   <EntityType Name="V_KARDEX">
     <Key>
       <PropertyRef Name="ID_KARDEX" />
+      <PropertyRef Name="ID_EMPRESA" />
       <PropertyRef Name="ID_PRODUCTO" />
       <PropertyRef Name="PRODUCTO" />
       <PropertyRef Name="DESC_TIPO_COMPROBANTE" />
@@ -809,6 +810,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_KARDEX' no tiene definida 
       <PropertyRef Name="PRECIO_DOLAR" />
     </Key>
     <Property Name="ID_KARDEX" Type="int" Nullable="false" />
+    <Property Name="ID_EMPRESA" Type="int" Nullable="false" />
     <Property Name="ID_PRODUCTO" Type="int" Nullable="false" />
     <Property Name="PRODUCTO" Type="varchar" MaxLength="200" Nullable="false" />
     <Property Name="STOCK" Type="int" />
@@ -1496,6 +1498,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
     <EntitySet Name="V_KARDEX" EntityType="Self.V_KARDEX" store:Type="Views" store:Schema="dbo">
       <DefiningQuery>SELECT 
     [V_KARDEX].[ID_KARDEX] AS [ID_KARDEX], 
+    [V_KARDEX].[ID_EMPRESA] AS [ID_EMPRESA], 
     [V_KARDEX].[ID_PRODUCTO] AS [ID_PRODUCTO], 
     [V_KARDEX].[PRODUCTO] AS [PRODUCTO], 
     [V_KARDEX].[STOCK] AS [STOCK], 

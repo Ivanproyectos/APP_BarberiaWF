@@ -832,6 +832,7 @@
     <EntitySetMapping Name="V_KARDEX">
       <EntityTypeMapping TypeName="DB_BARBERIAModel.V_KARDEX">
         <MappingFragment StoreEntitySet="V_KARDEX">
+          <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
           <ScalarProperty Name="TIPO_CAMBIO" ColumnName="TIPO_CAMBIO" />
           <ScalarProperty Name="ID_MONEDA" ColumnName="ID_MONEDA" />
           <ScalarProperty Name="ID_KARDEX" ColumnName="ID_KARDEX" />

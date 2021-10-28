@@ -16,6 +16,7 @@ namespace Barberia.Entidad
     {
         public int ID_KARDEX { get; set; }
         public int ID_PRODUCTO { get; set; }
+        public int ID_EMPRESA { get; set; }
         public Nullable<int> STOCK { get; set; }
         public string PRODUCTO { get; set; }
         public Nullable<int> ID_MONEDA { get; set; }

@@ -843,6 +843,7 @@
       <PropertyRef Name="NUM_DOCUMENTO" />
       <PropertyRef Name="PRECIO_SOLES" />
       <PropertyRef Name="PRECIO_DOLAR" />
+      <PropertyRef Name="ID_EMPRESA" />
     </Key>
     <Property Name="ID_KARDEX" Type="Int32" Nullable="false" />
     <Property Name="ID_PRODUCTO" Type="Int32" Nullable="false" />
@@ -866,6 +867,7 @@
     <Property Name="FEC_CREACION" Type="DateTime" Precision="3" />
     <Property Name="ID_MONEDA" Type="Int32" />
     <Property Name="TIPO_CAMBIO" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="ID_EMPRESA" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="V_M_COTIZACION">
     <Key>

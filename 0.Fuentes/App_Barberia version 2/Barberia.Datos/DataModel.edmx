@@ -806,6 +806,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_KARDEX' no tiene definida 
         <EntityType Name="V_KARDEX">
           <Key>
             <PropertyRef Name="ID_KARDEX" />
+            <PropertyRef Name="ID_EMPRESA" />
             <PropertyRef Name="ID_PRODUCTO" />
             <PropertyRef Name="PRODUCTO" />
             <PropertyRef Name="DESC_TIPO_COMPROBANTE" />
@@ -814,6 +815,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_KARDEX' no tiene definida 
             <PropertyRef Name="PRECIO_DOLAR" />
           </Key>
           <Property Name="ID_KARDEX" Type="int" Nullable="false" />
+          <Property Name="ID_EMPRESA" Type="int" Nullable="false" />
           <Property Name="ID_PRODUCTO" Type="int" Nullable="false" />
           <Property Name="PRODUCTO" Type="varchar" MaxLength="200" Nullable="false" />
           <Property Name="STOCK" Type="int" />
@@ -1501,6 +1503,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           <EntitySet Name="V_KARDEX" EntityType="Self.V_KARDEX" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [V_KARDEX].[ID_KARDEX] AS [ID_KARDEX], 
+    [V_KARDEX].[ID_EMPRESA] AS [ID_EMPRESA], 
     [V_KARDEX].[ID_PRODUCTO] AS [ID_PRODUCTO], 
     [V_KARDEX].[PRODUCTO] AS [PRODUCTO], 
     [V_KARDEX].[STOCK] AS [STOCK], 
@@ -2658,6 +2661,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
             <PropertyRef Name="NUM_DOCUMENTO" />
             <PropertyRef Name="PRECIO_SOLES" />
             <PropertyRef Name="PRECIO_DOLAR" />
+            <PropertyRef Name="ID_EMPRESA" />
           </Key>
           <Property Name="ID_KARDEX" Type="Int32" Nullable="false" />
           <Property Name="ID_PRODUCTO" Type="Int32" Nullable="false" />
@@ -2681,6 +2685,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           <Property Name="FEC_CREACION" Type="DateTime" Precision="3" />
           <Property Name="ID_MONEDA" Type="Int32" />
           <Property Name="TIPO_CAMBIO" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="ID_EMPRESA" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="V_M_COTIZACION">
           <Key>
@@ -4176,6 +4181,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           <EntitySetMapping Name="V_KARDEX">
             <EntityTypeMapping TypeName="DB_BARBERIAModel.V_KARDEX">
               <MappingFragment StoreEntitySet="V_KARDEX">
+                <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
                 <ScalarProperty Name="TIPO_CAMBIO" ColumnName="TIPO_CAMBIO" />
                 <ScalarProperty Name="ID_MONEDA" ColumnName="ID_MONEDA" />
                 <ScalarProperty Name="ID_KARDEX" ColumnName="ID_KARDEX" />
