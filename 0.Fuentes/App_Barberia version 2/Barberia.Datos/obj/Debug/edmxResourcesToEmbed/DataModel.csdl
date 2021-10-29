@@ -661,6 +661,7 @@
     <NavigationProperty Name="T_D_DOCUMENTOS_VENTAS" Relationship="Self.FK_DOCUMENTOVENTAS" FromRole="T_M_VENTA" ToRole="T_D_DOCUMENTOS_VENTAS" />
     <NavigationProperty Name="T_D_VENTA" Relationship="Self.FK_ID_VENTA" FromRole="T_M_VENTA" ToRole="T_D_VENTA" />
     <NavigationProperty Name="T_M_CLIENTES" Relationship="Self.FK_VENTA_ID_CLIENTE" FromRole="T_M_VENTA" ToRole="T_M_CLIENTES" />
+    <Property Name="TIPO_CAMBIO" Type="Decimal" Precision="10" Scale="2" />
   </EntityType>
   <EntityType Name="T_STOCK_ANULAR">
     <Key>

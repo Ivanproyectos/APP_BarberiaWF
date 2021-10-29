@@ -617,6 +617,7 @@
     <Property Name="FEC_ENVIO" Type="varchar" MaxLength="50" />
     <Property Name="USU_MODIFICA" Type="varchar" MaxLength="20" />
     <Property Name="FEC_MODIFICA" Type="datetime" />
+    <Property Name="TIPO_CAMBIO" Type="numeric" Precision="10" Scale="2" />
   </EntityType>
   <EntityType Name="T_STOCK_ANULAR">
     <Key>

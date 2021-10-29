@@ -25,6 +25,7 @@ namespace Barberia.Entidad
         public int ID_EMPRESA { get; set; }
         public int ID_CLIENTE { get; set; }
         public Nullable<int> ID_MONEDA { get; set; }
+        public Nullable<decimal> TIPO_CAMBIO { get; set; }
         public string VOUCHER { get; set; }
         public Nullable<decimal> TOTAL_IMPORTE { get; set; }
         public Nullable<decimal> DESCT_TOTAL { get; set; }
