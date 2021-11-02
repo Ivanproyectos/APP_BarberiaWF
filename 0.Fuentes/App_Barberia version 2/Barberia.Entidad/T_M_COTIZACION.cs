@@ -33,6 +33,7 @@ namespace Barberia.Entidad
         public string GARANTIA { get; set; }
         public Nullable<int> CANT_DIAS_VALIDES { get; set; }
         public Nullable<decimal> SUBTOTAL { get; set; }
+        public Nullable<decimal> TIPO_CAMBIO { get; set; }
         public Nullable<decimal> IGV { get; set; }
         public Nullable<decimal> DESCUENTO { get; set; }
         public Nullable<decimal> TOTAL { get; set; }

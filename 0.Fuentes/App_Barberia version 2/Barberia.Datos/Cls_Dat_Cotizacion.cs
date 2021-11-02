@@ -115,6 +115,8 @@ namespace Barberia.Datos
                 lista.ID_FORMA_PAGO = entidad.ID_FORMA_PAGO;
                 lista.GARANTIA = entidad.GARANTIA;
                 lista.CANT_DIAS_VALIDES = entidad.CANT_DIAS_VALIDES;
+                lista.ID_MONEDA = entidad.ID_MONEDA;
+                lista.TIPO_CAMBIO = entidad.TIPO_CAMBIO;
                 lista.SUBTOTAL = entidad.SUBTOTAL;
                 lista.IGV = entidad.IGV;
                 lista.DESCUENTO = entidad.DESCUENTO;

@@ -354,6 +354,7 @@
           <Property Name="FEC_CREACION" Type="datetime" />
           <Property Name="USU_MODIFICA" Type="varchar" MaxLength="20" />
           <Property Name="FEC_MODIFICA" Type="datetime" />
+          <Property Name="TIPO_CAMBIO" Type="numeric" Precision="10" Scale="2" />
         </EntityType>
         <EntityType Name="T_M_CUOTA">
           <Key>
@@ -505,6 +506,7 @@
           <Property Name="FEC_CREACION" Type="datetime" />
           <Property Name="USU_MODIFICA" Type="varchar" MaxLength="20" />
           <Property Name="FEC_MODIFICA" Type="datetime" />
+          <Property Name="TIPO_CAMBIO" Type="numeric" Precision="10" Scale="2" />
         </EntityType>
         <EntityType Name="T_M_PARAMETRO">
           <Key>
@@ -2189,6 +2191,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
           <NavigationProperty Name="T_D_COTIZACION" Relationship="Self.FK_ID_COTIZACION" FromRole="T_M_COTIZACION" ToRole="T_D_COTIZACION" />
+          <Property Name="TIPO_CAMBIO" Type="Decimal" Precision="10" Scale="2" />
         </EntityType>
         <EntityType Name="T_M_CUOTA">
           <Key>
@@ -2349,6 +2352,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
           <NavigationProperty Name="T_D_ORDEN_COMPRA" Relationship="Self.FK_ID_ORDEN_COMPRA" FromRole="T_M_ORDEN_COMPRA" ToRole="T_D_ORDEN_COMPRA" />
+          <Property Name="TIPO_CAMBIO" Type="Decimal" Precision="10" Scale="2" />
         </EntityType>
         <EntityType Name="T_M_PARAMETRO">
           <Key>
@@ -3702,6 +3706,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           <EntitySetMapping Name="T_M_COTIZACION">
             <EntityTypeMapping TypeName="DB_BARBERIAModel.T_M_COTIZACION">
               <MappingFragment StoreEntitySet="T_M_COTIZACION">
+                <ScalarProperty Name="TIPO_CAMBIO" ColumnName="TIPO_CAMBIO" />
                 <ScalarProperty Name="ID_COTIZACION" ColumnName="ID_COTIZACION" />
                 <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
                 <ScalarProperty Name="ID_EMPRESA_INTERNA" ColumnName="ID_EMPRESA_INTERNA" />
@@ -3863,6 +3868,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           <EntitySetMapping Name="T_M_ORDEN_COMPRA">
             <EntityTypeMapping TypeName="DB_BARBERIAModel.T_M_ORDEN_COMPRA">
               <MappingFragment StoreEntitySet="T_M_ORDEN_COMPRA">
+                <ScalarProperty Name="TIPO_CAMBIO" ColumnName="TIPO_CAMBIO" />
                 <ScalarProperty Name="ID_ORDEN_COMPRA" ColumnName="ID_ORDEN_COMPRA" />
                 <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
                 <ScalarProperty Name="ID_EMPRESA_INTERNA" ColumnName="ID_EMPRESA_INTERNA" />

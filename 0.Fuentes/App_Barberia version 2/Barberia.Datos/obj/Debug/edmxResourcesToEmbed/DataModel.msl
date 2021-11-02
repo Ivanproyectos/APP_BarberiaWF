@@ -351,6 +351,7 @@
     <EntitySetMapping Name="T_M_COTIZACION">
       <EntityTypeMapping TypeName="DB_BARBERIAModel.T_M_COTIZACION">
         <MappingFragment StoreEntitySet="T_M_COTIZACION">
+          <ScalarProperty Name="TIPO_CAMBIO" ColumnName="TIPO_CAMBIO" />
           <ScalarProperty Name="ID_COTIZACION" ColumnName="ID_COTIZACION" />
           <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
           <ScalarProperty Name="ID_EMPRESA_INTERNA" ColumnName="ID_EMPRESA_INTERNA" />
@@ -512,6 +513,7 @@
     <EntitySetMapping Name="T_M_ORDEN_COMPRA">
       <EntityTypeMapping TypeName="DB_BARBERIAModel.T_M_ORDEN_COMPRA">
         <MappingFragment StoreEntitySet="T_M_ORDEN_COMPRA">
+          <ScalarProperty Name="TIPO_CAMBIO" ColumnName="TIPO_CAMBIO" />
           <ScalarProperty Name="ID_ORDEN_COMPRA" ColumnName="ID_ORDEN_COMPRA" />
           <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
           <ScalarProperty Name="ID_EMPRESA_INTERNA" ColumnName="ID_EMPRESA_INTERNA" />
