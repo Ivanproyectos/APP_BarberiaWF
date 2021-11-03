@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DB_BARBERIAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DB_BARBERIAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="T_ACTUALIZAR_STOCK">
           <Key>
             <PropertyRef Name="ID_ACTUALIZAR" />
@@ -932,6 +932,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_M_VENTA' no tiene definida
             <PropertyRef Name="ID_EMPRESA" />
           </Key>
           <Property Name="ID_VENTA" Type="int" Nullable="false" />
+          <Property Name="ID_MONEDA" Type="int" />
           <Property Name="ID_EMPRESA" Type="int" Nullable="false" />
           <Property Name="VOUCHER" Type="varchar" MaxLength="20" />
           <Property Name="CLIENTE" Type="varchar" MaxLength="1202" />
@@ -1066,6 +1067,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           </Key>
           <Property Name="ID_VENTA" Type="int" Nullable="false" />
           <Property Name="ID_EMPRESA" Type="int" Nullable="false" />
+          <Property Name="ID_MONEDA" Type="int" />
           <Property Name="DESC_MONDEDA" Type="varchar" MaxLength="50" />
           <Property Name="VOUCHER" Type="varchar" MaxLength="20" />
           <Property Name="PERSONAL" Type="varchar" MaxLength="602" />
@@ -1602,6 +1604,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           <EntitySet Name="V_M_VENTA" EntityType="Self.V_M_VENTA" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [V_M_VENTA].[ID_VENTA] AS [ID_VENTA], 
+    [V_M_VENTA].[ID_MONEDA] AS [ID_MONEDA], 
     [V_M_VENTA].[ID_EMPRESA] AS [ID_EMPRESA], 
     [V_M_VENTA].[VOUCHER] AS [VOUCHER], 
     [V_M_VENTA].[CLIENTE] AS [CLIENTE], 
@@ -1706,6 +1709,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
             <DefiningQuery>SELECT 
     [V_VENTA].[ID_VENTA] AS [ID_VENTA], 
     [V_VENTA].[ID_EMPRESA] AS [ID_EMPRESA], 
+    [V_VENTA].[ID_MONEDA] AS [ID_MONEDA], 
     [V_VENTA].[DESC_MONDEDA] AS [DESC_MONDEDA], 
     [V_VENTA].[VOUCHER] AS [VOUCHER], 
     [V_VENTA].[PERSONAL] AS [PERSONAL], 
@@ -1819,8 +1823,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
             <End Role="T_M_VENTA" EntitySet="T_M_VENTA" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DB_BARBERIAModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -2792,6 +2795,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           <Property Name="FEC_VENTA" Type="DateTime" Precision="3" />
           <Property Name="CODIGO_ARCHIVO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Name="EXTENSION_ARCHIVO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ID_MONEDA" Type="Int32" />
         </EntityType>
         <EntityType Name="V_ORDEN_COMPRA">
           <Key>
@@ -2923,6 +2927,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           <Property Name="FEC_VENTA" Type="DateTime" Precision="3" />
           <Property Name="ANIO" Type="Int32" />
           <Property Name="MES" Type="Int32" />
+          <Property Name="ID_MONEDA" Type="Int32" />
         </EntityType>
         <Association Name="FK_ID_COTIZACION">
           <End Role="T_M_COTIZACION" Type="Self.T_M_COTIZACION" Multiplicity="0..1" />
@@ -4299,6 +4304,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           <EntitySetMapping Name="V_M_VENTA">
             <EntityTypeMapping TypeName="DB_BARBERIAModel.V_M_VENTA">
               <MappingFragment StoreEntitySet="V_M_VENTA">
+                <ScalarProperty Name="ID_MONEDA" ColumnName="ID_MONEDA" />
                 <ScalarProperty Name="ID_VENTA" ColumnName="ID_VENTA" />
                 <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
                 <ScalarProperty Name="VOUCHER" ColumnName="VOUCHER" />
@@ -4410,6 +4416,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           <EntitySetMapping Name="V_VENTA">
             <EntityTypeMapping TypeName="DB_BARBERIAModel.V_VENTA">
               <MappingFragment StoreEntitySet="V_VENTA">
+                <ScalarProperty Name="ID_MONEDA" ColumnName="ID_MONEDA" />
                 <ScalarProperty Name="ID_VENTA" ColumnName="ID_VENTA" />
                 <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
                 <ScalarProperty Name="DESC_MONDEDA" ColumnName="DESC_MONDEDA" />

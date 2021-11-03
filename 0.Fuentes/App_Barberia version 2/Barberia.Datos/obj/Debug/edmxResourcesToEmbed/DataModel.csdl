@@ -968,6 +968,7 @@
     <Property Name="FEC_VENTA" Type="DateTime" Precision="3" />
     <Property Name="CODIGO_ARCHIVO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
     <Property Name="EXTENSION_ARCHIVO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ID_MONEDA" Type="Int32" />
   </EntityType>
   <EntityType Name="V_ORDEN_COMPRA">
     <Key>
@@ -1099,6 +1100,7 @@
     <Property Name="FEC_VENTA" Type="DateTime" Precision="3" />
     <Property Name="ANIO" Type="Int32" />
     <Property Name="MES" Type="Int32" />
+    <Property Name="ID_MONEDA" Type="Int32" />
   </EntityType>
   <Association Name="FK_ID_COTIZACION">
     <End Role="T_M_COTIZACION" Type="Self.T_M_COTIZACION" Multiplicity="0..1" />

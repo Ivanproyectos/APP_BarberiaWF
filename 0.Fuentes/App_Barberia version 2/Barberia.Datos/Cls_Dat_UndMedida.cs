@@ -17,7 +17,7 @@ namespace Barberia.Datos
                 //{
                 //    lista = db.T_M_UNIDAD_MEDIDA.Where(x => x.FLG_ESTADO == "1").OrderByDescending(x => x.ID_UNIDAD_MEDIDA).ToList();
                 //}
-                lista = GetAll().Where(x => x.FLG_ESTADO == "1" && x.ID_EMPRESA == idEmpresa).OrderByDescending(x => x.ID_UNIDAD_MEDIDA).ToList();
+                lista = GetAll().Where(x => x.FLG_ESTADO == "1").OrderByDescending(x => x.ID_UNIDAD_MEDIDA).ToList();
             }
             catch (Exception ex)
             {

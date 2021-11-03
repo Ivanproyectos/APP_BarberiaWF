@@ -53,6 +53,10 @@ namespace Barberia.Datos
                 //if (!string.IsNullOrEmpty(entidad.CLIENTE))
                 //    query = query.Where(w => w.CLIENTE.Contains(entidad.CLIENTE));
 
+
+                if (entidad.ID_MONEDA > 0)
+                    query = query.Where(w => w.ID_MONEDA == entidad.ID_MONEDA);
+
                 if (entidad.MES > 0)
                 {
                     query = query.Where(w => w.MES == entidad.MES);
