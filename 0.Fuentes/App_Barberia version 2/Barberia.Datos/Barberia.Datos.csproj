@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cls_Data_Backup.cs" />
+    <Compile Include="Cls_Dat_M_Serie.cs" />
     <Compile Include="Cls_Dat_ClientePaginado.cs" />
     <Compile Include="Cls_Dat_D_Kardex.cs" />
     <Compile Include="Cls_Dat_M_Kardex.cs" />

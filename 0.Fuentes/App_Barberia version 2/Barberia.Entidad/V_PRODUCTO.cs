@@ -27,8 +27,8 @@ namespace Barberia.Entidad
         public string DES_MARCA { get; set; }
         public string NOM_FILE { get; set; }
         public string RUTA { get; set; }
-        public string DESC_MONDEDA { get; set; }
         public Nullable<int> STOCK { get; set; }
+        public string DESC_MONDEDA { get; set; }
         public Nullable<decimal> PRECIO_COMPRA { get; set; }
         public Nullable<decimal> PRECIO_VENTA { get; set; }
         public Nullable<decimal> PRECIO_VENTA_DOLAR { get; set; }

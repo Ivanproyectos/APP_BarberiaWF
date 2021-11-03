@@ -15,13 +15,13 @@ namespace Barberia.Entidad
     public partial class V_KARDEX
     {
         public int ID_KARDEX { get; set; }
-        public int ID_PRODUCTO { get; set; }
         public int ID_EMPRESA { get; set; }
-        public Nullable<int> STOCK { get; set; }
+        public int ID_PRODUCTO { get; set; }
         public string PRODUCTO { get; set; }
-        public Nullable<int> ID_MONEDA { get; set; }
-        public Nullable<decimal> PRECIO_VENTA { get; set; }
+        public Nullable<int> STOCK { get; set; }
         public Nullable<decimal> PRECIO_COMPRA { get; set; }
+        public Nullable<decimal> PRECIO_VENTA { get; set; }
+        public Nullable<int> ID_MONEDA { get; set; }
         public Nullable<decimal> TIPO_CAMBIO { get; set; }
         public Nullable<System.DateTime> FEC_KARDEX { get; set; }
         public string DESC_TIPO_COMPROBANTE { get; set; }

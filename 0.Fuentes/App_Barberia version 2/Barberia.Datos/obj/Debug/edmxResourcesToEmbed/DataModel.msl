@@ -351,7 +351,6 @@
     <EntitySetMapping Name="T_M_COTIZACION">
       <EntityTypeMapping TypeName="DB_BARBERIAModel.T_M_COTIZACION">
         <MappingFragment StoreEntitySet="T_M_COTIZACION">
-          <ScalarProperty Name="TIPO_CAMBIO" ColumnName="TIPO_CAMBIO" />
           <ScalarProperty Name="ID_COTIZACION" ColumnName="ID_COTIZACION" />
           <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
           <ScalarProperty Name="ID_EMPRESA_INTERNA" ColumnName="ID_EMPRESA_INTERNA" />
@@ -364,6 +363,7 @@
           <ScalarProperty Name="ID_FORMA_PAGO" ColumnName="ID_FORMA_PAGO" />
           <ScalarProperty Name="GARANTIA" ColumnName="GARANTIA" />
           <ScalarProperty Name="CANT_DIAS_VALIDES" ColumnName="CANT_DIAS_VALIDES" />
+          <ScalarProperty Name="TIPO_CAMBIO" ColumnName="TIPO_CAMBIO" />
           <ScalarProperty Name="SUBTOTAL" ColumnName="SUBTOTAL" />
           <ScalarProperty Name="IGV" ColumnName="IGV" />
           <ScalarProperty Name="DESCUENTO" ColumnName="DESCUENTO" />
@@ -513,7 +513,6 @@
     <EntitySetMapping Name="T_M_ORDEN_COMPRA">
       <EntityTypeMapping TypeName="DB_BARBERIAModel.T_M_ORDEN_COMPRA">
         <MappingFragment StoreEntitySet="T_M_ORDEN_COMPRA">
-          <ScalarProperty Name="TIPO_CAMBIO" ColumnName="TIPO_CAMBIO" />
           <ScalarProperty Name="ID_ORDEN_COMPRA" ColumnName="ID_ORDEN_COMPRA" />
           <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
           <ScalarProperty Name="ID_EMPRESA_INTERNA" ColumnName="ID_EMPRESA_INTERNA" />
@@ -527,6 +526,7 @@
           <ScalarProperty Name="ID_FORMA_PAGO" ColumnName="ID_FORMA_PAGO" />
           <ScalarProperty Name="GARANTIA" ColumnName="GARANTIA" />
           <ScalarProperty Name="CANT_DIAS_VALIDES" ColumnName="CANT_DIAS_VALIDES" />
+          <ScalarProperty Name="TIPO_CAMBIO" ColumnName="TIPO_CAMBIO" />
           <ScalarProperty Name="SUBTOTAL" ColumnName="SUBTOTAL" />
           <ScalarProperty Name="IGV" ColumnName="IGV" />
           <ScalarProperty Name="DESCUENTO" ColumnName="DESCUENTO" />
@@ -561,9 +561,6 @@
     <EntitySetMapping Name="T_M_PRODUCTO">
       <EntityTypeMapping TypeName="DB_BARBERIAModel.T_M_PRODUCTO">
         <MappingFragment StoreEntitySet="T_M_PRODUCTO">
-          <ScalarProperty Name="TIPO_CAMBIO" ColumnName="TIPO_CAMBIO" />
-          <ScalarProperty Name="GANANCIA_MAX" ColumnName="GANANCIA_MAX" />
-          <ScalarProperty Name="ID_MONEDA" ColumnName="ID_MONEDA" />
           <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
           <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
           <ScalarProperty Name="ID_CATEGORIA" ColumnName="ID_CATEGORIA" />
@@ -575,12 +572,15 @@
           <ScalarProperty Name="ID_ALMACEN" ColumnName="ID_ALMACEN" />
           <ScalarProperty Name="ID_CLASE" ColumnName="ID_CLASE" />
           <ScalarProperty Name="ID_AFECTACION" ColumnName="ID_AFECTACION" />
+          <ScalarProperty Name="ID_MONEDA" ColumnName="ID_MONEDA" />
           <ScalarProperty Name="NOM_FILE" ColumnName="NOM_FILE" />
           <ScalarProperty Name="RUTA" ColumnName="RUTA" />
           <ScalarProperty Name="STOCK" ColumnName="STOCK" />
+          <ScalarProperty Name="GANANCIA_MAX" ColumnName="GANANCIA_MAX" />
           <ScalarProperty Name="PRECIO_COMPRA" ColumnName="PRECIO_COMPRA" />
           <ScalarProperty Name="PRECIO_VENTA" ColumnName="PRECIO_VENTA" />
           <ScalarProperty Name="PRECIO_VENTA_DOLAR" ColumnName="PRECIO_VENTA_DOLAR" />
+          <ScalarProperty Name="TIPO_CAMBIO" ColumnName="TIPO_CAMBIO" />
           <ScalarProperty Name="FEC_COMPRA" ColumnName="FEC_COMPRA" />
           <ScalarProperty Name="FLG_ESTADO" ColumnName="FLG_ESTADO" />
           <ScalarProperty Name="USU_CREACION" ColumnName="USU_CREACION" />
@@ -608,6 +608,8 @@
           <ScalarProperty Name="ID_TIPO_COMPROBANTE" ColumnName="ID_TIPO_COMPROBANTE" />
           <ScalarProperty Name="SERIE" ColumnName="SERIE" />
           <ScalarProperty Name="CORRELATIVO" ColumnName="CORRELATIVO" />
+          <ScalarProperty Name="USU_CREACION" ColumnName="USU_CREACION" />
+          <ScalarProperty Name="FEC_CREACION" ColumnName="FEC_CREACION" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -642,11 +644,11 @@
     <EntitySetMapping Name="T_M_VENTA">
       <EntityTypeMapping TypeName="DB_BARBERIAModel.T_M_VENTA">
         <MappingFragment StoreEntitySet="T_M_VENTA">
-          <ScalarProperty Name="TIPO_CAMBIO" ColumnName="TIPO_CAMBIO" />
           <ScalarProperty Name="ID_VENTA" ColumnName="ID_VENTA" />
           <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
           <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
           <ScalarProperty Name="ID_MONEDA" ColumnName="ID_MONEDA" />
+          <ScalarProperty Name="TIPO_CAMBIO" ColumnName="TIPO_CAMBIO" />
           <ScalarProperty Name="VOUCHER" ColumnName="VOUCHER" />
           <ScalarProperty Name="TOTAL_IMPORTE" ColumnName="TOTAL_IMPORTE" />
           <ScalarProperty Name="DESCT_TOTAL" ColumnName="DESCT_TOTAL" />
@@ -835,15 +837,15 @@
     <EntitySetMapping Name="V_KARDEX">
       <EntityTypeMapping TypeName="DB_BARBERIAModel.V_KARDEX">
         <MappingFragment StoreEntitySet="V_KARDEX">
-          <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
-          <ScalarProperty Name="TIPO_CAMBIO" ColumnName="TIPO_CAMBIO" />
-          <ScalarProperty Name="ID_MONEDA" ColumnName="ID_MONEDA" />
           <ScalarProperty Name="ID_KARDEX" ColumnName="ID_KARDEX" />
+          <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
           <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
           <ScalarProperty Name="PRODUCTO" ColumnName="PRODUCTO" />
           <ScalarProperty Name="STOCK" ColumnName="STOCK" />
           <ScalarProperty Name="PRECIO_COMPRA" ColumnName="PRECIO_COMPRA" />
           <ScalarProperty Name="PRECIO_VENTA" ColumnName="PRECIO_VENTA" />
+          <ScalarProperty Name="ID_MONEDA" ColumnName="ID_MONEDA" />
+          <ScalarProperty Name="TIPO_CAMBIO" ColumnName="TIPO_CAMBIO" />
           <ScalarProperty Name="FEC_KARDEX" ColumnName="FEC_KARDEX" />
           <ScalarProperty Name="DESC_TIPO_COMPROBANTE" ColumnName="DESC_TIPO_COMPROBANTE" />
           <ScalarProperty Name="FEC_DETALLE_KARDEX" ColumnName="FEC_DETALLE_KARDEX" />
@@ -1016,7 +1018,6 @@
     <EntitySetMapping Name="V_PRODUCTO">
       <EntityTypeMapping TypeName="DB_BARBERIAModel.V_PRODUCTO">
         <MappingFragment StoreEntitySet="V_PRODUCTO">
-          <ScalarProperty Name="DESC_MONDEDA" ColumnName="DESC_MONDEDA" />
           <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
           <ScalarProperty Name="DESC_CATEGORIA" ColumnName="DESC_CATEGORIA" />
           <ScalarProperty Name="ID_CATEGORIA" ColumnName="ID_CATEGORIA" />
@@ -1031,6 +1032,7 @@
           <ScalarProperty Name="NOM_FILE" ColumnName="NOM_FILE" />
           <ScalarProperty Name="RUTA" ColumnName="RUTA" />
           <ScalarProperty Name="STOCK" ColumnName="STOCK" />
+          <ScalarProperty Name="DESC_MONDEDA" ColumnName="DESC_MONDEDA" />
           <ScalarProperty Name="PRECIO_COMPRA" ColumnName="PRECIO_COMPRA" />
           <ScalarProperty Name="PRECIO_VENTA" ColumnName="PRECIO_VENTA" />
           <ScalarProperty Name="PRECIO_VENTA_DOLAR" ColumnName="PRECIO_VENTA_DOLAR" />

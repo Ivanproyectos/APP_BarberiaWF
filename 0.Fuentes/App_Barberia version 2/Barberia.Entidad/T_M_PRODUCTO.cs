@@ -41,7 +41,6 @@ namespace Barberia.Entidad
         public Nullable<decimal> PRECIO_VENTA { get; set; }
         public Nullable<decimal> PRECIO_VENTA_DOLAR { get; set; }
         public Nullable<decimal> TIPO_CAMBIO { get; set; }
-        
         public Nullable<System.DateTime> FEC_COMPRA { get; set; }
         public string FLG_ESTADO { get; set; }
         public string USU_CREACION { get; set; }
@@ -50,14 +49,14 @@ namespace Barberia.Entidad
         public Nullable<System.DateTime> FEC_MODIFICA { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public  ICollection<T_D_VENTA> T_D_VENTA { get; set; }
-        public  T_M_ALMACEN T_M_ALMACEN { get; set; }
-        public  T_M_CATEGORIA T_M_CATEGORIA { get; set; }
-        public  T_M_CLASE T_M_CLASE { get; set; }
+        public   ICollection<T_D_VENTA> T_D_VENTA { get; set; }
+        public   T_M_ALMACEN T_M_ALMACEN { get; set; }
+        public   T_M_CATEGORIA T_M_CATEGORIA { get; set; }
+        public   T_M_CLASE T_M_CLASE { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public  ICollection<T_M_KARDEX> T_M_KARDEX { get; set; }
-        public  T_M_MARCA T_M_MARCA { get; set; }
-        public  T_M_MODELO T_M_MODELO { get; set; }
-        public  T_M_UNIDAD_MEDIDA T_M_UNIDAD_MEDIDA { get; set; }
+        public   ICollection<T_M_KARDEX> T_M_KARDEX { get; set; }
+        public   T_M_MARCA T_M_MARCA { get; set; }
+        public   T_M_MODELO T_M_MODELO { get; set; }
+        public   T_M_UNIDAD_MEDIDA T_M_UNIDAD_MEDIDA { get; set; }
     }
 }

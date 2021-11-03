@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cls_Rule_M_Serie.cs" />
     <Compile Include="Cls_Rule_M_Categoria.cs" />
     <Compile Include="Cls_Rule_D_Parametro.cs" />
     <Compile Include="Cls_Rule_D_Kardex.cs" />

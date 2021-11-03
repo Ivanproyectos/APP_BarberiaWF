@@ -25,6 +25,8 @@ namespace Barberia.Entidad
         public Nullable<int> ID_TIPO_COMPROBANTE { get; set; }
         public string SERIE { get; set; }
         public Nullable<int> CORRELATIVO { get; set; }
+        public string USU_CREACION { get; set; }
+        public Nullable<System.DateTime> FEC_CREACION { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<T_M_COMPROBANTE_SUNAT> T_M_COMPROBANTE_SUNAT { get; set; }

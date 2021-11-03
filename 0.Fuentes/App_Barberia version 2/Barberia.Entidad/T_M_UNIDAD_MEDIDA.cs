@@ -30,6 +30,6 @@ namespace Barberia.Entidad
         public Nullable<System.DateTime> FEC_MODIFICA { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public ICollection<T_M_PRODUCTO> T_M_PRODUCTO { get; set; }
+        public  ICollection<T_M_PRODUCTO> T_M_PRODUCTO { get; set; }
     }
 }

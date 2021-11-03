@@ -360,6 +360,7 @@
     <Property Name="ID_FORMA_PAGO" Type="Int32" />
     <Property Name="GARANTIA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="CANT_DIAS_VALIDES" Type="Int32" />
+    <Property Name="TIPO_CAMBIO" Type="Decimal" Precision="10" Scale="2" />
     <Property Name="SUBTOTAL" Type="Decimal" Precision="10" Scale="2" />
     <Property Name="IGV" Type="Decimal" Precision="10" Scale="2" />
     <Property Name="DESCUENTO" Type="Decimal" Precision="10" Scale="2" />
@@ -370,7 +371,6 @@
     <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
     <NavigationProperty Name="T_D_COTIZACION" Relationship="Self.FK_ID_COTIZACION" FromRole="T_M_COTIZACION" ToRole="T_D_COTIZACION" />
-    <Property Name="TIPO_CAMBIO" Type="Decimal" Precision="10" Scale="2" />
   </EntityType>
   <EntityType Name="T_M_CUOTA">
     <Key>
@@ -521,6 +521,7 @@
     <Property Name="ID_FORMA_PAGO" Type="Int32" />
     <Property Name="GARANTIA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="CANT_DIAS_VALIDES" Type="Int32" />
+    <Property Name="TIPO_CAMBIO" Type="Decimal" Precision="10" Scale="2" />
     <Property Name="SUBTOTAL" Type="Decimal" Precision="10" Scale="2" />
     <Property Name="IGV" Type="Decimal" Precision="10" Scale="2" />
     <Property Name="DESCUENTO" Type="Decimal" Precision="10" Scale="2" />
@@ -531,7 +532,6 @@
     <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
     <NavigationProperty Name="T_D_ORDEN_COMPRA" Relationship="Self.FK_ID_ORDEN_COMPRA" FromRole="T_M_ORDEN_COMPRA" ToRole="T_D_ORDEN_COMPRA" />
-    <Property Name="TIPO_CAMBIO" Type="Decimal" Precision="10" Scale="2" />
   </EntityType>
   <EntityType Name="T_M_PARAMETRO">
     <Key>
@@ -542,7 +542,7 @@
     <Property Name="COD_PARAMETRO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="DESC_PARAMETRO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="TIPO_PARAMETRO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
-    <Property Name="VALOR_D" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="VALOR_D" Type="Decimal" Precision="18" Scale="3" />
     <Property Name="VALOR_S" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="VALOR_I" Type="Int32" />
     <Property Name="FLG_ESTADO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
@@ -567,12 +567,15 @@
     <Property Name="ID_ALMACEN" Type="Int32" />
     <Property Name="ID_CLASE" Type="Int32" />
     <Property Name="ID_AFECTACION" Type="Int32" />
+    <Property Name="ID_MONEDA" Type="Int32" />
     <Property Name="NOM_FILE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="RUTA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="STOCK" Type="Int32" />
+    <Property Name="GANANCIA_MAX" Type="Decimal" Precision="10" Scale="2" />
     <Property Name="PRECIO_COMPRA" Type="Decimal" Precision="10" Scale="2" />
     <Property Name="PRECIO_VENTA" Type="Decimal" Precision="10" Scale="2" />
     <Property Name="PRECIO_VENTA_DOLAR" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="TIPO_CAMBIO" Type="Decimal" Precision="10" Scale="2" />
     <Property Name="FEC_COMPRA" Type="DateTime" Precision="3" />
     <Property Name="FLG_ESTADO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
     <Property Name="USU_CREACION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
@@ -587,9 +590,6 @@
     <NavigationProperty Name="T_M_MARCA" Relationship="Self.FK_ID_MARCA" FromRole="T_M_PRODUCTO" ToRole="T_M_MARCA" />
     <NavigationProperty Name="T_M_MODELO" Relationship="Self.FK_ID_MODELO" FromRole="T_M_PRODUCTO" ToRole="T_M_MODELO" />
     <NavigationProperty Name="T_M_UNIDAD_MEDIDA" Relationship="Self.FK_ID_UNIDAD_MEDIDA" FromRole="T_M_PRODUCTO" ToRole="T_M_UNIDAD_MEDIDA" />
-    <Property Name="ID_MONEDA" Type="Int32" />
-    <Property Name="GANANCIA_MAX" Type="Decimal" Precision="10" Scale="2" />
-    <Property Name="TIPO_CAMBIO" Type="Decimal" Precision="10" Scale="2" />
   </EntityType>
   <EntityType Name="T_M_PROVINCIA">
     <Key>
@@ -604,11 +604,13 @@
     <Key>
       <PropertyRef Name="ID_SERIE" />
     </Key>
-    <Property Name="ID_SERIE" Type="Int32" Nullable="false" />
+    <Property Name="ID_SERIE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="ID_EMPRESA" Type="Int32" />
     <Property Name="ID_TIPO_COMPROBANTE" Type="Int32" />
     <Property Name="SERIE" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
     <Property Name="CORRELATIVO" Type="Int32" />
+    <Property Name="USU_CREACION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="FEC_CREACION" Type="DateTime" Precision="3" />
     <NavigationProperty Name="T_M_COMPROBANTE_SUNAT" Relationship="Self.FK_ID_SERIE" FromRole="T_M_SERIE" ToRole="T_M_COMPROBANTE_SUNAT" />
   </EntityType>
   <EntityType Name="T_M_SERVICIO">
@@ -646,6 +648,7 @@
     <Property Name="ID_EMPRESA" Type="Int32" Nullable="false" />
     <Property Name="ID_CLIENTE" Type="Int32" Nullable="false" />
     <Property Name="ID_MONEDA" Type="Int32" />
+    <Property Name="TIPO_CAMBIO" Type="Decimal" Precision="10" Scale="2" />
     <Property Name="VOUCHER" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="TOTAL_IMPORTE" Type="Decimal" Precision="10" Scale="2" />
     <Property Name="DESCT_TOTAL" Type="Decimal" Precision="10" Scale="2" />
@@ -663,7 +666,6 @@
     <NavigationProperty Name="T_D_DOCUMENTOS_VENTAS" Relationship="Self.FK_DOCUMENTOVENTAS" FromRole="T_M_VENTA" ToRole="T_D_DOCUMENTOS_VENTAS" />
     <NavigationProperty Name="T_D_VENTA" Relationship="Self.FK_ID_VENTA" FromRole="T_M_VENTA" ToRole="T_D_VENTA" />
     <NavigationProperty Name="T_M_CLIENTES" Relationship="Self.FK_VENTA_ID_CLIENTE" FromRole="T_M_VENTA" ToRole="T_M_CLIENTES" />
-    <Property Name="TIPO_CAMBIO" Type="Decimal" Precision="10" Scale="2" />
   </EntityType>
   <EntityType Name="T_STOCK_ANULAR">
     <Key>
@@ -840,20 +842,23 @@
   <EntityType Name="V_KARDEX">
     <Key>
       <PropertyRef Name="ID_KARDEX" />
+      <PropertyRef Name="ID_EMPRESA" />
       <PropertyRef Name="ID_PRODUCTO" />
       <PropertyRef Name="PRODUCTO" />
       <PropertyRef Name="DESC_TIPO_COMPROBANTE" />
       <PropertyRef Name="NUM_DOCUMENTO" />
       <PropertyRef Name="PRECIO_SOLES" />
       <PropertyRef Name="PRECIO_DOLAR" />
-      <PropertyRef Name="ID_EMPRESA" />
     </Key>
     <Property Name="ID_KARDEX" Type="Int32" Nullable="false" />
+    <Property Name="ID_EMPRESA" Type="Int32" Nullable="false" />
     <Property Name="ID_PRODUCTO" Type="Int32" Nullable="false" />
     <Property Name="PRODUCTO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="STOCK" Type="Int32" />
     <Property Name="PRECIO_COMPRA" Type="Decimal" Precision="10" Scale="2" />
     <Property Name="PRECIO_VENTA" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="ID_MONEDA" Type="Int32" />
+    <Property Name="TIPO_CAMBIO" Type="Decimal" Precision="10" Scale="2" />
     <Property Name="FEC_KARDEX" Type="DateTime" Precision="3" />
     <Property Name="DESC_TIPO_COMPROBANTE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="FEC_DETALLE_KARDEX" Type="DateTime" Precision="3" />
@@ -868,9 +873,6 @@
     <Property Name="TOTAL_SALDO" Type="Decimal" Precision="18" Scale="2" />
     <Property Name="USU_CREACION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="FEC_CREACION" Type="DateTime" Precision="3" />
-    <Property Name="ID_MONEDA" Type="Int32" />
-    <Property Name="TIPO_CAMBIO" Type="Decimal" Precision="10" Scale="2" />
-    <Property Name="ID_EMPRESA" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="V_M_COTIZACION">
     <Key>
@@ -938,7 +940,7 @@
     <Property Name="COD_PARAMETRO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="DESC_PARAMETRO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="TIPO_PARAMETRO" Type="String" MaxLength="7" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="VALOR_D" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="VALOR_D" Type="Decimal" Precision="18" Scale="3" />
     <Property Name="VALOR_S" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="VALOR_I" Type="Int32" />
     <Property Name="FLG_ESTADO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
@@ -1019,7 +1021,7 @@
     <Property Name="COD_PARAMETRO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="DESC_PARAMETRO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="TIPO_PARAMETRO" Type="String" MaxLength="7" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="VALOR_D" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="VALOR_D" Type="Decimal" Precision="18" Scale="3" />
     <Property Name="VALOR_S" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="VALOR_I" Type="Int32" />
     <Property Name="ID_D_PARAMETRO" Type="Int32" Nullable="false" />
@@ -1058,6 +1060,7 @@
     <Property Name="NOM_FILE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="RUTA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="STOCK" Type="Int32" />
+    <Property Name="DESC_MONDEDA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="PRECIO_COMPRA" Type="Decimal" Precision="10" Scale="2" />
     <Property Name="PRECIO_VENTA" Type="Decimal" Precision="10" Scale="2" />
     <Property Name="PRECIO_VENTA_DOLAR" Type="Decimal" Precision="10" Scale="2" />
@@ -1069,7 +1072,6 @@
     <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
     <Property Name="ANIO" Type="Int32" />
     <Property Name="MES" Type="Int32" />
-    <Property Name="DESC_MONDEDA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="V_VENTA">
     <Key>
