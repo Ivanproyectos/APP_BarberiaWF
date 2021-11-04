@@ -23,6 +23,7 @@ namespace Barberia.Entidad
         public int ID_CATEGORIA { get; set; }
         public int ID_EMPRESA { get; set; }
         public string DESC_CATEGORIA { get; set; }
+        public string TIPO_CATEGORIA { get; set; }
         public string FLG_ESTADO { get; set; }
         public string USU_CREACION { get; set; }
         public Nullable<System.DateTime> FEC_CREACION { get; set; }

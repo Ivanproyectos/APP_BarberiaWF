@@ -236,6 +236,7 @@
     <Property Name="FEC_CREACION" Type="datetime" />
     <Property Name="USU_MODIFICA" Type="varchar" MaxLength="20" />
     <Property Name="FEC_MODIFICA" Type="datetime" />
+    <Property Name="TIPO_CATEGORIA" Type="char" MaxLength="1" />
   </EntityType>
   <EntityType Name="T_M_CLASE">
     <Key>

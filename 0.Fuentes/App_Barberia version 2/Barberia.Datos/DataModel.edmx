@@ -241,6 +241,7 @@
           <Property Name="FEC_CREACION" Type="datetime" />
           <Property Name="USU_MODIFICA" Type="varchar" MaxLength="20" />
           <Property Name="FEC_MODIFICA" Type="datetime" />
+          <Property Name="TIPO_CATEGORIA" Type="char" MaxLength="1" />
         </EntityType>
         <EntityType Name="T_M_CLASE">
           <Key>
@@ -2075,6 +2076,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
           <NavigationProperty Name="T_M_PRODUCTO" Relationship="Self.FK_ID_CATEGORIA" FromRole="T_M_CATEGORIA" ToRole="T_M_PRODUCTO" />
+          <Property Name="TIPO_CATEGORIA" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
         </EntityType>
         <EntityType Name="T_M_CLASE">
           <Key>
@@ -3611,6 +3613,7 @@ advertencia 6002: La tabla o vista 'DB_BARBERIA.dbo.V_VENTA' no tiene definida n
           <EntitySetMapping Name="T_M_CATEGORIA">
             <EntityTypeMapping TypeName="DB_BARBERIAModel.T_M_CATEGORIA">
               <MappingFragment StoreEntitySet="T_M_CATEGORIA">
+                <ScalarProperty Name="TIPO_CATEGORIA" ColumnName="TIPO_CATEGORIA" />
                 <ScalarProperty Name="ID_CATEGORIA" ColumnName="ID_CATEGORIA" />
                 <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
                 <ScalarProperty Name="DESC_CATEGORIA" ColumnName="DESC_CATEGORIA" />

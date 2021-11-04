@@ -95,6 +95,8 @@ namespace Barberia.Datos
             {
                 query = query.Where(c => c.FLG_ESTADO == "1" && c.ID_EMPRESA == entidad.ID_EMPRESA);
 
+                
+
                 if (!string.IsNullOrEmpty(entidad.COD_PRODUCTO))
                     query = query.Where(c => c.COD_PRODUCTO.Contains(entidad.COD_PRODUCTO));
 

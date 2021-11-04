@@ -248,6 +248,7 @@
     <Property Name="USU_MODIFICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="FEC_MODIFICA" Type="DateTime" Precision="3" />
     <NavigationProperty Name="T_M_PRODUCTO" Relationship="Self.FK_ID_CATEGORIA" FromRole="T_M_CATEGORIA" ToRole="T_M_PRODUCTO" />
+    <Property Name="TIPO_CATEGORIA" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
   </EntityType>
   <EntityType Name="T_M_CLASE">
     <Key>

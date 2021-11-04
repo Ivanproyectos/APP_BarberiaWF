@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Barberia.Datos.dll" size="409600">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Barberia.Datos.dll" size="410112">
       <assemblyIdentity name="Barberia.Datos" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>bYUy33SXK1b9vee0sfMXs/WwoAalBLlV9j5MgEipzV0=</dsig:DigestValue>
+        <dsig:DigestValue>W0HctU5QZ9mo+IchvQuoYCod4ZRlk7fd/QfrF+AWqP4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -74,7 +74,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>D/hi0VMZDF4r7w1S59DqVPij1VWqKgTQzTwpLVeQpOs=</dsig:DigestValue>
+        <dsig:DigestValue>kogyFH1S6Y+Xu46jjLMo6CVnj6AWE8yepgds0G/Uh2A=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
