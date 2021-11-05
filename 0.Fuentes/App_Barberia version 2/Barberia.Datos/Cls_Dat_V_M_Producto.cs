@@ -99,11 +99,11 @@ namespace Barberia.Datos
 
                 if (optReporte == "optStockProducto")
                 {
-
+                    query = query.Where(c => c.ID_CATEGORIA > 1);
                 }
                 else if (optReporte == "optProductoFaltante")
                 {
-                    query = query.Where(c => c.STOCK <= 5);
+                    query = query.Where(c => c.STOCK <= entidad.STOCK);
                 }
                 else if (optReporte == "optProductoVendido")
                 {
