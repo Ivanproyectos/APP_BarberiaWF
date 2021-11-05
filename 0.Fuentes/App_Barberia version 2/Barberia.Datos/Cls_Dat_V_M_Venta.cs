@@ -100,6 +100,25 @@ namespace Barberia.Datos
             return lista;
         }
 
+        public V_M_VENTA ListarUno_Venta(int idVenta, ref Cls_Ent_Auditoria auditoria)
+        {
+            auditoria.Limpiar();
+            V_M_VENTA entidad = new V_M_VENTA();
+            try
+            {
+                //using (DB_BARBERIAEntities1 db = new DB_BARBERIAEntities1())
+                //{
+                //    entidad = db.V_M_VENTA.Find(idVenta);
+                //}
+                entidad = Find(x => x.ID_VENTA == idVenta);
+            }
+            catch (Exception ex)
+            {
+                auditoria.Error(ex);
+            }
+            return entidad;
+        }
+
         public List<Cls_Ent_V_Venta> ListarPaginado_Venta(string ORDEN_COLUMNA, string ORDEN, int FILAS, int PAGINA, string @WHERE, ref Cls_Ent_Auditoria auditoria)
         {
             var TABLA = "";

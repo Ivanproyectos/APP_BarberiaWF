@@ -144,5 +144,19 @@ namespace Barberia.Negocio
 
         }
 
+        public T_M_VENTA ListarUno_Venta(int idVenta, ref Cls_Ent_Auditoria auditoria)
+        {
+            T_M_VENTA lista = new T_M_VENTA();
+            try
+            {
+                lista = ObjVenta.ListarUno_Venta(idVenta, ref auditoria);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return lista;
+        }
+
     }
 }

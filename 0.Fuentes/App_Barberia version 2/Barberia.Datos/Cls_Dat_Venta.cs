@@ -242,5 +242,23 @@ namespace Barberia.Datos
             return lista;
         }
 
+        public T_M_VENTA ListarUno_Venta(int id, ref Cls_Ent_Auditoria auditoria)
+        {
+            auditoria.Limpiar();
+            T_M_VENTA entidad = new T_M_VENTA();
+            try
+            {
+                using (DB_BARBERIAEntities1 db = new DB_BARBERIAEntities1())
+                {
+                    entidad = db.T_M_VENTA.Find(id); //.Where(x => x.ID_CARGO == id && x.FLG_ESTADO == "1").OrderByDescending(x => x.ID_CARGO);
+                }
+            }
+            catch (Exception ex)
+            {
+                auditoria.Error(ex);
+            }
+            return entidad;
+        }
+
     }
 }
